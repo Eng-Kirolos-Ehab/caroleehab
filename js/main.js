@@ -144,13 +144,20 @@ function renderMagazines(data) {
   `;
 
   grid.innerHTML = others.map((m, i) => `
-    <a href="${escapeHtml(m.embedUrl)}" target="_blank" rel="noopener" class="magazine-card" data-reveal data-reveal-delay="${i * 100}">
-      <img src="${m.cover || 'images/work-001.jpg'}" alt="${escapeHtml(m.title)}" loading="lazy">
-      <div class="mc-overlay">
-        <span class="mc-title">${escapeHtml(m.title)}</span>
-        <span class="mc-cta">تصفّحي المجلة ↗</span>
+    <div class="magazine-item ${i % 2 === 1 ? 'reverse' : ''}" data-reveal>
+      <div class="magazine-item-media">
+        <div class="magazine-frame">
+          <iframe src="${escapeHtml(m.embedUrl)}" loading="lazy" scrolling="no" allow="fullscreen" allowfullscreen title="${escapeHtml(m.title)}"></iframe>
+        </div>
       </div>
-    </a>
+      <div class="magazine-item-text">
+        <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(m.title)}</h3>
+        <p class="text-ink2 mb-4">${escapeHtml(m.description || '')}</p>
+        <a href="${escapeHtml(m.embedUrl)}" target="_blank" rel="noopener" class="magazine-item-link">
+          فتح في صفحة كاملة ↗
+        </a>
+      </div>
+    </div>
   `).join('');
 
   initRevealAnimations();
