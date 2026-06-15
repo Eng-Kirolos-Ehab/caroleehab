@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم | كارول</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream:  '#FDF8F3',
+          cream2: '#F6EFE6',
+          ink:    '#1C1917',
+          ink2:   '#44403C',
+          gold:   '#C9A227',
+          gold2:  '#E8C766',
+        },
+        fontFamily: {
+          serif: ['Playfair Display', 'serif'],
+          ar:    ['Cairo', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="bg-cream2 text-ink font-ar antialiased min-h-screen">
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="bg-ink text-cream sticky top-0 z-40 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <span class="font-serif text-2xl">لوحة التحكم</span>
+      <span class="text-cream/40 text-sm">— موقع كارول</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <span id="conn-status" class="text-sm px-3 py-1.5 rounded-full bg-cream/10 text-cream/70">غير متصل بمجلد الموقع</span>
+      <button id="btn-connect" class="cursor-pointer bg-gold text-ink px-4 py-2 rounded-full text-sm font-semibold hover:bg-gold2 transition-colors">
+        فتح مجلد الموقع
+      </button>
+      <a href="index.html" class="cursor-pointer text-sm text-cream/70 hover:text-gold transition-colors">عرض الموقع ↗</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== UNSUPPORTED BROWSER NOTICE ===================== -->
+<div id="unsupported-notice" class="hidden max-w-3xl mx-auto mt-6 mx-4 bg-amber-50 border border-amber-300 text-amber-900 rounded-2xl p-5 text-sm leading-relaxed">
+  متصفحك الحالي لا يدعم الحفظ المباشر للملفات. افتحي هذه الصفحة من متصفح
+  <strong>Google Chrome</strong> أو <strong>Microsoft Edge</strong> على الكمبيوتر
+  لاستخدام لوحة التحكم بكامل ميزاتها (الحفظ التلقائي في content.js ومكتبة الصور).
+</div>
+
+<!-- ===================== TOAST ===================== -->
+<div id="toast" class="toast"></div>
+
+<!-- ===================== MAIN ===================== -->
+<main id="app" class="max-w-7xl mx-auto px-4 sm:px-6 py-8 hidden">
+
+  <!-- Tabs -->
+  <div class="flex flex-wrap gap-2 mb-8">
+    <button class="tab-btn active" data-tab="artist">بيانات الفنانة</button>
+    <button class="tab-btn" data-tab="works">الأعمال</button>
+    <button class="tab-btn" data-tab="events">الفعاليات</button>
+    <button class="tab-btn" data-tab="quotes">الاقتباسات</button>
+    <button class="tab-btn" data-tab="categories">التصنيفات</button>
+  </div>
+
+  <!-- ============ ARTIST TAB ============ -->
+  <section data-tab-panel="artist" class="tab-panel">
+    <div class="card">
+      <h2 class="card-title">البيانات الأساسية</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="field-label">الاسم (English)</label>
+          <input id="f-artist-name" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">الاسم (عربي)</label>
+          <input id="f-artist-nameAr" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">الصفة / التخصص</label>
+          <input id="f-artist-title" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">الموقع (مدينة، دولة)</label>
+          <input id="f-artist-location" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">عبارة الواجهة الرئيسية (Tagline)</label>
+          <input id="f-artist-tagline" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">السيرة الذاتية (تظهر في قسم "عن الفنانة")</label>
+          <textarea id="f-artist-bio" class="field-input" rows="4"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">صورة الفنانة (قسم "عن الفنانة")</h2>
+      <div class="flex flex-wrap items-center gap-4">
+        <img id="artist-photo-preview" class="w-28 h-28 object-cover rounded-xl border border-ink/10" src="" alt="">
+        <div class="flex flex-col gap-2">
+          <button id="btn-pick-artist-photo" class="btn-secondary">اختيار من مكتبة الصور</button>
+          <input id="f-artist-photo-upload" type="file" accept="image/*" class="text-sm">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">التواصل</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="field-label">البريد الإلكتروني</label>
+          <input id="f-artist-email" class="field-input" type="email">
+        </div>
+        <div>
+          <label class="field-label">إنستغرام (رابط كامل)</label>
+          <input id="f-artist-instagram" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">فيسبوك (رابط كامل)</label>
+          <input id="f-artist-facebook" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">Behance (رابط كامل)</label>
+          <input id="f-artist-behance" class="field-input" type="text">
+        </div>
+      </div>
+    </div>
+
+    <button id="btn-save-artist" class="btn-primary">حفظ بيانات الفنانة</button>
+  </section>
+
+  <!-- ============ WORKS TAB ============ -->
+  <section data-tab-panel="works" class="tab-panel hidden">
+    <div class="card">
+      <h2 class="card-title">إضافة عمل جديد</h2>
+      <div class="grid sm:grid-cols-2 gap-5 mb-5">
+        <div>
+          <label class="field-label">عنوان العمل</label>
+          <input id="w-title" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">التصنيف</label>
+          <select id="w-category" class="field-input"></select>
+        </div>
+        <div>
+          <label class="field-label">السنة</label>
+          <input id="w-year" class="field-input" type="text" placeholder="2026">
+        </div>
+        <div class="flex items-center gap-2 mt-7">
+          <input id="w-featured" type="checkbox" class="w-5 h-5 accent-[#C9A227]">
+          <label for="w-featured" class="text-sm text-ink2">عمل مميز (يظهر في "أعمال مميزة")</label>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">الوصف</label>
+          <textarea id="w-description" class="field-input" rows="3"></textarea>
+        </div>
+      </div>
+
+      <label class="field-label">الصورة</label>
+      <div class="flex flex-wrap items-center gap-4 mb-3">
+        <img id="w-image-preview" class="w-24 h-24 object-cover rounded-xl border border-ink/10 hidden" src="" alt="">
+        <input id="w-image-upload" type="file" accept="image/*" class="text-sm">
+        <button id="btn-pick-work-image" class="btn-secondary">أو اختيار من مكتبة الصور</button>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="btn-add-work" class="btn-primary">إضافة العمل</button>
+        <button id="btn-cancel-edit-work" class="btn-secondary hidden">إلغاء التعديل</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="card-title !mb-0">كل الأعمال (<span id="works-count">0</span>)</h2>
+      </div>
+      <div id="works-list" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">مكتبة الصور (<span id="library-count">0</span> صورة)</h2>
+      <p class="text-sm text-ink2 mb-4">كل الصور المتوفرة في فولدر <code>images</code>. الصور المعلّمة بـ ✓ مستخدمة بالفعل في الموقع.</p>
+      <div id="library-picker-banner" class="hidden flex items-center justify-between gap-3 bg-gold/15 border border-gold rounded-xl px-4 py-2.5 mb-4 text-sm font-semibold">
+        <span id="library-picker-text">اضغطي على صورة لاختيارها</span>
+        <button id="btn-cancel-pick" class="cursor-pointer text-ink2 hover:text-ink">إلغاء ✕</button>
+      </div>
+      <div id="image-library" class="image-library"></div>
+    </div>
+  </section>
+
+  <!-- ============ EVENTS TAB ============ -->
+  <section data-tab-panel="events" class="tab-panel hidden">
+    <div class="card">
+      <h2 class="card-title">إضافة فعالية / معرض</h2>
+      <div class="grid sm:grid-cols-2 gap-5 mb-5">
+        <div>
+          <label class="field-label">عنوان الفعالية</label>
+          <input id="e-title" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">التاريخ</label>
+          <input id="e-date" class="field-input" type="text" placeholder="2026">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">المكان</label>
+          <input id="e-location" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">الوصف</label>
+          <textarea id="e-description" class="field-input" rows="3"></textarea>
+        </div>
+      </div>
+      <label class="field-label">الصورة</label>
+      <div class="flex flex-wrap items-center gap-4 mb-3">
+        <img id="e-image-preview" class="w-24 h-24 object-cover rounded-xl border border-ink/10 hidden" src="" alt="">
+        <input id="e-image-upload" type="file" accept="image/*" class="text-sm">
+        <button id="btn-pick-event-image" class="btn-secondary">أو اختيار من مكتبة الصور</button>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="btn-add-event" class="btn-primary">إضافة الفعالية</button>
+        <button id="btn-cancel-edit-event" class="btn-secondary hidden">إلغاء التعديل</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">كل الفعاليات</h2>
+      <div id="events-list-admin" class="grid sm:grid-cols-2 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- ============ QUOTES TAB ============ -->
+  <section data-tab-panel="quotes" class="tab-panel hidden">
+    <div class="card">
+      <h2 class="card-title">إضافة اقتباس / كلمة</h2>
+      <div class="grid sm:grid-cols-3 gap-5 mb-5">
+        <div class="sm:col-span-2">
+          <label class="field-label">النص</label>
+          <textarea id="q-text" class="field-input" rows="2"></textarea>
+        </div>
+        <div>
+          <label class="field-label">الاسم (يظهر تحت الاقتباس)</label>
+          <input id="q-author" class="field-input" type="text" value="كارول">
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="btn-add-quote" class="btn-primary">إضافة الاقتباس</button>
+        <button id="btn-cancel-edit-quote" class="btn-secondary hidden">إلغاء التعديل</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">كل الاقتباسات</h2>
+      <div id="quotes-list-admin" class="space-y-3"></div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES TAB ============ -->
+  <section data-tab-panel="categories" class="tab-panel hidden">
+    <div class="card">
+      <h2 class="card-title">إضافة تصنيف جديد</h2>
+      <p class="text-sm text-ink2 mb-4">التصنيفات تظهر كأزرار فلتر في معرض الأعمال. تصنيف "الكل" ثابت ولا يمكن حذفه.</p>
+      <div class="grid sm:grid-cols-3 gap-5 mb-5">
+        <div>
+          <label class="field-label">المعرّف (إنجليزي، بدون مسافات)</label>
+          <input id="c-id" class="field-input" type="text" placeholder="sculpture">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">الاسم الظاهر (عربي)</label>
+          <input id="c-label" class="field-input" type="text" placeholder="تماثيل">
+        </div>
+      </div>
+      <button id="btn-add-category" class="btn-primary">إضافة التصنيف</button>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">كل التصنيفات</h2>
+      <div id="categories-list-admin" class="space-y-2"></div>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

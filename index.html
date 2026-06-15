@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كارول | Carole — فنانة تشكيلية ومصممة</title>
+<meta name="description" content="بورتفوليو الفنانة كارول - لوحات، رسومات بالفحم، تصميم نسيج، أعمال يدوية وفعاليات فنية.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream:  '#FDF8F3',
+          cream2: '#F6EFE6',
+          ink:    '#1C1917',
+          ink2:   '#44403C',
+          gold:   '#C9A227',
+          gold2:  '#E8C766',
+        },
+        fontFamily: {
+          serif: ['Playfair Display', 'serif'],
+          sans:  ['Inter', 'Cairo', 'sans-serif'],
+          ar:    ['Cairo', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cream text-ink font-ar antialiased">
+
+<!-- ============ NAV ============ -->
+<header id="site-nav" class="fixed top-4 left-4 right-4 z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto bg-cream/80 backdrop-blur-md border border-ink/10 rounded-full shadow-sm px-5 sm:px-8 py-3 flex items-center justify-between">
+    <a href="#home" class="font-serif text-xl sm:text-2xl tracking-wide text-ink">
+      <span id="nav-artist-name">Carole</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink2">
+      <a href="#home" class="nav-link hover:text-gold transition-colors duration-200">الرئيسية</a>
+      <a href="#about" class="nav-link hover:text-gold transition-colors duration-200">عن الفنانة</a>
+      <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200">الأعمال</a>
+      <a href="#events" class="nav-link hover:text-gold transition-colors duration-200">الفعاليات</a>
+      <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200">تواصل</a>
+    </nav>
+
+    <button id="menu-toggle" aria-label="فتح القائمة" class="md:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-full hover:bg-ink/5 transition-colors">
+      <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden mt-2 max-w-6xl mx-auto bg-cream/95 backdrop-blur-md border border-ink/10 rounded-2xl shadow-sm px-6 py-4 flex flex-col gap-4 text-ink2 font-medium">
+    <a href="#home" class="nav-link hover:text-gold transition-colors duration-200">الرئيسية</a>
+    <a href="#about" class="nav-link hover:text-gold transition-colors duration-200">عن الفنانة</a>
+    <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200">الأعمال</a>
+    <a href="#events" class="nav-link hover:text-gold transition-colors duration-200">الفعاليات</a>
+    <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200">تواصل</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16">
+  <!-- decorative blobs -->
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+
+  <div class="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <div data-reveal>
+      <p class="inline-flex items-center gap-2 text-gold font-medium text-sm tracking-widest mb-4">
+        <span class="w-8 h-px bg-gold"></span>
+        <span id="hero-role">فنانة تشكيلية ومصممة</span>
+      </p>
+      <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-6">
+        <span id="hero-name" class="block">Carole</span>
+        <span class="block text-ink2 text-3xl sm:text-4xl mt-3 font-normal" id="hero-name-ar">كارول</span>
+      </h1>
+      <p id="hero-tagline" class="text-lg text-ink2 max-w-md leading-relaxed mb-8">
+        بين الفحم واللون والقماش… كل عمل يحكي حكاية
+      </p>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="#gallery" class="cursor-pointer inline-flex items-center gap-2 bg-ink text-cream px-7 py-3.5 rounded-full font-medium hover:bg-gold hover:text-ink transition-all duration-300 shadow-lg shadow-ink/10">
+          استعرضي الأعمال
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+        </a>
+        <a href="#about" class="cursor-pointer inline-flex items-center gap-2 border border-ink/20 px-7 py-3.5 rounded-full font-medium hover:border-gold hover:text-gold transition-all duration-300">
+          تعرفي عليها
+        </a>
+      </div>
+    </div>
+
+    <div class="relative" data-reveal data-reveal-delay="150">
+      <div class="hero-frame">
+        <img src="images/work-001.jpg" alt="عمل فني للفنانة كارول" class="w-full h-full object-cover" loading="eager">
+      </div>
+      <div class="hero-frame-accent"></div>
+    </div>
+  </div>
+
+  <a href="#about" aria-label="انتقل للأسفل" class="cursor-pointer absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-cue">
+    <svg class="w-6 h-10 text-ink2" viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="1" y="1" width="22" height="38" rx="11"/>
+      <circle cx="12" cy="10" r="2.5" fill="currentColor" class="scroll-dot"/>
+    </svg>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-24 px-6 relative">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div class="relative order-2 md:order-1" data-reveal>
+      <div class="about-frame">
+        <img id="about-photo" src="images/work-106.jpg" alt="صورة الفنانة كارول" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="order-1 md:order-2" data-reveal data-reveal-delay="100">
+      <p class="inline-flex items-center gap-2 text-gold font-medium text-sm tracking-widest mb-4">
+        <span class="w-8 h-px bg-gold"></span>
+        عن الفنانة
+      </p>
+      <h2 class="font-serif text-4xl sm:text-5xl mb-6 leading-tight">رحلة بين الخط واللون والخامة</h2>
+      <p id="about-bio" class="text-ink2 leading-relaxed text-lg mb-6"></p>
+      <div class="flex items-center gap-3 mb-8 text-ink2">
+        <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        <span id="about-location">القاهرة، مصر</span>
+      </div>
+
+      <!-- pull quote -->
+      <blockquote class="relative border-r-2 border-gold pr-6 py-2">
+        <p id="about-quote" class="font-serif text-2xl italic text-ink leading-snug"></p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED WORKS ============ -->
+<section class="py-20 bg-cream2">
+  <div class="max-w-6xl mx-auto px-6 mb-10" data-reveal>
+    <p class="inline-flex items-center gap-2 text-gold font-medium text-sm tracking-widest mb-4">
+      <span class="w-8 h-px bg-gold"></span>
+      مختارات
+    </p>
+    <h2 class="font-serif text-4xl sm:text-5xl">أعمال مميزة</h2>
+  </div>
+
+  <div id="featured-scroll" class="featured-scroll px-6">
+    <!-- injected by JS -->
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-12 text-center" data-reveal>
+      <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
+        <span class="w-8 h-px bg-gold"></span>
+        المعرض
+        <span class="w-8 h-px bg-gold"></span>
+      </p>
+      <h2 class="font-serif text-4xl sm:text-5xl mb-6">كل الأعمال</h2>
+      <p class="text-ink2 max-w-xl mx-auto">تصفّحي مختلف الأعمال حسب التصنيف، واضغطي على أي عمل لمشاهدته بحجم أكبر.</p>
+    </div>
+
+    <!-- filters -->
+    <div id="filters" class="flex flex-wrap justify-center gap-3 mb-12" data-reveal></div>
+
+    <!-- masonry grid -->
+    <div id="gallery-grid" class="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section id="events" class="py-24 px-6 bg-ink text-cream relative overflow-hidden">
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="max-w-5xl mx-auto relative z-10">
+    <div class="mb-14 text-center" data-reveal>
+      <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
+        <span class="w-8 h-px bg-gold"></span>
+        الفعاليات
+        <span class="w-8 h-px bg-gold"></span>
+      </p>
+      <h2 class="font-serif text-4xl sm:text-5xl">المعارض والفعاليات</h2>
+    </div>
+
+    <div id="events-list" class="space-y-10"></div>
+  </div>
+</section>
+
+<!-- ============ QUOTES ============ -->
+<section class="py-24 px-6 relative overflow-hidden">
+  <div class="max-w-3xl mx-auto text-center relative z-10" data-reveal>
+    <svg class="w-10 h-10 text-gold mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H4.5A2.83 2.83 0 017.17 8.5V6zm10 0A5.17 5.17 0 0012 11.17V18h6.83v-6.83H14.5A2.83 2.83 0 0117.17 8.5V6z"/></svg>
+    <div id="quote-box" class="relative h-40 sm:h-32">
+      <!-- quotes injected -->
+    </div>
+    <div id="quote-dots" class="flex justify-center gap-2 mt-8"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer id="contact" class="bg-ink text-cream pt-24 pb-10 px-6 relative overflow-hidden">
+  <div class="hero-blob hero-blob-4"></div>
+  <div class="max-w-4xl mx-auto text-center relative z-10" data-reveal>
+    <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
+      <span class="w-8 h-px bg-gold"></span>
+      تواصل
+      <span class="w-8 h-px bg-gold"></span>
+    </p>
+    <h2 class="font-serif text-4xl sm:text-5xl mb-6">يلا نتكلم عن فكرتك</h2>
+    <p class="text-cream/70 max-w-lg mx-auto mb-10">لأي تعاون فني، طلب عمل خاص، أو دعوة لمعرض — تقدري تتواصلي معايا من خلال:</p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+      <a id="contact-email" href="#" class="cursor-pointer inline-flex items-center gap-2 bg-gold text-ink px-7 py-3.5 rounded-full font-medium hover:bg-gold2 transition-all duration-300">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+        راسليني
+      </a>
+      <a id="contact-instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" class="cursor-pointer w-12 h-12 flex items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all duration-300">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a id="contact-facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook" class="cursor-pointer w-12 h-12 flex items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all duration-300">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M14 9h2.5V6H14c-1.93 0-3.5 1.57-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.5c0-.28.22-.5.5-.5z"/></svg>
+      </a>
+      <a id="contact-behance" href="#" target="_blank" rel="noopener" aria-label="Behance" class="cursor-pointer w-12 h-12 flex items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all duration-300">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7h6M3 12h7a2.5 2.5 0 010 5H3v-5zm0-5v10M16 14.5c0 1.5 1.2 2.5 3 2.5s3-1 3-2.5M16 12.5h6c0-2-1.3-3.5-3-3.5s-3 1.5-3 3.5zM3 7h4.5a2.25 2.25 0 010 4.5H3V7z"/></svg>
+      </a>
+    </div>
+
+    <div class="border-t border-cream/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-cream/50">
+      <p>© <span id="footer-year"></span> <span id="footer-name">Carole</span> — <span id="footer-note">جميع الحقوق محفوظة</span></p>
+      <a href="admin.html" class="cursor-pointer hover:text-gold transition-colors duration-200">لوحة التحكم</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="lightbox">
+  <button id="lightbox-close" aria-label="إغلاق" class="lightbox-btn lightbox-close cursor-pointer">
+    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+  </button>
+  <button id="lightbox-prev" aria-label="السابق" class="lightbox-btn lightbox-nav lightbox-prev cursor-pointer">
+    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+  </button>
+  <button id="lightbox-next" aria-label="التالي" class="lightbox-btn lightbox-nav lightbox-next cursor-pointer">
+    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7" /></svg>
+  </button>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption">
+      <span id="lightbox-category" class="lightbox-tag"></span>
+      <h3 id="lightbox-title" class="font-serif text-2xl sm:text-3xl mt-3"></h3>
+      <p id="lightbox-desc" class="text-cream/70 mt-2 max-w-xl"></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

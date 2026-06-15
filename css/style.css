@@ -1,0 +1,512 @@
+/* =========================================================
+   كارول | Carole Portfolio — Styles
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------------------------------------------------------
+   Scroll reveal
+--------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
+   Nav
+--------------------------------------------------------- */
+#site-nav.nav-scrolled .max-w-6xl {
+  box-shadow: 0 8px 30px -10px rgba(28, 25, 23, 0.15);
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #C9A227;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------
+   Hero decorative blobs
+--------------------------------------------------------- */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+  animation: float-blob 18s ease-in-out infinite;
+}
+.hero-blob-1 {
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, #E8C766 0%, transparent 70%);
+  top: -120px; right: -120px;
+}
+.hero-blob-2 {
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, #C9A227 0%, transparent 70%);
+  bottom: -140px; left: -100px;
+  animation-delay: -6s;
+}
+.hero-blob-3 {
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, #C9A227 0%, transparent 70%);
+  top: -160px; left: -160px;
+  opacity: 0.15;
+}
+.hero-blob-4 {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, #C9A227 0%, transparent 70%);
+  bottom: -160px; right: -100px;
+  opacity: 0.15;
+}
+
+@keyframes float-blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(30px, -20px) scale(1.05); }
+  66%      { transform: translate(-20px, 25px) scale(0.97); }
+}
+
+/* ---------------------------------------------------------
+   Hero / About image frames
+--------------------------------------------------------- */
+.hero-frame {
+  position: relative;
+  z-index: 2;
+  aspect-ratio: 4 / 5;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(28, 25, 23, 0.35);
+}
+.hero-frame img {
+  transition: transform 8s ease;
+}
+.hero-frame:hover img {
+  transform: scale(1.08);
+}
+.hero-frame-accent {
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 2px solid #C9A227;
+  border-radius: 1.5rem;
+  z-index: 1;
+}
+
+.about-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(28, 25, 23, 0.25);
+}
+.about-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  box-shadow: inset 0 0 0 1px rgba(28,25,23,0.06);
+}
+.about-frame img {
+  transition: transform 6s ease;
+}
+.about-frame:hover img {
+  transform: scale(1.06);
+}
+
+/* ---------------------------------------------------------
+   Scroll cue
+--------------------------------------------------------- */
+.scroll-cue {
+  animation: bob 2.4s ease-in-out infinite;
+}
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, 10px); }
+}
+.scroll-dot {
+  animation: scroll-dot 2.4s ease-in-out infinite;
+}
+@keyframes scroll-dot {
+  0%   { opacity: 1; transform: translateY(0); }
+  50%  { opacity: 0.3; transform: translateY(14px); }
+  100% { opacity: 0; transform: translateY(14px); }
+}
+
+/* ---------------------------------------------------------
+   Featured works horizontal scroll
+--------------------------------------------------------- */
+.featured-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #C9A227 transparent;
+}
+.featured-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.featured-scroll::-webkit-scrollbar-thumb {
+  background: #C9A227;
+  border-radius: 10px;
+}
+
+.featured-card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 280px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 20px 40px -18px rgba(28,25,23,0.25);
+}
+@media (min-width: 640px) {
+  .featured-card { width: 340px; }
+}
+.featured-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.featured-card:hover img {
+  transform: scale(1.08);
+}
+.featured-card .fc-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(28,25,23,0.85) 0%, rgba(28,25,23,0.05) 55%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  color: #FDF8F3;
+}
+.featured-card .fc-cat {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: #E8C766;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.featured-card .fc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+}
+
+/* ---------------------------------------------------------
+   Filters
+--------------------------------------------------------- */
+.filter-btn {
+  cursor: pointer;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(28,25,23,0.12);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #44403C;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+.filter-btn:hover {
+  border-color: #C9A227;
+  color: #1C1917;
+}
+.filter-btn.active {
+  background: #1C1917;
+  color: #FDF8F3;
+  border-color: #1C1917;
+}
+
+/* ---------------------------------------------------------
+   Masonry gallery (CSS columns)
+--------------------------------------------------------- */
+.gallery-grid {
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .gallery-grid { column-count: 2; }
+}
+@media (min-width: 1024px) {
+  .gallery-grid { column-count: 3; }
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: #F6EFE6;
+  box-shadow: 0 10px 30px -16px rgba(28,25,23,0.2);
+  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+  box-shadow: 0 18px 40px -16px rgba(28,25,23,0.3);
+}
+.gallery-item.gallery-hidden {
+  display: none;
+}
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+.gallery-item .gi-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(28,25,23,0.78) 0%, rgba(28,25,23,0) 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.1rem;
+  color: #FDF8F3;
+}
+.gallery-item:hover .gi-overlay {
+  opacity: 1;
+}
+.gallery-item .gi-cat {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #E8C766;
+  margin-bottom: 0.25rem;
+}
+.gallery-item .gi-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+}
+.gallery-item .gi-zoom {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(253,248,243,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: #1C1917;
+}
+.gallery-item:hover .gi-zoom {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* fade-in animation for filtered items */
+@keyframes item-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.gallery-item.item-anim {
+  animation: item-in 0.5s ease both;
+}
+
+/* ---------------------------------------------------------
+   Events timeline
+--------------------------------------------------------- */
+.event-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  background: rgba(253,248,243,0.04);
+  border: 1px solid rgba(253,248,243,0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.event-card:hover {
+  border-color: #C9A227;
+  transform: translateY(-4px);
+}
+@media (min-width: 768px) {
+  .event-card { grid-template-columns: 280px 1fr; }
+}
+.event-card .ev-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.event-card .ev-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.event-card:hover .ev-img img {
+  transform: scale(1.05);
+}
+.event-card .ev-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ev-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: #E8C766;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+/* ---------------------------------------------------------
+   Quotes
+--------------------------------------------------------- */
+.quote-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.quote-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.quote-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(28,25,23,0.15);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.quote-dot.active {
+  background: #C9A227;
+  transform: scale(1.3);
+}
+
+/* ---------------------------------------------------------
+   Lightbox
+--------------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(28, 25, 23, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease;
+  padding: 1.5rem;
+}
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox-content {
+  max-width: 1000px;
+  width: 100%;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.96);
+  transition: transform 0.35s ease;
+}
+.lightbox.open .lightbox-content {
+  transform: scale(1);
+}
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 65vh;
+  border-radius: 0.75rem;
+  object-fit: contain;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.6);
+}
+.lightbox-caption {
+  margin-top: 1.25rem;
+  text-align: center;
+  color: #FDF8F3;
+}
+.lightbox-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #E8C766;
+}
+.lightbox-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem; height: 3rem;
+  border-radius: 50%;
+  background: rgba(253,248,243,0.08);
+  color: #FDF8F3;
+  border: 1px solid rgba(253,248,243,0.15);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.lightbox-btn:hover {
+  background: #C9A227;
+  border-color: #C9A227;
+  color: #1C1917;
+}
+.lightbox-close { top: 1.5rem; left: 1.5rem; }
+.lightbox-nav { top: 50%; transform: translateY(-50%); }
+.lightbox-prev { right: 1.5rem; }
+.lightbox-next { left: 1.5rem; }
+@media (max-width: 640px) {
+  .lightbox-btn { width: 2.5rem; height: 2.5rem; }
+  .lightbox-prev { right: 0.5rem; }
+  .lightbox-next { left: 0.5rem; }
+  .lightbox-close { top: 0.75rem; left: 0.75rem; }
+}
+
+/* ---------------------------------------------------------
+   Reduced motion
+--------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
