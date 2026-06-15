@@ -1,12 +1,17 @@
 /* =========================================================
    لوحة التحكم — منطق التطبيق
-   يعمل فقط في متصفحات تدعم File System Access API
-   (Chrome / Edge على الكمبيوتر)
+   تتصل مباشرة بمستودع الموقع على GitHub عبر Contents API
    ========================================================= */
 
-let rootHandle = null;
-let jsDirHandle = null;
-let imagesDirHandle = null;
+const GH_OWNER = 'Eng-Kirolos-Ehab';
+const GH_REPO = 'caroleehab';
+const GH_BRANCH = 'main';
+const GH_API = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}`;
+const GH_TOKEN_KEY = 'caroleehab_admin_gh_token';
+
+let ghToken = null;
+let contentSha = null;
+let manifestSha = null;
 
 let siteData = null;       // SITE_DATA object
 let manifest = [];         // [{id, original, width, height, orientation}]
@@ -28,11 +33,8 @@ let editingProcessId = null;
    Init
    ========================================================= */
 document.addEventListener('DOMContentLoaded', () => {
-  if (!('showDirectoryPicker' in window)) {
-    document.getElementById('unsupported-notice').classList.remove('hidden');
-  }
-
-  document.getElementById('btn-connect').addEventListener('click', connectFolder);
+  document.getElementById('btn-connect').addEventListener('click', connectGitHub);
+  document.getElementById('btn-disconnect').addEventListener('click', disconnectGitHub);
 
   // tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -77,39 +79,155 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // picker banner cancel
   document.getElementById('btn-cancel-pick').addEventListener('click', stopPicking);
+
+  // site texts
+  document.getElementById('btn-save-texts').addEventListener('click', saveTexts);
+
+  // auto-connect if a token was saved previously
+  const savedToken = getToken();
+  if (savedToken) {
+    document.getElementById('gh-token-input').value = savedToken;
+    connectGitHub();
+  }
 });
 
 /* =========================================================
-   Folder connection / file IO
+   GitHub API helpers
    ========================================================= */
-async function connectFolder() {
-  try {
-    rootHandle = await window.showDirectoryPicker();
-    jsDirHandle = await rootHandle.getDirectoryHandle('js');
-    imagesDirHandle = await rootHandle.getDirectoryHandle('images');
+function getToken() {
+  return localStorage.getItem(GH_TOKEN_KEY);
+}
+function setToken(token) {
+  localStorage.setItem(GH_TOKEN_KEY, token);
+}
+function clearToken() {
+  localStorage.removeItem(GH_TOKEN_KEY);
+}
 
+// ترميز/فك ترميز base64 يدعم النصوص العربية (UTF-8) بشكل صحيح
+function b64EncodeUtf8(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function b64DecodeUtf8(b64) {
+  return decodeURIComponent(escape(atob(b64.replace(/\n/g, ''))));
+}
+
+async function ghRequest(path, options = {}) {
+  const res = await fetch(`${GH_API}/${path}`, {
+    ...options,
+    headers: {
+      Authorization: `Bearer ${ghToken}`,
+      Accept: 'application/vnd.github+json',
+      ...(options.headers || {})
+    }
+  });
+  return res;
+}
+
+// يرجع { text, sha } أو { text: null, sha: null } لو الملف غير موجود
+async function ghGetFile(path) {
+  const res = await ghRequest(`contents/${path}?ref=${GH_BRANCH}`);
+  if (res.status === 404) return { text: null, sha: null };
+  if (!res.ok) throw new Error(`فشل تحميل ${path} (${res.status})`);
+  const json = await res.json();
+  return { text: b64DecodeUtf8(json.content), sha: json.sha };
+}
+
+// يحفظ ملف نصي (UTF-8) ويرجع الـ sha الجديد
+async function ghPutFile(path, text, message, sha) {
+  const body = { message, content: b64EncodeUtf8(text), branch: GH_BRANCH };
+  if (sha) body.sha = sha;
+  const res = await ghRequest(`contents/${path}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `فشل حفظ ${path} (${res.status})`);
+  }
+  const json = await res.json();
+  return json.content.sha;
+}
+
+// يحفظ ملف ثنائي (صورة) من base64 جاهز ويرجع الـ sha الجديد
+async function ghPutBinary(path, base64Content, message, sha) {
+  const body = { message, content: base64Content, branch: GH_BRANCH };
+  if (sha) body.sha = sha;
+  const res = await ghRequest(`contents/${path}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `فشل رفع الصورة (${res.status})`);
+  }
+  const json = await res.json();
+  return json.content.sha;
+}
+
+/* =========================================================
+   Connection (GitHub token)
+   ========================================================= */
+async function connectGitHub() {
+  const input = document.getElementById('gh-token-input');
+  const token = input.value.trim();
+  if (!token) {
+    showToast('من فضلك أدخلي التوكن', true);
+    return;
+  }
+
+  ghToken = token;
+  try {
     await loadContentJs();
     await loadManifest();
 
+    setToken(token);
+
     document.getElementById('app').classList.remove('hidden');
+    document.getElementById('gh-connect-panel').classList.add('hidden');
+    document.getElementById('btn-connect').classList.add('hidden');
+    document.getElementById('btn-disconnect').classList.remove('hidden');
+
     const status = document.getElementById('conn-status');
-    status.textContent = 'متصل ✓ — ' + (rootHandle.name || 'مجلد الموقع');
+    status.textContent = 'متصلة بـ GitHub ✓';
     status.classList.remove('bg-cream/10', 'text-cream/70');
     status.classList.add('bg-gold/20', 'text-gold2');
 
     renderAll();
     showToast('تم الاتصال بنجاح');
   } catch (err) {
-    if (err.name === 'AbortError') return;
+    ghToken = null;
     console.error(err);
-    showToast('حدث خطأ: ' + err.message, true);
+    showToast('فشل الاتصال: ' + err.message, true);
   }
 }
 
+function disconnectGitHub() {
+  clearToken();
+  ghToken = null;
+  siteData = null;
+  contentSha = null;
+  manifestSha = null;
+
+  document.getElementById('app').classList.add('hidden');
+  document.getElementById('gh-connect-panel').classList.remove('hidden');
+  document.getElementById('btn-connect').classList.remove('hidden');
+  document.getElementById('btn-disconnect').classList.add('hidden');
+
+  const status = document.getElementById('conn-status');
+  status.textContent = 'غير متصلة';
+  status.classList.add('bg-cream/10', 'text-cream/70');
+  status.classList.remove('bg-gold/20', 'text-gold2');
+}
+
+/* =========================================================
+   Content / manifest IO
+   ========================================================= */
 async function loadContentJs() {
-  const fileHandle = await jsDirHandle.getFileHandle('content.js');
-  const file = await fileHandle.getFile();
-  const text = await file.text();
+  const { text, sha } = await ghGetFile('js/content.js');
+  if (text === null) throw new Error('تعذر العثور على js/content.js في المستودع');
 
   const start = text.indexOf('const SITE_DATA');
   const objStart = text.indexOf('{', start);
@@ -120,39 +238,34 @@ async function loadContentJs() {
 
   // eslint-disable-next-line no-new-func
   siteData = new Function('return (' + objStr + ');')();
+  contentSha = sha;
 }
 
 async function loadManifest() {
-  try {
-    const fileHandle = await rootHandle.getFileHandle('manifest.json');
-    const file = await fileHandle.getFile();
-    manifest = JSON.parse(await file.text());
-  } catch (err) {
-    manifest = [];
-  }
+  const { text, sha } = await ghGetFile('manifest.json');
+  manifest = text ? JSON.parse(text) : [];
+  manifestSha = sha;
 }
 
 async function saveContent() {
   const json = JSON.stringify(siteData, null, 2);
   const text = contentHeader + 'const SITE_DATA = ' + json + ';\n';
-  const fileHandle = await jsDirHandle.getFileHandle('content.js', { create: true });
-  const writable = await fileHandle.createWritable();
-  await writable.write(text);
-  await writable.close();
+  // إعادة جلب الـ sha الحالي لتجنب تعارض الإصدارات
+  const current = await ghGetFile('js/content.js');
+  contentSha = await ghPutFile('js/content.js', text, 'تحديث محتوى الموقع', current.sha);
 }
 
 async function saveManifest() {
-  const fileHandle = await rootHandle.getFileHandle('manifest.json', { create: true });
-  const writable = await fileHandle.createWritable();
-  await writable.write(JSON.stringify(manifest, null, 2));
-  await writable.close();
+  const text = JSON.stringify(manifest, null, 2);
+  const current = await ghGetFile('manifest.json');
+  manifestSha = await ghPutFile('manifest.json', text, 'تحديث مكتبة الصور', current.sha);
 }
 
 async function persist() {
   try {
     await saveContent();
     await saveManifest();
-    showToast('تم الحفظ ✓');
+    showToast('تم الحفظ ✓ — التحديث سيظهر على الموقع خلال دقيقة');
   } catch (err) {
     console.error(err);
     showToast('فشل الحفظ: ' + err.message, true);
@@ -180,6 +293,8 @@ function renderAll() {
   renderMagazines();
   renderProcessAdmin();
   renderImageLibrary();
+  renderTextsForm();
+  renderSectionOrder();
 }
 
 /* =========================================================
@@ -318,7 +433,8 @@ async function deleteCategory(index) {
 function renderWorks() {
   document.getElementById('works-count').textContent = siteData.works.length;
   const wrap = document.getElementById('works-list');
-  wrap.innerHTML = siteData.works.map(w => `
+  const works = siteData.works;
+  wrap.innerHTML = works.map((w, i) => `
     <div class="item-card">
       <div class="item-img"><img src="${w.image}" alt="${escapeAttr(w.title)}" loading="lazy"></div>
       <div class="item-body">
@@ -326,6 +442,8 @@ function renderWorks() {
         <h3 class="item-title">${escapeHtml(w.title)}</h3>
         <p class="item-desc">${escapeHtml(w.description || '')}</p>
         <div class="item-actions">
+          <button class="btn-icon" data-action="move-up-work" data-id="${w.id}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
+          <button class="btn-icon" data-action="move-down-work" data-id="${w.id}" aria-label="تحريك لأسفل" ${i === works.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
           <button class="btn-icon" data-action="edit-work" data-id="${w.id}" aria-label="تعديل">${iconEdit()}</button>
           <button class="btn-icon danger" data-action="delete-work" data-id="${w.id}" aria-label="حذف">${iconTrash()}</button>
         </div>
@@ -338,6 +456,12 @@ function renderWorks() {
   });
   wrap.querySelectorAll('[data-action="delete-work"]').forEach(btn => {
     btn.addEventListener('click', () => deleteWork(Number(btn.dataset.id)));
+  });
+  wrap.querySelectorAll('[data-action="move-up-work"]').forEach(btn => {
+    btn.addEventListener('click', () => moveWork(Number(btn.dataset.id), -1));
+  });
+  wrap.querySelectorAll('[data-action="move-down-work"]').forEach(btn => {
+    btn.addEventListener('click', () => moveWork(Number(btn.dataset.id), 1));
   });
 }
 
@@ -416,7 +540,8 @@ async function deleteWork(id) {
    ========================================================= */
 function renderEvents() {
   const wrap = document.getElementById('events-list-admin');
-  wrap.innerHTML = siteData.events.map(ev => `
+  const events = siteData.events;
+  wrap.innerHTML = events.map((ev, i) => `
     <div class="item-card">
       <div class="item-img"><img src="${ev.image}" alt="${escapeAttr(ev.title)}" loading="lazy"></div>
       <div class="item-body">
@@ -424,6 +549,8 @@ function renderEvents() {
         <h3 class="item-title">${escapeHtml(ev.title)}</h3>
         <p class="item-desc">${escapeHtml(ev.description || '')}</p>
         <div class="item-actions">
+          <button class="btn-icon" data-action="move-up-event" data-id="${ev.id}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
+          <button class="btn-icon" data-action="move-down-event" data-id="${ev.id}" aria-label="تحريك لأسفل" ${i === events.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
           <button class="btn-icon" data-action="edit-event" data-id="${ev.id}" aria-label="تعديل">${iconEdit()}</button>
           <button class="btn-icon danger" data-action="delete-event" data-id="${ev.id}" aria-label="حذف">${iconTrash()}</button>
         </div>
@@ -436,6 +563,12 @@ function renderEvents() {
   });
   wrap.querySelectorAll('[data-action="delete-event"]').forEach(btn => {
     btn.addEventListener('click', () => deleteEvent(Number(btn.dataset.id)));
+  });
+  wrap.querySelectorAll('[data-action="move-up-event"]').forEach(btn => {
+    btn.addEventListener('click', () => moveEvent(Number(btn.dataset.id), -1));
+  });
+  wrap.querySelectorAll('[data-action="move-down-event"]').forEach(btn => {
+    btn.addEventListener('click', () => moveEvent(Number(btn.dataset.id), 1));
   });
 }
 
@@ -575,7 +708,7 @@ async function deleteQuote(index) {
 function renderMagazines() {
   const wrap = document.getElementById('magazines-list-admin');
   const mags = siteData.magazines || [];
-  wrap.innerHTML = mags.map(m => `
+  wrap.innerHTML = mags.map((m, i) => `
     <div class="item-card">
       <div class="item-img"><img src="${m.cover}" alt="${escapeAttr(m.title)}" loading="lazy"></div>
       <div class="item-body">
@@ -584,6 +717,8 @@ function renderMagazines() {
         <p class="item-desc">${escapeHtml(m.description || '')}</p>
         <p class="item-desc text-xs break-all">${escapeHtml(m.embedUrl)}</p>
         <div class="item-actions">
+          <button class="btn-icon" data-action="move-up-magazine" data-id="${m.id}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
+          <button class="btn-icon" data-action="move-down-magazine" data-id="${m.id}" aria-label="تحريك لأسفل" ${i === mags.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
           <button class="btn-icon" data-action="edit-magazine" data-id="${m.id}" aria-label="تعديل">${iconEdit()}</button>
           <button class="btn-icon danger" data-action="delete-magazine" data-id="${m.id}" aria-label="حذف">${iconTrash()}</button>
         </div>
@@ -596,6 +731,12 @@ function renderMagazines() {
   });
   wrap.querySelectorAll('[data-action="delete-magazine"]').forEach(btn => {
     btn.addEventListener('click', () => deleteMagazine(Number(btn.dataset.id)));
+  });
+  wrap.querySelectorAll('[data-action="move-up-magazine"]').forEach(btn => {
+    btn.addEventListener('click', () => moveMagazine(Number(btn.dataset.id), -1));
+  });
+  wrap.querySelectorAll('[data-action="move-down-magazine"]').forEach(btn => {
+    btn.addEventListener('click', () => moveMagazine(Number(btn.dataset.id), 1));
   });
 }
 
@@ -765,13 +906,123 @@ async function deleteProcess(id) {
   await persist();
 }
 
-async function moveProcess(id, direction) {
-  const steps = siteData.process;
-  const index = steps.findIndex(p => p.id === id);
+function moveArrayItem(array, id, direction) {
+  const index = array.findIndex(item => item.id === id);
   const target = index + direction;
-  if (index === -1 || target < 0 || target >= steps.length) return;
-  [steps[index], steps[target]] = [steps[target], steps[index]];
+  if (index === -1 || target < 0 || target >= array.length) return false;
+  [array[index], array[target]] = [array[target], array[index]];
+  return true;
+}
+
+async function moveProcess(id, direction) {
+  if (!moveArrayItem(siteData.process, id, direction)) return;
   renderProcessAdmin();
+  await persist();
+}
+
+async function moveWork(id, direction) {
+  if (!moveArrayItem(siteData.works, id, direction)) return;
+  renderWorks();
+  await persist();
+}
+
+async function moveEvent(id, direction) {
+  if (!moveArrayItem(siteData.events, id, direction)) return;
+  renderEvents();
+  await persist();
+}
+
+async function moveMagazine(id, direction) {
+  if (!moveArrayItem(siteData.magazines, id, direction)) return;
+  renderMagazines();
+  await persist();
+}
+
+/* =========================================================
+   Site texts
+   ========================================================= */
+const TEXT_DEFAULTS = {
+  nav: { home: 'الرئيسية', about: 'عن الفنانة', gallery: 'الأعمال', process: 'رحلة العمل', magazines: 'المجلات', events: 'الفعاليات', contact: 'تواصل' },
+  hero: { ctaPrimary: 'استعرضي الأعمال', ctaSecondary: 'تعرفي عليها' },
+  about: { eyebrow: 'عن الفنانة', heading: 'رحلة بين الخط واللون والخامة', quote: 'بحب إن كل تفصيلة صغيرة في شغلي تحمل جزء من إحساسي.' },
+  featured: { eyebrow: 'مختارات', heading: 'أعمال مميزة' },
+  process: { eyebrow: 'كيف تولد اللوحة', heading: 'رحلة العمل', description: 'من أول فكرة في الدماغ، لحد ما توصل اللوحة لشكلها النهائي — كل مرحلة ليها حكايتها.' },
+  gallery: { eyebrow: 'المعرض', heading: 'كل الأعمال', description: 'تصفّحي مختلف الأعمال حسب التصنيف، واضغطي على أي عمل لمشاهدته بحجم أكبر.' },
+  magazineBanner: { title: 'مجلتي الفنية التفاعلية', description: 'اقلبي الصفحات بنفسك واستكشفي أعمالي في شكل مجلة كاملة' },
+  magazines: { eyebrow: 'مجلات تفاعلية', heading: 'تصفّحي مجلاتي الفنية', description: 'اقلبي الصفحات بنفسك واستكشفي مجموعة من أعمالي وتصاميمي في شكل مجلة تفاعلية كاملة.', badge: 'المجلة الأبرز', openLink: 'فتح في صفحة كاملة ↗' },
+  events: { eyebrow: 'الفعاليات', heading: 'المعارض والفعاليات' },
+  footer: { eyebrow: 'تواصل', heading: 'يلا نتكلم عن فكرتك', description: 'لأي تعاون فني، طلب عمل خاص، أو دعوة لمعرض — تقدري تتواصلي معايا من خلال:', contactButton: 'راسليني', note: 'جميع الحقوق محفوظة' }
+};
+
+function renderTextsForm() {
+  const texts = siteData.texts || {};
+  Object.keys(TEXT_DEFAULTS).forEach(section => {
+    Object.keys(TEXT_DEFAULTS[section]).forEach(key => {
+      const el = document.getElementById(`tx-${section}-${key}`);
+      if (!el) return;
+      const current = texts[section] && texts[section][key];
+      el.value = current !== undefined ? current : TEXT_DEFAULTS[section][key];
+    });
+  });
+}
+
+async function saveTexts() {
+  siteData.texts = siteData.texts || {};
+  Object.keys(TEXT_DEFAULTS).forEach(section => {
+    siteData.texts[section] = siteData.texts[section] || {};
+    Object.keys(TEXT_DEFAULTS[section]).forEach(key => {
+      const el = document.getElementById(`tx-${section}-${key}`);
+      if (!el) return;
+      siteData.texts[section][key] = el.value;
+    });
+  });
+  await persist();
+}
+
+/* =========================================================
+   Section order
+   ========================================================= */
+const SECTION_LABELS = {
+  about: 'عن الفنانة',
+  featured: 'أعمال مميزة',
+  process: 'رحلة العمل',
+  gallery: 'المعرض / كل الأعمال',
+  magazines: 'المجلات التفاعلية',
+  events: 'الفعاليات',
+  quotes: 'الاقتباسات'
+};
+
+function renderSectionOrder() {
+  const wrap = document.getElementById('section-order-list');
+  const order = siteData.sectionOrder || [];
+  wrap.innerHTML = order.map((id, i) => `
+    <div class="row-card">
+      <div class="flex items-center gap-3">
+        <span class="text-gold text-sm font-semibold">${i + 1}</span>
+        <h3 class="font-semibold">${escapeHtml(SECTION_LABELS[id] || id)}</h3>
+      </div>
+      <div class="flex gap-2">
+        <button class="btn-icon" data-action="move-up-section" data-id="${id}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
+        <button class="btn-icon" data-action="move-down-section" data-id="${id}" aria-label="تحريك لأسفل" ${i === order.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
+      </div>
+    </div>
+  `).join('');
+
+  wrap.querySelectorAll('[data-action="move-up-section"]').forEach(btn => {
+    btn.addEventListener('click', () => moveSection(btn.dataset.id, -1));
+  });
+  wrap.querySelectorAll('[data-action="move-down-section"]').forEach(btn => {
+    btn.addEventListener('click', () => moveSection(btn.dataset.id, 1));
+  });
+}
+
+async function moveSection(id, direction) {
+  const order = siteData.sectionOrder || [];
+  const index = order.indexOf(id);
+  const target = index + direction;
+  if (index === -1 || target < 0 || target >= order.length) return;
+  [order[index], order[target]] = [order[target], order[index]];
+  renderSectionOrder();
   await persist();
 }
 
@@ -929,13 +1180,20 @@ function nextWorkImageName() {
   return 'work-' + String(next).padStart(3, '0') + '.jpg';
 }
 
+function blobToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result).split(',')[1]);
+    reader.onerror = () => reject(new Error('تعذرت قراءة الصورة'));
+    reader.readAsDataURL(blob);
+  });
+}
+
 async function addImageToLibrary(file) {
   const { blob, width, height } = await resizeImageFile(file);
   const name = nextWorkImageName();
-  const fileHandle = await imagesDirHandle.getFileHandle(name, { create: true });
-  const writable = await fileHandle.createWritable();
-  await writable.write(blob);
-  await writable.close();
+  const base64 = await blobToBase64(blob);
+  await ghPutBinary('images/' + name, base64, 'إضافة صورة جديدة: ' + name);
 
   manifest.push({
     id: name,

@@ -55,13 +55,13 @@
     </a>
 
     <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-ink2">
-      <a href="#home" class="nav-link hover:text-gold transition-colors duration-200">الرئيسية</a>
-      <a href="#about" class="nav-link hover:text-gold transition-colors duration-200">عن الفنانة</a>
-      <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200">الأعمال</a>
-      <a href="#process" class="nav-link hover:text-gold transition-colors duration-200">رحلة العمل</a>
-      <a href="#magazines" class="nav-link hover:text-gold transition-colors duration-200">المجلات</a>
-      <a href="#events" class="nav-link hover:text-gold transition-colors duration-200">الفعاليات</a>
-      <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200">تواصل</a>
+      <a href="#home" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.home">الرئيسية</a>
+      <a href="#about" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.about">عن الفنانة</a>
+      <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.gallery">الأعمال</a>
+      <a href="#process" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.process">رحلة العمل</a>
+      <a href="#magazines" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.magazines">المجلات</a>
+      <a href="#events" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.events">الفعاليات</a>
+      <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.contact">تواصل</a>
     </nav>
 
     <button id="menu-toggle" aria-label="فتح القائمة" class="lg:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-full hover:bg-ink/5 transition-colors">
@@ -76,13 +76,13 @@
 
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden lg:hidden mt-2 max-w-6xl mx-auto bg-cream/95 backdrop-blur-md border border-ink/10 rounded-2xl shadow-sm px-6 py-4 flex flex-col gap-4 text-ink2 font-medium">
-    <a href="#home" class="nav-link hover:text-gold transition-colors duration-200">الرئيسية</a>
-    <a href="#about" class="nav-link hover:text-gold transition-colors duration-200">عن الفنانة</a>
-    <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200">الأعمال</a>
-    <a href="#process" class="nav-link hover:text-gold transition-colors duration-200">رحلة العمل</a>
-    <a href="#magazines" class="nav-link hover:text-gold transition-colors duration-200">المجلات</a>
-    <a href="#events" class="nav-link hover:text-gold transition-colors duration-200">الفعاليات</a>
-    <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200">تواصل</a>
+    <a href="#home" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.home">الرئيسية</a>
+    <a href="#about" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.about">عن الفنانة</a>
+    <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.gallery">الأعمال</a>
+    <a href="#process" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.process">رحلة العمل</a>
+    <a href="#magazines" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.magazines">المجلات</a>
+    <a href="#events" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.events">الفعاليات</a>
+    <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.contact">تواصل</a>
   </div>
 </header>
 
@@ -109,10 +109,10 @@
       </p>
       <div class="flex flex-wrap items-center gap-4">
         <a href="#gallery" class="cursor-pointer inline-flex items-center gap-2 bg-ink text-cream px-7 py-3.5 rounded-full font-medium hover:bg-gold hover:text-ink transition-all duration-300 shadow-lg shadow-ink/10">
-          استعرضي الأعمال
+          <span data-text="hero.ctaPrimary">استعرضي الأعمال</span>
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
         </a>
-        <a href="#about" class="cursor-pointer inline-flex items-center gap-2 border border-ink/20 px-7 py-3.5 rounded-full font-medium hover:border-gold hover:text-gold transition-all duration-300">
+        <a href="#about" class="cursor-pointer inline-flex items-center gap-2 border border-ink/20 px-7 py-3.5 rounded-full font-medium hover:border-gold hover:text-gold transition-all duration-300" data-text="hero.ctaSecondary">
           تعرفي عليها
         </a>
       </div>
@@ -145,9 +145,9 @@
     <div class="order-1 md:order-2" data-reveal data-reveal-delay="100">
       <p class="inline-flex items-center gap-2 text-gold font-medium text-sm tracking-widest mb-4">
         <span class="w-8 h-px bg-gold"></span>
-        عن الفنانة
+        <span data-text="about.eyebrow">عن الفنانة</span>
       </p>
-      <h2 class="font-serif text-4xl sm:text-5xl mb-6 leading-tight">رحلة بين الخط واللون والخامة</h2>
+      <h2 class="font-serif text-4xl sm:text-5xl mb-6 leading-tight" data-text="about.heading">رحلة بين الخط واللون والخامة</h2>
       <p id="about-bio" class="text-ink2 leading-relaxed text-lg mb-6"></p>
       <div class="flex items-center gap-3 mb-8 text-ink2">
         <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
@@ -156,20 +156,20 @@
 
       <!-- pull quote -->
       <blockquote class="relative border-r-2 border-gold pr-6 py-2">
-        <p id="about-quote" class="font-serif text-2xl italic text-ink leading-snug"></p>
+        <p id="about-quote" class="font-serif text-2xl italic text-ink leading-snug" data-text="about.quote"></p>
       </blockquote>
     </div>
   </div>
 </section>
 
 <!-- ============ FEATURED WORKS ============ -->
-<section class="py-20 bg-cream2">
+<section id="featured" class="py-20 bg-cream2">
   <div class="max-w-6xl mx-auto px-6 mb-10" data-reveal>
     <p class="inline-flex items-center gap-2 text-gold font-medium text-sm tracking-widest mb-4">
       <span class="w-8 h-px bg-gold"></span>
-      مختارات
+      <span data-text="featured.eyebrow">مختارات</span>
     </p>
-    <h2 class="font-serif text-4xl sm:text-5xl">أعمال مميزة</h2>
+    <h2 class="font-serif text-4xl sm:text-5xl" data-text="featured.heading">أعمال مميزة</h2>
   </div>
 
   <div id="featured-scroll" class="featured-scroll px-6">
@@ -183,11 +183,11 @@
     <div class="mb-16 text-center" data-reveal>
       <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
         <span class="w-8 h-px bg-gold"></span>
-        كيف تولد اللوحة
+        <span data-text="process.eyebrow">كيف تولد اللوحة</span>
         <span class="w-8 h-px bg-gold"></span>
       </p>
-      <h2 class="font-serif text-4xl sm:text-5xl mb-6">رحلة العمل</h2>
-      <p class="text-ink2 max-w-xl mx-auto">من أول فكرة في الدماغ، لحد ما توصل اللوحة لشكلها النهائي — كل مرحلة ليها حكايتها.</p>
+      <h2 class="font-serif text-4xl sm:text-5xl mb-6" data-text="process.heading">رحلة العمل</h2>
+      <p class="text-ink2 max-w-xl mx-auto" data-text="process.description">من أول فكرة في الدماغ، لحد ما توصل اللوحة لشكلها النهائي — كل مرحلة ليها حكايتها.</p>
     </div>
 
     <div id="process-list" class="process-list"></div>
@@ -200,11 +200,11 @@
     <div class="mb-12 text-center" data-reveal>
       <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
         <span class="w-8 h-px bg-gold"></span>
-        المعرض
+        <span data-text="gallery.eyebrow">المعرض</span>
         <span class="w-8 h-px bg-gold"></span>
       </p>
-      <h2 class="font-serif text-4xl sm:text-5xl mb-6">كل الأعمال</h2>
-      <p class="text-ink2 max-w-xl mx-auto">تصفّحي مختلف الأعمال حسب التصنيف، واضغطي على أي عمل لمشاهدته بحجم أكبر.</p>
+      <h2 class="font-serif text-4xl sm:text-5xl mb-6" data-text="gallery.heading">كل الأعمال</h2>
+      <p class="text-ink2 max-w-xl mx-auto" data-text="gallery.description">تصفّحي مختلف الأعمال حسب التصنيف، واضغطي على أي عمل لمشاهدته بحجم أكبر.</p>
     </div>
 
     <!-- filters -->
@@ -221,8 +221,8 @@
         </svg>
       </span>
       <span class="magazine-banner-text">
-        <strong>مجلتي الفنية التفاعلية</strong>
-        <span>اقلبي الصفحات بنفسك واستكشفي أعمالي في شكل مجلة كاملة</span>
+        <strong data-text="magazineBanner.title">مجلتي الفنية التفاعلية</strong>
+        <span data-text="magazineBanner.description">اقلبي الصفحات بنفسك واستكشفي أعمالي في شكل مجلة كاملة</span>
       </span>
       <span class="magazine-banner-arrow">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
@@ -237,11 +237,11 @@
     <div class="mb-14 text-center" data-reveal>
       <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
         <span class="w-8 h-px bg-gold"></span>
-        مجلات تفاعلية
+        <span data-text="magazines.eyebrow">مجلات تفاعلية</span>
         <span class="w-8 h-px bg-gold"></span>
       </p>
-      <h2 class="font-serif text-4xl sm:text-5xl mb-6">تصفّحي مجلاتي الفنية</h2>
-      <p class="text-ink2 max-w-xl mx-auto">اقلبي الصفحات بنفسك واستكشفي مجموعة من أعمالي وتصاميمي في شكل مجلة تفاعلية كاملة.</p>
+      <h2 class="font-serif text-4xl sm:text-5xl mb-6" data-text="magazines.heading">تصفّحي مجلاتي الفنية</h2>
+      <p class="text-ink2 max-w-xl mx-auto" data-text="magazines.description">اقلبي الصفحات بنفسك واستكشفي مجموعة من أعمالي وتصاميمي في شكل مجلة تفاعلية كاملة.</p>
     </div>
 
     <div id="magazine-featured"><!-- injected by JS --></div>
@@ -256,10 +256,10 @@
     <div class="mb-14 text-center" data-reveal>
       <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
         <span class="w-8 h-px bg-gold"></span>
-        الفعاليات
+        <span data-text="events.eyebrow">الفعاليات</span>
         <span class="w-8 h-px bg-gold"></span>
       </p>
-      <h2 class="font-serif text-4xl sm:text-5xl">المعارض والفعاليات</h2>
+      <h2 class="font-serif text-4xl sm:text-5xl" data-text="events.heading">المعارض والفعاليات</h2>
     </div>
 
     <div id="events-list" class="space-y-10"></div>
@@ -267,7 +267,7 @@
 </section>
 
 <!-- ============ QUOTES ============ -->
-<section class="py-24 px-6 relative overflow-hidden">
+<section id="quotes" class="py-24 px-6 relative overflow-hidden">
   <div class="max-w-3xl mx-auto text-center relative z-10" data-reveal>
     <svg class="w-10 h-10 text-gold mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H4.5A2.83 2.83 0 017.17 8.5V6zm10 0A5.17 5.17 0 0012 11.17V18h6.83v-6.83H14.5A2.83 2.83 0 0117.17 8.5V6z"/></svg>
     <div id="quote-box" class="relative h-40 sm:h-32">
@@ -283,16 +283,16 @@
   <div class="max-w-4xl mx-auto text-center relative z-10" data-reveal>
     <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
       <span class="w-8 h-px bg-gold"></span>
-      تواصل
+      <span data-text="footer.eyebrow">تواصل</span>
       <span class="w-8 h-px bg-gold"></span>
     </p>
-    <h2 class="font-serif text-4xl sm:text-5xl mb-6">يلا نتكلم عن فكرتك</h2>
-    <p class="text-cream/70 max-w-lg mx-auto mb-10">لأي تعاون فني، طلب عمل خاص، أو دعوة لمعرض — تقدري تتواصلي معايا من خلال:</p>
+    <h2 class="font-serif text-4xl sm:text-5xl mb-6" data-text="footer.heading">يلا نتكلم عن فكرتك</h2>
+    <p class="text-cream/70 max-w-lg mx-auto mb-10" data-text="footer.description">لأي تعاون فني، طلب عمل خاص، أو دعوة لمعرض — تقدري تتواصلي معايا من خلال:</p>
 
     <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
       <a id="contact-email" href="#" class="cursor-pointer inline-flex items-center gap-2 bg-gold text-ink px-7 py-3.5 rounded-full font-medium hover:bg-gold2 transition-all duration-300">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
-        راسليني
+        <span data-text="footer.contactButton">راسليني</span>
       </a>
       <a id="contact-instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" class="cursor-pointer w-12 h-12 flex items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all duration-300">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
@@ -306,7 +306,7 @@
     </div>
 
     <div class="border-t border-cream/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-cream/50">
-      <p>© <span id="footer-year"></span> <span id="footer-name">Carole</span> — <span id="footer-note">جميع الحقوق محفوظة</span></p>
+      <p>© <span id="footer-year"></span> <span id="footer-name">Carole</span> — <span id="footer-note" data-text="footer.note">جميع الحقوق محفوظة</span></p>
       <a href="admin.html" class="cursor-pointer hover:text-gold transition-colors duration-200">لوحة التحكم</a>
     </div>
   </div>

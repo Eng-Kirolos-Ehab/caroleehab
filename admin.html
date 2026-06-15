@@ -42,20 +42,37 @@
       <span class="text-cream/40 text-sm">— موقع كارول</span>
     </div>
     <div class="flex items-center gap-3">
-      <span id="conn-status" class="text-sm px-3 py-1.5 rounded-full bg-cream/10 text-cream/70">غير متصل بمجلد الموقع</span>
-      <button id="btn-connect" class="cursor-pointer bg-gold text-ink px-4 py-2 rounded-full text-sm font-semibold hover:bg-gold2 transition-colors">
-        فتح مجلد الموقع
+      <span id="conn-status" class="text-sm px-3 py-1.5 rounded-full bg-cream/10 text-cream/70">غير متصلة</span>
+      <button id="btn-disconnect" class="hidden cursor-pointer bg-cream/10 text-cream px-4 py-2 rounded-full text-sm font-semibold hover:bg-cream/20 transition-colors">
+        تسجيل خروج
       </button>
       <a href="index.html" class="cursor-pointer text-sm text-cream/70 hover:text-gold transition-colors">عرض الموقع ↗</a>
     </div>
   </div>
 </header>
 
-<!-- ===================== UNSUPPORTED BROWSER NOTICE ===================== -->
-<div id="unsupported-notice" class="hidden max-w-3xl mx-auto mt-6 mx-4 bg-amber-50 border border-amber-300 text-amber-900 rounded-2xl p-5 text-sm leading-relaxed">
-  متصفحك الحالي لا يدعم الحفظ المباشر للملفات. افتحي هذه الصفحة من متصفح
-  <strong>Google Chrome</strong> أو <strong>Microsoft Edge</strong> على الكمبيوتر
-  لاستخدام لوحة التحكم بكامل ميزاتها (الحفظ التلقائي في content.js ومكتبة الصور).
+<!-- ===================== GITHUB CONNECTION PANEL ===================== -->
+<div id="gh-connect-panel" class="max-w-2xl mx-auto mt-10 px-4 sm:px-6">
+  <div class="card">
+    <h2 class="card-title">الاتصال بـ GitHub</h2>
+    <p class="text-sm text-ink2 leading-relaxed mb-4">
+      لوحة التحكم تتصل مباشرة بمستودع الموقع على GitHub لحفظ كل التعديلات.
+      محتاجة تدخلي Personal Access Token مرة واحدة فقط — يُحفظ في متصفحك فقط:
+    </p>
+    <ol class="text-sm text-ink2 leading-relaxed list-decimal pr-5 space-y-1.5 mb-5">
+      <li>افتحي صفحة <span class="font-semibold">github.com/settings/tokens?type=beta</span> من حسابك على GitHub.</li>
+      <li>اضغطي "Generate new token"، واختاري Repository access ← Only select repositories ← <span class="font-semibold">caroleehab</span>.</li>
+      <li>من Permissions، فعّلي صلاحية <span class="font-semibold">Contents: Read and write</span> فقط، واتركي باقي الصلاحيات بدون تفعيل.</li>
+      <li>اضغطي Generate token، انسخي التوكن، وضعيه في الحقل بالأسفل.</li>
+    </ol>
+    <label class="field-label">GitHub Personal Access Token</label>
+    <input id="gh-token-input" type="password" class="field-input mb-4" placeholder="github_pat_xxxxxxxxxxxxxxxxxxxx">
+    <button id="btn-connect" class="btn-primary">اتصال</button>
+    <p class="text-xs text-ink2 mt-4 leading-relaxed">
+      ملاحظة: التوكن يُحفظ على جهازك فقط (داخل المتصفح) ولا يُرسل لأي مكان غير GitHub.
+      لا تشاركي هذا التوكن مع أي شخص آخر.
+    </p>
+  </div>
 </div>
 
 <!-- ===================== TOAST ===================== -->
@@ -73,6 +90,8 @@
     <button class="tab-btn" data-tab="categories">التصنيفات</button>
     <button class="tab-btn" data-tab="magazines">المجلات</button>
     <button class="tab-btn" data-tab="process">رحلة العمل</button>
+    <button class="tab-btn" data-tab="texts">نصوص الموقع</button>
+    <button class="tab-btn" data-tab="sections">ترتيب الأقسام</button>
   </div>
 
   <!-- ============ ARTIST TAB ============ -->
@@ -370,6 +389,120 @@
     <div class="card">
       <h2 class="card-title">كل المراحل</h2>
       <div id="process-list-admin" class="space-y-3"></div>
+    </div>
+  </section>
+
+  <!-- ============ SITE TEXTS TAB ============ -->
+  <section data-tab-panel="texts" class="tab-panel hidden">
+    <p class="text-sm text-ink2 mb-4">عدّلي أي نص ظاهر في الموقع. اتركي الحقل فاضي لاستخدام النص الافتراضي.</p>
+
+    <div class="card">
+      <h2 class="card-title">روابط التنقل (Navbar)</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div><label class="field-label">الرئيسية</label><input id="tx-nav-home" class="field-input" type="text"></div>
+        <div><label class="field-label">عن الفنانة</label><input id="tx-nav-about" class="field-input" type="text"></div>
+        <div><label class="field-label">الأعمال</label><input id="tx-nav-gallery" class="field-input" type="text"></div>
+        <div><label class="field-label">رحلة العمل</label><input id="tx-nav-process" class="field-input" type="text"></div>
+        <div><label class="field-label">المجلات</label><input id="tx-nav-magazines" class="field-input" type="text"></div>
+        <div><label class="field-label">الفعاليات</label><input id="tx-nav-events" class="field-input" type="text"></div>
+        <div><label class="field-label">تواصل</label><input id="tx-nav-contact" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">الواجهة الرئيسية (Hero)</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">نص الزر الأول</label><input id="tx-hero-ctaPrimary" class="field-input" type="text"></div>
+        <div><label class="field-label">نص الزر الثاني</label><input id="tx-hero-ctaSecondary" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">قسم "عن الفنانة"</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">العنوان الفرعي (Eyebrow)</label><input id="tx-about-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">العنوان الرئيسي</label><input id="tx-about-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">الاقتباس</label><textarea id="tx-about-quote" class="field-input" rows="2"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">قسم "أعمال مميزة"</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">العنوان الفرعي (Eyebrow)</label><input id="tx-featured-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">العنوان الرئيسي</label><input id="tx-featured-heading" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">قسم "رحلة العمل"</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">العنوان الفرعي (Eyebrow)</label><input id="tx-process-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">العنوان الرئيسي</label><input id="tx-process-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">الوصف</label><textarea id="tx-process-description" class="field-input" rows="2"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">قسم المعرض (كل الأعمال)</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">العنوان الفرعي (Eyebrow)</label><input id="tx-gallery-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">العنوان الرئيسي</label><input id="tx-gallery-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">الوصف</label><textarea id="tx-gallery-description" class="field-input" rows="2"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">بانر المجلة (داخل المعرض)</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">العنوان</label><input id="tx-magazineBanner-title" class="field-input" type="text"></div>
+        <div><label class="field-label">الوصف</label><input id="tx-magazineBanner-description" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">قسم "المجلات التفاعلية"</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">العنوان الفرعي (Eyebrow)</label><input id="tx-magazines-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">العنوان الرئيسي</label><input id="tx-magazines-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">الوصف</label><textarea id="tx-magazines-description" class="field-input" rows="2"></textarea></div>
+        <div><label class="field-label">شارة "المجلة الأبرز"</label><input id="tx-magazines-badge" class="field-input" type="text"></div>
+        <div><label class="field-label">نص رابط "فتح في صفحة كاملة"</label><input id="tx-magazines-openLink" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">قسم "الفعاليات"</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">العنوان الفرعي (Eyebrow)</label><input id="tx-events-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">العنوان الرئيسي</label><input id="tx-events-heading" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">قسم التواصل (Footer)</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">العنوان الفرعي (Eyebrow)</label><input id="tx-footer-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">العنوان الرئيسي</label><input id="tx-footer-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">الوصف</label><textarea id="tx-footer-description" class="field-input" rows="2"></textarea></div>
+        <div><label class="field-label">نص زر التواصل</label><input id="tx-footer-contactButton" class="field-input" type="text"></div>
+        <div><label class="field-label">نص حقوق النشر</label><input id="tx-footer-note" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <button id="btn-save-texts" class="btn-primary">حفظ النصوص</button>
+  </section>
+
+  <!-- ============ SECTION ORDER TAB ============ -->
+  <section data-tab-panel="sections" class="tab-panel hidden">
+    <div class="card">
+      <h2 class="card-title">ترتيب أقسام الصفحة</h2>
+      <p class="text-sm text-ink2 mb-4">
+        استخدمي الأسهم لتغيير ترتيب ظهور الأقسام في الصفحة الرئيسية.
+        قسم "الرئيسية" (Hero) في الأعلى وقسم "التواصل" في الأسفل ثابتان دائمًا
+        ولا يظهران في هذه القائمة.
+      </p>
+      <div id="section-order-list" class="space-y-3"></div>
     </div>
   </section>
 

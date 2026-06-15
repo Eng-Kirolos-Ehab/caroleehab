@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const data = SITE_DATA;
   if (!data) return;
 
+  /* ---------------- Section order ---------------- */
+  applySectionOrder(data);
+
+  /* ---------------- Site-wide editable texts ---------------- */
+  applyTexts(data);
+
   /* ---------------- Basic text injection ---------------- */
   setText('nav-artist-name', data.artist.name);
   setText('hero-role', data.artist.title);
@@ -16,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setText('about-bio', data.artist.bio);
   setText('about-location', data.artist.location);
   setText('footer-name', data.artist.name);
-  setText('footer-note', data.site && data.site.footerNote);
   setText('footer-year', new Date().getFullYear());
 
   const aboutPhoto = document.getElementById('about-photo');
@@ -69,6 +74,35 @@ function setHref(id, value) {
 function categoryLabel(data, catId) {
   const cat = data.categories.find(c => c.id === catId);
   return cat ? cat.label : catId;
+}
+function getPath(obj, path) {
+  return path.split('.').reduce((o, key) => (o && o[key] !== undefined ? o[key] : undefined), obj);
+}
+
+/* =========================================================
+   Site-wide editable texts ([data-text="section.key"])
+   ========================================================= */
+function applyTexts(data) {
+  if (!data.texts) return;
+  document.querySelectorAll('[data-text]').forEach(el => {
+    const value = getPath(data.texts, el.dataset.text);
+    if (value !== undefined && value !== '') el.textContent = value;
+  });
+}
+
+/* =========================================================
+   Section order — reorders middle sections in the DOM
+   (hero #home and footer #contact stay fixed first/last)
+   ========================================================= */
+function applySectionOrder(data) {
+  const order = data.sectionOrder;
+  if (!order || !order.length) return;
+  const footer = document.getElementById('contact');
+  if (!footer) return;
+  order.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) footer.parentNode.insertBefore(el, footer);
+  });
 }
 
 /* =========================================================
@@ -131,10 +165,13 @@ function renderMagazines(data) {
 
   const featured = mags.find(m => m.featured) || mags[0];
   const others = mags.filter(m => m !== featured);
+  const mgTexts = data.texts && data.texts.magazines || {};
+  const badge = mgTexts.badge || 'المجلة الأبرز';
+  const openLink = mgTexts.openLink || 'فتح في صفحة كاملة ↗';
 
   featuredWrap.innerHTML = `
     <div class="magazine-featured-card" data-reveal>
-      <span class="magazine-badge">المجلة الأبرز</span>
+      <span class="magazine-badge">${escapeHtml(badge)}</span>
       <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(featured.title)}</h3>
       <p class="text-ink2 max-w-2xl mb-5">${escapeHtml(featured.description || '')}</p>
       <div class="magazine-frame">
@@ -154,7 +191,7 @@ function renderMagazines(data) {
         <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(m.title)}</h3>
         <p class="text-ink2 mb-4">${escapeHtml(m.description || '')}</p>
         <a href="${escapeHtml(m.embedUrl)}" target="_blank" rel="noopener" class="magazine-item-link">
-          فتح في صفحة كاملة ↗
+          ${escapeHtml(openLink)}
         </a>
       </div>
     </div>
