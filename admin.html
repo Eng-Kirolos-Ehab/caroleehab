@@ -71,6 +71,8 @@
     <button class="tab-btn" data-tab="events">الفعاليات</button>
     <button class="tab-btn" data-tab="quotes">الاقتباسات</button>
     <button class="tab-btn" data-tab="categories">التصنيفات</button>
+    <button class="tab-btn" data-tab="magazines">المجلات</button>
+    <button class="tab-btn" data-tab="process">رحلة العمل</button>
   </div>
 
   <!-- ============ ARTIST TAB ============ -->
@@ -286,6 +288,88 @@
     <div class="card">
       <h2 class="card-title">كل التصنيفات</h2>
       <div id="categories-list-admin" class="space-y-2"></div>
+    </div>
+  </section>
+
+  <!-- ============ MAGAZINES TAB ============ -->
+  <section data-tab-panel="magazines" class="tab-panel hidden">
+    <div class="card">
+      <h2 class="card-title">إضافة مجلة تفاعلية (Flipbook)</h2>
+      <p class="text-sm text-ink2 mb-4">
+        ارفعي ملف الـ PDF/HTML على موقع مثل
+        <a href="https://fliphtml5.com" target="_blank" class="text-gold underline">FlipHTML5</a>
+        وانسخي رابط الـ embed (src بتاع الـ iframe) وضعيه هنا.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-5 mb-5">
+        <div class="sm:col-span-2">
+          <label class="field-label">عنوان المجلة</label>
+          <input id="mg-title" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">الوصف</label>
+          <textarea id="mg-description" class="field-input" rows="2"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">رابط Embed (src بتاع iframe من FlipHTML5)</label>
+          <input id="mg-embed" class="field-input" type="text" placeholder="https://online.fliphtml5.com/xxxxx/yyyy/">
+        </div>
+        <div class="flex items-center gap-2">
+          <input id="mg-featured" type="checkbox" class="w-5 h-5 accent-[#C9A227]">
+          <label for="mg-featured" class="text-sm text-ink2">المجلة الأبرز (تظهر بشكل كبير في الأعلى)</label>
+        </div>
+      </div>
+
+      <label class="field-label">صورة الغلاف</label>
+      <div class="flex flex-wrap items-center gap-4 mb-3">
+        <img id="mg-cover-preview" class="w-24 h-24 object-cover rounded-xl border border-ink/10 hidden" src="" alt="">
+        <input id="mg-cover-upload" type="file" accept="image/*" class="text-sm">
+        <button id="btn-pick-mg-cover" class="btn-secondary">أو اختيار من مكتبة الصور</button>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="btn-add-magazine" class="btn-primary">إضافة المجلة</button>
+        <button id="btn-cancel-edit-magazine" class="btn-secondary hidden">إلغاء التعديل</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">كل المجلات</h2>
+      <div id="magazines-list-admin" class="grid sm:grid-cols-2 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS TAB ============ -->
+  <section data-tab-panel="process" class="tab-panel hidden">
+    <div class="card">
+      <h2 class="card-title">إضافة مرحلة جديدة في "رحلة العمل"</h2>
+      <p class="text-sm text-ink2 mb-4">المراحل بتظهر في الموقع بالترتيب من فوق لتحت — استخدمي أسهم الترتيب لتغيير الترتيب.</p>
+      <div class="grid sm:grid-cols-2 gap-5 mb-5">
+        <div class="sm:col-span-2">
+          <label class="field-label">عنوان المرحلة</label>
+          <input id="pr-title" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">الوصف</label>
+          <textarea id="pr-description" class="field-input" rows="3"></textarea>
+        </div>
+      </div>
+
+      <label class="field-label">الصورة</label>
+      <div class="flex flex-wrap items-center gap-4 mb-3">
+        <img id="pr-image-preview" class="w-24 h-24 object-cover rounded-xl border border-ink/10 hidden" src="" alt="">
+        <input id="pr-image-upload" type="file" accept="image/*" class="text-sm">
+        <button id="btn-pick-pr-image" class="btn-secondary">أو اختيار من مكتبة الصور</button>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="btn-add-process" class="btn-primary">إضافة المرحلة</button>
+        <button id="btn-cancel-edit-process" class="btn-secondary hidden">إلغاء التعديل</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">كل المراحل</h2>
+      <div id="process-list-admin" class="space-y-3"></div>
     </div>
   </section>
 

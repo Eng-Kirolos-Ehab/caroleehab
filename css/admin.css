@@ -119,6 +119,14 @@
   border-color: #DC2626;
   color: #DC2626;
 }
+.btn-icon:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+.btn-icon:disabled:hover {
+  border-color: rgba(28,25,23,0.1);
+  color: #44403C;
+}
 
 /* ---------------------------------------------------------
    Image library grid

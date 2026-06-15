@@ -12,13 +12,17 @@ let siteData = null;       // SITE_DATA object
 let manifest = [];         // [{id, original, width, height, orientation}]
 let contentHeader = '';    // الجزء التعليقي في بداية content.js
 
-let pickerTarget = null;        // 'artist' | 'work' | 'event' | null
+let pickerTarget = null;        // 'artist' | 'work' | 'event' | 'mg-cover' | 'pr-image' | null
 let pendingWorkImage = null;    // images/work-xxx.jpg
 let pendingEventImage = null;
+let pendingMagazineCover = null;
+let pendingProcessImage = null;
 
 let editingWorkId = null;
 let editingEventId = null;
 let editingQuoteIndex = null;
+let editingMagazineId = null;
+let editingProcessId = null;
 
 /* =========================================================
    Init
@@ -58,6 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // categories
   document.getElementById('btn-add-category').addEventListener('click', submitCategory);
+
+  // magazines
+  document.getElementById('btn-add-magazine').addEventListener('click', submitMagazine);
+  document.getElementById('btn-cancel-edit-magazine').addEventListener('click', () => cancelEdit('magazine'));
+  document.getElementById('btn-pick-mg-cover').addEventListener('click', () => startPicking('mg-cover'));
+  document.getElementById('mg-cover-upload').addEventListener('change', (e) => handleUpload(e, 'mg-cover'));
+
+  // process
+  document.getElementById('btn-add-process').addEventListener('click', submitProcess);
+  document.getElementById('btn-cancel-edit-process').addEventListener('click', () => cancelEdit('process'));
+  document.getElementById('btn-pick-pr-image').addEventListener('click', () => startPicking('pr-image'));
+  document.getElementById('pr-image-upload').addEventListener('change', (e) => handleUpload(e, 'pr-image'));
 
   // picker banner cancel
   document.getElementById('btn-cancel-pick').addEventListener('click', stopPicking);
@@ -161,6 +177,8 @@ function renderAll() {
   renderWorks();
   renderEvents();
   renderQuotes();
+  renderMagazines();
+  renderProcessAdmin();
   renderImageLibrary();
 }
 
@@ -552,12 +570,220 @@ async function deleteQuote(index) {
 }
 
 /* =========================================================
+   Magazines (Flipbooks)
+   ========================================================= */
+function renderMagazines() {
+  const wrap = document.getElementById('magazines-list-admin');
+  const mags = siteData.magazines || [];
+  wrap.innerHTML = mags.map(m => `
+    <div class="item-card">
+      <div class="item-img"><img src="${m.cover}" alt="${escapeAttr(m.title)}" loading="lazy"></div>
+      <div class="item-body">
+        <span class="item-meta">${m.featured ? 'المجلة الأبرز' : 'مجلة'}</span>
+        <h3 class="item-title">${escapeHtml(m.title)}</h3>
+        <p class="item-desc">${escapeHtml(m.description || '')}</p>
+        <p class="item-desc text-xs break-all">${escapeHtml(m.embedUrl)}</p>
+        <div class="item-actions">
+          <button class="btn-icon" data-action="edit-magazine" data-id="${m.id}" aria-label="تعديل">${iconEdit()}</button>
+          <button class="btn-icon danger" data-action="delete-magazine" data-id="${m.id}" aria-label="حذف">${iconTrash()}</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  wrap.querySelectorAll('[data-action="edit-magazine"]').forEach(btn => {
+    btn.addEventListener('click', () => startEditMagazine(Number(btn.dataset.id)));
+  });
+  wrap.querySelectorAll('[data-action="delete-magazine"]').forEach(btn => {
+    btn.addEventListener('click', () => deleteMagazine(Number(btn.dataset.id)));
+  });
+}
+
+function startEditMagazine(id) {
+  const m = (siteData.magazines || []).find(m => m.id === id);
+  if (!m) return;
+  editingMagazineId = id;
+  setVal('mg-title', m.title);
+  setVal('mg-description', m.description);
+  setVal('mg-embed', m.embedUrl);
+  document.getElementById('mg-featured').checked = !!m.featured;
+  pendingMagazineCover = m.cover;
+  showPreview('mg-cover-preview', m.cover);
+
+  document.getElementById('btn-add-magazine').textContent = 'حفظ التعديلات';
+  document.getElementById('btn-cancel-edit-magazine').classList.remove('hidden');
+  switchTab('magazines');
+}
+
+async function submitMagazine() {
+  const title = getVal('mg-title').trim();
+  const description = getVal('mg-description').trim();
+  const embedUrl = getVal('mg-embed').trim();
+  const featured = document.getElementById('mg-featured').checked;
+
+  if (!title) { showToast('أدخلي عنوان المجلة', true); return; }
+  if (!embedUrl) { showToast('أدخلي رابط الـ embed', true); return; }
+  if (!pendingMagazineCover) { showToast('اختاري صورة غلاف للمجلة', true); return; }
+
+  siteData.magazines = siteData.magazines || [];
+
+  if (featured) {
+    siteData.magazines.forEach(m => { m.featured = false; });
+  }
+
+  if (editingMagazineId !== null) {
+    const m = siteData.magazines.find(m => m.id === editingMagazineId);
+    Object.assign(m, { title, description, embedUrl, featured, cover: pendingMagazineCover });
+  } else {
+    const nextId = siteData.magazines.reduce((mx, m) => Math.max(mx, m.id), 0) + 1;
+    siteData.magazines.push({ id: nextId, title, description, embedUrl, cover: pendingMagazineCover, featured });
+  }
+
+  resetMagazineForm();
+  renderMagazines();
+  renderImageLibrary();
+  await persist();
+}
+
+function resetMagazineForm() {
+  editingMagazineId = null;
+  pendingMagazineCover = null;
+  setVal('mg-title', '');
+  setVal('mg-description', '');
+  setVal('mg-embed', '');
+  document.getElementById('mg-featured').checked = false;
+  hidePreview('mg-cover-preview');
+  document.getElementById('mg-cover-upload').value = '';
+  document.getElementById('btn-add-magazine').textContent = 'إضافة المجلة';
+  document.getElementById('btn-cancel-edit-magazine').classList.add('hidden');
+}
+
+async function deleteMagazine(id) {
+  const m = (siteData.magazines || []).find(m => m.id === id);
+  if (!confirm(`حذف المجلة "${m.title}"؟`)) return;
+  siteData.magazines = siteData.magazines.filter(m => m.id !== id);
+  if (editingMagazineId === id) resetMagazineForm();
+  renderMagazines();
+  renderImageLibrary();
+  await persist();
+}
+
+/* =========================================================
+   Creative Process (رحلة العمل)
+   ========================================================= */
+function renderProcessAdmin() {
+  const wrap = document.getElementById('process-list-admin');
+  const steps = siteData.process || [];
+  wrap.innerHTML = steps.map((p, i) => `
+    <div class="row-card">
+      <div class="flex items-center gap-3">
+        <img src="${p.image}" alt="${escapeAttr(p.title)}" class="w-16 h-16 object-cover rounded-lg border border-ink/10" loading="lazy">
+        <div>
+          <span class="text-gold text-sm font-semibold">المرحلة ${i + 1}</span>
+          <h3 class="font-semibold">${escapeHtml(p.title)}</h3>
+          <p class="item-desc">${escapeHtml(p.description || '')}</p>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button class="btn-icon" data-action="move-up-process" data-id="${p.id}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
+        <button class="btn-icon" data-action="move-down-process" data-id="${p.id}" aria-label="تحريك لأسفل" ${i === steps.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
+        <button class="btn-icon" data-action="edit-process" data-id="${p.id}" aria-label="تعديل">${iconEdit()}</button>
+        <button class="btn-icon danger" data-action="delete-process" data-id="${p.id}" aria-label="حذف">${iconTrash()}</button>
+      </div>
+    </div>
+  `).join('');
+
+  wrap.querySelectorAll('[data-action="edit-process"]').forEach(btn => {
+    btn.addEventListener('click', () => startEditProcess(Number(btn.dataset.id)));
+  });
+  wrap.querySelectorAll('[data-action="delete-process"]').forEach(btn => {
+    btn.addEventListener('click', () => deleteProcess(Number(btn.dataset.id)));
+  });
+  wrap.querySelectorAll('[data-action="move-up-process"]').forEach(btn => {
+    btn.addEventListener('click', () => moveProcess(Number(btn.dataset.id), -1));
+  });
+  wrap.querySelectorAll('[data-action="move-down-process"]').forEach(btn => {
+    btn.addEventListener('click', () => moveProcess(Number(btn.dataset.id), 1));
+  });
+}
+
+function startEditProcess(id) {
+  const p = (siteData.process || []).find(p => p.id === id);
+  if (!p) return;
+  editingProcessId = id;
+  setVal('pr-title', p.title);
+  setVal('pr-description', p.description);
+  pendingProcessImage = p.image;
+  showPreview('pr-image-preview', p.image);
+
+  document.getElementById('btn-add-process').textContent = 'حفظ التعديلات';
+  document.getElementById('btn-cancel-edit-process').classList.remove('hidden');
+  switchTab('process');
+}
+
+async function submitProcess() {
+  const title = getVal('pr-title').trim();
+  const description = getVal('pr-description').trim();
+
+  if (!title) { showToast('أدخلي عنوان المرحلة', true); return; }
+  if (!pendingProcessImage) { showToast('اختاري صورة للمرحلة', true); return; }
+
+  siteData.process = siteData.process || [];
+
+  if (editingProcessId !== null) {
+    const p = siteData.process.find(p => p.id === editingProcessId);
+    Object.assign(p, { title, description, image: pendingProcessImage });
+  } else {
+    const nextId = siteData.process.reduce((mx, p) => Math.max(mx, p.id), 0) + 1;
+    siteData.process.push({ id: nextId, image: pendingProcessImage, title, description });
+  }
+
+  resetProcessForm();
+  renderProcessAdmin();
+  renderImageLibrary();
+  await persist();
+}
+
+function resetProcessForm() {
+  editingProcessId = null;
+  pendingProcessImage = null;
+  setVal('pr-title', '');
+  setVal('pr-description', '');
+  hidePreview('pr-image-preview');
+  document.getElementById('pr-image-upload').value = '';
+  document.getElementById('btn-add-process').textContent = 'إضافة المرحلة';
+  document.getElementById('btn-cancel-edit-process').classList.add('hidden');
+}
+
+async function deleteProcess(id) {
+  const p = (siteData.process || []).find(p => p.id === id);
+  if (!confirm(`حذف المرحلة "${p.title}"؟`)) return;
+  siteData.process = siteData.process.filter(p => p.id !== id);
+  if (editingProcessId === id) resetProcessForm();
+  renderProcessAdmin();
+  renderImageLibrary();
+  await persist();
+}
+
+async function moveProcess(id, direction) {
+  const steps = siteData.process;
+  const index = steps.findIndex(p => p.id === id);
+  const target = index + direction;
+  if (index === -1 || target < 0 || target >= steps.length) return;
+  [steps[index], steps[target]] = [steps[target], steps[index]];
+  renderProcessAdmin();
+  await persist();
+}
+
+/* =========================================================
    Generic cancel-edit
    ========================================================= */
 function cancelEdit(kind) {
   if (kind === 'work') resetWorkForm();
   if (kind === 'event') resetEventForm();
   if (kind === 'quote') resetQuoteForm();
+  if (kind === 'magazine') resetMagazineForm();
+  if (kind === 'process') resetProcessForm();
 }
 
 /* =========================================================
@@ -567,6 +793,8 @@ function usedImagePaths() {
   const used = new Set();
   siteData.works.forEach(w => used.add(w.image));
   siteData.events.forEach(e => used.add(e.image));
+  (siteData.magazines || []).forEach(m => used.add(m.cover));
+  (siteData.process || []).forEach(p => used.add(p.image));
   if (siteData.artist && siteData.artist.photo) used.add(siteData.artist.photo);
   return used;
 }
@@ -594,7 +822,9 @@ function startPicking(target) {
   const labels = {
     artist: 'صورة الفنانة',
     work: 'صورة العمل الجديد',
-    event: 'صورة الفعالية'
+    event: 'صورة الفعالية',
+    'mg-cover': 'صورة غلاف المجلة',
+    'pr-image': 'صورة مرحلة رحلة العمل'
   };
   document.getElementById('library-picker-text').textContent = `اضغطي على صورة لاختيارها لـ: ${labels[target]}`;
   document.getElementById('library-picker-banner').classList.remove('hidden');
@@ -618,6 +848,12 @@ function onLibraryPick(path) {
   } else if (pickerTarget === 'event') {
     pendingEventImage = path;
     showPreview('e-image-preview', path);
+  } else if (pickerTarget === 'mg-cover') {
+    pendingMagazineCover = path;
+    showPreview('mg-cover-preview', path);
+  } else if (pickerTarget === 'pr-image') {
+    pendingProcessImage = path;
+    showPreview('pr-image-preview', path);
   }
   stopPicking();
   showToast('تم اختيار الصورة');
@@ -641,6 +877,12 @@ async function handleUpload(e, target) {
     } else if (target === 'event') {
       pendingEventImage = path;
       showPreview('e-image-preview', path);
+    } else if (target === 'mg-cover') {
+      pendingMagazineCover = path;
+      showPreview('mg-cover-preview', path);
+    } else if (target === 'pr-image') {
+      pendingProcessImage = path;
+      showPreview('pr-image-preview', path);
     }
     renderImageLibrary();
     showToast('تم رفع الصورة ✓');
@@ -748,4 +990,10 @@ function iconEdit() {
 }
 function iconTrash() {
   return `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>`;
+}
+function iconUp() {
+  return `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg>`;
+}
+function iconDown() {
+  return `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>`;
 }

@@ -39,6 +39,14 @@
 </head>
 <body class="bg-cream text-ink font-ar antialiased">
 
+<!-- ============ AMBIENT BACKGROUND ============ -->
+<div class="aurora-bg" aria-hidden="true">
+  <span class="aurora-blob a1"></span>
+  <span class="aurora-blob a2"></span>
+  <span class="aurora-blob a3"></span>
+</div>
+<div class="grain-overlay" aria-hidden="true"></div>
+
 <!-- ============ NAV ============ -->
 <header id="site-nav" class="fixed top-4 left-4 right-4 z-50 transition-all duration-300">
   <div class="max-w-6xl mx-auto bg-cream/80 backdrop-blur-md border border-ink/10 rounded-full shadow-sm px-5 sm:px-8 py-3 flex items-center justify-between">
@@ -46,15 +54,17 @@
       <span id="nav-artist-name">Carole</span>
     </a>
 
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink2">
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-ink2">
       <a href="#home" class="nav-link hover:text-gold transition-colors duration-200">الرئيسية</a>
       <a href="#about" class="nav-link hover:text-gold transition-colors duration-200">عن الفنانة</a>
       <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200">الأعمال</a>
+      <a href="#process" class="nav-link hover:text-gold transition-colors duration-200">رحلة العمل</a>
+      <a href="#magazines" class="nav-link hover:text-gold transition-colors duration-200">المجلات</a>
       <a href="#events" class="nav-link hover:text-gold transition-colors duration-200">الفعاليات</a>
       <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200">تواصل</a>
     </nav>
 
-    <button id="menu-toggle" aria-label="فتح القائمة" class="md:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-full hover:bg-ink/5 transition-colors">
+    <button id="menu-toggle" aria-label="فتح القائمة" class="lg:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-full hover:bg-ink/5 transition-colors">
       <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
       </svg>
@@ -65,10 +75,12 @@
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden mt-2 max-w-6xl mx-auto bg-cream/95 backdrop-blur-md border border-ink/10 rounded-2xl shadow-sm px-6 py-4 flex flex-col gap-4 text-ink2 font-medium">
+  <div id="mobile-menu" class="hidden lg:hidden mt-2 max-w-6xl mx-auto bg-cream/95 backdrop-blur-md border border-ink/10 rounded-2xl shadow-sm px-6 py-4 flex flex-col gap-4 text-ink2 font-medium">
     <a href="#home" class="nav-link hover:text-gold transition-colors duration-200">الرئيسية</a>
     <a href="#about" class="nav-link hover:text-gold transition-colors duration-200">عن الفنانة</a>
     <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200">الأعمال</a>
+    <a href="#process" class="nav-link hover:text-gold transition-colors duration-200">رحلة العمل</a>
+    <a href="#magazines" class="nav-link hover:text-gold transition-colors duration-200">المجلات</a>
     <a href="#events" class="nav-link hover:text-gold transition-colors duration-200">الفعاليات</a>
     <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200">تواصل</a>
   </div>
@@ -79,6 +91,8 @@
   <!-- decorative blobs -->
   <div class="hero-blob hero-blob-1"></div>
   <div class="hero-blob hero-blob-2"></div>
+  <!-- interactive cursor spotlight -->
+  <div id="hero-spotlight" class="hero-spotlight" aria-hidden="true"></div>
 
   <div class="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
     <div data-reveal>
@@ -163,6 +177,23 @@
   </div>
 </section>
 
+<!-- ============ CREATIVE PROCESS ============ -->
+<section id="process" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-16 text-center" data-reveal>
+      <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
+        <span class="w-8 h-px bg-gold"></span>
+        كيف تولد اللوحة
+        <span class="w-8 h-px bg-gold"></span>
+      </p>
+      <h2 class="font-serif text-4xl sm:text-5xl mb-6">رحلة العمل</h2>
+      <p class="text-ink2 max-w-xl mx-auto">من أول فكرة في الدماغ، لحد ما توصل اللوحة لشكلها النهائي — كل مرحلة ليها حكايتها.</p>
+    </div>
+
+    <div id="process-list" class="process-list"></div>
+  </div>
+</section>
+
 <!-- ============ GALLERY ============ -->
 <section id="gallery" class="py-24 px-6">
   <div class="max-w-6xl mx-auto">
@@ -180,7 +211,41 @@
     <div id="filters" class="flex flex-wrap justify-center gap-3 mb-12" data-reveal></div>
 
     <!-- masonry grid -->
-    <div id="gallery-grid" class="gallery-grid"></div>
+    <div id="gallery-grid" class="gallery-grid mb-12"></div>
+
+    <!-- magazine CTA banner -->
+    <a href="#magazines" class="cursor-pointer magazine-banner" data-reveal>
+      <span class="magazine-banner-icon">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.04C10.18 4.77 7.5 4 5.25 4 4.56 4 4 4.56 4 5.25v12.5c0 .69.56 1.25 1.25 1.25 2.25 0 4.93.77 6.75 2.04m0-15v15m0-15c1.82-1.27 4.5-2.04 6.75-2.04.69 0 1.25.56 1.25 1.25v12.5c0 .69-.56 1.25-1.25 1.25-2.25 0-4.93.77-6.75 2.04" />
+        </svg>
+      </span>
+      <span class="magazine-banner-text">
+        <strong>مجلتي الفنية التفاعلية</strong>
+        <span>اقلبي الصفحات بنفسك واستكشفي أعمالي في شكل مجلة كاملة</span>
+      </span>
+      <span class="magazine-banner-arrow">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ MAGAZINES ============ -->
+<section id="magazines" class="py-24 px-6 bg-cream2">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-14 text-center" data-reveal>
+      <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
+        <span class="w-8 h-px bg-gold"></span>
+        مجلات تفاعلية
+        <span class="w-8 h-px bg-gold"></span>
+      </p>
+      <h2 class="font-serif text-4xl sm:text-5xl mb-6">تصفّحي مجلاتي الفنية</h2>
+      <p class="text-ink2 max-w-xl mx-auto">اقلبي الصفحات بنفسك واستكشفي مجموعة من أعمالي وتصاميمي في شكل مجلة تفاعلية كاملة.</p>
+    </div>
+
+    <div id="magazine-featured"><!-- injected by JS --></div>
+    <div id="magazine-grid" class="magazine-grid"></div>
   </div>
 </section>
 

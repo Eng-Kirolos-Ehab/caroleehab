@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------- Featured works ---------------- */
   renderFeatured(data);
 
+  /* ---------------- Creative process ---------------- */
+  renderProcess(data);
+
+  /* ---------------- Magazines ---------------- */
+  renderMagazines(data);
+
   /* ---------------- Gallery + filters ---------------- */
   renderFilters(data);
   renderGallery(data);
@@ -46,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRevealAnimations();
   initNav();
   initLightbox(data);
+  initHeroSpotlight();
 });
 
 /* =========================================================
@@ -87,6 +94,66 @@ function renderFeatured(data) {
       window.dispatchEvent(new CustomEvent('open-lightbox', { detail: { id } }));
     });
   });
+}
+
+/* =========================================================
+   Creative process (رحلة العمل)
+   ========================================================= */
+function renderProcess(data) {
+  const wrap = document.getElementById('process-list');
+  if (!wrap || !data.process || !data.process.length) return;
+
+  wrap.innerHTML = data.process.map((step, i) => `
+    <div class="process-step ${i % 2 === 1 ? 'reverse' : ''}" data-reveal>
+      <div class="process-img">
+        <img src="${step.image}" alt="${escapeHtml(step.title)}" loading="lazy">
+      </div>
+      <div class="process-text">
+        <span class="process-num">${String(i + 1).padStart(2, '0')}</span>
+        <h3 class="font-serif text-2xl sm:text-3xl mb-3">${escapeHtml(step.title)}</h3>
+        <p class="text-ink2 leading-relaxed">${escapeHtml(step.description || '')}</p>
+      </div>
+    </div>
+  `).join('');
+
+  initRevealAnimations();
+}
+
+/* =========================================================
+   Magazines / Flipbooks
+   ========================================================= */
+function renderMagazines(data) {
+  const featuredWrap = document.getElementById('magazine-featured');
+  const grid = document.getElementById('magazine-grid');
+  if (!featuredWrap || !grid) return;
+  const mags = data.magazines || [];
+  if (!mags.length) return;
+
+  const featured = mags.find(m => m.featured) || mags[0];
+  const others = mags.filter(m => m !== featured);
+
+  featuredWrap.innerHTML = `
+    <div class="magazine-featured-card" data-reveal>
+      <span class="magazine-badge">المجلة الأبرز</span>
+      <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(featured.title)}</h3>
+      <p class="text-ink2 max-w-2xl mb-5">${escapeHtml(featured.description || '')}</p>
+      <div class="magazine-frame">
+        <iframe src="${escapeHtml(featured.embedUrl)}" loading="lazy" scrolling="no" allow="fullscreen" allowfullscreen title="${escapeHtml(featured.title)}"></iframe>
+      </div>
+    </div>
+  `;
+
+  grid.innerHTML = others.map((m, i) => `
+    <a href="${escapeHtml(m.embedUrl)}" target="_blank" rel="noopener" class="magazine-card" data-reveal data-reveal-delay="${i * 100}">
+      <img src="${m.cover || 'images/work-001.jpg'}" alt="${escapeHtml(m.title)}" loading="lazy">
+      <div class="mc-overlay">
+        <span class="mc-title">${escapeHtml(m.title)}</span>
+        <span class="mc-cta">تصفّحي المجلة ↗</span>
+      </div>
+    </a>
+  `).join('');
+
+  initRevealAnimations();
 }
 
 /* =========================================================
@@ -358,6 +425,27 @@ function initLightbox(data) {
     // RTL layout: visually "next" arrow is on the left, "prev" on the right.
     if (e.key === 'ArrowLeft') next();
     if (e.key === 'ArrowRight') prev();
+  });
+}
+
+/* =========================================================
+   Hero cursor spotlight
+   ========================================================= */
+function initHeroSpotlight() {
+  const hero = document.getElementById('home');
+  const spot = document.getElementById('hero-spotlight');
+  if (!hero || !spot) return;
+
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    spot.style.setProperty('--spot-x', x + '%');
+    spot.style.setProperty('--spot-y', y + '%');
+    spot.classList.add('active');
+  });
+  hero.addEventListener('mouseleave', () => {
+    spot.classList.remove('active');
   });
 }
 
