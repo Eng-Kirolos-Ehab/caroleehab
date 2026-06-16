@@ -1028,63 +1028,33 @@ header, section, footer {
 .hero-scroll-cue:hover { color: #E8C766; }
 
 /* ---------------------------------------------------------
-   Magazine Interlude strips (distributed across page)
+   Magazine sections — embedded FlipHTML5 iframes
 --------------------------------------------------------- */
-.mag-interlude-section {
-  overflow: hidden;
+.mag-embed-section {
+  padding: 5rem 1.5rem;
 }
-
-.mag-interlude-wrap {
-  display: grid;
-  grid-template-columns: 1fr;
-  min-height: 360px;
-}
-@media (min-width: 768px) {
-  .mag-interlude-wrap {
-    grid-template-columns: 1fr 1fr;
-    min-height: 420px;
-  }
-}
-
-.mag-cover-panel {
-  position: relative;
-  overflow: hidden;
-  min-height: 280px;
-}
-.mag-cover-panel img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.9s ease;
-}
-.mag-interlude-section:hover .mag-cover-panel img {
-  transform: scale(1.06);
-}
-
-@media (min-width: 768px) {
-  .mag-cover-panel.cover-right { order: 2; }
-}
-
-.mag-body-panel {
-  padding: 3rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.85rem;
-}
-.mag-body-panel.dark-bg {
+.mag-embed-section.mag-dark {
   background: #1C1917;
   color: #FDF8F3;
 }
-.mag-body-panel.light-bg {
+.mag-embed-section.mag-light {
   background: #F6EFE6;
   color: #1C1917;
 }
-.mag-body-panel.cream-bg {
-  background: #FDF8F3;
-  color: #1C1917;
+
+.mag-embed-header {
+  max-width: 72rem;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mag-embed-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .mag-interlude-eyebrow {
@@ -1104,63 +1074,67 @@ header, section, footer {
   background: #C9A227;
 }
 
-.mag-featured-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 2;
-}
-
-.mag-interlude-title {
+.mag-embed-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   line-height: 1.25;
   margin: 0;
 }
 
-.mag-interlude-desc {
+.mag-embed-desc {
   font-size: 0.9rem;
   line-height: 1.75;
-  opacity: 0.72;
-  max-width: 400px;
+  opacity: 0.7;
+  max-width: 640px;
+  margin: 0;
 }
 
-.mag-open-btn {
+.mag-embed-frame-wrap {
+  max-width: 72rem;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 32px 80px -20px rgba(0,0,0,0.5);
+}
+.mag-embed-frame-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.mag-embed-footer {
+  max-width: 72rem;
+  margin: 1.25rem auto 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mag-fullscreen-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  width: fit-content;
-  padding: 0.65rem 1.5rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  transition: all 0.25s ease;
-  text-decoration: none;
-  margin-top: 0.25rem;
-}
-.mag-open-btn.gold-btn {
-  background: #C9A227;
-  color: #1C1917;
-}
-.mag-open-btn.gold-btn:hover {
-  background: #E8C766;
-  transform: translateY(-1px);
-}
-.mag-open-btn.outline-dark {
-  border: 1.5px solid #C9A227;
   color: #C9A227;
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
 }
-.mag-open-btn.outline-dark:hover {
-  background: #C9A227;
-  color: #1C1917;
+.mag-fullscreen-btn:hover {
+  color: #E8C766;
+  gap: 0.65rem;
 }
-.mag-open-btn.outline-light {
-  border: 1.5px solid rgba(253,248,243,0.3);
-  color: rgba(253,248,243,0.85);
+.mag-embed-section.mag-dark .mag-fullscreen-btn {
+  color: rgba(232,199,102,0.8);
 }
-.mag-open-btn.outline-light:hover {
-  border-color: #C9A227;
+.mag-embed-section.mag-dark .mag-fullscreen-btn:hover {
   color: #E8C766;
 }
 
@@ -1216,22 +1190,6 @@ header, section, footer {
   text-transform: uppercase;
 }
 
-/* ---------------------------------------------------------
-   Magazine interlude — shade overlay on cover
---------------------------------------------------------- */
-.mag-cover-shade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(28,25,23,0.25) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 1;
-}
-.mag-featured-badge {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  z-index: 2;
-}
 .magazine-tag.tag-light {
   color: #E8C766;
   border-color: rgba(232,199,102,0.45);
@@ -1240,12 +1198,6 @@ header, section, footer {
 /* ---------------------------------------------------------
    LTR support: flip cover-right for ltr direction
 --------------------------------------------------------- */
-[dir="ltr"] .mag-cover-panel.cover-right {
-  order: 0;
-}
-[dir="ltr"] .mag-cover-panel:not(.cover-right) {
-  order: 0;
-}
 [dir="ltr"] .hero-portrait {
   justify-content: flex-end;
 }

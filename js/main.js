@@ -148,63 +148,64 @@ function renderProcess(data) {
 }
 
 /* =========================================================
-   Magazines — distributed as interlude strips across the page
-   Slots: #mag-1, #mag-2, #mag-3, #mag-4
+   Magazines — embedded iframes distributed across the page
+   Slots: #mag-1 .. #mag-4  (filled before applySectionOrder)
    ========================================================= */
 function renderMagazines(data) {
   const mags = data.magazines || [];
   if (!mags.length) return;
 
   const mgTexts = (data.texts && data.texts.magazines) || {};
-  const badge   = mgTexts.badge    || 'المجلة الأبرز';
-  const openLbl = mgTexts.openLink || 'تصفح المجلة ↗';
+  const badge   = mgTexts.badge || 'المجلة الأبرز';
 
-  // Theme alternates: dark / light / dark / light
-  const themes = [
-    { bodyBg: 'dark-bg',  btnCls: 'gold-btn',      coverRight: false },
-    { bodyBg: 'light-bg', btnCls: 'outline-dark',   coverRight: true  },
-    { bodyBg: 'dark-bg',  btnCls: 'gold-btn',      coverRight: false },
-    { bodyBg: 'cream-bg', btnCls: 'outline-dark',   coverRight: true  },
-  ];
+  // alternating bg: dark / light / dark / light
+  const bgs = ['mag-dark', 'mag-light', 'mag-dark', 'mag-light'];
 
   mags.forEach((mag, i) => {
     const slot = document.getElementById('mag-' + (i + 1));
     if (!slot) return;
 
-    const t = themes[i] || themes[0];
+    const bg = bgs[i] || 'mag-light';
     const isFeatured = mag.featured || i === 0;
-    const coverCls = t.coverRight ? 'cover-right' : '';
-
-    const openLblEn = (data.texts_en && data.texts_en.magazines && data.texts_en.magazines.openLink) || 'Open Magazine ↗';
-    const badgeEn   = (data.texts_en && data.texts_en.magazines && data.texts_en.magazines.badge)    || 'Featured';
+    const badgeEn = (data.texts_en && data.texts_en.magazines && data.texts_en.magazines.badge) || 'Featured';
 
     slot.innerHTML = `
-      <div class="mag-interlude-wrap">
-        <div class="mag-cover-panel ${coverCls}">
-          <img src="${escapeHtml(mag.cover || 'images/work-001.jpg')}" alt="${escapeHtml(mag.title)}" loading="lazy">
-          <div class="mag-cover-shade"></div>
-          ${isFeatured ? `<div class="mag-featured-badge"><span class="magazine-badge" data-ar="${escapeHtml(badge)}" data-en="${escapeHtml(badgeEn)}">${escapeHtml(badge)}</span></div>` : ''}
-        </div>
-        <div class="mag-body-panel ${t.bodyBg}">
-          <div class="mag-interlude-eyebrow">
-            <span class="ei-line"></span>
-            <span data-ar="مجلة تفاعلية" data-en="Interactive Magazine">مجلة تفاعلية</span>
+      <div class="mag-embed-section ${bg}">
+        <div class="mag-embed-header">
+          <div class="mag-embed-meta">
+            <div class="mag-interlude-eyebrow">
+              <span class="ei-line"></span>
+              <span data-ar="مجلة تفاعلية" data-en="Interactive Magazine">مجلة تفاعلية</span>
+            </div>
+            ${isFeatured ? `<span class="magazine-badge" data-ar="${escapeHtml(badge)}" data-en="${escapeHtml(badgeEn)}">${escapeHtml(badge)}</span>` : ''}
           </div>
-          ${mag.tag ? `<span class="magazine-tag${t.bodyBg === 'dark-bg' ? ' tag-light' : ''}">${escapeHtml(mag.tag)}</span>` : ''}
-          <h3 class="mag-interlude-title">${escapeHtml(mag.title)}</h3>
-          <p class="mag-interlude-desc">${escapeHtml(mag.description || '')}</p>
-          <a href="${escapeHtml(mag.embedUrl)}" target="_blank" rel="noopener" class="mag-open-btn ${t.btnCls}">
-            <span data-ar="${escapeHtml(openLbl)}" data-en="${escapeHtml(openLblEn)}">${escapeHtml(openLbl)}</span>
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="transform:scaleX(-1)">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
+          ${mag.tag ? `<span class="magazine-tag${bg === 'mag-dark' ? ' tag-light' : ''}">${escapeHtml(mag.tag)}</span>` : ''}
+          <h3 class="mag-embed-title">${escapeHtml(mag.title)}</h3>
+          <p class="mag-embed-desc">${escapeHtml(mag.description || '')}</p>
+        </div>
+
+        <div class="mag-embed-frame-wrap">
+          <iframe
+            src="${escapeHtml(mag.embedUrl)}"
+            loading="lazy"
+            scrolling="no"
+            allow="fullscreen"
+            allowfullscreen
+            title="${escapeHtml(mag.title)}"
+          ></iframe>
+        </div>
+
+        <div class="mag-embed-footer">
+          <a href="${escapeHtml(mag.embedUrl)}" target="_blank" rel="noopener" class="mag-fullscreen-btn">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
             </svg>
+            <span data-ar="فتح بشاشة كاملة" data-en="Open Fullscreen">فتح بشاشة كاملة</span>
           </a>
         </div>
       </div>
     `;
   });
-
-  initRevealAnimations();
 }
 
 /* =========================================================
