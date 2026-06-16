@@ -521,6 +521,13 @@ header, section, footer {
 .magazine-featured-card {
   margin-bottom: 3rem;
 }
+.magazine-badges-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
 .magazine-badge {
   display: inline-flex;
   align-items: center;
@@ -532,7 +539,16 @@ header, section, footer {
   background: #C9A227;
   border-radius: 999px;
   padding: 0.3rem 0.9rem;
-  margin-bottom: 0.75rem;
+}
+.magazine-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: #C9A227;
+  border: 1px solid rgba(201,162,39,0.55);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
 }
 .magazine-frame {
   position: relative;

@@ -171,7 +171,10 @@ function renderMagazines(data) {
 
   featuredWrap.innerHTML = `
     <div class="magazine-featured-card" data-reveal>
-      <span class="magazine-badge">${escapeHtml(badge)}</span>
+      <div class="magazine-badges-row">
+        <span class="magazine-badge">${escapeHtml(badge)}</span>
+        ${featured.tag ? `<span class="magazine-tag">${escapeHtml(featured.tag)}</span>` : ''}
+      </div>
       <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(featured.title)}</h3>
       <p class="text-ink2 max-w-2xl mb-5">${escapeHtml(featured.description || '')}</p>
       <div class="magazine-frame">
@@ -188,6 +191,7 @@ function renderMagazines(data) {
         </div>
       </div>
       <div class="magazine-item-text">
+        ${m.tag ? `<span class="magazine-tag">${escapeHtml(m.tag)}</span>` : ''}
         <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(m.title)}</h3>
         <p class="text-ink2 mb-4">${escapeHtml(m.description || '')}</p>
         <a href="${escapeHtml(m.embedUrl)}" target="_blank" rel="noopener" class="magazine-item-link">

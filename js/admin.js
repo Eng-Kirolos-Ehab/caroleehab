@@ -712,7 +712,7 @@ function renderMagazines() {
     <div class="item-card">
       <div class="item-img"><img src="${m.cover}" alt="${escapeAttr(m.title)}" loading="lazy"></div>
       <div class="item-body">
-        <span class="item-meta">${m.featured ? 'المجلة الأبرز' : 'مجلة'}</span>
+        <span class="item-meta">${m.featured ? 'المجلة الأبرز' : 'مجلة'}${m.tag ? ` · ${escapeHtml(m.tag)}` : ''}</span>
         <h3 class="item-title">${escapeHtml(m.title)}</h3>
         <p class="item-desc">${escapeHtml(m.description || '')}</p>
         <p class="item-desc text-xs break-all">${escapeHtml(m.embedUrl)}</p>
@@ -747,6 +747,7 @@ function startEditMagazine(id) {
   setVal('mg-title', m.title);
   setVal('mg-description', m.description);
   setVal('mg-embed', m.embedUrl);
+  setVal('mg-tag', m.tag || '');
   document.getElementById('mg-featured').checked = !!m.featured;
   pendingMagazineCover = m.cover;
   showPreview('mg-cover-preview', m.cover);
@@ -760,6 +761,7 @@ async function submitMagazine() {
   const title = getVal('mg-title').trim();
   const description = getVal('mg-description').trim();
   const embedUrl = getVal('mg-embed').trim();
+  const tag = getVal('mg-tag').trim();
   const featured = document.getElementById('mg-featured').checked;
 
   if (!title) { showToast('أدخلي عنوان المجلة', true); return; }
@@ -774,10 +776,10 @@ async function submitMagazine() {
 
   if (editingMagazineId !== null) {
     const m = siteData.magazines.find(m => m.id === editingMagazineId);
-    Object.assign(m, { title, description, embedUrl, featured, cover: pendingMagazineCover });
+    Object.assign(m, { title, description, embedUrl, tag, featured, cover: pendingMagazineCover });
   } else {
     const nextId = siteData.magazines.reduce((mx, m) => Math.max(mx, m.id), 0) + 1;
-    siteData.magazines.push({ id: nextId, title, description, embedUrl, cover: pendingMagazineCover, featured });
+    siteData.magazines.push({ id: nextId, title, description, embedUrl, tag, cover: pendingMagazineCover, featured });
   }
 
   resetMagazineForm();
@@ -792,6 +794,7 @@ function resetMagazineForm() {
   setVal('mg-title', '');
   setVal('mg-description', '');
   setVal('mg-embed', '');
+  setVal('mg-tag', '');
   document.getElementById('mg-featured').checked = false;
   hidePreview('mg-cover-preview');
   document.getElementById('mg-cover-upload').value = '';
