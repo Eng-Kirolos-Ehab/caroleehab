@@ -19,19 +19,19 @@ const SITE_DATA = {
   // بيانات الفنانة
   // -----------------------------------------------------------
   artist: {
-    name: "Carole",
+    name: "  Carole ehab ",
     nameAr: "كارول",
-    title: "فنانة تشكيلية ومصممة نسيج",
-    tagline: "بين الفحم واللون والقماش… كل عمل يحكي حكاية",
-    bio: "فنانة تشكيلية ومصممة نسيج متعددة المواهب — تتقن الرسم بالفحم والألوان الزيتية والسكتش، وتصميم أنماط الجاكار والطباعة المنزلية والأزياء السريالية. تعمل في مجال تصميم النسيج حيث تتولى تخطيط وعرض أقسام المصنع وتنفيذ المجسمات. كارول تؤمن بأن الفن لا يقف عند حدود اللوحة — تجده في فستان جينز، على غلاف موبايل، في منحوتة صغيرة؛ كل شيء حولها فرصة للتعبير بلمستها الخاصة. شاركت في معارض فنية ومسابقات وبرامج نسيج متخصصة، وتوثّق تجاربها الإبداعية في أربع مجلات تفاعلية متنوعة الكونسبت.",
-    bioShort: "فنانة تشكيلية ومصممة نسيج تؤمن بأن الفن موجود في كل تفصيلة.",
-    photo: "images/work-106.jpg",
-    location: "القاهرة، مصر",
+    title: "Textile Engineer & Visionary Designer",
+    tagline: "Blending textile engineering expertise with innovative fashion and pattern design",
+    bio: "A visual artist, textile engineer, and designer who combines artistic sensitivity with technical knowledge in textile design, fashion design, motifs, and hand drawing. I believe that every small idea can be transformed into an artwork that carries a story and identity. Through my work, I aim to create designs that blend beauty, precision, and visual expression. I have participated in several art exhibitions, and my creative journey continues to grow across art, textiles, and design",
+    bioShort: "فنانة تشكيلية شغوفة بالفحم، اللون، والتفاصيل الصغيرة.",
+    photo: "images/work-052.jpg",
+    location: "suez - egypt",
     email: "info@example.com",
     social: {
-      instagram: "#",
-      facebook: "#",
-      behance: "#"
+      instagram: "https://www.instagram.com/carole_ehab?igsh=YjloYm8xcHY2MWdj",
+      facebook: "https://www.facebook.com/share/1J7XXx28Vj/",
+      behance: ""
     }
   },
 
