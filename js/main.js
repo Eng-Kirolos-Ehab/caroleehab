@@ -7,13 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const data = SITE_DATA;
   if (!data) return;
 
-  /* ---------------- Section order ---------------- */
+  /* ── Magazines FIRST: fill slots before reorder so they have height ── */
+  renderMagazines(data);
+
+  /* ── Section order (slots now have content + height) ── */
   applySectionOrder(data);
 
-  /* ---------------- Site-wide editable texts ---------------- */
+  /* ── Site-wide texts ── */
   applyTexts(data);
 
-  /* ---------------- Basic text injection ---------------- */
+  /* ── Basic text injection ── */
   setText('nav-artist-name', data.artist.name);
   setText('hero-role', data.artist.title);
   setText('hero-name', data.artist.name);
@@ -27,37 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const aboutPhoto = document.getElementById('about-photo');
   if (aboutPhoto && data.artist.photo) aboutPhoto.src = data.artist.photo;
 
-  // contact links
   const emailLink = document.getElementById('contact-email');
   if (emailLink && data.artist.email) emailLink.href = 'mailto:' + data.artist.email;
   setHref('contact-instagram', data.artist.social && data.artist.social.instagram);
   setHref('contact-facebook', data.artist.social && data.artist.social.facebook);
   setHref('contact-behance', data.artist.social && data.artist.social.behance);
 
-  /* ---------------- Featured works ---------------- */
+  /* ── Render sections ── */
   renderFeatured(data);
-
-  /* ---------------- Creative process ---------------- */
   renderProcess(data);
-
-  /* ---------------- Magazines ---------------- */
-  renderMagazines(data);
-
-  /* ---------------- Gallery + filters ---------------- */
   renderFilters(data);
   renderGallery(data);
-
-  /* ---------------- Events ---------------- */
   renderEvents(data);
-
-  /* ---------------- Quotes ---------------- */
   renderQuotes(data);
+  renderStats(data);
 
-  /* ---------------- UI behaviours ---------------- */
+  /* ── UI behaviours ── */
   initRevealAnimations();
   initNav();
   initLightbox(data);
-  initHeroSpotlight();
+  initHeroParallax();
+  initHeroPortrait(data);
+  initLangToggle(data);
 });
 
 /* =========================================================
@@ -154,52 +148,61 @@ function renderProcess(data) {
 }
 
 /* =========================================================
-   Magazines / Flipbooks
+   Magazines — distributed as interlude strips across the page
+   Slots: #mag-1, #mag-2, #mag-3, #mag-4
    ========================================================= */
 function renderMagazines(data) {
-  const featuredWrap = document.getElementById('magazine-featured');
-  const grid = document.getElementById('magazine-grid');
-  if (!featuredWrap || !grid) return;
   const mags = data.magazines || [];
   if (!mags.length) return;
 
-  const featured = mags.find(m => m.featured) || mags[0];
-  const others = mags.filter(m => m !== featured);
-  const mgTexts = data.texts && data.texts.magazines || {};
-  const badge = mgTexts.badge || 'المجلة الأبرز';
-  const openLink = mgTexts.openLink || 'فتح في صفحة كاملة ↗';
+  const mgTexts = (data.texts && data.texts.magazines) || {};
+  const badge   = mgTexts.badge    || 'المجلة الأبرز';
+  const openLbl = mgTexts.openLink || 'تصفح المجلة ↗';
 
-  featuredWrap.innerHTML = `
-    <div class="magazine-featured-card" data-reveal>
-      <div class="magazine-badges-row">
-        <span class="magazine-badge">${escapeHtml(badge)}</span>
-        ${featured.tag ? `<span class="magazine-tag">${escapeHtml(featured.tag)}</span>` : ''}
-      </div>
-      <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(featured.title)}</h3>
-      <p class="text-ink2 max-w-2xl mb-5">${escapeHtml(featured.description || '')}</p>
-      <div class="magazine-frame">
-        <iframe src="${escapeHtml(featured.embedUrl)}" loading="lazy" scrolling="no" allow="fullscreen" allowfullscreen title="${escapeHtml(featured.title)}"></iframe>
-      </div>
-    </div>
-  `;
+  // Theme alternates: dark / light / dark / light
+  const themes = [
+    { bodyBg: 'dark-bg',  btnCls: 'gold-btn',      coverRight: false },
+    { bodyBg: 'light-bg', btnCls: 'outline-dark',   coverRight: true  },
+    { bodyBg: 'dark-bg',  btnCls: 'gold-btn',      coverRight: false },
+    { bodyBg: 'cream-bg', btnCls: 'outline-dark',   coverRight: true  },
+  ];
 
-  grid.innerHTML = others.map((m, i) => `
-    <div class="magazine-item ${i % 2 === 1 ? 'reverse' : ''}" data-reveal>
-      <div class="magazine-item-media">
-        <div class="magazine-frame">
-          <iframe src="${escapeHtml(m.embedUrl)}" loading="lazy" scrolling="no" allow="fullscreen" allowfullscreen title="${escapeHtml(m.title)}"></iframe>
+  mags.forEach((mag, i) => {
+    const slot = document.getElementById('mag-' + (i + 1));
+    if (!slot) return;
+
+    const t = themes[i] || themes[0];
+    const isFeatured = mag.featured || i === 0;
+    const coverCls = t.coverRight ? 'cover-right' : '';
+
+    const openLblEn = (data.texts_en && data.texts_en.magazines && data.texts_en.magazines.openLink) || 'Open Magazine ↗';
+    const badgeEn   = (data.texts_en && data.texts_en.magazines && data.texts_en.magazines.badge)    || 'Featured';
+
+    slot.innerHTML = `
+      <div class="mag-interlude-wrap">
+        <div class="mag-cover-panel ${coverCls}">
+          <img src="${escapeHtml(mag.cover || 'images/work-001.jpg')}" alt="${escapeHtml(mag.title)}" loading="lazy">
+          <div class="mag-cover-shade"></div>
+          ${isFeatured ? `<div class="mag-featured-badge"><span class="magazine-badge" data-ar="${escapeHtml(badge)}" data-en="${escapeHtml(badgeEn)}">${escapeHtml(badge)}</span></div>` : ''}
+        </div>
+        <div class="mag-body-panel ${t.bodyBg}">
+          <div class="mag-interlude-eyebrow">
+            <span class="ei-line"></span>
+            <span data-ar="مجلة تفاعلية" data-en="Interactive Magazine">مجلة تفاعلية</span>
+          </div>
+          ${mag.tag ? `<span class="magazine-tag${t.bodyBg === 'dark-bg' ? ' tag-light' : ''}">${escapeHtml(mag.tag)}</span>` : ''}
+          <h3 class="mag-interlude-title">${escapeHtml(mag.title)}</h3>
+          <p class="mag-interlude-desc">${escapeHtml(mag.description || '')}</p>
+          <a href="${escapeHtml(mag.embedUrl)}" target="_blank" rel="noopener" class="mag-open-btn ${t.btnCls}">
+            <span data-ar="${escapeHtml(openLbl)}" data-en="${escapeHtml(openLblEn)}">${escapeHtml(openLbl)}</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="transform:scaleX(-1)">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
+            </svg>
+          </a>
         </div>
       </div>
-      <div class="magazine-item-text">
-        ${m.tag ? `<span class="magazine-tag">${escapeHtml(m.tag)}</span>` : ''}
-        <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(m.title)}</h3>
-        <p class="text-ink2 mb-4">${escapeHtml(m.description || '')}</p>
-        <a href="${escapeHtml(m.embedUrl)}" target="_blank" rel="noopener" class="magazine-item-link">
-          ${escapeHtml(openLink)}
-        </a>
-      </div>
-    </div>
-  `).join('');
+    `;
+  });
 
   initRevealAnimations();
 }
@@ -477,24 +480,97 @@ function initLightbox(data) {
 }
 
 /* =========================================================
-   Hero cursor spotlight
+   About — animated stats bar
    ========================================================= */
-function initHeroSpotlight() {
-  const hero = document.getElementById('home');
-  const spot = document.getElementById('hero-spotlight');
-  if (!hero || !spot) return;
+function renderStats(data) {
+  const el = document.getElementById('about-stats');
+  if (!el) return;
+  const stats = [
+    { num: '59+', ar: 'عمل فني',        en: 'Artworks' },
+    { num: '12',  ar: 'تصنيف',           en: 'Categories' },
+    { num: '4',   ar: 'معارض ومسابقات', en: 'Exhibitions' },
+    { num: '4',   ar: 'مجلات تفاعلية',  en: 'Magazines' },
+  ];
+  el.innerHTML = stats.map(s => `
+    <div class="stat-item">
+      <span class="stat-num">${s.num}</span>
+      <span class="stat-label" data-ar="${s.ar}" data-en="${s.en}">${s.ar}</span>
+    </div>
+  `).join('');
+}
 
-  hero.addEventListener('mousemove', (e) => {
-    const rect = hero.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    spot.style.setProperty('--spot-x', x + '%');
-    spot.style.setProperty('--spot-y', y + '%');
-    spot.classList.add('active');
+/* =========================================================
+   Language toggle — AR ↔ EN  (RTL ↔ LTR)
+   ========================================================= */
+function initLangToggle(data) {
+  const btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+  let lang = 'ar';
+
+  function apply(l) {
+    const html = document.documentElement;
+    const isEn = l === 'en';
+    html.setAttribute('dir',  isEn ? 'ltr' : 'rtl');
+    html.setAttribute('lang', l);
+    btn.textContent = isEn ? 'AR' : 'EN';
+    btn.classList.toggle('lang-active', isEn);
+
+    /* texts via data-text attributes */
+    const texts = isEn ? (data.texts_en || data.texts) : data.texts;
+    if (texts) {
+      document.querySelectorAll('[data-text]').forEach(el => {
+        const val = getPath(texts, el.dataset.text);
+        if (val) el.textContent = val;
+      });
+    }
+
+    /* artist-specific dynamic fields */
+    const a = data.artist;
+    setText('hero-role',     isEn ? (a.title_en    || a.title)    : a.title);
+    setText('hero-tagline',  isEn ? (a.tagline_en  || a.tagline)  : a.tagline);
+    setText('about-bio',     isEn ? (a.bio_en      || a.bio)      : a.bio);
+    setText('about-location',isEn ? (a.location_en || a.location) : a.location);
+    setText('hero-name-ar',  isEn ? '' : a.nameAr);
+    if (texts && texts.about) setText('about-quote', texts.about.quote);
+
+    /* all data-ar / data-en bilateral elements — skip elements with child elements to avoid destroying SVGs */
+    document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+      if (el.children.length > 0) return;
+      const val = el.getAttribute('data-' + l);
+      if (val !== null) el.textContent = val;
+    });
+  }
+
+  btn.addEventListener('click', () => {
+    lang = lang === 'ar' ? 'en' : 'ar';
+    apply(lang);
   });
-  hero.addEventListener('mouseleave', () => {
-    spot.classList.remove('active');
-  });
+}
+
+/* =========================================================
+   Hero — JS parallax on scroll
+   ========================================================= */
+function initHeroParallax() {
+  const layer = document.getElementById('hero-parallax-layer');
+  const hero  = document.getElementById('home');
+  if (!layer || !hero) return;
+
+  function update() {
+    const y = window.scrollY;
+    if (y > hero.offsetHeight * 1.2) return;
+    layer.style.transform = `translateY(${y * 0.38}px)`;
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+/* =========================================================
+   Hero — sync portrait img with data.artist.photo
+   ========================================================= */
+function initHeroPortrait(data) {
+  const el = document.getElementById('hero-portrait-img');
+  if (el && data.artist && data.artist.photo) el.src = data.artist.photo;
 }
 
 /* =========================================================

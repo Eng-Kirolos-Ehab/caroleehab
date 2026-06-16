@@ -19,15 +19,19 @@ const SITE_DATA = {
   // بيانات الفنانة
   // -----------------------------------------------------------
   artist: {
-    name: "  Carole ehab ",
-    nameAr: "كارول",
-    title: "Textile Engineer & Visionary Designer",
-    tagline: "Blending textile engineering expertise with innovative fashion and pattern design",
-    bio: "A visual artist, textile engineer, and designer who combines artistic sensitivity with technical knowledge in textile design, fashion design, motifs, and hand drawing. I believe that every small idea can be transformed into an artwork that carries a story and identity. Through my work, I aim to create designs that blend beauty, precision, and visual expression. I have participated in several art exhibitions, and my creative journey continues to grow across art, textiles, and design",
-    bioShort: "فنانة تشكيلية شغوفة بالفحم، اللون، والتفاصيل الصغيرة.",
+    name: "Carole Ehab Nabil",
+    nameAr: "كارول إيهاب نبيل",
+    title: "فنانة تشكيلية · مصممة نسيج · طالبة هندسة",
+    tagline: "من النسيج إلى الموضة، من الفحم إلى اللون — كل عمل يبدأ برسم يدوي وينتهي بقصة",
+    bio: "فنانة تشكيلية ومصممة نسيج في السنة الرابعة بكلية هندسة النسيج، جامعة بدر في القاهرة. متخصصة في تصميم الأنماط التكرارية، تصاميم الجاكار، الموضة السريالية، والطباعة المنزلية — كل أعمالها تبدأ برسم يدوي وتنتهي بتصميم يحكي قصة. حصلت على المركز الثالث في مسابقة الفنون الجامعية، وشاركت في معرض EgyStetch وعدة معارض فنية داخل الكلية. مشروع تخرجها يستلهم من السريالية ويجمع بين تصميم الأزياء والمفروشات في مجموعتين متكاملتين — كلتيهما منشورتان على الموقع.",
+    bioShort: "فنانة تشكيلية شغوفة بالنسيج، الفحم، والتفاصيل الصغيرة.",
     photo: "images/work-052.jpg",
-    location: "suez - egypt",
-    email: "info@example.com",
+    location: "السويس، مصر",
+    location_en: "Suez, Egypt",
+    title_en: "Textile Engineer & Visual Artist",
+    tagline_en: "From textiles to fashion, from charcoal to color — every work begins with a hand-drawn sketch.",
+    bio_en: "A textile engineering student in her fourth year at Badr University in Cairo (BUC), specializing in repeat pattern design, jacquard, surrealist fashion, and home printing. Her graduation project — two complete surrealist collections (upholstery + fashion) — is published on this portfolio. She won 3rd place in the university-wide arts competition, exhibited at EgyStetch, and received the Department Creative Certificate for excellence in hand-drawn artistic boards.",
+    email: "caroleeehab@gmail.com",
     social: {
       instagram: "https://www.instagram.com/carole_ehab?igsh=YjloYm8xcHY2MWdj",
       facebook: "https://www.facebook.com/share/1J7XXx28Vj/",
@@ -820,5 +824,20 @@ const SITE_DATA = {
   // -----------------------------------------------------------
   // ترتيب الأقسام في الصفحة
   // -----------------------------------------------------------
-  sectionOrder: ["about", "featured", "process", "gallery", "magazines", "events", "quotes"]
+  // -----------------------------------------------------------
+  // English texts — parallel to texts above, used by lang toggle
+  // -----------------------------------------------------------
+  texts_en: {
+    nav: { home: "Home", about: "About", gallery: "Works", process: "Journey", magazines: "Magazines", events: "Events", contact: "Contact" },
+    hero: { ctaPrimary: "Browse Works", ctaSecondary: "About Me" },
+    about: { eyebrow: "About the Artist", heading: "Where Textiles Meet Art", quote: "I love that every small detail in my work carries a piece of my feeling." },
+    featured: { eyebrow: "Selected", heading: "Featured Works" },
+    process: { eyebrow: "How a piece is born", heading: "The Creative Journey", description: "From the first idea in mind, to the finished piece — each stage has its own story." },
+    gallery: { eyebrow: "Gallery", heading: "All Works", description: "Exhibition paintings, jacquard designs, surrealist fashion, factory work, and personal touches — choose a category to explore." },
+    magazines: { eyebrow: "Interactive Magazines", heading: "4 Magazines · 4 Worlds", description: "Jacquard Christmas, Jacquard Atlantis, Home Printing, and Surrealist Fashion — flip through the pages and explore.", badge: "Featured", openLink: "Open Magazine ↗" },
+    events: { eyebrow: "Events", heading: "Exhibitions & Events" },
+    footer: { eyebrow: "Contact", heading: "Let's Talk About Your Idea", description: "For any artistic collaboration, custom work, or exhibition invitation — reach out:", contactButton: "Message Me", note: "All rights reserved" }
+  },
+
+  sectionOrder: ["about", "mag-1", "featured", "mag-2", "process", "gallery", "mag-3", "events", "mag-4", "quotes"]
 };

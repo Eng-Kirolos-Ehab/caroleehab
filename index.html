@@ -59,11 +59,13 @@
       <a href="#about" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.about">عن الفنانة</a>
       <a href="#gallery" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.gallery">الأعمال</a>
       <a href="#process" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.process">رحلة العمل</a>
-      <a href="#magazines" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.magazines">المجلات</a>
+      <a href="#mag-1" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.magazines">المجلات</a>
       <a href="#events" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.events">الفعاليات</a>
       <a href="#contact" class="nav-link hover:text-gold transition-colors duration-200" data-text="nav.contact">تواصل</a>
     </nav>
 
+    <div class="flex items-center gap-2">
+      <button id="lang-toggle" class="lang-btn cursor-pointer" aria-label="Switch language">EN</button>
     <button id="menu-toggle" aria-label="فتح القائمة" class="lg:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-full hover:bg-ink/5 transition-colors">
       <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
@@ -72,6 +74,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
+    </div>
   </div>
 
   <!-- Mobile menu -->
@@ -87,47 +90,57 @@
 </header>
 
 <!-- ============ HERO ============ -->
-<section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16">
-  <!-- decorative blobs -->
-  <div class="hero-blob hero-blob-1"></div>
-  <div class="hero-blob hero-blob-2"></div>
-  <!-- interactive cursor spotlight -->
-  <div id="hero-spotlight" class="hero-spotlight" aria-hidden="true"></div>
+<section id="home" class="hero-scene">
+  <!-- Parallax background layer -->
+  <div class="hero-parallax-layer" id="hero-parallax-layer" aria-hidden="true">
+    <img src="images/hero-collage.png" alt="">
+  </div>
+  <!-- Gradient veil -->
+  <div class="hero-veil" aria-hidden="true"></div>
 
-  <div class="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
-    <div data-reveal>
-      <p class="inline-flex items-center gap-2 text-gold font-medium text-sm tracking-widest mb-4">
-        <span class="w-8 h-px bg-gold"></span>
-        <span id="hero-role">فنانة تشكيلية ومصممة</span>
-      </p>
-      <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-6">
-        <span id="hero-name" class="block">Carole</span>
-        <span class="block text-ink2 text-3xl sm:text-4xl mt-3 font-normal" id="hero-name-ar">كارول</span>
-      </h1>
-      <p id="hero-tagline" class="text-lg text-ink2 max-w-md leading-relaxed mb-8">
-        بين الفحم واللون والقماش… كل عمل يحكي حكاية
-      </p>
-      <div class="flex flex-wrap items-center gap-4">
-        <a href="#gallery" class="cursor-pointer inline-flex items-center gap-2 bg-ink text-cream px-7 py-3.5 rounded-full font-medium hover:bg-gold hover:text-ink transition-all duration-300 shadow-lg shadow-ink/10">
-          <span data-text="hero.ctaPrimary">استعرضي الأعمال</span>
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
-        </a>
-        <a href="#about" class="cursor-pointer inline-flex items-center gap-2 border border-ink/20 px-7 py-3.5 rounded-full font-medium hover:border-gold hover:text-gold transition-all duration-300" data-text="hero.ctaSecondary">
-          تعرفي عليها
-        </a>
+  <!-- Content -->
+  <div class="hero-scene-content">
+    <!-- Portrait (right in RTL) -->
+    <div class="hero-portrait" data-reveal>
+      <div class="hero-portrait-frame">
+        <img id="hero-portrait-img" src="images/work-052.jpg" alt="الفنانة كارول إيهاب" class="hero-portrait-img-el" loading="eager">
+        <div class="hero-portrait-border"></div>
+        <div class="hero-portrait-border-outer"></div>
+        <span class="hero-portrait-badge" data-ar="طالبة هندسة النسيج · جامعة بدر" data-en="Textile Eng. · Badr University">طالبة هندسة النسيج · جامعة بدر</span>
       </div>
     </div>
 
-    <div class="relative" data-reveal data-reveal-delay="150">
-      <div class="hero-frame">
-        <img src="images/work-001.jpg" alt="عمل فني للفنانة كارول" class="w-full h-full object-cover" loading="eager">
+    <!-- Text (left in RTL) -->
+    <div class="hero-text-side" data-reveal data-reveal-delay="120">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span id="hero-role">فنانة تشكيلية · مصممة نسيج</span>
       </div>
-      <div class="hero-frame-accent"></div>
+      <h1 class="hero-big-name">
+        <span id="hero-name">Carole</span>
+      </h1>
+      <span class="hero-name-ar" id="hero-name-ar">كارول إيهاب نبيل</span>
+      <p id="hero-tagline" class="hero-subtitle">
+        من النسيج إلى الموضة، من الفحم إلى اللون — كل عمل يبدأ برسم يدوي وينتهي بقصة.
+      </p>
+      <div class="hero-achievements">
+        <span class="hero-achieve-pill gold-pill" data-ar="المركز الثالث · مسابقة الفنون الجامعية" data-en="3rd Place · University Arts Competition">المركز الثالث · مسابقة الفنون الجامعية</span>
+        <span class="hero-achieve-pill" data-ar="معرض EgyStetch" data-en="EgyStetch Exhibition">معرض EgyStetch</span>
+        <span class="hero-achieve-pill" data-ar="شهادة إبداع قسم النسيج" data-en="Dept. Creative Certificate">شهادة إبداع قسم النسيج</span>
+      </div>
+      <div class="hero-cta-group">
+        <a href="#gallery" class="hero-btn-primary cursor-pointer">
+          <span data-text="hero.ctaPrimary">استعرضي الأعمال</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="transform:scaleX(-1)"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+        </a>
+        <a href="#about" class="hero-btn-secondary cursor-pointer" data-text="hero.ctaSecondary">تعرفي عليها</a>
+      </div>
     </div>
   </div>
 
-  <a href="#about" aria-label="انتقل للأسفل" class="cursor-pointer absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-cue">
-    <svg class="w-6 h-10 text-ink2" viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="1.5">
+  <!-- Scroll cue -->
+  <a href="#about" aria-label="انتقل للأسفل" class="hero-scroll-cue cursor-pointer">
+    <svg class="w-6 h-10" viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="1.5">
       <rect x="1" y="1" width="22" height="38" rx="11"/>
       <circle cx="12" cy="10" r="2.5" fill="currentColor" class="scroll-dot"/>
     </svg>
@@ -155,9 +168,12 @@
       </div>
 
       <!-- pull quote -->
-      <blockquote class="relative border-r-2 border-gold pr-6 py-2">
+      <blockquote class="relative border-r-2 border-gold pr-6 py-2 mb-8">
         <p id="about-quote" class="font-serif text-2xl italic text-ink leading-snug" data-text="about.quote"></p>
       </blockquote>
+
+      <!-- stats bar -->
+      <div id="about-stats" class="about-stats-bar"></div>
     </div>
   </div>
 </section>
@@ -213,41 +229,14 @@
     <!-- masonry grid -->
     <div id="gallery-grid" class="gallery-grid mb-12"></div>
 
-    <!-- magazine CTA banner -->
-    <a href="#magazines" class="cursor-pointer magazine-banner" data-reveal>
-      <span class="magazine-banner-icon">
-        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.04C10.18 4.77 7.5 4 5.25 4 4.56 4 4 4.56 4 5.25v12.5c0 .69.56 1.25 1.25 1.25 2.25 0 4.93.77 6.75 2.04m0-15v15m0-15c1.82-1.27 4.5-2.04 6.75-2.04.69 0 1.25.56 1.25 1.25v12.5c0 .69-.56 1.25-1.25 1.25-2.25 0-4.93.77-6.75 2.04" />
-        </svg>
-      </span>
-      <span class="magazine-banner-text">
-        <strong data-text="magazineBanner.title">مجلتي الفنية التفاعلية</strong>
-        <span data-text="magazineBanner.description">اقلبي الصفحات بنفسك واستكشفي أعمالي في شكل مجلة كاملة</span>
-      </span>
-      <span class="magazine-banner-arrow">
-        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
-      </span>
-    </a>
   </div>
 </section>
 
-<!-- ============ MAGAZINES ============ -->
-<section id="magazines" class="py-24 px-6 bg-cream2">
-  <div class="max-w-6xl mx-auto">
-    <div class="mb-14 text-center" data-reveal>
-      <p class="inline-flex items-center gap-2 justify-center text-gold font-medium text-sm tracking-widest mb-4">
-        <span class="w-8 h-px bg-gold"></span>
-        <span data-text="magazines.eyebrow">مجلات تفاعلية</span>
-        <span class="w-8 h-px bg-gold"></span>
-      </p>
-      <h2 class="font-serif text-4xl sm:text-5xl mb-6" data-text="magazines.heading">تصفّحي مجلاتي الفنية</h2>
-      <p class="text-ink2 max-w-xl mx-auto" data-text="magazines.description">اقلبي الصفحات بنفسك واستكشفي مجموعة من أعمالي وتصاميمي في شكل مجلة تفاعلية كاملة.</p>
-    </div>
-
-    <div id="magazine-featured"><!-- injected by JS --></div>
-    <div id="magazine-grid" class="magazine-list"></div>
-  </div>
-</section>
+<!-- ============ MAGAZINE INTERLUDES (slots filled by JS) ============ -->
+<section id="mag-1" class="mag-interlude-section"></section>
+<section id="mag-2" class="mag-interlude-section"></section>
+<section id="mag-3" class="mag-interlude-section"></section>
+<section id="mag-4" class="mag-interlude-section"></section>
 
 <!-- ============ EVENTS ============ -->
 <section id="events" class="py-24 px-6 bg-ink text-cream relative overflow-hidden">

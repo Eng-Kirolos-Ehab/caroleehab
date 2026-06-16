@@ -766,6 +766,499 @@ header, section, footer {
 }
 
 /* ---------------------------------------------------------
+   HERO — Full-screen parallax redesign
+--------------------------------------------------------- */
+#home.hero-scene {
+  position: relative;
+  min-height: 100svh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #1C1917;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.hero-parallax-layer {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  right: 0;
+  bottom: -20%;
+  z-index: 0;
+  will-change: transform;
+}
+.hero-parallax-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+.hero-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to bottom,
+      rgba(28,25,23,0.65) 0%,
+      rgba(28,25,23,0.30) 35%,
+      rgba(28,25,23,0.70) 75%,
+      rgba(28,25,23,0.90) 100%),
+    linear-gradient(to left,
+      transparent 40%,
+      rgba(28,25,23,0.80) 100%);
+}
+
+.hero-scene-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .hero-scene-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Portrait */
+.hero-portrait {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;
+}
+@media (min-width: 768px) {
+  .hero-portrait { order: 0; justify-content: flex-start; }
+}
+
+.hero-portrait-frame {
+  position: relative;
+  width: 260px;
+  height: 360px;
+  flex-shrink: 0;
+}
+@media (min-width: 640px) {
+  .hero-portrait-frame { width: 310px; height: 430px; }
+}
+@media (min-width: 1024px) {
+  .hero-portrait-frame { width: 370px; height: 510px; }
+}
+
+.hero-portrait-img-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.75rem;
+  display: block;
+  box-shadow: 0 40px 90px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,162,39,0.25);
+}
+
+.hero-portrait-border {
+  position: absolute;
+  inset: -10px;
+  border: 1.5px solid rgba(201,162,39,0.45);
+  border-radius: 2.15rem;
+  pointer-events: none;
+}
+.hero-portrait-border-outer {
+  position: absolute;
+  inset: -22px;
+  border: 1px solid rgba(201,162,39,0.18);
+  border-radius: 2.55rem;
+  pointer-events: none;
+}
+
+.hero-portrait-badge {
+  position: absolute;
+  bottom: -0.85rem;
+  right: -0.85rem;
+  background: #C9A227;
+  color: #1C1917;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 8px 24px -6px rgba(201,162,39,0.55);
+  white-space: nowrap;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* Hero text */
+.hero-text-side {
+  color: #FDF8F3;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #E8C766;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.hero-eyebrow-line {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: #E8C766;
+  flex-shrink: 0;
+}
+
+.hero-big-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  color: #FDF8F3;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.hero-name-ar {
+  font-family: 'Cairo', sans-serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.75rem);
+  font-weight: 300;
+  color: rgba(253,248,243,0.6);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: rgba(253,248,243,0.80);
+  line-height: 1.8;
+  margin-bottom: 1.75rem;
+  max-width: 440px;
+}
+
+/* Achievement pills */
+.hero-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.hero-achieve-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  background: rgba(253,248,243,0.07);
+  border: 1px solid rgba(253,248,243,0.16);
+  color: rgba(253,248,243,0.82);
+  backdrop-filter: blur(6px);
+  font-family: 'Cairo', sans-serif;
+}
+.hero-achieve-pill.gold-pill {
+  background: rgba(201,162,39,0.18);
+  border-color: rgba(201,162,39,0.45);
+  color: #E8C766;
+}
+
+/* CTA buttons */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+}
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #C9A227;
+  color: #1C1917;
+  padding: 0.85rem 1.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px -6px rgba(201,162,39,0.5);
+  text-decoration: none;
+}
+.hero-btn-primary:hover {
+  background: #E8C766;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -8px rgba(201,162,39,0.6);
+}
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1.5px solid rgba(253,248,243,0.28);
+  color: rgba(253,248,243,0.88);
+  padding: 0.85rem 1.9rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.88rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.hero-btn-secondary:hover {
+  border-color: #C9A227;
+  color: #E8C766;
+}
+
+/* Scroll cue override for dark hero */
+.hero-scroll-cue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(253,248,243,0.45);
+  animation: bob 2.4s ease-in-out infinite;
+}
+.hero-scroll-cue:hover { color: #E8C766; }
+
+/* ---------------------------------------------------------
+   Magazine Interlude strips (distributed across page)
+--------------------------------------------------------- */
+.mag-interlude-section {
+  overflow: hidden;
+}
+
+.mag-interlude-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 360px;
+}
+@media (min-width: 768px) {
+  .mag-interlude-wrap {
+    grid-template-columns: 1fr 1fr;
+    min-height: 420px;
+  }
+}
+
+.mag-cover-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+.mag-cover-panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s ease;
+}
+.mag-interlude-section:hover .mag-cover-panel img {
+  transform: scale(1.06);
+}
+
+@media (min-width: 768px) {
+  .mag-cover-panel.cover-right { order: 2; }
+}
+
+.mag-body-panel {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.85rem;
+}
+.mag-body-panel.dark-bg {
+  background: #1C1917;
+  color: #FDF8F3;
+}
+.mag-body-panel.light-bg {
+  background: #F6EFE6;
+  color: #1C1917;
+}
+.mag-body-panel.cream-bg {
+  background: #FDF8F3;
+  color: #1C1917;
+}
+
+.mag-interlude-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #C9A227;
+}
+.mag-interlude-eyebrow .ei-line {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: #C9A227;
+}
+
+.mag-featured-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.mag-interlude-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.mag-interlude-desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  opacity: 0.72;
+  max-width: 400px;
+}
+
+.mag-open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  margin-top: 0.25rem;
+}
+.mag-open-btn.gold-btn {
+  background: #C9A227;
+  color: #1C1917;
+}
+.mag-open-btn.gold-btn:hover {
+  background: #E8C766;
+  transform: translateY(-1px);
+}
+.mag-open-btn.outline-dark {
+  border: 1.5px solid #C9A227;
+  color: #C9A227;
+}
+.mag-open-btn.outline-dark:hover {
+  background: #C9A227;
+  color: #1C1917;
+}
+.mag-open-btn.outline-light {
+  border: 1.5px solid rgba(253,248,243,0.3);
+  color: rgba(253,248,243,0.85);
+}
+.mag-open-btn.outline-light:hover {
+  border-color: #C9A227;
+  color: #E8C766;
+}
+
+/* ---------------------------------------------------------
+   Language toggle button
+--------------------------------------------------------- */
+.lang-btn {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 0.32rem 0.85rem;
+  border: 1.5px solid rgba(28,25,23,0.15);
+  border-radius: 999px;
+  color: #44403C;
+  background: transparent;
+  transition: all 0.25s ease;
+  font-family: 'Inter', sans-serif;
+}
+.lang-btn:hover, .lang-btn.lang-active {
+  border-color: #C9A227;
+  color: #C9A227;
+  background: rgba(201,162,39,0.05);
+}
+
+/* ---------------------------------------------------------
+   About section — stats bar
+--------------------------------------------------------- */
+.about-stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(28,25,23,0.1);
+}
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #C9A227;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #44403C;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------
+   Magazine interlude — shade overlay on cover
+--------------------------------------------------------- */
+.mag-cover-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(28,25,23,0.25) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+.mag-featured-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 2;
+}
+.magazine-tag.tag-light {
+  color: #E8C766;
+  border-color: rgba(232,199,102,0.45);
+}
+
+/* ---------------------------------------------------------
+   LTR support: flip cover-right for ltr direction
+--------------------------------------------------------- */
+[dir="ltr"] .mag-cover-panel.cover-right {
+  order: 0;
+}
+[dir="ltr"] .mag-cover-panel:not(.cover-right) {
+  order: 0;
+}
+[dir="ltr"] .hero-portrait {
+  justify-content: flex-end;
+}
+[dir="ltr"] .hero-portrait-badge {
+  right: auto;
+  left: -0.85rem;
+}
+[dir="ltr"] .hero-eyebrow-line,
+[dir="ltr"] .mag-interlude-eyebrow .ei-line {
+  order: -1;
+}
+
+/* ---------------------------------------------------------
    Reduced motion
 --------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
