@@ -129,9 +129,7 @@ async function ghRequest(path, options = {}) {
 // يرجع { text, sha } أو { text: null, sha: null } لو الملف غير موجود
 async function ghGetFile(path) {
   const bust = Date.now();
-  const res = await ghRequest(`contents/${path}?ref=${GH_BRANCH}&_=${bust}`, {
-    headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' }
-  });
+  const res = await ghRequest(`contents/${path}?ref=${GH_BRANCH}&_=${bust}`);
   if (res.status === 404) return { text: null, sha: null };
   if (!res.ok) throw new Error(`فشل تحميل ${path} (${res.status})`);
   const json = await res.json();
