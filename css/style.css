@@ -239,20 +239,44 @@ header, section, footer {
    Featured works horizontal scroll
 --------------------------------------------------------- */
 .featured-scroll {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-  scrollbar-width: thin;
-  scrollbar-color: #C9A227 transparent;
+  overflow: hidden;
+  scrollbar-width: none;
+  position: relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 4rem, #000 calc(100% - 4rem), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 4rem, #000 calc(100% - 4rem), transparent 100%);
 }
 .featured-scroll::-webkit-scrollbar {
-  height: 6px;
+  display: none;
 }
-.featured-scroll::-webkit-scrollbar-thumb {
-  background: #C9A227;
-  border-radius: 10px;
+.featured-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  padding-bottom: 1rem;
+  animation: featured-marquee 58s linear infinite;
+  will-change: transform;
+}
+.featured-scroll:hover .featured-track,
+.featured-scroll:focus-within .featured-track {
+  animation-play-state: paused;
+}
+html[dir="rtl"] .featured-track {
+  animation-direction: reverse;
+}
+@keyframes featured-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 0.75rem)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .featured-scroll {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .featured-track {
+    animation: none;
+    scroll-snap-type: x mandatory;
+  }
 }
 
 .featured-card {

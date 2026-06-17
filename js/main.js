@@ -141,15 +141,22 @@ function renderFeatured(data) {
   const wrap = document.getElementById('featured-scroll');
   if (!wrap) return;
   const featured = data.works.filter(w => w.featured);
-  wrap.innerHTML = featured.map(w => `
-    <div class="featured-card" data-work-id="${w.id}">
+  const renderCard = (w, isDuplicate = false) => `
+    <div class="featured-card" data-work-id="${w.id}"${isDuplicate ? ' aria-hidden="true"' : ''}>
       <img src="${w.image}" alt="${escapeHtml(localized(w, 'title'))}" loading="lazy">
       <div class="fc-overlay">
         <span class="fc-cat">${escapeHtml(categoryLabel(data, w.category))}</span>
         <h3 class="fc-title">${escapeHtml(localized(w, 'title'))}</h3>
       </div>
     </div>
-  `).join('');
+  `;
+
+  wrap.innerHTML = `
+    <div class="featured-track">
+      ${featured.map(w => renderCard(w)).join('')}
+      ${featured.map(w => renderCard(w, true)).join('')}
+    </div>
+  `;
 
   wrap.querySelectorAll('.featured-card').forEach(card => {
     card.addEventListener('click', () => {
