@@ -39,6 +39,7 @@ function initSite() {
   setHref('contact-behance', data.artist.social && data.artist.social.behance);
 
   /* ── Render sections ── */
+  ensureFeaturedCarouselStyles();
   renderFeatured(data);
   renderProcess(data);
   renderFilters(data);
@@ -137,6 +138,58 @@ function applySectionOrder(data) {
 /* =========================================================
    Featured works (horizontal scroll)
    ========================================================= */
+function ensureFeaturedCarouselStyles() {
+  if (document.getElementById('featured-carousel-fallback-css')) return;
+  const style = document.createElement('style');
+  style.id = 'featured-carousel-fallback-css';
+  style.textContent = `
+    #featured-scroll {
+      overflow: hidden;
+      position: relative;
+      scrollbar-width: none;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 4rem, #000 calc(100% - 4rem), transparent 100%);
+      mask-image: linear-gradient(90deg, transparent 0, #000 4rem, #000 calc(100% - 4rem), transparent 100%);
+    }
+    #featured-scroll::-webkit-scrollbar { display: none; }
+    #featured-scroll .featured-track {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 1.5rem;
+      width: max-content;
+      min-width: max-content;
+      padding-bottom: 1rem;
+      animation: featured-marquee 58s linear infinite;
+      will-change: transform;
+    }
+    #featured-scroll:hover .featured-track,
+    #featured-scroll:focus-within .featured-track {
+      animation-play-state: paused;
+    }
+    html[dir="rtl"] #featured-scroll .featured-track { animation-direction: reverse; }
+    #featured-scroll .featured-card {
+      flex: 0 0 auto;
+      display: block;
+    }
+    @keyframes featured-marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(-50% - 0.75rem)); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #featured-scroll {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+      #featured-scroll .featured-track {
+        animation: none;
+        scroll-snap-type: x mandatory;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 function renderFeatured(data) {
   const wrap = document.getElementById('featured-scroll');
   if (!wrap) return;
