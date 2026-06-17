@@ -87,21 +87,21 @@ const SITE_DATA = {
   ],
   "works": [
     {
-      "id": 2,
-      "image": "images/work-106.jpg",
-      "title": "بنت البادية",
-      "category": "charcoal",
-      "year": "2026",
-      "description": "عمل بالفحم يحتفي بتفاصيل الوجه والملامح، مع لمسة من الحياة الصحراوية.",
-      "featured": true
-    },
-    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
       "category": "painting",
       "year": "2026",
       "description": "لوحة زيتية مستوحاة من مشهد يومي متكرر لاهالي غزة يعكس معاناتهم الدائمة و حقوقهم المهدورة و بيوتهم المدمره",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "image": "images/work-106.jpg",
+      "title": "بنت البادية",
+      "category": "charcoal",
+      "year": "2026",
+      "description": "عمل بالفحم يحتفي بتفاصيل الوجه والملامح، مع لمسة من الحياة الصحراوية.",
       "featured": true
     },
     {
