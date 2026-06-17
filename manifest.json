@@ -859,5 +859,12 @@
     "width": 960,
     "height": 1280,
     "orientation": "portrait"
+  },
+  {
+    "id": "work-124.jpg",
+    "original": "photo_27_2026-06-15_19-42-21.jpg",
+    "width": 1024,
+    "height": 1280,
+    "orientation": "portrait"
   }
 ]
