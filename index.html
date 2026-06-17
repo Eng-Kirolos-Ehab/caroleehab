@@ -66,7 +66,7 @@
 
     <div class="flex items-center gap-2">
       <button id="lang-toggle" class="lang-btn cursor-pointer" aria-label="Switch language">EN</button>
-    <button id="menu-toggle" aria-label="فتح القائمة" class="lg:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-full hover:bg-ink/5 transition-colors">
+    <button id="menu-toggle" aria-label="فتح القائمة" data-ar-label="فتح القائمة" data-en-label="Open menu" class="lg:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-full hover:bg-ink/5 transition-colors">
       <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
       </svg>
@@ -139,7 +139,7 @@
   </div>
 
   <!-- Scroll cue -->
-  <a href="#about" aria-label="انتقل للأسفل" class="hero-scroll-cue cursor-pointer">
+  <a href="#about" aria-label="انتقل للأسفل" data-ar-label="انتقل للأسفل" data-en-label="Scroll down" class="hero-scroll-cue cursor-pointer">
     <svg class="w-6 h-10" viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="1.5">
       <rect x="1" y="1" width="22" height="38" rx="11"/>
       <circle cx="12" cy="10" r="2.5" fill="currentColor" class="scroll-dot"/>
@@ -296,20 +296,23 @@
 
     <div class="border-t border-cream/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-cream/50">
       <p>© <span id="footer-year"></span> <span id="footer-name">Carole</span> — <span id="footer-note" data-text="footer.note">جميع الحقوق محفوظة</span></p>
-      <a href="admin.html" class="cursor-pointer hover:text-gold transition-colors duration-200">لوحة التحكم</a>
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+        <span class="site-version" data-ar="الإصدار v1.1.0" data-en="Version v1.1.0">الإصدار v1.1.0</span>
+        <a href="admin.html" class="cursor-pointer hover:text-gold transition-colors duration-200" data-ar="لوحة التحكم" data-en="Admin Panel">لوحة التحكم</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <!-- ============ LIGHTBOX ============ -->
 <div id="lightbox" class="lightbox">
-  <button id="lightbox-close" aria-label="إغلاق" class="lightbox-btn lightbox-close cursor-pointer">
+  <button id="lightbox-close" aria-label="إغلاق" data-ar-label="إغلاق" data-en-label="Close" class="lightbox-btn lightbox-close cursor-pointer">
     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
   </button>
-  <button id="lightbox-prev" aria-label="السابق" class="lightbox-btn lightbox-nav lightbox-prev cursor-pointer">
+  <button id="lightbox-prev" aria-label="السابق" data-ar-label="السابق" data-en-label="Previous" class="lightbox-btn lightbox-nav lightbox-prev cursor-pointer">
     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
   </button>
-  <button id="lightbox-next" aria-label="التالي" class="lightbox-btn lightbox-nav lightbox-next cursor-pointer">
+  <button id="lightbox-next" aria-label="التالي" data-ar-label="التالي" data-en-label="Next" class="lightbox-btn lightbox-nav lightbox-next cursor-pointer">
     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7" /></svg>
   </button>
   <div class="lightbox-content">
@@ -322,7 +325,19 @@
   </div>
 </div>
 
-<script src="js/content.js?v=20260615"></script>
-<script src="js/main.js?v=20260615"></script>
+<script>
+  (function loadFreshSiteScripts() {
+    const version = Date.now();
+    const loadScript = (src) => new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = `${src}?v=${version}`;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.body.appendChild(script);
+    });
+
+    loadScript('js/content.js').then(() => loadScript('js/main.js'));
+  })();
+</script>
 </body>
 </html>

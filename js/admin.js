@@ -311,9 +311,13 @@ function renderArtist() {
   setVal('f-artist-name', a.name);
   setVal('f-artist-nameAr', a.nameAr);
   setVal('f-artist-title', a.title);
+  setVal('f-artist-title-en', a.title_en);
   setVal('f-artist-location', a.location);
+  setVal('f-artist-location-en', a.location_en);
   setVal('f-artist-tagline', a.tagline);
+  setVal('f-artist-tagline-en', a.tagline_en);
   setVal('f-artist-bio', a.bio);
+  setVal('f-artist-bio-en', a.bio_en);
   setVal('f-artist-email', a.email);
   setVal('f-artist-instagram', a.social && a.social.instagram);
   setVal('f-artist-facebook', a.social && a.social.facebook);
@@ -337,9 +341,13 @@ async function saveArtist() {
   a.name = getVal('f-artist-name');
   a.nameAr = getVal('f-artist-nameAr');
   a.title = getVal('f-artist-title');
+  a.title_en = getVal('f-artist-title-en');
   a.location = getVal('f-artist-location');
+  a.location_en = getVal('f-artist-location-en');
   a.tagline = getVal('f-artist-tagline');
+  a.tagline_en = getVal('f-artist-tagline-en');
   a.bio = getVal('f-artist-bio');
+  a.bio_en = getVal('f-artist-bio-en');
   a.email = getVal('f-artist-email');
   a.social = a.social || {};
   a.social.instagram = getVal('f-artist-instagram');
@@ -402,6 +410,7 @@ function renderCategories() {
 async function submitCategory() {
   const id = getVal('c-id').trim();
   const label = getVal('c-label').trim();
+  const label_en = getVal('c-label-en').trim();
   if (!id || !label) {
     showToast('من فضلك أدخلي المعرّف والاسم', true);
     return;
@@ -410,9 +419,10 @@ async function submitCategory() {
     showToast('هذا المعرّف مستخدم بالفعل', true);
     return;
   }
-  siteData.categories.push({ id, label });
+  siteData.categories.push({ id, label, label_en });
   setVal('c-id', '');
   setVal('c-label', '');
+  setVal('c-label-en', '');
   renderCategories();
   renderCategorySelect();
   await persist();
@@ -422,7 +432,9 @@ function editCategory(index) {
   const cat = siteData.categories[index];
   const newLabel = prompt('الاسم الجديد للتصنيف:', cat.label);
   if (newLabel === null || !newLabel.trim()) return;
+  const newLabelEn = prompt('English category name:', cat.label_en || '');
   cat.label = newLabel.trim();
+  if (newLabelEn !== null) cat.label_en = newLabelEn.trim();
   renderCategories();
   renderCategorySelect();
   renderWorks();
@@ -491,9 +503,11 @@ function startEditWork(id) {
   if (!w) return;
   editingWorkId = id;
   setVal('w-title', w.title);
+  setVal('w-title-en', w.title_en);
   setVal('w-category', w.category);
   setVal('w-year', w.year);
   setVal('w-description', w.description);
+  setVal('w-description-en', w.description_en);
   document.getElementById('w-featured').checked = !!w.featured;
   pendingWorkImage = w.image;
   showPreview('w-image-preview', w.image);
@@ -506,9 +520,11 @@ function startEditWork(id) {
 
 async function submitWork() {
   const title = getVal('w-title').trim();
+  const title_en = getVal('w-title-en').trim();
   const category = getVal('w-category');
   const year = getVal('w-year').trim();
   const description = getVal('w-description').trim();
+  const description_en = getVal('w-description-en').trim();
   const featured = document.getElementById('w-featured').checked;
 
   if (!title) { showToast('أدخلي عنوان العمل', true); return; }
@@ -516,10 +532,10 @@ async function submitWork() {
 
   if (editingWorkId !== null) {
     const w = siteData.works.find(w => w.id === editingWorkId);
-    Object.assign(w, { title, category, year, description, featured, image: pendingWorkImage });
+    Object.assign(w, { title, title_en, category, year, description, description_en, featured, image: pendingWorkImage });
   } else {
     const nextId = siteData.works.reduce((m, w) => Math.max(m, w.id), 0) + 1;
-    siteData.works.push({ id: nextId, image: pendingWorkImage, title, category, year, description, featured });
+    siteData.works.push({ id: nextId, image: pendingWorkImage, title, title_en, category, year, description, description_en, featured });
   }
 
   resetWorkForm();
@@ -532,8 +548,10 @@ function resetWorkForm() {
   editingWorkId = null;
   pendingWorkImage = null;
   setVal('w-title', '');
+  setVal('w-title-en', '');
   setVal('w-year', '');
   setVal('w-description', '');
+  setVal('w-description-en', '');
   document.getElementById('w-featured').checked = false;
   hidePreview('w-image-preview');
   document.getElementById('w-image-upload').value = '';
@@ -593,9 +611,12 @@ function startEditEvent(id) {
   if (!ev) return;
   editingEventId = id;
   setVal('e-title', ev.title);
+  setVal('e-title-en', ev.title_en);
   setVal('e-date', ev.date);
   setVal('e-location', ev.location);
+  setVal('e-location-en', ev.location_en);
   setVal('e-description', ev.description);
+  setVal('e-description-en', ev.description_en);
   pendingEventImage = ev.image;
   showPreview('e-image-preview', ev.image);
 
@@ -606,19 +627,22 @@ function startEditEvent(id) {
 
 async function submitEvent() {
   const title = getVal('e-title').trim();
+  const title_en = getVal('e-title-en').trim();
   const date = getVal('e-date').trim();
   const location = getVal('e-location').trim();
+  const location_en = getVal('e-location-en').trim();
   const description = getVal('e-description').trim();
+  const description_en = getVal('e-description-en').trim();
 
   if (!title) { showToast('أدخلي عنوان الفعالية', true); return; }
   if (!pendingEventImage) { showToast('اختاري صورة للفعالية', true); return; }
 
   if (editingEventId !== null) {
     const ev = siteData.events.find(e => e.id === editingEventId);
-    Object.assign(ev, { title, date, location, description, image: pendingEventImage });
+    Object.assign(ev, { title, title_en, date, location, location_en, description, description_en, image: pendingEventImage });
   } else {
     const nextId = siteData.events.reduce((m, e) => Math.max(m, e.id), 0) + 1;
-    siteData.events.push({ id: nextId, image: pendingEventImage, title, date, location, description });
+    siteData.events.push({ id: nextId, image: pendingEventImage, title, title_en, date, location, location_en, description, description_en });
   }
 
   resetEventForm();
@@ -631,9 +655,12 @@ function resetEventForm() {
   editingEventId = null;
   pendingEventImage = null;
   setVal('e-title', '');
+  setVal('e-title-en', '');
   setVal('e-date', '');
   setVal('e-location', '');
+  setVal('e-location-en', '');
   setVal('e-description', '');
+  setVal('e-description-en', '');
   hidePreview('e-image-preview');
   document.getElementById('e-image-upload').value = '';
   document.getElementById('btn-add-event').textContent = 'إضافة الفعالية';
@@ -680,7 +707,9 @@ function startEditQuote(index) {
   const q = siteData.quotes[index];
   editingQuoteIndex = index;
   setVal('q-text', q.text);
+  setVal('q-text-en', q.text_en);
   setVal('q-author', q.author);
+  setVal('q-author-en', q.author_en);
   document.getElementById('btn-add-quote').textContent = 'حفظ التعديلات';
   document.getElementById('btn-cancel-edit-quote').classList.remove('hidden');
   switchTab('quotes');
@@ -688,13 +717,15 @@ function startEditQuote(index) {
 
 async function submitQuote() {
   const text = getVal('q-text').trim();
+  const text_en = getVal('q-text-en').trim();
   const author = getVal('q-author').trim();
+  const author_en = getVal('q-author-en').trim();
   if (!text) { showToast('أدخلي نص الاقتباس', true); return; }
 
   if (editingQuoteIndex !== null) {
-    siteData.quotes[editingQuoteIndex] = { text, author };
+    siteData.quotes[editingQuoteIndex] = { text, text_en, author, author_en };
   } else {
-    siteData.quotes.push({ text, author });
+    siteData.quotes.push({ text, text_en, author, author_en });
   }
 
   resetQuoteForm();
@@ -705,7 +736,9 @@ async function submitQuote() {
 function resetQuoteForm() {
   editingQuoteIndex = null;
   setVal('q-text', '');
+  setVal('q-text-en', '');
   setVal('q-author', 'كارول');
+  setVal('q-author-en', 'Carole');
   document.getElementById('btn-add-quote').textContent = 'إضافة الاقتباس';
   document.getElementById('btn-cancel-edit-quote').classList.add('hidden');
 }
@@ -761,9 +794,12 @@ function startEditMagazine(id) {
   if (!m) return;
   editingMagazineId = id;
   setVal('mg-title', m.title);
+  setVal('mg-title-en', m.title_en);
   setVal('mg-description', m.description);
+  setVal('mg-description-en', m.description_en);
   setVal('mg-embed', m.embedUrl);
   setVal('mg-tag', m.tag || '');
+  setVal('mg-tag-en', m.tag_en || '');
   document.getElementById('mg-featured').checked = !!m.featured;
   pendingMagazineCover = m.cover;
   showPreview('mg-cover-preview', m.cover);
@@ -775,9 +811,12 @@ function startEditMagazine(id) {
 
 async function submitMagazine() {
   const title = getVal('mg-title').trim();
+  const title_en = getVal('mg-title-en').trim();
   const description = getVal('mg-description').trim();
+  const description_en = getVal('mg-description-en').trim();
   const embedUrl = getVal('mg-embed').trim();
   const tag = getVal('mg-tag').trim();
+  const tag_en = getVal('mg-tag-en').trim();
   const featured = document.getElementById('mg-featured').checked;
 
   if (!title) { showToast('أدخلي عنوان المجلة', true); return; }
@@ -792,10 +831,10 @@ async function submitMagazine() {
 
   if (editingMagazineId !== null) {
     const m = siteData.magazines.find(m => m.id === editingMagazineId);
-    Object.assign(m, { title, description, embedUrl, tag, featured, cover: pendingMagazineCover });
+    Object.assign(m, { title, title_en, description, description_en, embedUrl, tag, tag_en, featured, cover: pendingMagazineCover });
   } else {
     const nextId = siteData.magazines.reduce((mx, m) => Math.max(mx, m.id), 0) + 1;
-    siteData.magazines.push({ id: nextId, title, description, embedUrl, tag, cover: pendingMagazineCover, featured });
+    siteData.magazines.push({ id: nextId, title, title_en, description, description_en, embedUrl, tag, tag_en, cover: pendingMagazineCover, featured });
   }
 
   resetMagazineForm();
@@ -808,9 +847,12 @@ function resetMagazineForm() {
   editingMagazineId = null;
   pendingMagazineCover = null;
   setVal('mg-title', '');
+  setVal('mg-title-en', '');
   setVal('mg-description', '');
+  setVal('mg-description-en', '');
   setVal('mg-embed', '');
   setVal('mg-tag', '');
+  setVal('mg-tag-en', '');
   document.getElementById('mg-featured').checked = false;
   hidePreview('mg-cover-preview');
   document.getElementById('mg-cover-upload').value = '';
@@ -872,7 +914,9 @@ function startEditProcess(id) {
   if (!p) return;
   editingProcessId = id;
   setVal('pr-title', p.title);
+  setVal('pr-title-en', p.title_en);
   setVal('pr-description', p.description);
+  setVal('pr-description-en', p.description_en);
   pendingProcessImage = p.image;
   showPreview('pr-image-preview', p.image);
 
@@ -883,7 +927,9 @@ function startEditProcess(id) {
 
 async function submitProcess() {
   const title = getVal('pr-title').trim();
+  const title_en = getVal('pr-title-en').trim();
   const description = getVal('pr-description').trim();
+  const description_en = getVal('pr-description-en').trim();
 
   if (!title) { showToast('أدخلي عنوان المرحلة', true); return; }
   if (!pendingProcessImage) { showToast('اختاري صورة للمرحلة', true); return; }
@@ -892,10 +938,10 @@ async function submitProcess() {
 
   if (editingProcessId !== null) {
     const p = siteData.process.find(p => p.id === editingProcessId);
-    Object.assign(p, { title, description, image: pendingProcessImage });
+    Object.assign(p, { title, title_en, description, description_en, image: pendingProcessImage });
   } else {
     const nextId = siteData.process.reduce((mx, p) => Math.max(mx, p.id), 0) + 1;
-    siteData.process.push({ id: nextId, image: pendingProcessImage, title, description });
+    siteData.process.push({ id: nextId, image: pendingProcessImage, title, title_en, description, description_en });
   }
 
   resetProcessForm();
@@ -908,7 +954,9 @@ function resetProcessForm() {
   editingProcessId = null;
   pendingProcessImage = null;
   setVal('pr-title', '');
+  setVal('pr-title-en', '');
   setVal('pr-description', '');
+  setVal('pr-description-en', '');
   hidePreview('pr-image-preview');
   document.getElementById('pr-image-upload').value = '';
   document.getElementById('btn-add-process').textContent = 'إضافة المرحلة';
@@ -1130,6 +1178,7 @@ function startPicking(target) {
   pickerTarget = target;
   const labels = {
     artist: 'صورة الفنانة',
+    'artist-about': 'صورة قسم عن الفنانة',
     work: 'صورة العمل الجديد',
     event: 'صورة الفعالية',
     'mg-cover': 'صورة غلاف المجلة',
@@ -1265,6 +1314,9 @@ async function addImageToLibrary(file) {
     width, height,
     orientation: width > height ? 'landscape' : (height > width ? 'portrait' : 'square')
   });
+
+  siteData.imageMeta = siteData.imageMeta || {};
+  siteData.imageMeta['images/' + name] = { width, height };
 
   return 'images/' + name;
 }

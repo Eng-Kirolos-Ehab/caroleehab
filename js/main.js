@@ -3,7 +3,9 @@
    يقرأ كل المحتوى من content.js (SITE_DATA) ويبني الصفحة
    ========================================================= */
 
-document.addEventListener('DOMContentLoaded', () => {
+let CURRENT_LANG = 'ar';
+
+function initSite() {
   const data = SITE_DATA;
   if (!data) return;
 
@@ -52,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroParallax();
   initHeroPortrait(data);
   initLangToggle(data);
-});
+}
 
 /* =========================================================
    Helpers
@@ -65,9 +67,42 @@ function setHref(id, value) {
   const el = document.getElementById(id);
   if (el && value) el.href = value;
 }
+function localized(obj, field) {
+  if (!obj) return '';
+  const enValue = obj[field + '_en'];
+  if (CURRENT_LANG !== 'en') return obj[field] || '';
+  if (enValue) return enValue;
+  return englishFallback(obj, field);
+}
+function englishFallback(obj, field) {
+  if (field === 'label' && obj.id) {
+    if (obj.id === 'all') return 'All';
+    return String(obj.id).replace(/[-_]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+  if (field === 'title') return 'Untitled Work';
+  if (field === 'description') return 'A selected piece from Carole Ehab Nabil portfolio.';
+  if (field === 'tag') return '';
+  if (field === 'location') return 'Egypt';
+  if (field === 'author') return 'Carole';
+  if (field === 'text') return '';
+  return '';
+}
+function imageAttrs(data, src) {
+  const meta = data.imageMeta && data.imageMeta[src];
+  if (!meta || !meta.width || !meta.height) {
+    return {
+      boxStyle: '',
+      imgAttrs: 'loading="lazy" decoding="async"'
+    };
+  }
+  return {
+    boxStyle: ` style="aspect-ratio:${meta.width}/${meta.height}"`,
+    imgAttrs: `width="${meta.width}" height="${meta.height}" loading="lazy" decoding="async"`
+  };
+}
 function categoryLabel(data, catId) {
   const cat = data.categories.find(c => c.id === catId);
-  return cat ? cat.label : catId;
+  return cat ? localized(cat, 'label') : catId;
 }
 function getPath(obj, path) {
   return path.split('.').reduce((o, key) => (o && o[key] !== undefined ? o[key] : undefined), obj);
@@ -108,10 +143,10 @@ function renderFeatured(data) {
   const featured = data.works.filter(w => w.featured);
   wrap.innerHTML = featured.map(w => `
     <div class="featured-card" data-work-id="${w.id}">
-      <img src="${w.image}" alt="${escapeHtml(w.title)}" loading="lazy">
+      <img src="${w.image}" alt="${escapeHtml(localized(w, 'title'))}" loading="lazy">
       <div class="fc-overlay">
         <span class="fc-cat">${escapeHtml(categoryLabel(data, w.category))}</span>
-        <h3 class="fc-title">${escapeHtml(w.title)}</h3>
+        <h3 class="fc-title">${escapeHtml(localized(w, 'title'))}</h3>
       </div>
     </div>
   `).join('');
@@ -134,12 +169,12 @@ function renderProcess(data) {
   wrap.innerHTML = data.process.map((step, i) => `
     <div class="process-step ${i % 2 === 1 ? 'reverse' : ''}" data-reveal>
       <div class="process-img">
-        <img src="${step.image}" alt="${escapeHtml(step.title)}" loading="lazy">
+        <img src="${step.image}" alt="${escapeHtml(localized(step, 'title'))}" loading="lazy">
       </div>
       <div class="process-text">
         <span class="process-num">${String(i + 1).padStart(2, '0')}</span>
-        <h3 class="font-serif text-2xl sm:text-3xl mb-3">${escapeHtml(step.title)}</h3>
-        <p class="text-ink2 leading-relaxed">${escapeHtml(step.description || '')}</p>
+        <h3 class="font-serif text-2xl sm:text-3xl mb-3">${escapeHtml(localized(step, 'title'))}</h3>
+        <p class="text-ink2 leading-relaxed">${escapeHtml(localized(step, 'description'))}</p>
       </div>
     </div>
   `).join('');
@@ -157,6 +192,7 @@ function renderMagazines(data) {
 
   const mgTexts = (data.texts && data.texts.magazines) || {};
   const badge   = mgTexts.badge || 'المجلة الأبرز';
+  const isEn = CURRENT_LANG === 'en';
 
   // alternating bg: dark / light / dark / light
   const bgs = ['mag-dark', 'mag-light', 'mag-dark', 'mag-light'];
@@ -179,9 +215,9 @@ function renderMagazines(data) {
             </div>
             ${isFeatured ? `<span class="magazine-badge" data-ar="${escapeHtml(badge)}" data-en="${escapeHtml(badgeEn)}">${escapeHtml(badge)}</span>` : ''}
           </div>
-          ${mag.tag ? `<span class="magazine-tag${bg === 'mag-dark' ? ' tag-light' : ''}">${escapeHtml(mag.tag)}</span>` : ''}
-          <h3 class="mag-embed-title">${escapeHtml(mag.title)}</h3>
-          <p class="mag-embed-desc">${escapeHtml(mag.description || '')}</p>
+          ${localized(mag, 'tag') ? `<span class="magazine-tag${bg === 'mag-dark' ? ' tag-light' : ''}">${escapeHtml(localized(mag, 'tag'))}</span>` : ''}
+          <h3 class="mag-embed-title">${escapeHtml(localized(mag, 'title'))}</h3>
+          <p class="mag-embed-desc">${escapeHtml(localized(mag, 'description'))}</p>
         </div>
 
         <div class="mag-embed-frame-wrap">
@@ -191,7 +227,7 @@ function renderMagazines(data) {
             scrolling="no"
             allow="fullscreen"
             allowfullscreen
-            title="${escapeHtml(mag.title)}"
+            title="${escapeHtml(localized(mag, 'title'))}"
           ></iframe>
         </div>
 
@@ -200,7 +236,7 @@ function renderMagazines(data) {
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
             </svg>
-            <span data-ar="فتح بشاشة كاملة" data-en="Open Fullscreen">فتح بشاشة كاملة</span>
+            <span data-ar="فتح بشاشة كاملة" data-en="Open Fullscreen">${isEn ? 'Open Fullscreen' : 'فتح بشاشة كاملة'}</span>
           </a>
         </div>
       </div>
@@ -215,7 +251,7 @@ function renderFilters(data) {
   const wrap = document.getElementById('filters');
   if (!wrap) return;
   wrap.innerHTML = data.categories.map((c, i) => `
-    <button class="filter-btn ${i === 0 ? 'active' : ''}" data-cat="${c.id}">${escapeHtml(c.label)}</button>
+    <button class="filter-btn ${i === 0 ? 'active' : ''}" data-cat="${c.id}">${escapeHtml(categoryLabel(data, c.id))}</button>
   `).join('');
 
   wrap.querySelectorAll('.filter-btn').forEach(btn => {
@@ -248,9 +284,11 @@ function applyFilter(catId) {
 function renderGallery(data) {
   const grid = document.getElementById('gallery-grid');
   if (!grid) return;
-  grid.innerHTML = data.works.map(w => `
-    <div class="gallery-item item-anim" data-work-id="${w.id}" data-category="${w.category}">
-      <img src="${w.image}" alt="${escapeHtml(w.title)}" loading="lazy">
+  grid.innerHTML = data.works.map(w => {
+    const img = imageAttrs(data, w.image);
+    return `
+    <div class="gallery-item item-anim" data-work-id="${w.id}" data-category="${w.category}"${img.boxStyle}>
+      <img src="${w.image}" alt="${escapeHtml(localized(w, 'title'))}" ${img.imgAttrs}>
       <span class="gi-zoom">
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16zM11 8v6M8 11h6" />
@@ -258,10 +296,11 @@ function renderGallery(data) {
       </span>
       <div class="gi-overlay">
         <span class="gi-cat">${escapeHtml(categoryLabel(data, w.category))}</span>
-        <h3 class="gi-title">${escapeHtml(w.title)}</h3>
+        <h3 class="gi-title">${escapeHtml(localized(w, 'title'))}</h3>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 
   grid.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('click', () => {
@@ -284,15 +323,15 @@ function renderEvents(data) {
   wrap.innerHTML = data.events.map((ev, i) => `
     <div class="event-card" data-reveal data-reveal-delay="${i * 100}">
       <div class="ev-img">
-        <img src="${ev.image}" alt="${escapeHtml(ev.title)}" loading="lazy">
+        <img src="${ev.image}" alt="${escapeHtml(localized(ev, 'title'))}" loading="lazy">
       </div>
       <div class="ev-body">
         <span class="ev-date">
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-          ${escapeHtml(ev.date)} — ${escapeHtml(ev.location || '')}
+          ${escapeHtml(ev.date)} — ${escapeHtml(localized(ev, 'location'))}
         </span>
-        <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(ev.title)}</h3>
-        <p class="text-cream/70 leading-relaxed">${escapeHtml(ev.description || '')}</p>
+        <h3 class="font-serif text-2xl sm:text-3xl mb-2">${escapeHtml(localized(ev, 'title'))}</h3>
+        <p class="text-cream/70 leading-relaxed">${escapeHtml(localized(ev, 'description'))}</p>
       </div>
     </div>
   `).join('');
@@ -311,8 +350,8 @@ function renderQuotes(data) {
 
   box.innerHTML = data.quotes.map((q, i) => `
     <div class="quote-slide ${i === 0 ? 'active' : ''}" data-index="${i}">
-      <p class="font-serif text-2xl sm:text-3xl italic leading-relaxed mb-4">"${escapeHtml(q.text)}"</p>
-      <span class="text-gold font-medium tracking-widest text-sm">${escapeHtml(q.author || '')}</span>
+      <p class="font-serif text-2xl sm:text-3xl italic leading-relaxed mb-4">"${escapeHtml(localized(q, 'text'))}"</p>
+      <span class="text-gold font-medium tracking-widest text-sm">${escapeHtml(localized(q, 'author'))}</span>
     </div>
   `).join('');
 
@@ -443,9 +482,9 @@ function initLightbox(data) {
   function render() {
     const w = works[currentIndex];
     imgEl.src = w.image;
-    imgEl.alt = w.title;
-    titleEl.textContent = w.title;
-    descEl.textContent = w.description || '';
+    imgEl.alt = localized(w, 'title');
+    titleEl.textContent = localized(w, 'title');
+    descEl.textContent = localized(w, 'description');
     catEl.textContent = categoryLabel(data, w.category) + (w.year ? ' · ' + w.year : '');
   }
 
@@ -506,15 +545,26 @@ function renderStats(data) {
 function initLangToggle(data) {
   const btn = document.getElementById('lang-toggle');
   if (!btn) return;
-  let lang = 'ar';
+  const langKey = 'caroleehab_lang';
+  let lang = localStorage.getItem(langKey) === 'en' ? 'en' : 'ar';
 
   function apply(l) {
+    CURRENT_LANG = l;
     const html = document.documentElement;
     const isEn = l === 'en';
     html.setAttribute('dir',  isEn ? 'ltr' : 'rtl');
     html.setAttribute('lang', l);
     btn.textContent = isEn ? 'AR' : 'EN';
     btn.classList.toggle('lang-active', isEn);
+    document.title = isEn
+      ? 'Carole | Visual Artist & Textile Designer'
+      : 'كارول | Carole — فنانة تشكيلية ومصممة';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', isEn
+        ? 'Carole Ehab portfolio - paintings, charcoal drawings, textile design, handmade work, and art events.'
+        : 'بورتفوليو الفنانة كارول - لوحات، رسومات بالفحم، تصميم نسيج، أعمال يدوية وفعاليات فنية.');
+    }
 
     /* texts via data-text attributes */
     const texts = isEn ? (data.texts_en || data.texts) : data.texts;
@@ -533,6 +583,18 @@ function initLangToggle(data) {
     setText('about-location',isEn ? (a.location_en || a.location) : a.location);
     setText('hero-name-ar',  isEn ? '' : a.nameAr);
     if (texts && texts.about) setText('about-quote', texts.about.quote);
+    const heroPortrait = document.getElementById('hero-portrait-img');
+    if (heroPortrait) heroPortrait.alt = isEn ? 'Carole Ehab portrait' : 'الفنانة كارول إيهاب';
+    const aboutPhoto = document.getElementById('about-photo');
+    if (aboutPhoto) aboutPhoto.alt = isEn ? 'Carole Ehab artwork portrait' : 'صورة الفنانة كارول';
+
+    renderMagazines(data);
+    renderFeatured(data);
+    renderProcess(data);
+    renderFilters(data);
+    renderGallery(data);
+    renderEvents(data);
+    renderQuotes(data);
 
     /* all data-ar / data-en bilateral elements — skip elements with child elements to avoid destroying SVGs */
     document.querySelectorAll('[data-ar][data-en]').forEach(el => {
@@ -540,12 +602,20 @@ function initLangToggle(data) {
       const val = el.getAttribute('data-' + l);
       if (val !== null) el.textContent = val;
     });
+
+    document.querySelectorAll('[data-ar-label][data-en-label]').forEach(el => {
+      const val = el.getAttribute(`data-${l}-label`);
+      if (val) el.setAttribute('aria-label', val);
+    });
   }
 
   btn.addEventListener('click', () => {
     lang = lang === 'ar' ? 'en' : 'ar';
+    localStorage.setItem(langKey, lang);
     apply(lang);
   });
+
+  apply(lang);
 }
 
 /* =========================================================
@@ -584,4 +654,10 @@ function escapeHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSite);
+} else {
+  initSite();
 }

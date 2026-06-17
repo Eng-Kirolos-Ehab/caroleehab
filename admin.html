@@ -112,16 +112,32 @@
           <input id="f-artist-title" class="field-input" type="text">
         </div>
         <div>
+          <label class="field-label">Title (English)</label>
+          <input id="f-artist-title-en" class="field-input" type="text">
+        </div>
+        <div>
           <label class="field-label">الموقع (مدينة، دولة)</label>
           <input id="f-artist-location" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">Location (English)</label>
+          <input id="f-artist-location-en" class="field-input" type="text">
         </div>
         <div class="sm:col-span-2">
           <label class="field-label">عبارة الواجهة الرئيسية (Tagline)</label>
           <input id="f-artist-tagline" class="field-input" type="text">
         </div>
         <div class="sm:col-span-2">
+          <label class="field-label">Tagline (English)</label>
+          <input id="f-artist-tagline-en" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
           <label class="field-label">السيرة الذاتية (تظهر في قسم "عن الفنانة")</label>
           <textarea id="f-artist-bio" class="field-input" rows="4"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Bio (English)</label>
+          <textarea id="f-artist-bio-en" class="field-input" rows="4"></textarea>
         </div>
       </div>
     </div>
@@ -183,6 +199,10 @@
           <input id="w-title" class="field-input" type="text">
         </div>
         <div>
+          <label class="field-label">Work title (English)</label>
+          <input id="w-title-en" class="field-input" type="text">
+        </div>
+        <div>
           <label class="field-label">التصنيف</label>
           <select id="w-category" class="field-input"></select>
         </div>
@@ -197,6 +217,10 @@
         <div class="sm:col-span-2">
           <label class="field-label">الوصف</label>
           <textarea id="w-description" class="field-input" rows="3"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Description (English)</label>
+          <textarea id="w-description-en" class="field-input" rows="3"></textarea>
         </div>
       </div>
 
@@ -241,6 +265,10 @@
           <input id="e-title" class="field-input" type="text">
         </div>
         <div>
+          <label class="field-label">Event title (English)</label>
+          <input id="e-title-en" class="field-input" type="text">
+        </div>
+        <div>
           <label class="field-label">التاريخ</label>
           <input id="e-date" class="field-input" type="text" placeholder="2026">
         </div>
@@ -249,8 +277,16 @@
           <input id="e-location" class="field-input" type="text">
         </div>
         <div class="sm:col-span-2">
+          <label class="field-label">Location (English)</label>
+          <input id="e-location-en" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
           <label class="field-label">الوصف</label>
           <textarea id="e-description" class="field-input" rows="3"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Description (English)</label>
+          <textarea id="e-description-en" class="field-input" rows="3"></textarea>
         </div>
       </div>
       <label class="field-label">الصورة</label>
@@ -280,9 +316,17 @@
           <label class="field-label">النص</label>
           <textarea id="q-text" class="field-input" rows="2"></textarea>
         </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Quote text (English)</label>
+          <textarea id="q-text-en" class="field-input" rows="2"></textarea>
+        </div>
         <div>
           <label class="field-label">الاسم (يظهر تحت الاقتباس)</label>
           <input id="q-author" class="field-input" type="text" value="كارول">
+        </div>
+        <div>
+          <label class="field-label">Author (English)</label>
+          <input id="q-author-en" class="field-input" type="text" value="Carole">
         </div>
       </div>
       <div class="flex items-center gap-3">
@@ -311,6 +355,10 @@
           <label class="field-label">الاسم الظاهر (عربي)</label>
           <input id="c-label" class="field-input" type="text" placeholder="تماثيل">
         </div>
+        <div class="sm:col-span-3">
+          <label class="field-label">Display name (English)</label>
+          <input id="c-label-en" class="field-input" type="text" placeholder="Sculpture">
+        </div>
       </div>
       <button id="btn-add-category" class="btn-primary">إضافة التصنيف</button>
     </div>
@@ -336,8 +384,16 @@
           <input id="mg-title" class="field-input" type="text">
         </div>
         <div class="sm:col-span-2">
+          <label class="field-label">Magazine title (English)</label>
+          <input id="mg-title-en" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
           <label class="field-label">الوصف</label>
           <textarea id="mg-description" class="field-input" rows="2"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Description (English)</label>
+          <textarea id="mg-description-en" class="field-input" rows="2"></textarea>
         </div>
         <div class="sm:col-span-2">
           <label class="field-label">رابط Embed (src بتاع iframe من FlipHTML5)</label>
@@ -346,6 +402,10 @@
         <div class="sm:col-span-2">
           <label class="field-label">كونسبت / تصنيف المجلة (بطاقة صغيرة تظهر مع العنوان)</label>
           <input id="mg-tag" class="field-input" type="text" placeholder="مثال: جاكار — كريسماس">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Magazine tag (English)</label>
+          <input id="mg-tag-en" class="field-input" type="text" placeholder="Jacquard — Christmas">
         </div>
         <div class="flex items-center gap-2">
           <input id="mg-featured" type="checkbox" class="w-5 h-5 accent-[#C9A227]">
@@ -383,8 +443,16 @@
           <input id="pr-title" class="field-input" type="text">
         </div>
         <div class="sm:col-span-2">
+          <label class="field-label">Step title (English)</label>
+          <input id="pr-title-en" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
           <label class="field-label">الوصف</label>
           <textarea id="pr-description" class="field-input" rows="3"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Description (English)</label>
+          <textarea id="pr-description-en" class="field-input" rows="3"></textarea>
         </div>
       </div>
 
