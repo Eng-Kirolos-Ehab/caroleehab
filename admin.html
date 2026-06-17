@@ -127,12 +127,23 @@
     </div>
 
     <div class="card">
-      <h2 class="card-title">صورة الفنانة (قسم "عن الفنانة")</h2>
+      <h2 class="card-title">صورة الهيرو (صفحة البداية)</h2>
       <div class="flex flex-wrap items-center gap-4">
         <img id="artist-photo-preview" class="w-28 h-28 object-cover rounded-xl border border-ink/10" src="" alt="">
         <div class="flex flex-col gap-2">
           <button id="btn-pick-artist-photo" class="btn-secondary">اختيار من مكتبة الصور</button>
           <input id="f-artist-photo-upload" type="file" accept="image/*" class="text-sm">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">صورة قسم "عن الفنانة"</h2>
+      <div class="flex flex-wrap items-center gap-4">
+        <img id="artist-about-photo-preview" class="w-28 h-28 object-cover rounded-xl border border-ink/10" src="" alt="">
+        <div class="flex flex-col gap-2">
+          <button id="btn-pick-artist-about-photo" class="btn-secondary">اختيار من مكتبة الصور</button>
+          <input id="f-artist-about-photo-upload" type="file" accept="image/*" class="text-sm">
         </div>
       </div>
     </div>
@@ -491,6 +502,98 @@
         <div class="sm:col-span-2"><label class="field-label">الوصف</label><textarea id="tx-footer-description" class="field-input" rows="2"></textarea></div>
         <div><label class="field-label">نص زر التواصل</label><input id="tx-footer-contactButton" class="field-input" type="text"></div>
         <div><label class="field-label">نص حقوق النشر</label><input id="tx-footer-note" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <!-- ── English Texts ── -->
+    <div class="card" style="border-top: 2px solid #C9A227; margin-top: 1.5rem;">
+      <h2 class="card-title">النصوص بالإنجليزي (English Texts)</h2>
+      <p class="text-sm text-ink2 mb-4">هذه النصوص تظهر عند الضغط على زر EN في الموقع.</p>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Navbar — English</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div><label class="field-label">Home</label><input id="txen-nav-home" class="field-input" type="text"></div>
+        <div><label class="field-label">About</label><input id="txen-nav-about" class="field-input" type="text"></div>
+        <div><label class="field-label">Works</label><input id="txen-nav-gallery" class="field-input" type="text"></div>
+        <div><label class="field-label">Journey</label><input id="txen-nav-process" class="field-input" type="text"></div>
+        <div><label class="field-label">Magazines</label><input id="txen-nav-magazines" class="field-input" type="text"></div>
+        <div><label class="field-label">Events</label><input id="txen-nav-events" class="field-input" type="text"></div>
+        <div><label class="field-label">Contact</label><input id="txen-nav-contact" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Hero — English</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">Primary Button</label><input id="txen-hero-ctaPrimary" class="field-input" type="text"></div>
+        <div><label class="field-label">Secondary Button</label><input id="txen-hero-ctaSecondary" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">About — English</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">Eyebrow</label><input id="txen-about-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">Heading</label><input id="txen-about-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">Quote</label><textarea id="txen-about-quote" class="field-input" rows="2"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Featured Works — English</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">Eyebrow</label><input id="txen-featured-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">Heading</label><input id="txen-featured-heading" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Creative Journey — English</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">Eyebrow</label><input id="txen-process-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">Heading</label><input id="txen-process-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">Description</label><textarea id="txen-process-description" class="field-input" rows="2"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Gallery — English</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">Eyebrow</label><input id="txen-gallery-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">Heading</label><input id="txen-gallery-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">Description</label><textarea id="txen-gallery-description" class="field-input" rows="2"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Magazines — English</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">Eyebrow</label><input id="txen-magazines-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">Heading</label><input id="txen-magazines-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">Description</label><textarea id="txen-magazines-description" class="field-input" rows="2"></textarea></div>
+        <div><label class="field-label">Featured Badge</label><input id="txen-magazines-badge" class="field-input" type="text"></div>
+        <div><label class="field-label">Open Link text</label><input id="txen-magazines-openLink" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Events — English</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">Eyebrow</label><input id="txen-events-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">Heading</label><input id="txen-events-heading" class="field-input" type="text"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Footer / Contact — English</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="field-label">Eyebrow</label><input id="txen-footer-eyebrow" class="field-input" type="text"></div>
+        <div><label class="field-label">Heading</label><input id="txen-footer-heading" class="field-input" type="text"></div>
+        <div class="sm:col-span-2"><label class="field-label">Description</label><textarea id="txen-footer-description" class="field-input" rows="2"></textarea></div>
+        <div><label class="field-label">Contact Button</label><input id="txen-footer-contactButton" class="field-input" type="text"></div>
+        <div><label class="field-label">Copyright Note</label><input id="txen-footer-note" class="field-input" type="text"></div>
       </div>
     </div>
 

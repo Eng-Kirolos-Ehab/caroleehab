@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn-save-artist').addEventListener('click', saveArtist);
   document.getElementById('btn-pick-artist-photo').addEventListener('click', () => startPicking('artist'));
   document.getElementById('f-artist-photo-upload').addEventListener('change', (e) => handleUpload(e, 'artist'));
+  document.getElementById('btn-pick-artist-about-photo').addEventListener('click', () => startPicking('artist-about'));
+  document.getElementById('f-artist-about-photo-upload').addEventListener('change', (e) => handleUpload(e, 'artist-about'));
 
   // works
   document.getElementById('btn-add-work').addEventListener('click', submitWork);
@@ -126,7 +128,10 @@ async function ghRequest(path, options = {}) {
 
 // يرجع { text, sha } أو { text: null, sha: null } لو الملف غير موجود
 async function ghGetFile(path) {
-  const res = await ghRequest(`contents/${path}?ref=${GH_BRANCH}`);
+  const bust = Date.now();
+  const res = await ghRequest(`contents/${path}?ref=${GH_BRANCH}&_=${bust}`, {
+    headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' }
+  });
   if (res.status === 404) return { text: null, sha: null };
   if (!res.ok) throw new Error(`فشل تحميل ${path} (${res.status})`);
   const json = await res.json();
@@ -294,6 +299,7 @@ function renderAll() {
   renderProcessAdmin();
   renderImageLibrary();
   renderTextsForm();
+  renderTextsFormEn();
   renderSectionOrder();
 }
 
@@ -318,6 +324,11 @@ function renderArtist() {
     preview.src = a.photo;
     preview.classList.remove('hidden');
   }
+  const aboutPreview = document.getElementById('artist-about-photo-preview');
+  if (a.aboutPhoto) {
+    aboutPreview.src = a.aboutPhoto;
+    aboutPreview.classList.remove('hidden');
+  }
 }
 
 async function saveArtist() {
@@ -338,10 +349,15 @@ async function saveArtist() {
     a.photo = pendingArtistImage;
     pendingArtistImage = null;
   }
+  if (pendingArtistAboutImage) {
+    a.aboutPhoto = pendingArtistAboutImage;
+    pendingArtistAboutImage = null;
+  }
   await persist();
   renderImageLibrary();
 }
 let pendingArtistImage = null;
+let pendingArtistAboutImage = null;
 
 /* =========================================================
    Categories
@@ -969,6 +985,30 @@ function renderTextsForm() {
   });
 }
 
+const TEXT_DEFAULTS_EN = {
+  nav: { home: 'Home', about: 'About', gallery: 'Works', process: 'Journey', magazines: 'Magazines', events: 'Events', contact: 'Contact' },
+  hero: { ctaPrimary: 'Browse Works', ctaSecondary: 'About Me' },
+  about: { eyebrow: 'About the Artist', heading: 'Where Textiles Meet Art', quote: "I love that every small detail in my work carries a piece of my feeling." },
+  featured: { eyebrow: 'Selected', heading: 'Featured Works' },
+  process: { eyebrow: 'How a piece is born', heading: 'The Creative Journey', description: 'From the first idea in mind, to the finished piece — each stage has its own story.' },
+  gallery: { eyebrow: 'Gallery', heading: 'All Works', description: 'Browse works by category and click any piece to view it larger.' },
+  magazines: { eyebrow: 'Interactive Magazines', heading: '4 Magazines · 4 Worlds', description: 'Flip through the pages and explore.', badge: 'Featured', openLink: 'Open Magazine ↗' },
+  events: { eyebrow: 'Events', heading: 'Exhibitions & Events' },
+  footer: { eyebrow: 'Contact', heading: "Let's Talk About Your Idea", description: 'For any artistic collaboration, custom work, or exhibition invitation — reach out:', contactButton: 'Message Me', note: 'All rights reserved' }
+};
+
+function renderTextsFormEn() {
+  const texts = siteData.texts_en || {};
+  Object.keys(TEXT_DEFAULTS_EN).forEach(section => {
+    Object.keys(TEXT_DEFAULTS_EN[section]).forEach(key => {
+      const el = document.getElementById(`txen-${section}-${key}`);
+      if (!el) return;
+      const current = texts[section] && texts[section][key];
+      el.value = current !== undefined ? current : TEXT_DEFAULTS_EN[section][key];
+    });
+  });
+}
+
 async function saveTexts() {
   siteData.texts = siteData.texts || {};
   Object.keys(TEXT_DEFAULTS).forEach(section => {
@@ -979,6 +1019,17 @@ async function saveTexts() {
       siteData.texts[section][key] = el.value;
     });
   });
+
+  siteData.texts_en = siteData.texts_en || {};
+  Object.keys(TEXT_DEFAULTS_EN).forEach(section => {
+    siteData.texts_en[section] = siteData.texts_en[section] || {};
+    Object.keys(TEXT_DEFAULTS_EN[section]).forEach(key => {
+      const el = document.getElementById(`txen-${section}-${key}`);
+      if (!el) return;
+      siteData.texts_en[section][key] = el.value;
+    });
+  });
+
   await persist();
 }
 
@@ -1100,6 +1151,9 @@ function onLibraryPick(path) {
   if (pickerTarget === 'artist') {
     pendingArtistImage = path;
     showPreview('artist-photo-preview', path, false);
+  } else if (pickerTarget === 'artist-about') {
+    pendingArtistAboutImage = path;
+    showPreview('artist-about-photo-preview', path, false);
   } else if (pickerTarget === 'work') {
     pendingWorkImage = path;
     showPreview('w-image-preview', path);
@@ -1129,6 +1183,9 @@ async function handleUpload(e, target) {
     if (target === 'artist') {
       pendingArtistImage = path;
       showPreview('artist-photo-preview', path, false);
+    } else if (target === 'artist-about') {
+      pendingArtistAboutImage = path;
+      showPreview('artist-about-photo-preview', path, false);
     } else if (target === 'work') {
       pendingWorkImage = path;
       showPreview('w-image-preview', path);

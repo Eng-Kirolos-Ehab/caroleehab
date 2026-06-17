@@ -777,7 +777,14 @@ header, section, footer {
   overflow: hidden;
   background: #1C1917;
   padding-top: 5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
+}
+@media (max-width: 767px) {
+  #home.hero-scene {
+    align-items: flex-start;
+    padding-top: 5.5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 .hero-parallax-layer {
@@ -818,16 +825,18 @@ header, section, footer {
   width: 100%;
   max-width: 72rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 1.75rem;
   align-items: center;
 }
 @media (min-width: 768px) {
   .hero-scene-content {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+    padding: 0 1.5rem;
+    align-items: center;
   }
 }
 
@@ -845,12 +854,15 @@ header, section, footer {
 
 .hero-portrait-frame {
   position: relative;
-  width: 260px;
-  height: 360px;
+  width: 200px;
+  height: 270px;
   flex-shrink: 0;
 }
+@media (min-width: 480px) {
+  .hero-portrait-frame { width: 240px; height: 330px; }
+}
 @media (min-width: 640px) {
-  .hero-portrait-frame { width: 310px; height: 430px; }
+  .hero-portrait-frame { width: 290px; height: 400px; }
 }
 @media (min-width: 1024px) {
   .hero-portrait-frame { width: 370px; height: 510px; }
@@ -922,7 +934,7 @@ header, section, footer {
 
 .hero-big-name {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
   line-height: 1.05;
   color: #FDF8F3;
   margin-bottom: 0.35rem;
@@ -951,7 +963,10 @@ header, section, footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 768px) {
+  .hero-achievements { margin-bottom: 2rem; }
 }
 .hero-achieve-pill {
   display: inline-flex;

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setText('footer-year', new Date().getFullYear());
 
   const aboutPhoto = document.getElementById('about-photo');
-  if (aboutPhoto && data.artist.photo) aboutPhoto.src = data.artist.photo;
+  if (aboutPhoto) aboutPhoto.src = data.artist.aboutPhoto || data.artist.photo;
 
   const emailLink = document.getElementById('contact-email');
   if (emailLink && data.artist.email) emailLink.href = 'mailto:' + data.artist.email;
