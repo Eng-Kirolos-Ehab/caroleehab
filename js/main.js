@@ -146,6 +146,7 @@ function ensureFeaturedCarouselStyles() {
     #featured-scroll {
       overflow: hidden;
       position: relative;
+      direction: ltr;
       scrollbar-width: none;
       -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 4rem, #000 calc(100% - 4rem), transparent 100%);
       mask-image: linear-gradient(90deg, transparent 0, #000 4rem, #000 calc(100% - 4rem), transparent 100%);
@@ -155,6 +156,7 @@ function ensureFeaturedCarouselStyles() {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      direction: ltr;
       gap: 1.5rem;
       width: max-content;
       min-width: max-content;
@@ -166,7 +168,7 @@ function ensureFeaturedCarouselStyles() {
     #featured-scroll:focus-within .featured-track {
       animation-play-state: paused;
     }
-    html[dir="rtl"] #featured-scroll .featured-track { animation-direction: reverse; }
+    html[dir="rtl"] #featured-scroll .featured-card { direction: rtl; }
     #featured-scroll .featured-card {
       flex: 0 0 auto;
       display: block;

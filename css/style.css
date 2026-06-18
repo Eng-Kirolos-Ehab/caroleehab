@@ -242,6 +242,7 @@ header, section, footer {
   overflow: hidden;
   scrollbar-width: none;
   position: relative;
+  direction: ltr;
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 4rem, #000 calc(100% - 4rem), transparent 100%);
   mask-image: linear-gradient(90deg, transparent 0, #000 4rem, #000 calc(100% - 4rem), transparent 100%);
 }
@@ -251,6 +252,7 @@ header, section, footer {
 .featured-track {
   display: flex;
   gap: 1.5rem;
+  direction: ltr;
   width: max-content;
   padding-bottom: 1rem;
   animation: featured-marquee 58s linear infinite;
@@ -260,8 +262,8 @@ header, section, footer {
 .featured-scroll:focus-within .featured-track {
   animation-play-state: paused;
 }
-html[dir="rtl"] .featured-track {
-  animation-direction: reverse;
+html[dir="rtl"] .featured-card {
+  direction: rtl;
 }
 @keyframes featured-marquee {
   from { transform: translateX(0); }
