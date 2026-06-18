@@ -43,6 +43,7 @@ function initSite() {
 
   /* ── Render sections ── */
   ensureFeaturedCarouselStyles();
+  renderMotionFilm(data);
   renderFeatured(data);
   renderProcess(data);
   renderFilters(data);
@@ -145,6 +146,30 @@ function applySectionOrder(data) {
     const el = document.getElementById(id);
     if (el) footer.parentNode.insertBefore(el, footer);
   });
+}
+
+/* =========================================================
+   Designs in motion film
+   ========================================================= */
+function renderMotionFilm(data) {
+  const motion = data.motionFilm || {};
+  const section = document.getElementById('motion-film');
+  if (!section) return;
+
+  setText('motion-eyebrow', localized(motion, 'eyebrow'));
+  setText('motion-heading', localized(motion, 'heading'));
+  setText('motion-description', localized(motion, 'description'));
+
+  const video = document.getElementById('motion-video');
+  const source = document.getElementById('motion-video-source');
+  if (video) {
+    video.poster = motion.poster || 'images/work-062.jpg';
+    video.setAttribute('aria-label', localized(motion, 'heading'));
+  }
+  if (video && source && motion.video && source.getAttribute('src') !== motion.video) {
+    source.setAttribute('src', motion.video);
+    video.load();
+  }
 }
 
 /* =========================================================
@@ -667,6 +692,7 @@ function initLangToggle(data) {
     if (aboutPhoto) aboutPhoto.alt = isEn ? 'Carole Ehab artwork portrait' : 'صورة الفنانة كارول';
 
     renderMagazines(data);
+    renderMotionFilm(data);
     renderFeatured(data);
     renderProcess(data);
     renderFilters(data);

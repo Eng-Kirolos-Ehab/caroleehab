@@ -375,6 +375,66 @@ html[dir="rtl"] .featured-card {
 }
 
 /* ---------------------------------------------------------
+   Designs in motion film
+--------------------------------------------------------- */
+.motion-film-section {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 1.5rem;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(201,162,39,0.14), transparent 28rem),
+    linear-gradient(135deg, #1C1917 0%, #2b241e 52%, #F6EFE6 52%, #FDF8F3 100%);
+}
+.motion-film-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .motion-film-inner {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+}
+.motion-film-copy {
+  color: #FDF8F3;
+}
+.motion-film-copy .text-ink2,
+.motion-film-copy #motion-description {
+  color: rgba(253,248,243,0.74);
+}
+.motion-film-media {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #1C1917;
+  box-shadow: 0 30px 70px -28px rgba(28,25,23,0.55);
+}
+.motion-film-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(253,248,243,0.24);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+.motion-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #1C1917;
+}
+@media (max-width: 899px) {
+  .motion-film-section {
+    background: #1C1917;
+  }
+}
+
+/* ---------------------------------------------------------
    Filters
 --------------------------------------------------------- */
 .filter-btn {

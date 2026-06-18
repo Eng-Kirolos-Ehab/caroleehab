@@ -1014,6 +1014,7 @@ const SITE_DATA = {
   },
   "sectionOrder": [
     "about",
+    "motion-film",
     "mag-1",
     "featured",
     "mag-2",
@@ -1521,5 +1522,15 @@ const SITE_DATA = {
       "width": 1024,
       "height": 1280
     }
+  },
+  "motionFilm": {
+    "video": "videos/carole-designs-in-motion.mp4",
+    "poster": "images/work-062.jpg",
+    "eyebrow": "تصاميم تنبض بالحياة",
+    "heading": "حين تتحول الرسومات إلى مشاهد حية",
+    "description": "لم تتوقف كارول عند تحويل تصاميمها إلى موكبس فقط؛ بل منحتها حضورًا حيًا عبر مشاهد متحركة لموديلز يرتدون قطعًا من تصميمها، ويتحركون داخل عوالم مستوحاة من أشهر اللوحات، لتصبح الفكرة الفنية تجربة نابضة بالحياة.",
+    "eyebrow_en": "Designs in Motion",
+    "heading_en": "When sketches become living scenes",
+    "description_en": "Carole did not stop at turning her designs into mockups. She brought them into motion through scenes of models wearing her pieces, moving inside worlds inspired by iconic paintings, so each design feels alive, expressive, and cinematic."
   }
 };
