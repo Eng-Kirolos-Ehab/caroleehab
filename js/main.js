@@ -3,11 +3,14 @@
    يقرأ كل المحتوى من content.js (SITE_DATA) ويبني الصفحة
    ========================================================= */
 
-let CURRENT_LANG = 'ar';
+const LANG_KEY = 'caroleehab_lang';
+const DEFAULT_LANG = 'en';
+let CURRENT_LANG = getInitialLanguage();
 
 function initSite() {
   const data = SITE_DATA;
   if (!data) return;
+  CURRENT_LANG = getInitialLanguage();
 
   /* ── Magazines FIRST: fill slots before reorder so they have height ── */
   renderMagazines(data);
@@ -20,12 +23,12 @@ function initSite() {
 
   /* ── Basic text injection ── */
   setText('nav-artist-name', data.artist.name);
-  setText('hero-role', data.artist.title);
+  setText('hero-role', localized(data.artist, 'title'));
   setText('hero-name', data.artist.name);
-  setText('hero-name-ar', data.artist.nameAr);
-  setText('hero-tagline', data.artist.tagline);
-  setText('about-bio', data.artist.bio);
-  setText('about-location', data.artist.location);
+  setText('hero-name-ar', CURRENT_LANG === 'en' ? '' : data.artist.nameAr);
+  setText('hero-tagline', localized(data.artist, 'tagline'));
+  setText('about-bio', localized(data.artist, 'bio'));
+  setText('about-location', localized(data.artist, 'location'));
   setText('footer-name', data.artist.name);
   setText('footer-year', new Date().getFullYear());
 
@@ -67,6 +70,14 @@ function setText(id, value) {
 function setHref(id, value) {
   const el = document.getElementById(id);
   if (el && value) el.href = value;
+}
+function getInitialLanguage() {
+  return DEFAULT_LANG;
+}
+function saveLanguage(lang) {
+  try {
+    localStorage.setItem(LANG_KEY, lang);
+  } catch (_) {}
 }
 function localized(obj, field) {
   if (!obj) return '';
@@ -113,9 +124,10 @@ function getPath(obj, path) {
    Site-wide editable texts ([data-text="section.key"])
    ========================================================= */
 function applyTexts(data) {
-  if (!data.texts) return;
+  const texts = CURRENT_LANG === 'en' ? (data.texts_en || data.texts) : data.texts;
+  if (!texts) return;
   document.querySelectorAll('[data-text]').forEach(el => {
-    const value = getPath(data.texts, el.dataset.text);
+    const value = getPath(texts, el.dataset.text);
     if (value !== undefined && value !== '') el.textContent = value;
   });
 }
@@ -607,8 +619,7 @@ function renderStats(data) {
 function initLangToggle(data) {
   const btn = document.getElementById('lang-toggle');
   if (!btn) return;
-  const langKey = 'caroleehab_lang';
-  let lang = localStorage.getItem(langKey) === 'en' ? 'en' : 'ar';
+  let lang = getInitialLanguage();
 
   function apply(l) {
     CURRENT_LANG = l;
@@ -673,7 +684,7 @@ function initLangToggle(data) {
 
   btn.addEventListener('click', () => {
     lang = lang === 'ar' ? 'en' : 'ar';
-    localStorage.setItem(langKey, lang);
+    saveLanguage(lang);
     apply(lang);
   });
 
