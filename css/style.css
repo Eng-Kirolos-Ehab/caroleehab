@@ -1149,6 +1149,23 @@ html[dir="rtl"] .featured-card {
   border-color: #C9A227;
   color: #E8C766;
 }
+.hero-btn-cv {
+  border-color: rgba(201,162,39,0.34);
+  background: rgba(28,25,23,0.18);
+}
+.hero-btn-cv:hover {
+  background: rgba(201,162,39,0.12);
+}
+@media (max-width: 479px) {
+  .hero-cta-group {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .hero-cta-group > a {
+    justify-content: center;
+    width: 100%;
+  }
+}
 
 /* Scroll cue override for dark hero */
 .hero-scroll-cue {

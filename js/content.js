@@ -916,7 +916,8 @@ const SITE_DATA = {
     },
     "hero": {
       "ctaPrimary": "استعرضي الأعمال",
-      "ctaSecondary": "تعرفي عليها"
+      "ctaSecondary": "تعرفي عليها",
+      "ctaCv": "تحميل السيرة الذاتية"
     },
     "about": {
       "eyebrow": "عن الفنانة",
@@ -972,7 +973,8 @@ const SITE_DATA = {
     },
     "hero": {
       "ctaPrimary": "Browse Works",
-      "ctaSecondary": "About Me"
+      "ctaSecondary": "About Me",
+      "ctaCv": "Download CV"
     },
     "about": {
       "eyebrow": "About the Artist",
