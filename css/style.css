@@ -1323,6 +1323,11 @@ html[dir="rtl"] .featured-card {
 [dir="ltr"] .hero-portrait {
   justify-content: flex-end;
 }
+@media (max-width: 767px) {
+  [dir="ltr"] .hero-portrait {
+    justify-content: flex-start;
+  }
+}
 [dir="ltr"] .hero-portrait-badge {
   right: auto;
   left: -0.85rem;
