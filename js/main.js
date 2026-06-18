@@ -306,6 +306,11 @@ function renderMagazines(data) {
         </div>
 
         <div class="mag-embed-footer">
+          <p class="mag-interaction-note">
+            ${isEn
+              ? 'This is an interactive magazine: flip through the pages inside the viewer. If an ad appears, close it with the X button.'
+              : 'هذه مجلة تفاعلية: يمكنكِ تقليب الصفحات داخل العارض. إذا ظهر إعلان، اضغطي على زر X لإغلاقه.'}
+          </p>
           <a href="${escapeHtml(mag.embedUrl)}" target="_blank" rel="noopener" class="mag-fullscreen-btn">
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
