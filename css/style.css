@@ -380,12 +380,37 @@ html[dir="rtl"] .featured-card {
 .motion-film-section {
   position: relative;
   overflow: hidden;
-  padding: 6rem 1.5rem;
+  margin: 2rem 0;
+  padding: 6.5rem 1.5rem;
   background:
-    radial-gradient(circle at 12% 20%, rgba(201,162,39,0.14), transparent 28rem),
-    linear-gradient(135deg, #1C1917 0%, #2b241e 52%, #F6EFE6 52%, #FDF8F3 100%);
+    linear-gradient(180deg, rgba(253,248,243,0.04), rgba(253,248,243,0) 28%, rgba(201,162,39,0.08) 100%),
+    linear-gradient(135deg, #171411 0%, #2f261d 48%, #1b1713 100%);
+  border-top: 1px solid rgba(201,162,39,0.26);
+  border-bottom: 1px solid rgba(201,162,39,0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(253,248,243,0.08),
+    inset 0 -1px 0 rgba(253,248,243,0.06);
+}
+.motion-film-section::before,
+.motion-film-section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: min(72rem, calc(100% - 3rem));
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(201,162,39,0.58), transparent);
+  pointer-events: none;
+}
+.motion-film-section::before {
+  top: 1.25rem;
+}
+.motion-film-section::after {
+  bottom: 1.25rem;
 }
 .motion-film-inner {
+  position: relative;
+  z-index: 1;
   max-width: 72rem;
   margin: 0 auto;
   display: grid;
@@ -399,24 +424,26 @@ html[dir="rtl"] .featured-card {
   }
 }
 .motion-film-copy {
-  color: #FDF8F3;
+  color: #FFF8ED;
 }
 .motion-film-copy .text-ink2,
 .motion-film-copy #motion-description {
-  color: rgba(253,248,243,0.74);
+  color: rgba(255,248,237,0.86);
 }
 .motion-film-media {
   position: relative;
   border-radius: 1.25rem;
   overflow: hidden;
   background: #1C1917;
-  box-shadow: 0 30px 70px -28px rgba(28,25,23,0.55);
+  box-shadow:
+    0 34px 80px -32px rgba(0,0,0,0.78),
+    0 0 0 1px rgba(201,162,39,0.18);
 }
 .motion-film-media::before {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(253,248,243,0.24);
+  border: 1px solid rgba(253,248,243,0.30);
   border-radius: inherit;
   pointer-events: none;
   z-index: 2;
@@ -430,7 +457,11 @@ html[dir="rtl"] .featured-card {
 }
 @media (max-width: 899px) {
   .motion-film-section {
-    background: #1C1917;
+    margin: 1.25rem 0;
+    padding: 5.25rem 1.25rem;
+    background:
+      linear-gradient(180deg, rgba(253,248,243,0.045), rgba(253,248,243,0) 34%, rgba(201,162,39,0.08) 100%),
+      #1C1917;
   }
 }
 
