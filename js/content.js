@@ -348,7 +348,7 @@ const SITE_DATA = {
       "id": 5,
       "image": "images/work-001.jpg",
       "title": "عالم تحت الماء",
-      "category": "mixed",
+      "category": "mood boards",
       "year": "2026",
       "description": "عمل ميكس ميديا يجمع بين الرسم والكولاج والخامات المختلفة في تكوين بحري حيوي.",
       "featured": true,
