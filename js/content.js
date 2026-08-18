@@ -752,17 +752,6 @@ const SITE_DATA = {
       "featured": false
     },
     {
-      "id": 28,
-      "image": "images/work-112.jpg",
-      "title": "دراسة بالرصاص - الإبريق والنظارة",
-      "category": "Certificates",
-      "year": "2025",
-      "description": "طبيعة صامتة بالرصاص تجمع إبريقًا وفواكه ونظارة — تفاصيل دقيقة وتظليل ناعم.",
-      "featured": false,
-      "title_en": "Pencil Study - Pitcher and Glasses",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
       "id": 36,
       "image": "images/work-016.jpg",
       "title": "نسيج يدوي على النول - رمادي",
