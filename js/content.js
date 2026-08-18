@@ -582,6 +582,17 @@ const SITE_DATA = {
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
     },
     {
+      "id": 40,
+      "image": "images/work-120.jpg",
+      "title": "نقشة ذهبية نباتية",
+      "category": "homeprint",
+      "year": "2025",
+      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
+      "featured": false,
+      "title_en": "Golden Botanical Pattern",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
       "id": 36,
       "image": "images/work-016.jpg",
       "title": "نسيج يدوي على النول - رمادي",
@@ -624,17 +635,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Fashion and Color Theory",
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
-      "id": 40,
-      "image": "images/work-120.jpg",
-      "title": "نقشة ذهبية نباتية",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
-      "featured": false,
-      "title_en": "Golden Botanical Pattern",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
       "id": 42,
