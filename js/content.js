@@ -252,6 +252,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 46,
+      "image": "images/work-086.jpg",
+      "title": "سكتشات أزياء - أبيض وأسود",
+      "category": "fashion",
+      "year": "2025",
+      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
+      "featured": false,
+      "title_en": "Fashion Sketches - Black and White",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 25,
       "image": "images/work-102.jpg",
       "title": "البدوية الضاحكة",
@@ -282,17 +293,6 @@ const SITE_DATA = {
       "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
       "featured": true,
       "title_en": "Surreal Fashion",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
-      "id": 46,
-      "image": "images/work-086.jpg",
-      "title": "سكتشات أزياء - أبيض وأسود",
-      "category": "fashion",
-      "year": "2025",
-      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
-      "featured": false,
-      "title_en": "Fashion Sketches - Black and White",
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
