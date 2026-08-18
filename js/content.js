@@ -444,6 +444,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 69,
+      "image": "images/work-134.jpg",
+      "title": "سيناء شهد للأديان",
+      "title_en": "Sinai, Witness to Religions",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
+      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
+      "featured": false
+    },
+    {
       "id": 51,
       "image": "images/work-050.jpg",
       "title": "ورشة الطباعة اليدوية",
@@ -475,17 +486,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Underwater World",
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
-    },
-    {
-      "id": 69,
-      "image": "images/work-134.jpg",
-      "title": "سيناء شهد للأديان",
-      "title_en": "Sinai, Witness to Religions",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
-      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
-      "featured": false
     },
     {
       "id": 40,
