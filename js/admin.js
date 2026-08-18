@@ -309,6 +309,7 @@ async function loadContentJs() {
   siteData.imagePosition = siteData.imagePosition || {};
   siteData.sectionOrder = siteData.sectionOrder || [];
   contentSha = sha;
+  snapshotSiteData();
 }
 
 async function loadManifest() {
@@ -329,10 +330,154 @@ async function ghPutFileFast(path, text, message, getSha, setSha) {
   }
 }
 
+/* =========================================================
+   دمج آمن للتعديلات — يمنع إن حفظة من حد يمسح تعديل حد تاني
+   بيقارن نسخة السيرفر الحالية بالنسخة اللي كانت عندنا وقت التحميل
+   (originalSiteDataSnapshot) عشان يعرف احنا فعلاً عدّلنا إيه بس،
+   وياخد كل حاجة تانية من نسخة السيرفر الطازة
+   ========================================================= */
+let originalSiteDataSnapshot = null;
+
+function snapshotSiteData() {
+  originalSiteDataSnapshot = JSON.parse(JSON.stringify(siteData));
+}
+
+function deepEqual(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+
+function orderChanged(originalArr, localArr) {
+  const localIds = new Set(localArr.map(x => x.id));
+  const oIds = originalArr.filter(x => localIds.has(x.id)).map(x => x.id);
+  const originalIds = new Set(originalArr.map(x => x.id));
+  const lIds = localArr.filter(x => originalIds.has(x.id)).map(x => x.id);
+  return !deepEqual(oIds, lIds);
+}
+
+// بيدمج مصفوفة عناصر ليها id — تعديل/إضافة/حذف محلي بيتحفظ، وأي حاجة
+// حد تاني ضافها أو عدّلها على السيرفر ومكناش عارفينها بتتحفظ برضو
+function mergeArrayById(remoteArr, originalArr, localArr) {
+  remoteArr = remoteArr || []; originalArr = originalArr || []; localArr = localArr || [];
+  const originalIds = new Set(originalArr.map(x => x.id));
+  const localIds = new Set(localArr.map(x => x.id));
+  const localById = new Map(localArr.map(x => [x.id, x]));
+  const remoteById = new Map(remoteArr.map(x => [x.id, x]));
+  const originalById = new Map(originalArr.map(x => [x.id, x]));
+
+  const useLocalOrder = orderChanged(originalArr, localArr);
+  const baseOrderArr = useLocalOrder ? localArr : remoteArr;
+
+  const result = [];
+  const placed = new Set();
+
+  baseOrderArr.forEach(item => {
+    const id = item.id;
+    if (placed.has(id)) return;
+    if (localIds.has(id)) {
+      if (!remoteById.has(id)) {
+        if (!originalIds.has(id)) { result.push(localById.get(id)); placed.add(id); }
+        return; // كان موجود وحد تاني مسحه من السيرفر — نحترم مسحه
+      }
+      const localItem = localById.get(id);
+      const changed = !deepEqual(localItem, originalById.get(id) || null);
+      result.push(changed ? localItem : remoteById.get(id));
+      placed.add(id);
+    } else if (!originalIds.has(id) && remoteById.has(id)) {
+      result.push(remoteById.get(id)); // حد تاني ضافه — نحتفظ بيه
+      placed.add(id);
+    }
+    // موجود أصلًا وإحنا مسحناه محليًا — نتجاهله (نحترم الحذف بتاعنا)
+  });
+
+  // عناصر حد تاني ضافها على السيرفر ومكناش عارفينها (لو مش ملحقين وقت الترتيب اللي فوق)
+  remoteArr.forEach(item => {
+    if (!placed.has(item.id) && !originalIds.has(item.id)) {
+      result.push(item);
+      placed.add(item.id);
+    }
+  });
+
+  // عناصر إحنا ضفناها محليًا ومش موجودة في السيرفر أصلًا (نفس الحالة)
+  localArr.forEach(item => {
+    if (!placed.has(item.id) && !originalIds.has(item.id)) {
+      result.push(item);
+      placed.add(item.id);
+    }
+  });
+
+  return result;
+}
+
+function mergeStringArray(remoteArr, originalArr, localArr) {
+  remoteArr = remoteArr || []; originalArr = originalArr || []; localArr = localArr || [];
+  const originalSet = new Set(originalArr);
+  const localSet = new Set(localArr);
+  const reordered = !deepEqual(originalArr.filter(x => localSet.has(x)), localArr.filter(x => originalSet.has(x)));
+  const base = reordered ? localArr : remoteArr;
+
+  const result = [];
+  const placed = new Set();
+  base.forEach(id => {
+    if (placed.has(id)) return;
+    if (localSet.has(id)) { result.push(id); placed.add(id); }
+  });
+  remoteArr.forEach(id => {
+    if (!placed.has(id) && !originalSet.has(id)) { result.push(id); placed.add(id); }
+  });
+  localArr.forEach(id => {
+    if (!placed.has(id) && !originalSet.has(id)) { result.push(id); placed.add(id); }
+  });
+  return result;
+}
+
+function mergeKeyedObject(remoteObj, originalObj, localObj) {
+  remoteObj = remoteObj || {}; originalObj = originalObj || {}; localObj = localObj || {};
+  const result = { ...remoteObj };
+  Object.keys(localObj).forEach(k => {
+    if (!deepEqual(localObj[k], originalObj[k])) result[k] = localObj[k];
+  });
+  Object.keys(originalObj).forEach(k => {
+    if (!(k in localObj) && (k in result)) delete result[k];
+  });
+  return result;
+}
+
+function mergeScalarObject(remoteObj, originalObj, localObj) {
+  return deepEqual(localObj, originalObj) ? remoteObj : localObj;
+}
+
+function mergeSiteData(remoteData, originalData, localData) {
+  const merged = { ...remoteData };
+  merged.works = mergeArrayById(remoteData.works, originalData.works, localData.works);
+  merged.events = mergeArrayById(remoteData.events, originalData.events, localData.events);
+  merged.magazines = mergeArrayById(remoteData.magazines, originalData.magazines, localData.magazines);
+  merged.process = mergeArrayById(remoteData.process, originalData.process, localData.process);
+  merged.showcases = mergeArrayById(remoteData.showcases, originalData.showcases, localData.showcases);
+  merged.categories = mergeArrayById(remoteData.categories, originalData.categories, localData.categories);
+  merged.quotes = deepEqual(localData.quotes, originalData.quotes) ? remoteData.quotes : localData.quotes;
+  merged.sectionOrder = mergeStringArray(remoteData.sectionOrder, originalData.sectionOrder, localData.sectionOrder);
+  merged.imageMeta = mergeKeyedObject(remoteData.imageMeta, originalData.imageMeta, localData.imageMeta);
+  merged.imagePosition = mergeKeyedObject(remoteData.imagePosition, originalData.imagePosition, localData.imagePosition);
+  merged.artist = mergeScalarObject(remoteData.artist, originalData.artist, localData.artist);
+  merged.texts = mergeScalarObject(remoteData.texts, originalData.texts, localData.texts);
+  merged.texts_en = mergeScalarObject(remoteData.texts_en, originalData.texts_en, localData.texts_en);
+  return merged;
+}
+
 async function saveContent() {
+  const current = await ghGetFile('js/content.js');
+  if (current.text !== null && originalSiteDataSnapshot) {
+    const rStart = current.text.indexOf('const SITE_DATA');
+    const rObjStart = current.text.indexOf('{', rStart);
+    const rObjEnd = current.text.lastIndexOf('}');
+    // eslint-disable-next-line no-new-func
+    const remoteData = new Function('return (' + current.text.slice(rObjStart, rObjEnd + 1) + ');')();
+    siteData = mergeSiteData(remoteData, originalSiteDataSnapshot, siteData);
+  }
   const json = JSON.stringify(siteData, null, 2);
   const text = contentHeader + 'const SITE_DATA = ' + json + ';\n';
-  await ghPutFileFast('js/content.js', text, 'تحديث محتوى الموقع', () => contentSha, (sha) => { contentSha = sha; });
+  contentSha = await ghPutFile('js/content.js', text, 'تحديث محتوى الموقع', current.sha);
+  snapshotSiteData();
 }
 
 async function saveManifest() {
@@ -345,6 +490,7 @@ async function persist() {
   try {
     await saveContent();
     if (manifestDirty) await saveManifest();
+    renderAll(); // نعيد الرسم لأن الدمج ممكن يكون جاب تعديلات حد تاني مكناش شايفينها
     showToast('تم الحفظ ✓ — التحديث سيظهر على الموقع خلال دقيقة');
   } catch (err) {
     console.error(err);
