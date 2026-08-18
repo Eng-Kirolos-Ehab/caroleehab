@@ -376,7 +376,7 @@ const SITE_DATA = {
       "id": 31,
       "image": "images/work-065.jpg",
       "title": "جاكار مصري - الهيروغليفية",
-      "category": "jacquard",
+      "category": "Egy Stitch Competition Designs",
       "year": "2025",
       "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
       "featured": false,
