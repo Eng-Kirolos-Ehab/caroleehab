@@ -999,5 +999,19 @@
     "width": 1600,
     "height": 1128,
     "orientation": "landscape"
+  },
+  {
+    "id": "work-144.jpg",
+    "original": "Scanned Document_Page_1.jpg",
+    "width": 1600,
+    "height": 1165,
+    "orientation": "landscape"
+  },
+  {
+    "id": "work-145.jpg",
+    "original": "Scanned Document_Page_5.jpg",
+    "width": 1133,
+    "height": 1600,
+    "orientation": "portrait"
   }
 ]
