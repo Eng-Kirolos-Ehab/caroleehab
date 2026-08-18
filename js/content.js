@@ -328,7 +328,7 @@ const SITE_DATA = {
       "title": "جاكيت الأخطبوط المرصّع",
       "title_en": "Beaded Octopus Jacket",
       "category": "personal",
-      "year": "2026",
+      "year": "2022",
       "description": "جاكيت جينز مطرز يدويًا بتصميم أخطبوط غني بالتفاصيل، يجمع بين الخرز واللؤلؤ والتطريز لخلق قطعة فنية مميزة بطابع جريء ومعاصر.",
       "description_en": "A hand-embroidered denim jacket featuring an intricate octopus design, combining beads, pearls, and detailed stitching to create a bold, contemporary wearable art piece.",
       "featured": false
