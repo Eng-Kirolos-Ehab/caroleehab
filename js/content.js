@@ -444,17 +444,6 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
-      "id": 3,
-      "image": "images/work-015.jpg",
-      "title": "طبيعة صامتة",
-      "category": "charcoal",
-      "year": "2024",
-      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
-      "featured": false,
-      "title_en": "Still Life - The Pitcher",
-      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
       "id": 51,
       "image": "images/work-050.jpg",
       "title": "ورشة الطباعة اليدوية",
@@ -464,6 +453,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand Printing Workshop",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
+      "id": 3,
+      "image": "images/work-015.jpg",
+      "title": "طبيعة صامتة",
+      "category": "charcoal",
+      "year": "2024",
+      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
+      "featured": false,
+      "title_en": "Still Life - The Pitcher",
+      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
       "id": 5,
