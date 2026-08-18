@@ -483,6 +483,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 45,
+      "image": "images/work-085.jpg",
+      "title": "سكتش أزياء - الأنماط الهندسية",
+      "category": "fashion",
+      "year": "2025",
+      "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
+      "featured": false,
+      "title_en": "Fashion Sketch - Geometric Patterns",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 21,
       "image": "images/work-083.jpg",
       "title": "طبيعة صامتة - الجرة الفرعونية",
@@ -547,17 +558,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Pitcher and Glasses",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 45,
-      "image": "images/work-085.jpg",
-      "title": "سكتش أزياء - الأنماط الهندسية",
-      "category": "fashion",
-      "year": "2025",
-      "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
-      "featured": false,
-      "title_en": "Fashion Sketch - Geometric Patterns",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 29,
