@@ -741,6 +741,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 69,
+      "image": "images/work-134.jpg",
+      "title": "سيناء شهد للأديان",
+      "title_en": "Sinai, Witness to Religions",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
+      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
+      "featured": false
+    },
+    {
       "id": 43,
       "image": "images/work-030.jpg",
       "title": "أزياء من الحضارة الفرعونية",
@@ -816,17 +827,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Striped Textile Design",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 69,
-      "image": "images/work-134.jpg",
-      "title": "سيناء شهد للأديان",
-      "title_en": "Sinai, Witness to Religions",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
-      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
-      "featured": false
     },
     {
       "id": 53,
