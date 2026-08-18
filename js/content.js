@@ -730,6 +730,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 50,
+      "image": "images/work-024.jpg",
+      "title": "تخطيط منطقة التحضير",
+      "category": "factory",
+      "year": "2025",
+      "description": "رسم تخطيطي دقيق لتصميم منطقة التحضير في المصنع — تخطيط وظيفي وجمالي للمساحة.",
+      "featured": false,
+      "title_en": "Preparation Area Layout",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 35,
       "image": "images/work-005.jpg",
       "title": "نسيج يدوي على النول - وردي وبيج",
@@ -794,17 +805,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Fashion Inspired by Ancient Egypt",
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
-      "id": 50,
-      "image": "images/work-024.jpg",
-      "title": "تخطيط منطقة التحضير",
-      "category": "factory",
-      "year": "2025",
-      "description": "رسم تخطيطي دقيق لتصميم منطقة التحضير في المصنع — تخطيط وظيفي وجمالي للمساحة.",
-      "featured": false,
-      "title_en": "Preparation Area Layout",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
       "id": 53,
