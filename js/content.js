@@ -252,6 +252,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 24,
+      "image": "images/work-101.jpg",
+      "title": "مقهى الفيشاوي",
+      "category": "painting",
+      "year": "2025",
+      "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
+      "featured": false,
+      "title_en": "El Fishawy Cafe",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 41,
       "image": "images/work-062.jpg",
       "title": "سريالية الموضة",
@@ -283,17 +294,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Faces",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 24,
-      "image": "images/work-101.jpg",
-      "title": "مقهى الفيشاوي",
-      "category": "painting",
-      "year": "2025",
-      "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
-      "featured": false,
-      "title_en": "El Fishawy Cafe",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 5,
