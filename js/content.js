@@ -400,6 +400,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 40,
+      "image": "images/work-120.jpg",
+      "title": "نقشة ذهبية نباتية",
+      "category": "homeprint",
+      "year": "2025",
+      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
+      "featured": false,
+      "title_en": "Golden Botanical Pattern",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
       "id": 56,
       "image": "images/work-090.jpg",
       "title": "منحوتة الساعة الذائبة",
@@ -453,17 +464,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Faces",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 40,
-      "image": "images/work-120.jpg",
-      "title": "نقشة ذهبية نباتية",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
-      "featured": false,
-      "title_en": "Golden Botanical Pattern",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
       "id": 58,
