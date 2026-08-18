@@ -557,7 +557,7 @@ const SITE_DATA = {
       "id": 27,
       "image": "images/work-014.jpg",
       "title": "دراسة بالرصاص - الزجاجة والفواكه",
-      "category": "sketchbook",
+      "category": "charcoal",
       "year": "2025",
       "description": "سكتش بالرصاص لزجاجة نبيذ وموز وسكين — تمرين في الواقعية وتقنية التظليل الدقيق.",
       "featured": false,
