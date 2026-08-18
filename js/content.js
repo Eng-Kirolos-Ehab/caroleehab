@@ -490,12 +490,12 @@ const SITE_DATA = {
     {
       "id": 18,
       "image": "images/work-078.jpg",
-      "title": "طبيعة صامتة - الزجاجة الزرقاء",
+      "title": "تباين الألوان",
       "category": "bigworks",
-      "year": "2025",
+      "year": "2024",
       "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
       "featured": false,
-      "title_en": "Still Life - Blue Bottle",
+      "title_en": "Color Contrast",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
