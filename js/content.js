@@ -686,6 +686,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 49,
+      "image": "images/work-108.jpg",
+      "title": "مخطط توزيع المصنع",
+      "category": "factory",
+      "year": "2025",
+      "description": "مخطط هندسي لتوزيع أقسام مصنع النسيج — تصميم المساحة والعرض داخل بيئة المصنع.",
+      "featured": false,
+      "title_en": "Factory Layout Plan",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 15,
       "image": "images/work-010.jpg",
       "title": "دفتر تصميم - الكاروهات",
@@ -793,17 +804,6 @@ const SITE_DATA = {
       "description": "نموذج خشبي مصغر لماكينة النسيج منفّذ يدويًا — مجسم دقيق يعكس فهمًا عميقًا لمعدات المصنع.",
       "featured": true,
       "title_en": "Textile Machine Model",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 49,
-      "image": "images/work-108.jpg",
-      "title": "مخطط توزيع المصنع",
-      "category": "factory",
-      "year": "2025",
-      "description": "مخطط هندسي لتوزيع أقسام مصنع النسيج — تصميم المساحة والعرض داخل بيئة المصنع.",
-      "featured": false,
-      "title_en": "Factory Layout Plan",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
