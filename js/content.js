@@ -708,17 +708,6 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
-      "id": 10,
-      "image": "images/work-075.jpg",
-      "title": "رسم على جراب موبايل",
-      "category": "personal",
-      "year": "2026",
-      "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
-      "featured": false,
-      "title_en": "Hand-Painted Phone Case",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
       "id": 23,
       "image": "images/work-068.jpg",
       "title": "بورتريه كلاسيكي",
@@ -728,6 +717,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Classic Portrait",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
+      "id": 10,
+      "image": "images/work-075.jpg",
+      "title": "رسم على جراب موبايل",
+      "category": "personal",
+      "year": "2026",
+      "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
+      "featured": false,
+      "title_en": "Hand-Painted Phone Case",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 28,
