@@ -510,6 +510,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 19,
+      "image": "images/work-079.jpg",
+      "title": "دفء الحصاد",
+      "category": "bigworks",
+      "year": "2024",
+      "description": "لوحة زيتية بأجواء منزلية دافئة — طنجرة وخبز وسكين على قماش مخطط في ضوء هادئ.",
+      "featured": false,
+      "title_en": "Harvest Warmth",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 3,
       "image": "images/work-015.jpg",
       "title": "طبيعة صامتة",
@@ -530,17 +541,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Underwater World",
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
-    },
-    {
-      "id": 19,
-      "image": "images/work-079.jpg",
-      "title": "دفء الحصاد",
-      "category": "bigworks",
-      "year": "2024",
-      "description": "لوحة زيتية بأجواء منزلية دافئة — طنجرة وخبز وسكين على قماش مخطط في ضوء هادئ.",
-      "featured": false,
-      "title_en": "Harvest Warmth",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 6,
