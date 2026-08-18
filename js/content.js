@@ -406,6 +406,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 25,
+      "image": "images/work-102.jpg",
+      "title": "البدوية الضاحكة",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
+      "featured": false,
+      "title_en": "The Laughing Bedouin Woman",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 18,
       "image": "images/work-078.jpg",
       "title": "طبيعة صامتة - الزجاجة الزرقاء",
@@ -439,6 +450,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 24,
+      "image": "images/work-101.jpg",
+      "title": "مقهى الفيشاوي",
+      "category": "painting",
+      "year": "2025",
+      "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
+      "featured": false,
+      "title_en": "El Fishawy Cafe",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 21,
       "image": "images/work-083.jpg",
       "title": "طبيعة صامتة - الجرة الفرعونية",
@@ -447,17 +469,6 @@ const SITE_DATA = {
       "description": "لوحة زيتية تجمع بين جرة فرعونية وخضروات طازجة — تلاقي التراث والحياة اليومية.",
       "featured": false,
       "title_en": "Still Life - Pharaonic Jar",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 25,
-      "image": "images/work-102.jpg",
-      "title": "البدوية الضاحكة",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
-      "featured": false,
-      "title_en": "The Laughing Bedouin Woman",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
@@ -480,17 +491,6 @@ const SITE_DATA = {
       "description": "بورتريه فتاة بالألوان الزيتية الكلاسيكية، بأسلوب يستحضر عبق لوحات عصر النهضة.",
       "featured": false,
       "title_en": "Classic Portrait",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 24,
-      "image": "images/work-101.jpg",
-      "title": "مقهى الفيشاوي",
-      "category": "painting",
-      "year": "2025",
-      "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
-      "featured": false,
-      "title_en": "El Fishawy Cafe",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
