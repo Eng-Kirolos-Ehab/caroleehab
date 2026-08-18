@@ -455,6 +455,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 51,
+      "image": "images/work-050.jpg",
+      "title": "ورشة الطباعة اليدوية",
+      "category": "factory",
+      "year": "2025",
+      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
+      "featured": false,
+      "title_en": "Hand Printing Workshop",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 5,
       "image": "images/work-001.jpg",
       "title": "عالم تحت الماء",
@@ -519,17 +530,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Warm Check Jacquard",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 51,
-      "image": "images/work-050.jpg",
-      "title": "ورشة الطباعة اليدوية",
-      "category": "factory",
-      "year": "2025",
-      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
-      "featured": false,
-      "title_en": "Hand Printing Workshop",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
       "id": 10,
