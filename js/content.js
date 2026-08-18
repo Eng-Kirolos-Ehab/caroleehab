@@ -604,6 +604,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 66,
+      "image": "images/work-131.jpg",
+      "title": "فستان زهرة الزنبق",
+      "title_en": "Lily Petal Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
+      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
+      "featured": false
+    },
+    {
       "id": 45,
       "image": "images/work-085.jpg",
       "title": "سكتش أزياء - الأنماط الهندسية",
@@ -679,17 +690,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand Printing Workshop",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 66,
-      "image": "images/work-131.jpg",
-      "title": "فستان زهرة الزنبق",
-      "title_en": "Lily Petal Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
-      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
-      "featured": false
     },
     {
       "id": 52,
