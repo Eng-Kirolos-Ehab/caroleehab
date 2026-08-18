@@ -412,6 +412,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 39,
+      "image": "images/work-067.jpg",
+      "title": "أزهار زرقاء داكنة",
+      "category": "homeprint",
+      "year": "2025",
+      "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
+      "featured": false,
+      "title_en": "Dark Blue Flowers",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
       "id": 26,
       "image": "images/work-011.jpg",
       "title": "دراسة بالرصاص - الإبريق والقماش",
@@ -454,17 +465,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Christmas Jacquard - Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 39,
-      "image": "images/work-067.jpg",
-      "title": "أزهار زرقاء داكنة",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
-      "featured": false,
-      "title_en": "Dark Blue Flowers",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
       "id": 33,
