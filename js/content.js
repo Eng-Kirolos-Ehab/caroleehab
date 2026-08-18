@@ -175,6 +175,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 31,
+      "image": "images/work-065.jpg",
+      "title": "جاكار مصري - الهيروغليفية",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
+      "featured": false,
+      "title_en": "Egyptian Jacquard - Hieroglyphics",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -206,17 +217,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - The Pitcher",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 31,
-      "image": "images/work-065.jpg",
-      "title": "جاكار مصري - الهيروغليفية",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
-      "featured": false,
-      "title_en": "Egyptian Jacquard - Hieroglyphics",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
       "id": 4,
