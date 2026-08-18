@@ -123,11 +123,11 @@ const SITE_DATA = {
       "id": 2,
       "image": "images/work-106.jpg",
       "title": "وهج",
-      "category": "charcoal",
+      "category": "painting",
       "year": "2026",
       "description": "عمل بالفحم يحتفي بتفاصيل الوجه والملامح، مع لمسة من الحياة الصحراوية.",
       "featured": true,
-      "title_en": "Bedouin Girl",
+      "title_en": "Wahag",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
