@@ -697,6 +697,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 50,
+      "image": "images/work-024.jpg",
+      "title": "تخطيط منطقة التحضير",
+      "category": "factory",
+      "year": "2025",
+      "description": "رسم تخطيطي دقيق لتصميم منطقة التحضير في المصنع — تخطيط وظيفي وجمالي للمساحة.",
+      "featured": false,
+      "title_en": "Preparation Area Layout",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -728,17 +739,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Pitcher and Glasses",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 50,
-      "image": "images/work-024.jpg",
-      "title": "تخطيط منطقة التحضير",
-      "category": "factory",
-      "year": "2025",
-      "description": "رسم تخطيطي دقيق لتصميم منطقة التحضير في المصنع — تخطيط وظيفي وجمالي للمساحة.",
-      "featured": false,
-      "title_en": "Preparation Area Layout",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
       "id": 35,
