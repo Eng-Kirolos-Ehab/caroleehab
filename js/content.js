@@ -730,17 +730,6 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
-      "id": 33,
-      "image": "images/work-116.jpg",
-      "title": "جاكار تركواز - موجات البحر",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "نسيج جاكار بألوان التركواز والأزرق والأبيض يستحضر هدوء موجات البحر وعالم أطلانتس.",
-      "featured": false,
-      "title_en": "Turquoise Jacquard - Sea Waves",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
       "id": 35,
       "image": "images/work-005.jpg",
       "title": "نسيج يدوي على النول - وردي وبيج",
