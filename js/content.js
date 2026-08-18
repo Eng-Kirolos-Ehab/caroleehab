@@ -351,6 +351,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 47,
+      "image": "images/work-088.jpg",
+      "title": "أزياء ونظرية الألوان",
+      "category": "fashion",
+      "year": "2025",
+      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
+      "featured": false,
+      "title_en": "Fashion and Color Theory",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 8,
       "image": "images/work-027.jpg",
       "title": "جاكار كاروهات - أخضر",
@@ -382,17 +393,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand-Painted Phone Case",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 47,
-      "image": "images/work-088.jpg",
-      "title": "أزياء ونظرية الألوان",
-      "category": "fashion",
-      "year": "2025",
-      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
-      "featured": false,
-      "title_en": "Fashion and Color Theory",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 11,
