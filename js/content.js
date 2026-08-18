@@ -752,6 +752,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 71,
+      "image": "images/work-136.jpg",
+      "title": "تيشيرت Textile is Art",
+      "title_en": "Textile is Art Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
+      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
+      "featured": false
+    },
+    {
       "id": 51,
       "image": "images/work-050.jpg",
       "title": "ورشة الطباعة اليدوية",
@@ -816,17 +827,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Melting Clock Sculpture",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 71,
-      "image": "images/work-136.jpg",
-      "title": "تيشيرت Textile is Art",
-      "title_en": "Textile is Art Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
-      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
-      "featured": false
     },
     {
       "id": 57,
