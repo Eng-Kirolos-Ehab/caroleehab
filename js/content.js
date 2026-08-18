@@ -851,17 +851,6 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
-      "id": 52,
-      "image": "images/work-080.jpg",
-      "title": "تصميم نسيج مخطط",
-      "category": "factory",
-      "year": "2025",
-      "description": "تصميم نسيج بخطوط رأسية زرقاء وفيروزية وكحلية متكررة — سيريز جاهز للإنتاج في المصنع.",
-      "featured": false,
-      "title_en": "Striped Textile Design",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
       "id": 53,
       "image": "images/work-076.jpg",
       "title": "موبايل كيس - ليلة النجوم",
