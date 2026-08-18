@@ -615,6 +615,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 60,
+      "image": "images/work-125.jpg",
+      "title": "فستان الأزهار الحقيقية",
+      "title_en": "Real Flower Dress",
+      "category": "mixed",
+      "year": "2026",
+      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
+      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
+      "featured": false
+    },
+    {
       "id": 45,
       "image": "images/work-085.jpg",
       "title": "سكتش أزياء - الأنماط الهندسية",
@@ -679,17 +690,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Preparation Area Layout",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 60,
-      "image": "images/work-125.jpg",
-      "title": "فستان الأزهار الحقيقية",
-      "title_en": "Real Flower Dress",
-      "category": "mixed",
-      "year": "2026",
-      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
-      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
-      "featured": false
     },
     {
       "id": 51,
