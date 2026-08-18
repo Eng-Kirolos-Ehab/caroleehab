@@ -164,6 +164,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 65,
+      "image": "images/work-130.jpg",
+      "title": "تيشيرت Glow in the Dark",
+      "title_en": "Glow in the Dark Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
+      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
+      "featured": false
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -217,17 +228,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Underwater World",
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
-    },
-    {
-      "id": 65,
-      "image": "images/work-130.jpg",
-      "title": "تيشيرت Glow in the Dark",
-      "title_en": "Glow in the Dark Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
-      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
-      "featured": false
     },
     {
       "id": 6,
