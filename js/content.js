@@ -400,17 +400,6 @@ const SITE_DATA = {
       "featured": false
     },
     {
-      "id": 4,
-      "image": "images/work-118.jpg",
-      "title": "وجوه",
-      "category": "charcoal",
-      "year": "2026",
-      "description": "مجموعة بورتريهات بالفحم، كل وجه يحمل تعبيره وقصته الخاصة.",
-      "featured": true,
-      "title_en": "Faces",
-      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
       "id": 73,
       "image": "images/work-138.jpg",
       "title": "تيشيرت أدوات الرسم",
@@ -420,6 +409,17 @@ const SITE_DATA = {
       "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
       "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
       "featured": false
+    },
+    {
+      "id": 4,
+      "image": "images/work-118.jpg",
+      "title": "وجوه",
+      "category": "charcoal",
+      "year": "2026",
+      "description": "مجموعة بورتريهات بالفحم، كل وجه يحمل تعبيره وقصته الخاصة.",
+      "featured": true,
+      "title_en": "Faces",
+      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
       "id": 5,
