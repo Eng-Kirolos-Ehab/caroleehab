@@ -543,6 +543,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 64,
+      "image": "images/work-129.jpg",
+      "title": "جاكيت الأخطبوط المرصّع",
+      "title_en": "Beaded Octopus Jacket",
+      "category": "personal",
+      "year": "2026",
+      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
+      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
+      "featured": false
+    },
+    {
       "id": 27,
       "image": "images/work-014.jpg",
       "title": "دراسة بالرصاص - الزجاجة والفواكه",
@@ -673,17 +684,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Fashion Inspired by Ancient Egypt",
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
-      "id": 64,
-      "image": "images/work-129.jpg",
-      "title": "جاكيت الأخطبوط المرصّع",
-      "title_en": "Beaded Octopus Jacket",
-      "category": "personal",
-      "year": "2026",
-      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
-      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
-      "featured": false
     },
     {
       "id": 48,
