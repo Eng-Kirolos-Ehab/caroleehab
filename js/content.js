@@ -637,6 +637,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 65,
+      "image": "images/work-130.jpg",
+      "title": "تيشيرت Glow in the Dark",
+      "title_en": "Glow in the Dark Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
+      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
+      "featured": false
+    },
+    {
       "id": 46,
       "image": "images/work-086.jpg",
       "title": "سكتشات أزياء - أبيض وأسود",
@@ -745,17 +756,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Denim Dress - Tie-Dye",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 65,
-      "image": "images/work-130.jpg",
-      "title": "تيشيرت Glow in the Dark",
-      "title_en": "Glow in the Dark Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
-      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
-      "featured": false
     },
     {
       "id": 56,
