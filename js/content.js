@@ -219,6 +219,17 @@ const SITE_DATA = {
       "description_en": "An expressive artwork exploring portraiture, emotion, and storytelling through painted detail."
     },
     {
+      "id": 17,
+      "image": "images/work-071.jpg",
+      "title": "أمومة في زمن الحرب",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة زيتية معبّرة تصور امرأة وأطفالها وسط الأنقاض — عمل شارك في معرض فني ولامس قلوب الجمهور.",
+      "featured": true,
+      "title_en": "Motherhood in Wartime",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 41,
       "image": "images/work-062.jpg",
       "title": "سريالية الموضة",
@@ -392,17 +403,6 @@ const SITE_DATA = {
       "description": "لوحة زيتية كبيرة تجمع بين الإبريق والكتب والقماش — دراسة أكاديمية في التدرجات الدافئة والتكوين الكلاسيكي.",
       "featured": true,
       "title_en": "Still Life - Pitcher and Books",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 17,
-      "image": "images/work-071.jpg",
-      "title": "أمومة في زمن الحرب",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة زيتية معبّرة تصور امرأة وأطفالها وسط الأنقاض — عمل شارك في معرض فني ولامس قلوب الجمهور.",
-      "featured": true,
-      "title_en": "Motherhood in Wartime",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
