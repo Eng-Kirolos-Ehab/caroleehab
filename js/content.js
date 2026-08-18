@@ -307,6 +307,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 24,
+      "image": "images/work-101.jpg",
+      "title": "مقهى الفيشاوي",
+      "category": "painting",
+      "year": "2025",
+      "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
+      "featured": false,
+      "title_en": "El Fishawy Cafe",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 8,
       "image": "images/work-027.jpg",
       "title": "جاكار كاروهات - أخضر",
@@ -348,17 +359,6 @@ const SITE_DATA = {
       "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
       "featured": false,
       "title_en": "The Laughing Bedouin Woman",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 24,
-      "image": "images/work-101.jpg",
-      "title": "مقهى الفيشاوي",
-      "category": "painting",
-      "year": "2025",
-      "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
-      "featured": false,
-      "title_en": "El Fishawy Cafe",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
