@@ -455,6 +455,28 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 40,
+      "image": "images/work-120.jpg",
+      "title": "نقشة ذهبية نباتية",
+      "category": "homeprint",
+      "year": "2025",
+      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
+      "featured": false,
+      "title_en": "Golden Botanical Pattern",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
+      "id": 58,
+      "image": "images/work-117.jpg",
+      "title": "لوحة مطرزة - مطربة وبرج",
+      "category": "personal",
+      "year": "2025",
+      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
+      "featured": false,
+      "title_en": "Embroidered Panel - Singer and Tower",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 51,
       "image": "images/work-050.jpg",
       "title": "ورشة الطباعة اليدوية",
@@ -486,28 +508,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Underwater World",
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
-    },
-    {
-      "id": 40,
-      "image": "images/work-120.jpg",
-      "title": "نقشة ذهبية نباتية",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
-      "featured": false,
-      "title_en": "Golden Botanical Pattern",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 58,
-      "image": "images/work-117.jpg",
-      "title": "لوحة مطرزة - مطربة وبرج",
-      "category": "personal",
-      "year": "2025",
-      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
-      "featured": false,
-      "title_en": "Embroidered Panel - Singer and Tower",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 6,
