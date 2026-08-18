@@ -576,6 +576,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 54,
+      "image": "images/work-026.jpg",
+      "title": "فستان جينز - لمستي",
+      "category": "personal",
+      "year": "2025",
+      "description": "فستان جينز مطبوع برسومات يدوية أزرق وأبيض — تحويل قطعة ملابس عادية لعمل فني مميز.",
+      "featured": false,
+      "title_en": "Denim Dress - My Touch",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 33,
       "image": "images/work-116.jpg",
       "title": "جاكار تركواز - موجات البحر",
@@ -607,17 +618,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand Weaving on Loom - Pink and Beige",
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
-    },
-    {
-      "id": 54,
-      "image": "images/work-026.jpg",
-      "title": "فستان جينز - لمستي",
-      "category": "personal",
-      "year": "2025",
-      "description": "فستان جينز مطبوع برسومات يدوية أزرق وأبيض — تحويل قطعة ملابس عادية لعمل فني مميز.",
-      "featured": false,
-      "title_en": "Denim Dress - My Touch",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 40,
