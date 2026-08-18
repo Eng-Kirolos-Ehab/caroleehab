@@ -686,6 +686,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 57,
+      "image": "images/work-097.jpg",
+      "title": "الساعة الذائبة وأوشحتي",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
+      "featured": false,
+      "title_en": "Melting Clock and Scarves",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 28,
       "image": "images/work-112.jpg",
       "title": "دراسة بالرصاص - الإبريق والنظارة",
@@ -750,17 +761,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand Weaving on Loom - Gray",
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
-    },
-    {
-      "id": 57,
-      "image": "images/work-097.jpg",
-      "title": "الساعة الذائبة وأوشحتي",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
-      "featured": false,
-      "title_en": "Melting Clock and Scarves",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 37,
