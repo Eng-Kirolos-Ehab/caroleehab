@@ -620,6 +620,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 71,
+      "image": "images/work-136.jpg",
+      "title": "تيشيرت Textile is Art",
+      "title_en": "Textile is Art Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
+      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
+      "featured": false
+    },
+    {
       "id": 54,
       "image": "images/work-026.jpg",
       "title": "فستان جينز - لمستي",
@@ -695,17 +706,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand Weaving on Loom - Gray",
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
-    },
-    {
-      "id": 71,
-      "image": "images/work-136.jpg",
-      "title": "تيشيرت Textile is Art",
-      "title_en": "Textile is Art Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
-      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
-      "featured": false
     },
     {
       "id": 37,
