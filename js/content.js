@@ -521,6 +521,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 51,
+      "image": "images/work-050.jpg",
+      "title": "ورشة الطباعة اليدوية",
+      "category": "factory",
+      "year": "2025",
+      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
+      "featured": false,
+      "title_en": "Hand Printing Workshop",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -585,17 +596,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Pitcher and Fabric",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 51,
-      "image": "images/work-050.jpg",
-      "title": "ورشة الطباعة اليدوية",
-      "category": "factory",
-      "year": "2025",
-      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
-      "featured": false,
-      "title_en": "Hand Printing Workshop",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
       "id": 18,
