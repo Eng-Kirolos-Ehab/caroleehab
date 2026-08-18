@@ -100,6 +100,11 @@ const SITE_DATA = {
       "id": "Certificates",
       "label": "شهادات و تدريب",
       "label_en": "Certificates"
+    },
+    {
+      "id": "Egy Stitch Competition Designs",
+      "label": "تصاميم مسابقه egy stitch",
+      "label_en": "Egy Stitch Competition Designs"
     }
   ],
   "works": [
