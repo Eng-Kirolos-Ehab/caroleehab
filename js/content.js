@@ -521,6 +521,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 19,
+      "image": "images/work-079.jpg",
+      "title": "دفء الحصاد",
+      "category": "bigworks",
+      "year": "2024",
+      "description": "لوحة زيتية بأجواء منزلية دافئة — طنجرة وخبز وسكين على قماش مخطط في ضوء هادئ.",
+      "featured": false,
+      "title_en": "Harvest Warmth",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 6,
       "image": "images/work-017.jpg",
       "title": "أوراق الخريف",
@@ -585,17 +596,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand-Painted Phone Case",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 19,
-      "image": "images/work-079.jpg",
-      "title": "دفء الحصاد",
-      "category": "bigworks",
-      "year": "2024",
-      "description": "لوحة زيتية بأجواء منزلية دافئة — طنجرة وخبز وسكين على قماش مخطط في ضوء هادئ.",
-      "featured": false,
-      "title_en": "Harvest Warmth",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 20,
