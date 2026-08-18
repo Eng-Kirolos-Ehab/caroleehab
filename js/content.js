@@ -868,6 +868,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 71,
+      "image": "images/work-136.jpg",
+      "title": "تيشيرت Textile is Art",
+      "title_en": "Textile is Art Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
+      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
+      "featured": false
+    },
+    {
       "id": 69,
       "image": "images/work-134.jpg",
       "title": "سيناء شهد للأديان",
@@ -898,17 +909,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "بورتريه زيتي بأسلوب كلاسيكي، إكليل غار وخلفية ذهبية دافئة تستحضر لوحات عصر النهضة.",
       "description_en": "An oil portrait in a classical style, with a laurel wreath and a warm golden background evoking Renaissance painting.",
-      "featured": false
-    },
-    {
-      "id": 71,
-      "image": "images/work-136.jpg",
-      "title": "تيشيرت Textile is Art",
-      "title_en": "Textile is Art Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
-      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
       "featured": false
     }
   ],
