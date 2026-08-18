@@ -153,6 +153,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 41,
+      "image": "images/work-062.jpg",
+      "title": "سريالية الموضة",
+      "category": "fashion",
+      "year": "2025",
+      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
+      "featured": true,
+      "title_en": "Surreal Fashion",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -184,17 +195,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - The Pitcher",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 41,
-      "image": "images/work-062.jpg",
-      "title": "سريالية الموضة",
-      "category": "fashion",
-      "year": "2025",
-      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
-      "featured": true,
-      "title_en": "Surreal Fashion",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 4,
