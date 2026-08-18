@@ -450,6 +450,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 25,
+      "image": "images/work-102.jpg",
+      "title": "البدوية الضاحكة",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
+      "featured": false,
+      "title_en": "The Laughing Bedouin Woman",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 22,
       "image": "images/work-033.jpg",
       "title": "بورتريه بالباستيل",
@@ -480,17 +491,6 @@ const SITE_DATA = {
       "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
       "featured": false,
       "title_en": "El Fishawy Cafe",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 25,
-      "image": "images/work-102.jpg",
-      "title": "البدوية الضاحكة",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
-      "featured": false,
-      "title_en": "The Laughing Bedouin Woman",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
