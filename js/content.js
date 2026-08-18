@@ -653,6 +653,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 51,
+      "image": "images/work-050.jpg",
+      "title": "ورشة الطباعة اليدوية",
+      "category": "factory",
+      "year": "2025",
+      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
+      "featured": false,
+      "title_en": "Hand Printing Workshop",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 21,
       "image": "images/work-083.jpg",
       "title": "طبيعة صامتة - الجرة الفرعونية",
@@ -706,17 +717,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Pitcher and Glasses",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 51,
-      "image": "images/work-050.jpg",
-      "title": "ورشة الطباعة اليدوية",
-      "category": "factory",
-      "year": "2025",
-      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
-      "featured": false,
-      "title_en": "Hand Printing Workshop",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
       "id": 29,
