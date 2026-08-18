@@ -252,6 +252,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 45,
+      "image": "images/work-085.jpg",
+      "title": "سكتش أزياء - الأنماط الهندسية",
+      "category": "fashion",
+      "year": "2025",
+      "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
+      "featured": false,
+      "title_en": "Fashion Sketch - Geometric Patterns",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -316,17 +327,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - The Pitcher",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 45,
-      "image": "images/work-085.jpg",
-      "title": "سكتش أزياء - الأنماط الهندسية",
-      "category": "fashion",
-      "year": "2025",
-      "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
-      "featured": false,
-      "title_en": "Fashion Sketch - Geometric Patterns",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 4,
