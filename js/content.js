@@ -1541,5 +1541,7 @@ const SITE_DATA = {
     "description_en": "Carole did not stop at turning her designs into mockups. She brought them into motion through scenes of models wearing her pieces, moving inside worlds inspired by iconic paintings, so each design feels alive, expressive, and cinematic."
   },
   "showcases": [],
-  "imagePosition": {}
+  "imagePosition": {
+    "images/work-026.jpg": "50% 50%"
+  }
 };
