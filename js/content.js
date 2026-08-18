@@ -472,6 +472,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 63,
+      "image": "images/work-128.jpg",
+      "title": "فستان الحراشف الزرقاء",
+      "title_en": "Blue Scale Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
+      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
+      "featured": false
+    },
+    {
       "id": 28,
       "image": "images/work-112.jpg",
       "title": "دراسة بالرصاص - الإبريق والنظارة",
@@ -569,17 +580,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Winter Botanical Print",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 63,
-      "image": "images/work-128.jpg",
-      "title": "فستان الحراشف الزرقاء",
-      "title_en": "Blue Scale Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
-      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
-      "featured": false
     },
     {
       "id": 40,
