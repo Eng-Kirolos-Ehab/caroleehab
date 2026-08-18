@@ -752,6 +752,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 68,
+      "image": "images/work-133.jpg",
+      "title": "معرض النوستالجيا المصرية",
+      "title_en": "Egyptian Nostalgia Exhibition",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
+      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
+      "featured": false
+    },
+    {
       "id": 49,
       "image": "images/work-108.jpg",
       "title": "مخطط توزيع المصنع",
@@ -816,17 +827,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Denim Dress - Tie-Dye",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 68,
-      "image": "images/work-133.jpg",
-      "title": "معرض النوستالجيا المصرية",
-      "title_en": "Egyptian Nostalgia Exhibition",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
-      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
-      "featured": false
     },
     {
       "id": 56,
