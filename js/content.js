@@ -365,7 +365,7 @@ const SITE_DATA = {
       "id": 24,
       "image": "images/work-101.jpg",
       "title": "مقهى الفيشاوي",
-      "category": "bigworks",
+      "category": "painting",
       "year": "2025",
       "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
       "featured": false,
