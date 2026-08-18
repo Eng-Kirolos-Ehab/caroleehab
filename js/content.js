@@ -653,6 +653,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 34,
+      "image": "images/work-119.jpg",
+      "title": "جاكار شتوي - التوت والأوراق",
+      "category": "jacquard",
+      "year": "2025",
+      "description": "نمط جاكار بدرجات البني والكراميل الدافئة مع أوراق شتوية — كونسبت كريسماس بمزاج رومانسي هادئ.",
+      "featured": false,
+      "title_en": "Winter Jacquard - Berries and Leaves",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 12,
       "image": "images/work-111.jpg",
       "title": "مجسم معدات النسيج",
@@ -684,17 +695,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Pharaonic Jar",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 34,
-      "image": "images/work-119.jpg",
-      "title": "جاكار شتوي - التوت والأوراق",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "نمط جاكار بدرجات البني والكراميل الدافئة مع أوراق شتوية — كونسبت كريسماس بمزاج رومانسي هادئ.",
-      "featured": false,
-      "title_en": "Winter Jacquard - Berries and Leaves",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
       "id": 22,
