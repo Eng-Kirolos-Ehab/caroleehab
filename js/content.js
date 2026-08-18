@@ -398,7 +398,7 @@ const SITE_DATA = {
       "id": 32,
       "image": "images/work-066.jpg",
       "title": "جاكار مصري - الرموز الفرعونية",
-      "category": "jacquard",
+      "category": "Egy Stitch Competition Designs",
       "year": "2025",
       "description": "تصميم جاكار بأزرق غامق يحتضن رموزًا فرعونية كالعين والخنفساء — أطلانتس بلمسة مصرية أصيلة.",
       "featured": false,
