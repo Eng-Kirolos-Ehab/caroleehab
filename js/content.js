@@ -334,6 +334,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 62,
+      "image": "images/work-127.jpg",
+      "title": "بنطلون الأخطبوط تحت الماء",
+      "title_en": "Underwater Octopus Jeans",
+      "category": "personal",
+      "year": "2026",
+      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
+      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
+      "featured": false
+    },
+    {
       "id": 3,
       "image": "images/work-015.jpg",
       "title": "طبيعة صامتة - الإبريق",
@@ -354,17 +365,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Faces",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 62,
-      "image": "images/work-127.jpg",
-      "title": "بنطلون الأخطبوط تحت الماء",
-      "title_en": "Underwater Octopus Jeans",
-      "category": "personal",
-      "year": "2026",
-      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
-      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
-      "featured": false
     },
     {
       "id": 5,
