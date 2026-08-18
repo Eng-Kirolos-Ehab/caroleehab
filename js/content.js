@@ -873,17 +873,6 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
-      "id": 59,
-      "image": "images/work-121.jpg",
-      "title": "لوحة مطرزة - صوت الميكروفون",
-      "category": "personal",
-      "year": "2025",
-      "description": "لوحة مطرزة بالأسود والأبيض لشخصية على ميكروفون — قوة التعبير والتفاصيل الدقيقة في التطريز.",
-      "featured": false,
-      "title_en": "Embroidered Panel - Microphone Voice",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
       "id": 70,
       "image": "images/work-135.jpg",
       "title": "بورتريه كلاسيكي بالزيت",
