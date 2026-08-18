@@ -368,6 +368,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 31,
+      "image": "images/work-065.jpg",
+      "title": "جاكار مصري - الهيروغليفية",
+      "category": "jacquard",
+      "year": "2025",
+      "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
+      "featured": false,
+      "title_en": "Egyptian Jacquard - Hieroglyphics",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 30,
       "image": "images/work-064.jpg",
       "title": "جاكار أطلانتس - نقشة النيل",
@@ -431,17 +442,6 @@ const SITE_DATA = {
       "description": "تصميم جاكار بكونسبت كريسماس — أوراق الصنوبر وحبات التوت الحمراء في نسيج دافئ ومتكرر يبث أجواء الشتاء.",
       "featured": true,
       "title_en": "Christmas Jacquard - Berries and Pine",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 31,
-      "image": "images/work-065.jpg",
-      "title": "جاكار مصري - الهيروغليفية",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
-      "featured": false,
-      "title_en": "Egyptian Jacquard - Hieroglyphics",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
