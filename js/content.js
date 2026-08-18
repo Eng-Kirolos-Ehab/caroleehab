@@ -48,7 +48,7 @@ const SITE_DATA = {
     },
     {
       "id": "charcoal",
-      "label": "life drawing",
+      "label": "رسم طبيعي",
       "label_en": "natural Drawing"
     },
     {
