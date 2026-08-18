@@ -642,6 +642,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 69,
+      "image": "images/work-134.jpg",
+      "title": "سيناء شهد للأديان",
+      "title_en": "Sinai, Witness to Religions",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
+      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
+      "featured": false
+    },
+    {
       "id": 28,
       "image": "images/work-112.jpg",
       "title": "دراسة بالرصاص - الإبريق والنظارة",
@@ -684,17 +695,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Turquoise Jacquard - Sea Waves",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 69,
-      "image": "images/work-134.jpg",
-      "title": "سيناء شهد للأديان",
-      "title_en": "Sinai, Witness to Religions",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
-      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
-      "featured": false
     },
     {
       "id": 34,
