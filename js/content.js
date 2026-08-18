@@ -323,6 +323,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 64,
+      "image": "images/work-129.jpg",
+      "title": "جاكيت الأخطبوط المرصّع",
+      "title_en": "Beaded Octopus Jacket",
+      "category": "personal",
+      "year": "2026",
+      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
+      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
+      "featured": false
+    },
+    {
       "id": 3,
       "image": "images/work-015.jpg",
       "title": "طبيعة صامتة - الإبريق",
@@ -387,17 +398,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 64,
-      "image": "images/work-129.jpg",
-      "title": "جاكيت الأخطبوط المرصّع",
-      "title_en": "Beaded Octopus Jacket",
-      "category": "personal",
-      "year": "2026",
-      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
-      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
-      "featured": false
     },
     {
       "id": 8,
