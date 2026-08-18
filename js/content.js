@@ -510,6 +510,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 74,
+      "image": "images/work-139.jpg",
+      "title": "تيشيرت كولاج تجريدي",
+      "title_en": "Abstract Collage Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
+      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
+      "featured": false
+    },
+    {
       "id": 20,
       "image": "images/work-082.jpg",
       "title": "طبيعة صامتة - البرتقالي والأزرق",
@@ -574,17 +585,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Bottle and Fruit",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 74,
-      "image": "images/work-139.jpg",
-      "title": "تيشيرت كولاج تجريدي",
-      "title_en": "Abstract Collage Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
-      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
-      "featured": false
     },
     {
       "id": 72,
