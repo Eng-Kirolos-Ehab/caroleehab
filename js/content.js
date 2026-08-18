@@ -818,6 +818,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 57,
+      "image": "images/work-097.jpg",
+      "title": "الساعة الذائبة وأوشحتي",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
+      "featured": false,
+      "title_en": "Melting Clock and Scarves",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 50,
       "image": "images/work-024.jpg",
       "title": "تخطيط منطقة التحضير",
@@ -859,17 +870,6 @@ const SITE_DATA = {
       "description": "غلاف موبايل مرسوم بأسلوب 'ليلة النجوم' لفان جوخ بألوان زرقاء مذهلة — فن الماسترز على يومياتك.",
       "featured": true,
       "title_en": "Phone Case - Starry Night",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 57,
-      "image": "images/work-097.jpg",
-      "title": "الساعة الذائبة وأوشحتي",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
-      "featured": false,
-      "title_en": "Melting Clock and Scarves",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
