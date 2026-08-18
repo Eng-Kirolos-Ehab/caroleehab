@@ -719,17 +719,6 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
-      "id": 35,
-      "image": "images/work-005.jpg",
-      "title": "نسيج يدوي على النول - وردي وبيج",
-      "category": "textile",
-      "year": "2025",
-      "description": "نسيج يدوي على النول الشخصي بتناسق جميل بين الوردي والبيج والبني — شغل يدوي أصيل يمزج الألوان بحرفية.",
-      "featured": false,
-      "title_en": "Hand Weaving on Loom - Pink and Beige",
-      "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
-    },
-    {
       "id": 67,
       "image": "images/work-132.jpg",
       "title": "شهادة تحقيق مركز في مسابقة",
@@ -739,6 +728,17 @@ const SITE_DATA = {
       "description": "شهادة تقدير لحصولي على مركز في مسابقة، تقديرًا لتميزي في التصميم والمشاركة بالعمل المقدم.",
       "description_en": "An achievement certificate awarded for securing a place in a competition, recognizing the quality of my design and submitted work.",
       "featured": false
+    },
+    {
+      "id": 35,
+      "image": "images/work-005.jpg",
+      "title": "نسيج يدوي على النول - وردي وبيج",
+      "category": "textile",
+      "year": "2025",
+      "description": "نسيج يدوي على النول الشخصي بتناسق جميل بين الوردي والبيج والبني — شغل يدوي أصيل يمزج الألوان بحرفية.",
+      "featured": false,
+      "title_en": "Hand Weaving on Loom - Pink and Beige",
+      "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
     },
     {
       "id": 36,
