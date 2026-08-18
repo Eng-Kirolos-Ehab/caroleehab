@@ -358,10 +358,10 @@ const SITE_DATA = {
     {
       "id": 72,
       "image": "images/work-137.jpg",
-      "title": "تيشيرت الراقصات",
-      "title_en": "Ballerinas Tee",
+      "title": "تصميم خلفي",
+      "title_en": "Back Design",
       "category": "sketchbook",
-      "year": "2026",
+      "year": "2023",
       "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
       "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
       "featured": false
