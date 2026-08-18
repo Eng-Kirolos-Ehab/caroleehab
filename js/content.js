@@ -554,6 +554,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 18,
+      "image": "images/work-078.jpg",
+      "title": "تباين الألوان",
+      "category": "bigworks",
+      "year": "2024",
+      "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
+      "featured": false,
+      "title_en": "Color Contrast",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 14,
       "image": "images/work-003.jpg",
       "title": "دفتر تصميم - الخطوط",
@@ -618,17 +629,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Melting Clock Keychains",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 18,
-      "image": "images/work-078.jpg",
-      "title": "تباين الألوان",
-      "category": "bigworks",
-      "year": "2024",
-      "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
-      "featured": false,
-      "title_en": "Color Contrast",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 12,
