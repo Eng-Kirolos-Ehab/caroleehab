@@ -419,12 +419,12 @@ const SITE_DATA = {
     {
       "id": 39,
       "image": "images/work-067.jpg",
-      "title": "أزهار زرقاء داكنة",
+      "title": "تصميم مستوحى من زهرة اللوتس.",
       "category": "Egy Stitch Competition Designs",
       "year": "2025",
       "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
       "featured": false,
-      "title_en": "Dark Blue Flowers",
+      "title_en": "Lotus-Inspired Design",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
