@@ -347,10 +347,10 @@ const SITE_DATA = {
     {
       "id": 74,
       "image": "images/work-139.jpg",
-      "title": "تيشيرت كولاج تجريدي",
-      "title_en": "Abstract Collage Tee",
+      "title": "التصميم الامامي",
+      "title_en": "Front Design",
       "category": "sketchbook",
-      "year": "2026",
+      "year": "2023",
       "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
       "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
       "featured": false
