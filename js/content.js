@@ -821,11 +821,11 @@ const SITE_DATA = {
       "id": 70,
       "image": "images/work-135.jpg",
       "title": "بورتريه كلاسيكي ب الوان السوفت باستيل",
-      "title_en": "Classical Oil Portrait",
+      "title_en": "Classical Soft Pastel Portrait",
       "category": "painting",
       "year": "2025",
-      "description": "بورتريه ب السوفت باستيل بأسلوب كلاسيكي، إكليل غار وخلفية ذهبية دافئة تستحضر لوحات عصر النهضة.",
-      "description_en": "An oil portrait in a classical style, with a laurel wreath and a warm golden background evoking Renaissance painting.",
+      "description": "بورتريه بأسلوب كلاسيكي منفذ بألوان السوفت باستيل، مع إكليل غار وخلفية ذهبية دافئة تعزز الطابع الأنيق للتكوين.",
+      "description_en": "A classical portrait created with soft pastels, featuring a laurel wreath and a warm golden background that enhances the elegant character of the composition.",
       "featured": false
     }
   ],
