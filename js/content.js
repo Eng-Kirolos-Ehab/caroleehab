@@ -785,6 +785,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 58,
+      "image": "images/work-117.jpg",
+      "title": "لوحة مطرزة - مطربة وبرج",
+      "category": "personal",
+      "year": "2025",
+      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
+      "featured": false,
+      "title_en": "Embroidered Panel - Singer and Tower",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 51,
       "image": "images/work-050.jpg",
       "title": "ورشة الطباعة اليدوية",
@@ -859,17 +870,6 @@ const SITE_DATA = {
       "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
       "featured": false,
       "title_en": "Melting Clock and Scarves",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 58,
-      "image": "images/work-117.jpg",
-      "title": "لوحة مطرزة - مطربة وبرج",
-      "category": "personal",
-      "year": "2025",
-      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
-      "featured": false,
-      "title_en": "Embroidered Panel - Singer and Tower",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
