@@ -579,7 +579,7 @@ const SITE_DATA = {
       "id": 6,
       "image": "images/work-017.jpg",
       "title": "أوراق الخريف",
-      "category": "homeprint",
+      "category": "jacquard",
       "year": "2025",
       "description": "تصميم طباعة متكرر مستوحى من أوراق الشجر، وجميع الموتيفات مرسومة يدويًا من تصميمي.",
       "featured": false,
