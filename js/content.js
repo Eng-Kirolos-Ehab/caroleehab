@@ -104,17 +104,6 @@ const SITE_DATA = {
   ],
   "works": [
     {
-      "id": 1,
-      "image": "images/work-070.jpg",
-      "title": "لوحة اهل غزة",
-      "category": "painting",
-      "year": "2026",
-      "description": "لوحة زيتية مستوحاة من مشهد يومي متكرر لاهالي غزة يعكس معاناتهم الدائمة و حقوقهم المهدورة و بيوتهم المدمره",
-      "featured": true,
-      "title_en": "People of Gaza",
-      "description_en": "An expressive artwork exploring portraiture, emotion, and storytelling through painted detail."
-    },
-    {
       "id": 2,
       "image": "images/work-106.jpg",
       "title": "بنت البادية",
@@ -124,6 +113,17 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Bedouin Girl",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
+    },
+    {
+      "id": 1,
+      "image": "images/work-070.jpg",
+      "title": "لوحة اهل غزة",
+      "category": "painting",
+      "year": "2026",
+      "description": "لوحة زيتية مستوحاة من مشهد يومي متكرر لاهالي غزة يعكس معاناتهم الدائمة و حقوقهم المهدورة و بيوتهم المدمره",
+      "featured": true,
+      "title_en": "People of Gaza",
+      "description_en": "An expressive artwork exploring portraiture, emotion, and storytelling through painted detail."
     },
     {
       "id": 3,
