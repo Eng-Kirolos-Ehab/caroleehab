@@ -285,6 +285,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 13,
+      "image": "images/work-087.jpg",
+      "title": "دفتر تصميم - أزياء وأنماط",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "صفحة من دفتر التصميم تجمع بين رسومات الأزياء ودراسة الأنماط والألوان.",
+      "featured": false,
+      "title_en": "Design Notebook - Fashion and Patterns",
+      "description_en": "A design study page documenting ideas, structure, color, and visual research."
+    },
+    {
       "id": 4,
       "image": "images/work-118.jpg",
       "title": "وجوه",
@@ -316,17 +327,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Autumn Leaves",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 13,
-      "image": "images/work-087.jpg",
-      "title": "دفتر تصميم - أزياء وأنماط",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "صفحة من دفتر التصميم تجمع بين رسومات الأزياء ودراسة الأنماط والألوان.",
-      "featured": false,
-      "title_en": "Design Notebook - Fashion and Patterns",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
       "id": 7,
