@@ -446,12 +446,12 @@ const SITE_DATA = {
     {
       "id": 73,
       "image": "images/work-138.jpg",
-      "title": "تيشيرت أدوات الرسم",
-      "title_en": "Art Tools Tee",
+      "title": "تيشيرت تصميم من الامام",
+      "title_en": "Front Design",
       "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
-      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
+      "year": "2022",
+      "description": "تصميم أمامي بسيط مستوحى من أدوات الرسم، يعتمد على تكوين خطي نظيف يعكس الهوية الفنية بأسلوب مينيمال",
+      "description_en": "A simple front design inspired by drawing tools, featuring a clean line composition that reflects an artistic identity in a minimal style",
       "featured": false
     },
     {
