@@ -587,6 +587,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 40,
+      "image": "images/work-120.jpg",
+      "title": "نقشة ذهبية نباتية",
+      "category": "homeprint",
+      "year": "2025",
+      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
+      "featured": false,
+      "title_en": "Golden Botanical Pattern",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
       "id": 16,
       "image": "images/work-077.jpg",
       "title": "طبيعة صامتة",
@@ -618,17 +629,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Color Contrast",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 40,
-      "image": "images/work-120.jpg",
-      "title": "نقشة ذهبية نباتية",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
-      "featured": false,
-      "title_en": "Golden Botanical Pattern",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
       "id": 58,
