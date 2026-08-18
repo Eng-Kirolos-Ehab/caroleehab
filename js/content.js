@@ -708,6 +708,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 51,
+      "image": "images/work-050.jpg",
+      "title": "ورشة الطباعة اليدوية",
+      "category": "factory",
+      "year": "2025",
+      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
+      "featured": false,
+      "title_en": "Hand Printing Workshop",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 29,
       "image": "images/work-021.jpg",
       "title": "جاكار كريسماس - التوت والصنوبر",
@@ -772,17 +783,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Botanical Wallpaper",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 51,
-      "image": "images/work-050.jpg",
-      "title": "ورشة الطباعة اليدوية",
-      "category": "factory",
-      "year": "2025",
-      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
-      "featured": false,
-      "title_en": "Hand Printing Workshop",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
       "id": 67,
