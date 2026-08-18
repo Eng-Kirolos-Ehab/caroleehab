@@ -417,6 +417,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 41,
+      "image": "images/work-062.jpg",
+      "title": "سريالية الموضة",
+      "category": "fashion",
+      "year": "2025",
+      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
+      "featured": true,
+      "title_en": "Surreal Fashion",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 31,
       "image": "images/work-065.jpg",
       "title": "جاكار مصري - الهيروغليفية",
@@ -514,17 +525,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Christmas Jacquard - Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 41,
-      "image": "images/work-062.jpg",
-      "title": "سريالية الموضة",
-      "category": "fashion",
-      "year": "2025",
-      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
-      "featured": true,
-      "title_en": "Surreal Fashion",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 33,
