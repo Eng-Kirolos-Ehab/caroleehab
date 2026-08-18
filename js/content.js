@@ -252,6 +252,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 25,
+      "image": "images/work-102.jpg",
+      "title": "البدوية الضاحكة",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
+      "featured": false,
+      "title_en": "The Laughing Bedouin Woman",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 3,
       "image": "images/work-015.jpg",
       "title": "طبيعة صامتة - الإبريق",
@@ -283,17 +294,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Underwater World",
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
-    },
-    {
-      "id": 25,
-      "image": "images/work-102.jpg",
-      "title": "البدوية الضاحكة",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
-      "featured": false,
-      "title_en": "The Laughing Bedouin Woman",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 6,
