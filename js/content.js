@@ -576,6 +576,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 16,
+      "image": "images/work-077.jpg",
+      "title": "طبيعة صامتة",
+      "category": "charcoal",
+      "year": "2024",
+      "description": "لوحة زيتية كبيرة تجمع بين الإبريق والكتب والقماش — دراسة أكاديمية في التدرجات الدافئة والتكوين الكلاسيكي.",
+      "featured": true,
+      "title_en": "Still Life - Pitcher and Books",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 11,
       "image": "images/work-099.jpg",
       "title": "ميداليات الساعات الذائبة",
@@ -607,17 +618,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Design Notebook - Checks",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 16,
-      "image": "images/work-077.jpg",
-      "title": "طبيعة صامتة",
-      "category": "charcoal",
-      "year": "2024",
-      "description": "لوحة زيتية كبيرة تجمع بين الإبريق والكتب والقماش — دراسة أكاديمية في التدرجات الدافئة والتكوين الكلاسيكي.",
-      "featured": true,
-      "title_en": "Still Life - Pitcher and Books",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 26,
