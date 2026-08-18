@@ -587,6 +587,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 72,
+      "image": "images/work-137.jpg",
+      "title": "تيشيرت الراقصات",
+      "title_en": "Ballerinas Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
+      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
+      "featured": false
+    },
+    {
       "id": 28,
       "image": "images/work-112.jpg",
       "title": "دراسة بالرصاص - الإبريق والنظارة",
@@ -651,17 +662,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand Weaving on Loom - Pink and Beige",
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
-    },
-    {
-      "id": 72,
-      "image": "images/work-137.jpg",
-      "title": "تيشيرت الراقصات",
-      "title_en": "Ballerinas Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
-      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
-      "featured": false
     },
     {
       "id": 40,
