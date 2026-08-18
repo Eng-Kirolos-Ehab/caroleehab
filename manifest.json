@@ -922,5 +922,54 @@
     "width": 960,
     "height": 1280,
     "orientation": "portrait"
+  },
+  {
+    "id": "work-133.jpg",
+    "original": "work-133.jpg",
+    "width": 1600,
+    "height": 1200,
+    "orientation": "landscape"
+  },
+  {
+    "id": "work-134.jpg",
+    "original": "work-134.jpg",
+    "width": 960,
+    "height": 1280,
+    "orientation": "portrait"
+  },
+  {
+    "id": "work-135.jpg",
+    "original": "work-135.jpg",
+    "width": 1600,
+    "height": 1600,
+    "orientation": "square"
+  },
+  {
+    "id": "work-136.jpg",
+    "original": "work-136.jpg",
+    "width": 853,
+    "height": 1280,
+    "orientation": "portrait"
+  },
+  {
+    "id": "work-137.jpg",
+    "original": "work-137.jpg",
+    "width": 1066,
+    "height": 1600,
+    "orientation": "portrait"
+  },
+  {
+    "id": "work-138.jpg",
+    "original": "work-138.jpg",
+    "width": 853,
+    "height": 1280,
+    "orientation": "portrait"
+  },
+  {
+    "id": "work-139.jpg",
+    "original": "work-139.jpg",
+    "width": 1066,
+    "height": 1600,
+    "orientation": "portrait"
   }
 ]

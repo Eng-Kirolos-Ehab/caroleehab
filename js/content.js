@@ -751,6 +751,171 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Embroidered Panel - Microphone Voice",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
+      "id": 60,
+      "image": "images/work-125.jpg",
+      "title": "فستان الأزهار الحقيقية",
+      "title_en": "Real Flower Dress",
+      "category": "mixed",
+      "year": "2026",
+      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
+      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
+      "featured": false
+    },
+    {
+      "id": 61,
+      "image": "images/work-126.jpg",
+      "title": "صفحات من دفتر التصميم",
+      "title_en": "Pages from the Design Sketchbook",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
+      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
+      "featured": false
+    },
+    {
+      "id": 62,
+      "image": "images/work-127.jpg",
+      "title": "بنطلون الأخطبوط تحت الماء",
+      "title_en": "Underwater Octopus Jeans",
+      "category": "personal",
+      "year": "2026",
+      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
+      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
+      "featured": false
+    },
+    {
+      "id": 63,
+      "image": "images/work-128.jpg",
+      "title": "فستان الحراشف الزرقاء",
+      "title_en": "Blue Scale Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
+      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
+      "featured": false
+    },
+    {
+      "id": 64,
+      "image": "images/work-129.jpg",
+      "title": "جاكيت الأخطبوط المرصّع",
+      "title_en": "Beaded Octopus Jacket",
+      "category": "personal",
+      "year": "2026",
+      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
+      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
+      "featured": false
+    },
+    {
+      "id": 65,
+      "image": "images/work-130.jpg",
+      "title": "تيشيرت Glow in the Dark",
+      "title_en": "Glow in the Dark Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
+      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
+      "featured": false
+    },
+    {
+      "id": 66,
+      "image": "images/work-131.jpg",
+      "title": "فستان زهرة الزنبق",
+      "title_en": "Lily Petal Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
+      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
+      "featured": false
+    },
+    {
+      "id": 67,
+      "image": "images/work-132.jpg",
+      "title": "شهادة تخرج",
+      "title_en": "Graduation Certificate",
+      "category": "Certificates",
+      "year": "2026",
+      "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
+      "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
+      "featured": false
+    },
+    {
+      "id": 68,
+      "image": "images/work-133.jpg",
+      "title": "معرض النوستالجيا المصرية",
+      "title_en": "Egyptian Nostalgia Exhibition",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
+      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
+      "featured": false
+    },
+    {
+      "id": 69,
+      "image": "images/work-134.jpg",
+      "title": "سيناء شهد للأديان",
+      "title_en": "Sinai, Witness to Religions",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
+      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
+      "featured": false
+    },
+    {
+      "id": 70,
+      "image": "images/work-135.jpg",
+      "title": "بورتريه كلاسيكي بالزيت",
+      "title_en": "Classical Oil Portrait",
+      "category": "painting",
+      "year": "2026",
+      "description": "بورتريه زيتي بأسلوب كلاسيكي، إكليل غار وخلفية ذهبية دافئة تستحضر لوحات عصر النهضة.",
+      "description_en": "An oil portrait in a classical style, with a laurel wreath and a warm golden background evoking Renaissance painting.",
+      "featured": false
+    },
+    {
+      "id": 71,
+      "image": "images/work-136.jpg",
+      "title": "تيشيرت Textile is Art",
+      "title_en": "Textile is Art Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
+      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
+      "featured": false
+    },
+    {
+      "id": 72,
+      "image": "images/work-137.jpg",
+      "title": "تيشيرت الراقصات",
+      "title_en": "Ballerinas Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
+      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
+      "featured": false
+    },
+    {
+      "id": 73,
+      "image": "images/work-138.jpg",
+      "title": "تيشيرت أدوات الرسم",
+      "title_en": "Art Tools Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
+      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
+      "featured": false
+    },
+    {
+      "id": 74,
+      "image": "images/work-139.jpg",
+      "title": "تيشيرت كولاج تجريدي",
+      "title_en": "Abstract Collage Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
+      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
+      "featured": false
     }
   ],
   "events": [
@@ -1529,6 +1694,66 @@ const SITE_DATA = {
     "images/work-124.jpg": {
       "width": 1024,
       "height": 1280
+    },
+    "images/work-125.jpg": {
+      "width": 883,
+      "height": 1280
+    },
+    "images/work-126.jpg": {
+      "width": 719,
+      "height": 1046
+    },
+    "images/work-127.jpg": {
+      "width": 475,
+      "height": 1280
+    },
+    "images/work-128.jpg": {
+      "width": 960,
+      "height": 1280
+    },
+    "images/work-129.jpg": {
+      "width": 960,
+      "height": 1280
+    },
+    "images/work-130.jpg": {
+      "width": 1024,
+      "height": 1280
+    },
+    "images/work-131.jpg": {
+      "width": 960,
+      "height": 1280
+    },
+    "images/work-132.jpg": {
+      "width": 960,
+      "height": 1280
+    },
+    "images/work-133.jpg": {
+      "width": 1600,
+      "height": 1200
+    },
+    "images/work-134.jpg": {
+      "width": 960,
+      "height": 1280
+    },
+    "images/work-135.jpg": {
+      "width": 1600,
+      "height": 1600
+    },
+    "images/work-136.jpg": {
+      "width": 853,
+      "height": 1280
+    },
+    "images/work-137.jpg": {
+      "width": 1066,
+      "height": 1600
+    },
+    "images/work-138.jpg": {
+      "width": 853,
+      "height": 1280
+    },
+    "images/work-139.jpg": {
+      "width": 1066,
+      "height": 1600
     }
   },
   "motionFilm": {
