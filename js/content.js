@@ -818,6 +818,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 68,
+      "image": "images/work-133.jpg",
+      "title": "معرض النوستالجيا المصرية",
+      "title_en": "Egyptian Nostalgia Exhibition",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
+      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
+      "featured": false
+    },
+    {
       "id": 56,
       "image": "images/work-090.jpg",
       "title": "منحوتة الساعة الذائبة",
@@ -870,17 +881,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
       "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
-      "featured": false
-    },
-    {
-      "id": 68,
-      "image": "images/work-133.jpg",
-      "title": "معرض النوستالجيا المصرية",
-      "title_en": "Egyptian Nostalgia Exhibition",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
-      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
       "featured": false
     },
     {
