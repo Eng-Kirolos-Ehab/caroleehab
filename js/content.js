@@ -786,7 +786,7 @@ const SITE_DATA = {
     },
     {
       "id": 75,
-      "image": "images/work-140.jpg",
+      "image": "images/work-141.jpg",
       "title": "شهادة تقدير للمشاركة في Textile Program",
       "title_en": "Certificate of Appreciation – Textile Program Contribution",
       "category": "Certificates",
@@ -1636,6 +1636,10 @@ const SITE_DATA = {
     "images/work-140.jpg": {
       "width": 1600,
       "height": 1136
+    },
+    "images/work-141.jpg": {
+      "width": 1600,
+      "height": 1130
     }
   },
   "motionFilm": {
