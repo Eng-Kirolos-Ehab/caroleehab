@@ -816,6 +816,17 @@ const SITE_DATA = {
       "description": "شهادة إتمام برنامج تدريب لمدة أربعة أسابيع في شركة Jade Textile، مع المشاركة في قسم التحسين المستمر – Continuous Improvement Department والتعرف على بيئة العمل الصناعية وأساليب تطوير وتحسين العمليات الإنتاجية.",
       "description_en": "Certificate of completion of a four-week internship at Jade Textile, with active involvement in the Continuous Improvement Department, gaining practical exposure to industrial operations and process improvement practices.",
       "featured": false
+    },
+    {
+      "id": 78,
+      "image": "images/work-144.jpg",
+      "title": "المركز الثالث في مسابقة الفنون التشكيلية",
+      "title_en": "Third Place – Fine Arts Competition",
+      "category": "Certificates",
+      "year": "2024",
+      "description": "شهادة تقدير من جامعة بدر بالقاهرة لحصولي على المركز الثالث في مجال التصوير والرسم ضمن مسابقة الفنون التشكيلية للعام الجامعي 2023/2024، تقديرًا لمهاراتي الفنية والإبداعية.",
+      "description_en": "Certificate of recognition from Badr University in Cairo for achieving Third Place in Photography and Drawing in the Fine Arts Competition 2023/2024, reflecting my artistic skills and creative expression.",
+      "featured": false
     }
   ],
   "events": [
@@ -1670,6 +1681,10 @@ const SITE_DATA = {
     "images/work-143.jpg": {
       "width": 1600,
       "height": 1128
+    },
+    "images/work-144.jpg": {
+      "width": 1600,
+      "height": 1165
     }
   },
   "motionFilm": {
