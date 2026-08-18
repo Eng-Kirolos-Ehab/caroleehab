@@ -598,6 +598,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 34,
+      "image": "images/work-119.jpg",
+      "title": "جاكار شتوي - التوت والأوراق",
+      "category": "jacquard",
+      "year": "2025",
+      "description": "نمط جاكار بدرجات البني والكراميل الدافئة مع أوراق شتوية — كونسبت كريسماس بمزاج رومانسي هادئ.",
+      "featured": false,
+      "title_en": "Winter Jacquard - Berries and Leaves",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 14,
       "image": "images/work-003.jpg",
       "title": "دفتر تصميم - الخطوط",
@@ -617,17 +628,6 @@ const SITE_DATA = {
       "description": "تصميم نسيج جاكار Tartan/Check تم تطويره باستخدام برامج تصميم الأنسجة المتخصصة.",
       "featured": false,
       "title_en": "Green Check Jacquard",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 34,
-      "image": "images/work-119.jpg",
-      "title": "جاكار شتوي - التوت والأوراق",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "نمط جاكار بدرجات البني والكراميل الدافئة مع أوراق شتوية — كونسبت كريسماس بمزاج رومانسي هادئ.",
-      "featured": false,
-      "title_en": "Winter Jacquard - Berries and Leaves",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
