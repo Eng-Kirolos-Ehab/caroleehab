@@ -368,6 +368,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 30,
+      "image": "images/work-064.jpg",
+      "title": "جاكار أطلانتس - نقشة النيل",
+      "category": "jacquard",
+      "year": "2025",
+      "description": "تصميم جاكار بنقشة فرعونية مستوحاة من النيل والتراث المصري القديم — أزرق جينز عميق يحكي حضارة ما تحت الماء.",
+      "featured": true,
+      "title_en": "Atlantis Jacquard - Nile Motif",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 25,
       "image": "images/work-102.jpg",
       "title": "البدوية الضاحكة",
@@ -420,17 +431,6 @@ const SITE_DATA = {
       "description": "تصميم جاكار بكونسبت كريسماس — أوراق الصنوبر وحبات التوت الحمراء في نسيج دافئ ومتكرر يبث أجواء الشتاء.",
       "featured": true,
       "title_en": "Christmas Jacquard - Berries and Pine",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 30,
-      "image": "images/work-064.jpg",
-      "title": "جاكار أطلانتس - نقشة النيل",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "تصميم جاكار بنقشة فرعونية مستوحاة من النيل والتراث المصري القديم — أزرق جينز عميق يحكي حضارة ما تحت الماء.",
-      "featured": true,
-      "title_en": "Atlantis Jacquard - Nile Motif",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
