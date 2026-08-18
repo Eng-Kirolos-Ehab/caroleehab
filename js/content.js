@@ -395,6 +395,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 65,
+      "image": "images/work-130.jpg",
+      "title": "تيشيرت Glow in the Dark",
+      "title_en": "Glow in the Dark Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
+      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
+      "featured": false
+    },
+    {
       "id": 22,
       "image": "images/work-033.jpg",
       "title": "بورتريه بالباستيل",
@@ -459,17 +470,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Egyptian Jacquard - Pharaonic Symbols",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 65,
-      "image": "images/work-130.jpg",
-      "title": "تيشيرت Glow in the Dark",
-      "title_en": "Glow in the Dark Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
-      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
-      "featured": false
     },
     {
       "id": 39,
