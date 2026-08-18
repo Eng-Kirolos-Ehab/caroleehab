@@ -774,17 +774,6 @@ const SITE_DATA = {
       "featured": false
     },
     {
-      "id": 38,
-      "image": "images/work-051.jpg",
-      "title": "طبعة نباتية شتوية",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "نقشة طباعة بألوان خضراء وذهبية بطابع شتوي دافئ، مناسبة للستائر والمفروشات الراقية.",
-      "featured": false,
-      "title_en": "Winter Botanical Print",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
       "id": 43,
       "image": "images/work-030.jpg",
       "title": "أزياء من الحضارة الفرعونية",
