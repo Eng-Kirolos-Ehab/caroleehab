@@ -747,6 +747,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 66,
+      "image": "images/work-131.jpg",
+      "title": "فستان زهرة الزنبق",
+      "title_en": "Lily Petal Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
+      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
+      "featured": false
+    },
+    {
       "id": 58,
       "image": "images/work-117.jpg",
       "title": "لوحة مطرزة - مطربة وبرج",
@@ -821,17 +832,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
       "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
-      "featured": false
-    },
-    {
-      "id": 66,
-      "image": "images/work-131.jpg",
-      "title": "فستان زهرة الزنبق",
-      "title_en": "Lily Petal Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
-      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
       "featured": false
     },
     {
