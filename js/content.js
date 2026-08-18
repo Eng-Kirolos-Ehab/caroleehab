@@ -422,6 +422,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 68,
+      "image": "images/work-133.jpg",
+      "title": "معرض النوستالجيا المصرية",
+      "title_en": "Egyptian Nostalgia Exhibition",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
+      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
+      "featured": false
+    },
+    {
       "id": 5,
       "image": "images/work-001.jpg",
       "title": "عالم تحت الماء",
@@ -486,17 +497,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Warm Check Jacquard",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 68,
-      "image": "images/work-133.jpg",
-      "title": "معرض النوستالجيا المصرية",
-      "title_en": "Egyptian Nostalgia Exhibition",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
-      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
-      "featured": false
     },
     {
       "id": 10,
