@@ -719,6 +719,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 62,
+      "image": "images/work-127.jpg",
+      "title": "بنطلون الأخطبوط تحت الماء",
+      "title_en": "Underwater Octopus Jeans",
+      "category": "personal",
+      "year": "2026",
+      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
+      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
+      "featured": false
+    },
+    {
       "id": 51,
       "image": "images/work-050.jpg",
       "title": "ورشة الطباعة اليدوية",
@@ -805,17 +816,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Embroidered Panel - Microphone Voice",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 62,
-      "image": "images/work-127.jpg",
-      "title": "بنطلون الأخطبوط تحت الماء",
-      "title_en": "Underwater Octopus Jeans",
-      "category": "personal",
-      "year": "2026",
-      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
-      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
-      "featured": false
     },
     {
       "id": 67,
