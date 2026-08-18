@@ -653,17 +653,6 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
-      "id": 42,
-      "image": "images/work-098.jpg",
-      "title": "غلاف مجلة سرّيفا",
-      "category": "fashion",
-      "year": "2025",
-      "description": "غلاف المجلة الفنية 'سرّيفا' الذي يعرض تصميم أزياء كارول — حضور مميز في عالم الموضة المصرية.",
-      "featured": false,
-      "title_en": "Sereva Magazine Cover",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
       "id": 43,
       "image": "images/work-030.jpg",
       "title": "أزياء من الحضارة الفرعونية",
