@@ -576,6 +576,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 26,
+      "image": "images/work-011.jpg",
+      "title": "دراسة بالرصاص - الإبريق والقماش",
+      "category": "sketchbook",
+      "year": "2025",
+      "description": "رسم تخطيطي بالقلم الرصاص لتكوين من الإبريق والقماش — دراسة في المنظور والظل والنور.",
+      "featured": false,
+      "title_en": "Pencil Study - Pitcher and Fabric",
+      "description_en": "A design study page documenting ideas, structure, color, and visual research."
+    },
+    {
       "id": 7,
       "image": "images/work-063.jpg",
       "title": "توت وصنوبر",
@@ -650,17 +661,6 @@ const SITE_DATA = {
       "description": "صفحة بحث عن أنماط الكاروهات (Tartan/Check) ومصادرها التاريخية، مع عينات أقمشة حقيقية.",
       "featured": false,
       "title_en": "Design Notebook - Checks",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 26,
-      "image": "images/work-011.jpg",
-      "title": "دراسة بالرصاص - الإبريق والقماش",
-      "category": "sketchbook",
-      "year": "2025",
-      "description": "رسم تخطيطي بالقلم الرصاص لتكوين من الإبريق والقماش — دراسة في المنظور والظل والنور.",
-      "featured": false,
-      "title_en": "Pencil Study - Pitcher and Fabric",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
