@@ -818,6 +818,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 67,
+      "image": "images/work-132.jpg",
+      "title": "شهادة تخرج",
+      "title_en": "Graduation Certificate",
+      "category": "Certificates",
+      "year": "2026",
+      "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
+      "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
+      "featured": false
+    },
+    {
       "id": 52,
       "image": "images/work-080.jpg",
       "title": "تصميم نسيج مخطط",
@@ -882,17 +893,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Embroidered Panel - Microphone Voice",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 67,
-      "image": "images/work-132.jpg",
-      "title": "شهادة تخرج",
-      "title_en": "Graduation Certificate",
-      "category": "Certificates",
-      "year": "2026",
-      "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
-      "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
-      "featured": false
     },
     {
       "id": 70,
