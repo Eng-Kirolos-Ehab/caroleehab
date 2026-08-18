@@ -774,6 +774,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 51,
+      "image": "images/work-050.jpg",
+      "title": "ورشة الطباعة اليدوية",
+      "category": "factory",
+      "year": "2025",
+      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
+      "featured": false,
+      "title_en": "Hand Printing Workshop",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 67,
       "image": "images/work-132.jpg",
       "title": "شهادة تخرج",
@@ -837,17 +848,6 @@ const SITE_DATA = {
       "description": "رسم تخطيطي دقيق لتصميم منطقة التحضير في المصنع — تخطيط وظيفي وجمالي للمساحة.",
       "featured": false,
       "title_en": "Preparation Area Layout",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 51,
-      "image": "images/work-050.jpg",
-      "title": "ورشة الطباعة اليدوية",
-      "category": "factory",
-      "year": "2025",
-      "description": "تجهيز شاشات الطباعة اليدوية في الورشة — خطوة عملية في دورة إنتاج الأقمشة المطبوعة.",
-      "featured": false,
-      "title_en": "Hand Printing Workshop",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
