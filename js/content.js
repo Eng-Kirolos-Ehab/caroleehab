@@ -521,6 +521,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 73,
+      "image": "images/work-138.jpg",
+      "title": "تيشيرت أدوات الرسم",
+      "title_en": "Art Tools Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
+      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
+      "featured": false
+    },
+    {
       "id": 18,
       "image": "images/work-078.jpg",
       "title": "تباين الألوان",
@@ -552,17 +563,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Orange and Blue",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 73,
-      "image": "images/work-138.jpg",
-      "title": "تيشيرت أدوات الرسم",
-      "title_en": "Art Tools Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
-      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
-      "featured": false
     },
     {
       "id": 71,
