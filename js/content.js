@@ -653,6 +653,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 58,
+      "image": "images/work-117.jpg",
+      "title": "لوحة مطرزة - مطربة وبرج",
+      "category": "personal",
+      "year": "2025",
+      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
+      "featured": false,
+      "title_en": "Embroidered Panel - Singer and Tower",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 29,
       "image": "images/work-021.jpg",
       "title": "جاكار كريسماس - التوت والصنوبر",
@@ -684,17 +695,6 @@ const SITE_DATA = {
       "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
       "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
       "featured": false
-    },
-    {
-      "id": 58,
-      "image": "images/work-117.jpg",
-      "title": "لوحة مطرزة - مطربة وبرج",
-      "category": "personal",
-      "year": "2025",
-      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
-      "featured": false,
-      "title_en": "Embroidered Panel - Singer and Tower",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 34,
