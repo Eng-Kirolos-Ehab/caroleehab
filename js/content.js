@@ -48,8 +48,8 @@ const SITE_DATA = {
     },
     {
       "id": "charcoal",
-      "label": "رسم بالفحم",
-      "label_en": "Charcoal Drawing"
+      "label": "life drawing",
+      "label_en": "natural Drawing"
     },
     {
       "id": "bigworks",
