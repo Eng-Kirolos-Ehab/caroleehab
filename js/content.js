@@ -591,7 +591,7 @@ const SITE_DATA = {
       "image": "images/work-063.jpg",
       "title": "توت وصنوبر",
       "category": "jacquard",
-      "year": "2026",
+      "year": "2025",
       "description": "نمط جاكار بكونسبت كريسماس — التوت الأحمر والصنوبر الأخضر في هارمونية نسيج دافئة.",
       "featured": false,
       "title_en": "Berries and Pine",
