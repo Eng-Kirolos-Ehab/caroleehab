@@ -389,6 +389,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 73,
+      "image": "images/work-138.jpg",
+      "title": "تيشيرت أدوات الرسم",
+      "title_en": "Art Tools Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
+      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
+      "featured": false
+    },
+    {
       "id": 3,
       "image": "images/work-015.jpg",
       "title": "طبيعة صامتة",
@@ -408,17 +419,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
       "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
-      "featured": false
-    },
-    {
-      "id": 73,
-      "image": "images/work-138.jpg",
-      "title": "تيشيرت أدوات الرسم",
-      "title_en": "Art Tools Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
-      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
       "featured": false
     },
     {
