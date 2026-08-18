@@ -686,6 +686,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 34,
+      "image": "images/work-119.jpg",
+      "title": "جاكار شتوي - التوت والأوراق",
+      "category": "jacquard",
+      "year": "2025",
+      "description": "نمط جاكار بدرجات البني والكراميل الدافئة مع أوراق شتوية — كونسبت كريسماس بمزاج رومانسي هادئ.",
+      "featured": false,
+      "title_en": "Winter Jacquard - Berries and Leaves",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 22,
       "image": "images/work-033.jpg",
       "title": "بورتريه بالباستيل",
@@ -717,17 +728,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Pitcher and Glasses",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 34,
-      "image": "images/work-119.jpg",
-      "title": "جاكار شتوي - التوت والأوراق",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "نمط جاكار بدرجات البني والكراميل الدافئة مع أوراق شتوية — كونسبت كريسماس بمزاج رومانسي هادئ.",
-      "featured": false,
-      "title_en": "Winter Jacquard - Berries and Leaves",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
       "id": 29,
