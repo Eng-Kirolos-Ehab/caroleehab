@@ -686,6 +686,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 58,
+      "image": "images/work-117.jpg",
+      "title": "لوحة مطرزة - مطربة وبرج",
+      "category": "personal",
+      "year": "2025",
+      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
+      "featured": false,
+      "title_en": "Embroidered Panel - Singer and Tower",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 34,
       "image": "images/work-119.jpg",
       "title": "جاكار شتوي - التوت والأوراق",
@@ -750,17 +761,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Winter Botanical Print",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 58,
-      "image": "images/work-117.jpg",
-      "title": "لوحة مطرزة - مطربة وبرج",
-      "category": "personal",
-      "year": "2025",
-      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
-      "featured": false,
-      "title_en": "Embroidered Panel - Singer and Tower",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 43,
