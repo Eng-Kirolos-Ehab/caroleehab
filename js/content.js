@@ -174,10 +174,10 @@ const SITE_DATA = {
       "title": "سريالية الموضة",
       "category": "mood boards",
       "year": "2026",
-      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
+      "description": "يعكس المود بورد طابعًا سرياليًا جريئًا، يجمع بين **الطبعات الفنية والتفاصيل غير التقليدية والقصّات المتنوعة** لخلق أزياء عصرية تحمل هوية فنية مميزة.",
       "featured": true,
       "title_en": "Surreal Fashion",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+      "description_en": "The mood board reflects a bold **surrealist aesthetic**, combining artistic prints, unconventional details, and diverse silhouettes to create contemporary fashion with a distinctive artistic identity."
     },
     {
       "id": 31,
