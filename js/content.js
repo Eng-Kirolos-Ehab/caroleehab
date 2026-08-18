@@ -794,6 +794,17 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Phone Case - Starry Night",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
+      "id": 75,
+      "image": "images/work-140.jpg",
+      "title": "شهادة تقدير للمشاركة في Textile Program",
+      "title_en": "Certificate of Appreciation – Textile Program Contribution",
+      "category": "Certificates",
+      "year": "2025",
+      "description": "شهادة تقدير للمشاركة الفعالة والمساهمة كعضو في أنشطة Textales، والمشاركة في تنظيم الفعاليات والمبادرات التي دعمت برنامج النسيج وأسهمت في إثراء الحياة الطلابية.",
+      "description_en": "Certificate of Appreciation for valuable contribution as a Textales member, recognizing active participation in organizing events and initiatives that supported the Textile Program and enriched student activities.",
+      "featured": false
     }
   ],
   "events": [
@@ -1632,6 +1643,10 @@ const SITE_DATA = {
     "images/work-139.jpg": {
       "width": 1066,
       "height": 1600
+    },
+    "images/work-140.jpg": {
+      "width": 1600,
+      "height": 1136
     }
   },
   "motionFilm": {
