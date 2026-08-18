@@ -689,9 +689,9 @@ const SITE_DATA = {
       "id": 49,
       "image": "images/work-108.jpg",
       "title": "مخطط توزيع المصنع",
-      "category": "factory",
+      "category": "painting",
       "year": "2025",
-      "description": "مخطط هندسي لتوزيع أقسام مصنع النسيج — تصميم المساحة والعرض داخل بيئة المصنع.",
+      "description": "مخطط هندسي لتوزيع أقسام مصنع النسيج — تصميم المساحة والعرض داخل بيئة المصنع مشروع التدريب الصيفي في مصنع جيد",
       "featured": false,
       "title_en": "Factory Layout Plan",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
