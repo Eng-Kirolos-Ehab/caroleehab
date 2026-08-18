@@ -794,6 +794,17 @@ const SITE_DATA = {
       "description": "شهادة تقدير للمشاركة الفعالة والمساهمة كعضو في أنشطة Textales، والمشاركة في تنظيم الفعاليات والمبادرات التي دعمت برنامج النسيج وأسهمت في إثراء الحياة الطلابية.",
       "description_en": "Certificate of Appreciation for valuable contribution as a Textales member, recognizing active participation in organizing events and initiatives that supported the Textile Program and enriched student activities.",
       "featured": false
+    },
+    {
+      "id": 76,
+      "image": "images/work-142.jpg",
+      "title": "شهادة التميز الفني والإبداع",
+      "title_en": "Certificate of Artistic Excellence & Creativity",
+      "category": "Certificates",
+      "year": "2025",
+      "description": "شهادة تقدير من كلية الفنون التطبيقية تقديرًا للتميز الفني والإبداع والالتزام بالتطوير المستمر، وللأعمال والإنجازات التي تعكس شغفي بالفنون والتصميم.",
+      "description_en": "A Certificate of Appreciation recognizing artistic excellence, creativity, dedication, and continuous development, awarded for outstanding work and achievements in art and design.",
+      "featured": false
     }
   ],
   "events": [
@@ -1640,6 +1651,10 @@ const SITE_DATA = {
     "images/work-141.jpg": {
       "width": 1600,
       "height": 1130
+    },
+    "images/work-142.jpg": {
+      "width": 1600,
+      "height": 1136
     }
   },
   "motionFilm": {
