@@ -373,6 +373,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 31,
+      "image": "images/work-065.jpg",
+      "title": "جاكار مصري - الهيروغليفية",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
+      "featured": false,
+      "title_en": "Egyptian Jacquard - Hieroglyphics",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 19,
       "image": "images/work-079.jpg",
       "title": "طبيعة صامتة - الخبز والطنجرة",
@@ -437,17 +448,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "El Fishawy Cafe",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 31,
-      "image": "images/work-065.jpg",
-      "title": "جاكار مصري - الهيروغليفية",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
-      "featured": false,
-      "title_en": "Egyptian Jacquard - Hieroglyphics",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
       "id": 30,
