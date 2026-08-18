@@ -697,17 +697,6 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
-      "id": 21,
-      "image": "images/work-083.jpg",
-      "title": "طبيعة صامتة - الجرة الفرعونية",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة زيتية تجمع بين جرة فرعونية وخضروات طازجة — تلاقي التراث والحياة اليومية.",
-      "featured": false,
-      "title_en": "Still Life - Pharaonic Jar",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
       "id": 23,
       "image": "images/work-068.jpg",
       "title": "بورتريه كلاسيكي",
