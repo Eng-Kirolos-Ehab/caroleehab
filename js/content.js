@@ -329,8 +329,8 @@ const SITE_DATA = {
       "title_en": "Beaded Octopus Jacket",
       "category": "personal",
       "year": "2026",
-      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
-      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
+      "description": "جاكيت جينز مطرز يدويًا بتصميم أخطبوط غني بالتفاصيل، يجمع بين الخرز واللؤلؤ والتطريز لخلق قطعة فنية مميزة بطابع جريء ومعاصر.",
+      "description_en": "A hand-embroidered denim jacket featuring an intricate octopus design, combining beads, pearls, and detailed stitching to create a bold, contemporary wearable art piece.",
       "featured": false
     },
     {
