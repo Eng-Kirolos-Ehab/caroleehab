@@ -502,7 +502,7 @@ const SITE_DATA = {
       "id": 20,
       "image": "images/work-082.jpg",
       "title": "طبيعة صامتة - البرتقالي والأزرق",
-      "category": "bigworks",
+      "category": "charcoal",
       "year": "2025",
       "description": "تناقض مشرق بين وعاء برتقالي وإبريق أزرق على خلفية مزخرفة — دراسة في التضاد اللوني.",
       "featured": false,
