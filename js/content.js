@@ -499,17 +499,6 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
-      "id": 3,
-      "image": "images/work-015.jpg",
-      "title": "طبيعة صامتة",
-      "category": "charcoal",
-      "year": "2024",
-      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
-      "featured": false,
-      "title_en": "Still Life - The Pitcher",
-      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
       "id": 20,
       "image": "images/work-082.jpg",
       "title": "طبيعة صامتة - البرتقالي والأزرق",
@@ -519,6 +508,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Orange and Blue",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
+      "id": 3,
+      "image": "images/work-015.jpg",
+      "title": "طبيعة صامتة",
+      "category": "charcoal",
+      "year": "2024",
+      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
+      "featured": false,
+      "title_en": "Still Life - The Pitcher",
+      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
       "id": 5,
