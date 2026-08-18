@@ -554,6 +554,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 27,
+      "image": "images/work-014.jpg",
+      "title": "دراسة بالرصاص - الزجاجة والفواكه",
+      "category": "sketchbook",
+      "year": "2025",
+      "description": "سكتش بالرصاص لزجاجة نبيذ وموز وسكين — تمرين في الواقعية وتقنية التظليل الدقيق.",
+      "featured": false,
+      "title_en": "Pencil Study - Bottle and Fruit",
+      "description_en": "A design study page documenting ideas, structure, color, and visual research."
+    },
+    {
       "id": 5,
       "image": "images/work-001.jpg",
       "title": "عالم تحت الماء",
@@ -618,17 +629,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Warm Check Jacquard",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 27,
-      "image": "images/work-014.jpg",
-      "title": "دراسة بالرصاص - الزجاجة والفواكه",
-      "category": "sketchbook",
-      "year": "2025",
-      "description": "سكتش بالرصاص لزجاجة نبيذ وموز وسكين — تمرين في الواقعية وتقنية التظليل الدقيق.",
-      "featured": false,
-      "title_en": "Pencil Study - Bottle and Fruit",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
       "id": 10,
