@@ -406,6 +406,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 39,
+      "image": "images/work-067.jpg",
+      "title": "تصميم مستوحى من زهرة اللوتس.",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
+      "featured": false,
+      "title_en": "Lotus-Inspired Design",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
       "id": 19,
       "image": "images/work-079.jpg",
       "title": "طبيعة صامتة - الخبز والطنجرة",
@@ -470,17 +481,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "El Fishawy Cafe",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 39,
-      "image": "images/work-067.jpg",
-      "title": "تصميم مستوحى من زهرة اللوتس.",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
-      "featured": false,
-      "title_en": "Lotus-Inspired Design",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
       "id": 25,
