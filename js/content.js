@@ -252,6 +252,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 61,
+      "image": "images/work-126.jpg",
+      "title": "صفحات من دفتر التصميم",
+      "title_en": "Pages from the Design Sketchbook",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
+      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
+      "featured": false
+    },
+    {
       "id": 14,
       "image": "images/work-003.jpg",
       "title": "دفتر تصميم - الخطوط",
@@ -338,17 +349,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Pharaonic Jar",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 61,
-      "image": "images/work-126.jpg",
-      "title": "صفحات من دفتر التصميم",
-      "title_en": "Pages from the Design Sketchbook",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
-      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
-      "featured": false
     },
     {
       "id": 22,
