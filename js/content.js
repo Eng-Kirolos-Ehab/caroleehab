@@ -296,6 +296,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 60,
+      "image": "images/work-125.jpg",
+      "title": "فستان الأزهار الحقيقية",
+      "title_en": "Real Flower Dress",
+      "category": "mixed",
+      "year": "2026",
+      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
+      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
+      "featured": false
+    },
+    {
       "id": 15,
       "image": "images/work-010.jpg",
       "title": "دفتر تصميم - الكاروهات",
@@ -349,17 +360,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Bread and Pot",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 60,
-      "image": "images/work-125.jpg",
-      "title": "فستان الأزهار الحقيقية",
-      "title_en": "Real Flower Dress",
-      "category": "mixed",
-      "year": "2026",
-      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
-      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
-      "featured": false
     },
     {
       "id": 20,
