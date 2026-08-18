@@ -30,7 +30,7 @@
     }
   }
 </script>
-<link rel="stylesheet" href="css/admin.css?v=20260615">
+<link rel="stylesheet" href="css/admin.css?v=20260618">
 </head>
 <body class="bg-cream2 text-ink font-ar antialiased min-h-screen">
 
@@ -90,6 +90,7 @@
     <button class="tab-btn" data-tab="categories">التصنيفات</button>
     <button class="tab-btn" data-tab="magazines">المجلات</button>
     <button class="tab-btn" data-tab="process">رحلة العمل</button>
+    <button class="tab-btn" data-tab="showcases">أقسام مصورة</button>
     <button class="tab-btn" data-tab="texts">نصوص الموقع</button>
     <button class="tab-btn" data-tab="sections">ترتيب الأقسام</button>
   </div>
@@ -233,7 +234,6 @@
 
       <div class="flex items-center gap-3">
         <button id="btn-add-work" class="btn-primary">إضافة العمل</button>
-        <button id="btn-cancel-edit-work" class="btn-secondary hidden">إلغاء التعديل</button>
       </div>
     </div>
 
@@ -241,6 +241,7 @@
       <div class="flex items-center justify-between mb-4">
         <h2 class="card-title !mb-0">كل الأعمال (<span id="works-count">0</span>)</h2>
       </div>
+      <p class="text-sm text-ink2 mb-4">اسحبي أي كارت وأفلتيه في مكان تاني لإعادة الترتيب، أو استخدمي الأسهم. اضغطي على زر التعديل لفتح نافذة تعديل سريع.</p>
       <div id="works-list" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
     </div>
 
@@ -475,6 +476,62 @@
     </div>
   </section>
 
+  <!-- ============ SHOWCASE SECTIONS TAB ============ -->
+  <section data-tab-panel="showcases" class="tab-panel hidden">
+    <div class="card">
+      <h2 class="card-title">إضافة قسم مصور جديد</h2>
+      <p class="text-sm text-ink2 mb-4">قسم بصورة رئيسية كبيرة وصور أصغر تحتها بتتبدّل تلقائي، مع عنوان ووصف بيظهروا على جنب الصورة حسب لغة الموقع. كل قسم بتضيفيه بيتحط تلقائي في قائمة "ترتيب الأقسام" — رتّبيه من هناك.</p>
+      <div class="grid sm:grid-cols-2 gap-5 mb-5">
+        <div>
+          <label class="field-label">العنوان</label>
+          <input id="sh-title" class="field-input" type="text">
+        </div>
+        <div>
+          <label class="field-label">Title (English)</label>
+          <input id="sh-title-en" class="field-input" type="text">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">الوصف</label>
+          <textarea id="sh-description" class="field-input" rows="3"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Description (English)</label>
+          <textarea id="sh-description-en" class="field-input" rows="3"></textarea>
+        </div>
+        <div class="flex items-center gap-2">
+          <input id="sh-autoplay" type="checkbox" class="w-5 h-5 accent-[#C9A227]" checked>
+          <label for="sh-autoplay" class="text-sm text-ink2">تبديل تلقائي بين الصور الصغيرة</label>
+        </div>
+      </div>
+
+      <label class="field-label">الصورة الرئيسية</label>
+      <div class="flex flex-wrap items-center gap-4 mb-5">
+        <img id="sh-main-image-preview" class="w-24 h-24 object-cover rounded-xl border border-ink/10 hidden" src="" alt="">
+        <input id="sh-main-image-upload" type="file" accept="image/*" class="text-sm">
+        <button id="btn-pick-sh-main-image" type="button" class="btn-secondary">أو اختيار من مكتبة الصور</button>
+      </div>
+
+      <label class="field-label">الصور الصغيرة (بالترتيب)</label>
+      <div id="sh-sub-images" class="flex flex-wrap gap-3 mb-3"></div>
+      <div class="flex flex-wrap items-center gap-4 mb-5">
+        <input id="sh-sub-image-upload" type="file" accept="image/*" class="text-sm">
+        <button id="btn-pick-sh-sub-image" type="button" class="btn-secondary">أو إضافة من مكتبة الصور</button>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="btn-add-showcase" class="btn-primary">إضافة القسم</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="card-title !mb-0">كل الأقسام المصورة (<span id="showcases-count">0</span>)</h2>
+      </div>
+      <p class="text-sm text-ink2 mb-4">اسحبي أي كارت وأفلتيه لإعادة الترتيب، أو استخدمي الأسهم. اضغطي على زر التعديل لفتح نافذة تعديل سريع.</p>
+      <div id="showcases-list" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+  </section>
+
   <!-- ============ SITE TEXTS TAB ============ -->
   <section data-tab-panel="texts" class="tab-panel hidden">
     <p class="text-sm text-ink2 mb-4">عدّلي أي نص ظاهر في الموقع. اتركي الحقل فاضي لاستخدام النص الافتراضي.</p>
@@ -673,7 +730,7 @@
     <div class="card">
       <h2 class="card-title">ترتيب أقسام الصفحة</h2>
       <p class="text-sm text-ink2 mb-4">
-        استخدمي الأسهم لتغيير ترتيب ظهور الأقسام في الصفحة الرئيسية.
+        اسحبي أي قسم وأفلتيه في مكان تاني لإعادة الترتيب، أو استخدمي الأسهم.
         قسم "الرئيسية" (Hero) في الأعلى وقسم "التواصل" في الأسفل ثابتان دائمًا
         ولا يظهران في هذه القائمة.
       </p>
@@ -683,6 +740,155 @@
 
 </main>
 
-<script src="js/admin.js?v=20260617"></script>
+<!-- ============ WORK QUICK-EDIT MODAL ============ -->
+<div id="work-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+  <div class="work-modal-backdrop absolute inset-0 bg-ink/60"></div>
+  <div class="relative bg-cream rounded-2xl shadow-2xl w-full max-w-2xl mx-auto max-h-[90vh] overflow-y-auto p-6">
+    <div class="flex items-center justify-between mb-5">
+      <h3 class="card-title !mb-0">تعديل سريع</h3>
+      <button id="btn-close-work-modal" type="button" class="cursor-pointer text-ink2 hover:text-ink text-2xl leading-none">✕</button>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 mb-5">
+      <div>
+        <label class="field-label">عنوان العمل</label>
+        <input id="wm-title" class="field-input" type="text">
+      </div>
+      <div>
+        <label class="field-label">Work title (English)</label>
+        <input id="wm-title-en" class="field-input" type="text">
+      </div>
+      <div>
+        <label class="field-label">التصنيف</label>
+        <select id="wm-category" class="field-input"></select>
+      </div>
+      <div>
+        <label class="field-label">السنة</label>
+        <input id="wm-year" class="field-input" type="text" placeholder="2026">
+      </div>
+      <div class="flex items-center gap-2 mt-7">
+        <input id="wm-featured" type="checkbox" class="w-5 h-5 accent-[#C9A227]">
+        <label for="wm-featured" class="text-sm text-ink2">عمل مميز (يظهر في "أعمال مميزة")</label>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="field-label">الوصف</label>
+        <textarea id="wm-description" class="field-input" rows="3"></textarea>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="field-label">Description (English)</label>
+        <textarea id="wm-description-en" class="field-input" rows="3"></textarea>
+      </div>
+    </div>
+
+    <label class="field-label">الصورة</label>
+    <div class="flex flex-wrap items-center gap-4 mb-6">
+      <img id="wm-image-preview" class="w-24 h-24 object-cover rounded-xl border border-ink/10" src="" alt="">
+      <input id="wm-image-upload" type="file" accept="image/*" class="text-sm">
+      <button id="btn-pick-work-modal-image" type="button" class="btn-secondary">أو اختيار من مكتبة الصور</button>
+    </div>
+
+    <div class="flex items-center justify-between gap-3 flex-wrap">
+      <button id="btn-delete-work-modal" type="button" class="text-sm font-semibold text-red-600 hover:text-red-700 cursor-pointer">حذف العمل</button>
+      <div class="flex items-center gap-3">
+        <button id="btn-cancel-work-modal" type="button" class="btn-secondary">إلغاء</button>
+        <button id="btn-save-work-modal" type="button" class="btn-primary">حفظ التعديلات</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SHOWCASE QUICK-EDIT MODAL ============ -->
+<div id="showcase-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+  <div class="showcase-modal-backdrop absolute inset-0 bg-ink/60"></div>
+  <div class="relative bg-cream rounded-2xl shadow-2xl w-full max-w-2xl mx-auto max-h-[90vh] overflow-y-auto p-6">
+    <div class="flex items-center justify-between mb-5">
+      <h3 class="card-title !mb-0">تعديل سريع</h3>
+      <button id="btn-close-showcase-modal" type="button" class="cursor-pointer text-ink2 hover:text-ink text-2xl leading-none">✕</button>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 mb-5">
+      <div>
+        <label class="field-label">العنوان</label>
+        <input id="shm-title" class="field-input" type="text">
+      </div>
+      <div>
+        <label class="field-label">Title (English)</label>
+        <input id="shm-title-en" class="field-input" type="text">
+      </div>
+      <div class="sm:col-span-2">
+        <label class="field-label">الوصف</label>
+        <textarea id="shm-description" class="field-input" rows="3"></textarea>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="field-label">Description (English)</label>
+        <textarea id="shm-description-en" class="field-input" rows="3"></textarea>
+      </div>
+      <div class="flex items-center gap-2">
+        <input id="shm-autoplay" type="checkbox" class="w-5 h-5 accent-[#C9A227]">
+        <label for="shm-autoplay" class="text-sm text-ink2">تبديل تلقائي بين الصور الصغيرة</label>
+      </div>
+    </div>
+
+    <label class="field-label">الصورة الرئيسية</label>
+    <div class="flex flex-wrap items-center gap-4 mb-5">
+      <img id="shm-main-image-preview" class="w-24 h-24 object-cover rounded-xl border border-ink/10" src="" alt="">
+      <input id="shm-main-image-upload" type="file" accept="image/*" class="text-sm">
+      <button id="btn-pick-shm-main-image" type="button" class="btn-secondary">أو اختيار من مكتبة الصور</button>
+    </div>
+
+    <label class="field-label">الصور الصغيرة (بالترتيب)</label>
+    <div id="shm-sub-images" class="flex flex-wrap gap-3 mb-3"></div>
+    <div class="flex flex-wrap items-center gap-4 mb-6">
+      <input id="shm-sub-image-upload" type="file" accept="image/*" class="text-sm">
+      <button id="btn-pick-shm-sub-image" type="button" class="btn-secondary">أو إضافة من مكتبة الصور</button>
+    </div>
+
+    <div class="flex items-center justify-between gap-3 flex-wrap">
+      <button id="btn-delete-showcase-modal" type="button" class="text-sm font-semibold text-red-600 hover:text-red-700 cursor-pointer">حذف القسم</button>
+      <div class="flex items-center gap-3">
+        <button id="btn-cancel-showcase-modal" type="button" class="btn-secondary">إلغاء</button>
+        <button id="btn-save-showcase-modal" type="button" class="btn-primary">حفظ التعديلات</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ IMAGE POSITION MODAL ============ -->
+<div id="image-position-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+  <div class="image-position-backdrop absolute inset-0 bg-ink/60"></div>
+  <div class="relative bg-cream rounded-2xl shadow-2xl w-full max-w-lg mx-auto max-h-[90vh] overflow-y-auto p-6">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="card-title !mb-0">ضبط وضع الصورة</h3>
+      <button id="btn-close-position-modal" type="button" class="cursor-pointer text-ink2 hover:text-ink text-2xl leading-none">✕</button>
+    </div>
+    <p class="text-sm text-ink2 mb-4">اضغطي على النقطة اللي عايزة الصورة تتمركز حواليها — كده لما الصورة تتقص في أي كارت أو معرض في الموقع، الجزء المهم فيها هيفضل ظاهر.</p>
+
+    <div id="ip-click-area" class="ip-click-area">
+      <img id="ip-source-img" src="" alt="">
+      <div id="ip-marker" class="ip-marker"></div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mt-5 mb-5">
+      <div>
+        <p class="field-label mb-2">معاينة (مربّعة)</p>
+        <div class="ip-preview ip-preview-square"><img id="ip-preview-1" src="" alt=""></div>
+      </div>
+      <div>
+        <p class="field-label mb-2">معاينة (عريضة)</p>
+        <div class="ip-preview ip-preview-wide"><img id="ip-preview-2" src="" alt=""></div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between gap-3 flex-wrap">
+      <button id="btn-reset-position" type="button" class="btn-secondary">إعادة للمنتصف</button>
+      <div class="flex items-center gap-3">
+        <button id="btn-cancel-position" type="button" class="btn-secondary">إلغاء</button>
+        <button id="btn-save-position" type="button" class="btn-primary">حفظ الوضع</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/admin.js?v=20260618"></script>
 </body>
 </html>

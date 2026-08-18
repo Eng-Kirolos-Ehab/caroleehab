@@ -15,15 +15,27 @@ let manifestSha = null;
 
 let siteData = null;       // SITE_DATA object
 let manifest = [];         // [{id, original, width, height, orientation}]
+let manifestDirty = false; // بيتغير لـ true لما مكتبة الصور نفسها تتعدل (رفع صورة جديدة)
 let contentHeader = '';    // الجزء التعليقي في بداية content.js
 
-let pickerTarget = null;        // 'artist' | 'work' | 'event' | 'mg-cover' | 'pr-image' | null
+let pickerTarget = null;        // 'artist' | 'work' | 'event' | 'mg-cover' | 'pr-image' | 'sh-main' | 'sh-sub' | ... | null
 let pendingWorkImage = null;    // images/work-xxx.jpg
 let pendingEventImage = null;
 let pendingMagazineCover = null;
 let pendingProcessImage = null;
+let pendingShowcaseMainImage = null;
+let pendingShowcaseSubImages = [];
 
-let editingWorkId = null;
+let quickEditWorkId = null;   // work id currently open in the quick-edit modal
+let pendingWorkModalImage = null;
+
+let quickEditShowcaseId = null;
+let pendingShowcaseModalMainImage = null;
+let pendingShowcaseModalSubImages = [];
+
+let positionEditingPath = null;
+let pendingImagePosition = { x: 50, y: 50 };
+
 let editingEventId = null;
 let editingQuoteIndex = null;
 let editingMagazineId = null;
@@ -50,9 +62,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // works
   document.getElementById('btn-add-work').addEventListener('click', submitWork);
-  document.getElementById('btn-cancel-edit-work').addEventListener('click', () => cancelEdit('work'));
   document.getElementById('btn-pick-work-image').addEventListener('click', () => startPicking('work'));
   document.getElementById('w-image-upload').addEventListener('change', (e) => handleUpload(e, 'work'));
+
+  // work quick-edit modal
+  document.getElementById('btn-close-work-modal').addEventListener('click', closeWorkModal);
+  document.getElementById('btn-cancel-work-modal').addEventListener('click', closeWorkModal);
+  document.getElementById('btn-save-work-modal').addEventListener('click', saveWorkModal);
+  document.getElementById('btn-delete-work-modal').addEventListener('click', deleteWorkFromModal);
+  document.querySelector('#work-modal .work-modal-backdrop').addEventListener('click', closeWorkModal);
+  document.getElementById('btn-pick-work-modal-image').addEventListener('click', () => {
+    hideModal('work-modal');
+    startPicking('work-modal', 'work-modal');
+  });
+  document.getElementById('wm-image-upload').addEventListener('change', (e) => handleUpload(e, 'work-modal'));
+
+  // showcase sections
+  document.getElementById('btn-add-showcase').addEventListener('click', submitShowcase);
+  document.getElementById('btn-pick-sh-main-image').addEventListener('click', () => startPicking('sh-main'));
+  document.getElementById('sh-main-image-upload').addEventListener('change', (e) => handleUpload(e, 'sh-main'));
+  document.getElementById('btn-pick-sh-sub-image').addEventListener('click', () => startPicking('sh-sub'));
+  document.getElementById('sh-sub-image-upload').addEventListener('change', (e) => handleUpload(e, 'sh-sub'));
+
+  // showcase quick-edit modal
+  document.getElementById('btn-close-showcase-modal').addEventListener('click', closeShowcaseModal);
+  document.getElementById('btn-cancel-showcase-modal').addEventListener('click', closeShowcaseModal);
+  document.getElementById('btn-save-showcase-modal').addEventListener('click', saveShowcaseModal);
+  document.getElementById('btn-delete-showcase-modal').addEventListener('click', deleteShowcaseFromModal);
+  document.querySelector('#showcase-modal .showcase-modal-backdrop').addEventListener('click', closeShowcaseModal);
+  document.getElementById('btn-pick-shm-main-image').addEventListener('click', () => {
+    hideModal('showcase-modal');
+    startPicking('shm-main', 'showcase-modal');
+  });
+  document.getElementById('shm-main-image-upload').addEventListener('change', (e) => handleUpload(e, 'shm-main'));
+  document.getElementById('btn-pick-shm-sub-image').addEventListener('click', () => {
+    hideModal('showcase-modal');
+    startPicking('shm-sub', 'showcase-modal');
+  });
+  document.getElementById('shm-sub-image-upload').addEventListener('change', (e) => handleUpload(e, 'shm-sub'));
+
+  // image position editor
+  document.getElementById('ip-click-area').addEventListener('click', setPositionFromEvent);
+  document.getElementById('btn-close-position-modal').addEventListener('click', closePositionModal);
+  document.getElementById('btn-cancel-position').addEventListener('click', closePositionModal);
+  document.getElementById('btn-reset-position').addEventListener('click', resetImagePosition);
+  document.getElementById('btn-save-position').addEventListener('click', saveImagePosition);
+  document.querySelector('#image-position-modal .image-position-backdrop').addEventListener('click', closePositionModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (!document.getElementById('work-modal').classList.contains('hidden')) closeWorkModal();
+    if (!document.getElementById('showcase-modal').classList.contains('hidden')) closeShowcaseModal();
+    if (!document.getElementById('image-position-modal').classList.contains('hidden')) closePositionModal();
+  });
 
   // events
   document.getElementById('btn-add-event').addEventListener('click', submitEvent);
@@ -147,7 +209,9 @@ async function ghPutFile(path, text, message, sha) {
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    throw new Error(err.message || `فشل حفظ ${path} (${res.status})`);
+    const error = new Error(err.message || `فشل حفظ ${path} (${res.status})`);
+    error.status = res.status;
+    throw error;
   }
   const json = await res.json();
   return json.content.sha;
@@ -241,6 +305,9 @@ async function loadContentJs() {
 
   // eslint-disable-next-line no-new-func
   siteData = new Function('return (' + objStr + ');')();
+  siteData.showcases = siteData.showcases || [];
+  siteData.imagePosition = siteData.imagePosition || {};
+  siteData.sectionOrder = siteData.sectionOrder || [];
   contentSha = sha;
 }
 
@@ -250,24 +317,34 @@ async function loadManifest() {
   manifestSha = sha;
 }
 
+// تكتب الملف بالـ sha المحفوظ محليًا (بدون إعادة تحميل الملف أولًا لتوفير وقت الحفظ)
+// ولو الـ sha بقى قديم (409) بتجيب النسخة الحالية وتعيد المحاولة مرة واحدة فقط
+async function ghPutFileFast(path, text, message, getSha, setSha) {
+  try {
+    setSha(await ghPutFile(path, text, message, getSha()));
+  } catch (err) {
+    if (err.status !== 409) throw err;
+    const current = await ghGetFile(path);
+    setSha(await ghPutFile(path, text, message, current.sha));
+  }
+}
+
 async function saveContent() {
   const json = JSON.stringify(siteData, null, 2);
   const text = contentHeader + 'const SITE_DATA = ' + json + ';\n';
-  // إعادة جلب الـ sha الحالي لتجنب تعارض الإصدارات
-  const current = await ghGetFile('js/content.js');
-  contentSha = await ghPutFile('js/content.js', text, 'تحديث محتوى الموقع', current.sha);
+  await ghPutFileFast('js/content.js', text, 'تحديث محتوى الموقع', () => contentSha, (sha) => { contentSha = sha; });
 }
 
 async function saveManifest() {
   const text = JSON.stringify(manifest, null, 2);
-  const current = await ghGetFile('manifest.json');
-  manifestSha = await ghPutFile('manifest.json', text, 'تحديث مكتبة الصور', current.sha);
+  await ghPutFileFast('manifest.json', text, 'تحديث مكتبة الصور', () => manifestSha, (sha) => { manifestSha = sha; });
+  manifestDirty = false;
 }
 
 async function persist() {
   try {
     await saveContent();
-    await saveManifest();
+    if (manifestDirty) await saveManifest();
     showToast('تم الحفظ ✓ — التحديث سيظهر على الموقع خلال دقيقة');
   } catch (err) {
     console.error(err);
@@ -295,6 +372,7 @@ function renderAll() {
   renderQuotes();
   renderMagazines();
   renderProcessAdmin();
+  renderShowcases();
   renderImageLibrary();
   renderTextsForm();
   renderTextsFormEn();
@@ -369,11 +447,13 @@ let pendingArtistAboutImage = null;
    Categories
    ========================================================= */
 function renderCategorySelect() {
-  const sel = document.getElementById('w-category');
-  sel.innerHTML = siteData.categories
+  const options = siteData.categories
     .filter(c => c.id !== 'all')
     .map(c => `<option value="${escapeAttr(c.id)}">${escapeHtml(c.label)}</option>`)
     .join('');
+  document.getElementById('w-category').innerHTML = options;
+  const wmSel = document.getElementById('wm-category');
+  if (wmSel) wmSel.innerHTML = options;
 }
 
 function renderCategories() {
@@ -461,7 +541,8 @@ function renderWorks() {
   const wrap = document.getElementById('works-list');
   const works = siteData.works;
   wrap.innerHTML = works.map((w, i) => `
-    <div class="item-card">
+    <div class="item-card" draggable="true" data-drag-id="${w.id}">
+      <span class="item-drag-handle" aria-hidden="true">${iconDrag()}</span>
       <div class="item-img"><img src="${w.image}" alt="${escapeAttr(w.title)}" loading="lazy"></div>
       <div class="item-body">
         <span class="item-meta">${escapeHtml(categoryLabel(w.category))}${w.year ? ' · ' + escapeHtml(w.year) : ''}${w.featured ? ' · مميز' : ''}</span>
@@ -478,7 +559,7 @@ function renderWorks() {
   `).join('');
 
   wrap.querySelectorAll('[data-action="edit-work"]').forEach(btn => {
-    btn.addEventListener('click', () => startEditWork(Number(btn.dataset.id)));
+    btn.addEventListener('click', () => openWorkModal(Number(btn.dataset.id)));
   });
   wrap.querySelectorAll('[data-action="delete-work"]').forEach(btn => {
     btn.addEventListener('click', () => deleteWork(Number(btn.dataset.id)));
@@ -489,6 +570,8 @@ function renderWorks() {
   wrap.querySelectorAll('[data-action="move-down-work"]').forEach(btn => {
     btn.addEventListener('click', () => moveWork(Number(btn.dataset.id), 1));
   });
+
+  enableCardDrag(wrap, '.item-card', (draggedId, targetId) => reorderById(siteData.works, draggedId, targetId, renderWorks));
 }
 
 function categoryLabel(catId) {
@@ -496,24 +579,55 @@ function categoryLabel(catId) {
   return c ? c.label : catId;
 }
 
-function startEditWork(id) {
+function openWorkModal(id) {
   const w = siteData.works.find(w => w.id === id);
   if (!w) return;
-  editingWorkId = id;
-  setVal('w-title', w.title);
-  setVal('w-title-en', w.title_en);
-  setVal('w-category', w.category);
-  setVal('w-year', w.year);
-  setVal('w-description', w.description);
-  setVal('w-description-en', w.description_en);
-  document.getElementById('w-featured').checked = !!w.featured;
-  pendingWorkImage = w.image;
-  showPreview('w-image-preview', w.image);
+  quickEditWorkId = id;
+  setVal('wm-title', w.title);
+  setVal('wm-title-en', w.title_en);
+  setVal('wm-category', w.category);
+  setVal('wm-year', w.year);
+  setVal('wm-description', w.description);
+  setVal('wm-description-en', w.description_en);
+  document.getElementById('wm-featured').checked = !!w.featured;
+  pendingWorkModalImage = w.image;
+  showPreview('wm-image-preview', w.image, false);
+  showModal('work-modal');
+}
 
-  document.getElementById('btn-add-work').textContent = 'حفظ التعديلات';
-  document.getElementById('btn-cancel-edit-work').classList.remove('hidden');
-  switchTab('works');
-  document.querySelector('[data-tab-panel="works"]').scrollIntoView({ behavior: 'smooth' });
+function closeWorkModal() {
+  quickEditWorkId = null;
+  pendingWorkModalImage = null;
+  hideModal('work-modal');
+}
+
+async function saveWorkModal() {
+  const w = siteData.works.find(w => w.id === quickEditWorkId);
+  if (!w) return;
+  const title = getVal('wm-title').trim();
+  const title_en = getVal('wm-title-en').trim();
+  const category = getVal('wm-category');
+  const year = getVal('wm-year').trim();
+  const description = getVal('wm-description').trim();
+  const description_en = getVal('wm-description-en').trim();
+  const featured = document.getElementById('wm-featured').checked;
+
+  if (!title) { showToast('أدخلي عنوان العمل', true); return; }
+  if (!pendingWorkModalImage) { showToast('اختاري صورة للعمل', true); return; }
+
+  Object.assign(w, { title, title_en, category, year, description, description_en, featured, image: pendingWorkModalImage });
+  closeWorkModal();
+  renderWorks();
+  renderImageLibrary();
+  await persist();
+  showToast('تم حفظ التعديلات ✓');
+}
+
+async function deleteWorkFromModal() {
+  const id = quickEditWorkId;
+  if (id === null) return;
+  await deleteWork(id);
+  if (!siteData.works.find(w => w.id === id)) closeWorkModal();
 }
 
 async function submitWork() {
@@ -528,13 +642,8 @@ async function submitWork() {
   if (!title) { showToast('أدخلي عنوان العمل', true); return; }
   if (!pendingWorkImage) { showToast('اختاري صورة للعمل', true); return; }
 
-  if (editingWorkId !== null) {
-    const w = siteData.works.find(w => w.id === editingWorkId);
-    Object.assign(w, { title, title_en, category, year, description, description_en, featured, image: pendingWorkImage });
-  } else {
-    const nextId = siteData.works.reduce((m, w) => Math.max(m, w.id), 0) + 1;
-    siteData.works.push({ id: nextId, image: pendingWorkImage, title, title_en, category, year, description, description_en, featured });
-  }
+  const nextId = siteData.works.reduce((m, w) => Math.max(m, w.id), 0) + 1;
+  siteData.works.push({ id: nextId, image: pendingWorkImage, title, title_en, category, year, description, description_en, featured });
 
   resetWorkForm();
   renderWorks();
@@ -543,7 +652,6 @@ async function submitWork() {
 }
 
 function resetWorkForm() {
-  editingWorkId = null;
   pendingWorkImage = null;
   setVal('w-title', '');
   setVal('w-title-en', '');
@@ -553,15 +661,12 @@ function resetWorkForm() {
   document.getElementById('w-featured').checked = false;
   hidePreview('w-image-preview');
   document.getElementById('w-image-upload').value = '';
-  document.getElementById('btn-add-work').textContent = 'إضافة العمل';
-  document.getElementById('btn-cancel-edit-work').classList.add('hidden');
 }
 
 async function deleteWork(id) {
   const w = siteData.works.find(w => w.id === id);
   if (!confirm(`حذف العمل "${w.title}"؟`)) return;
   siteData.works = siteData.works.filter(w => w.id !== id);
-  if (editingWorkId === id) resetWorkForm();
   renderWorks();
   renderImageLibrary();
   await persist();
@@ -971,12 +1076,248 @@ async function deleteProcess(id) {
   await persist();
 }
 
+/* =========================================================
+   Showcase sections (main image + auto-rotating sub-images + copy)
+   ========================================================= */
+function showcaseSectionId(id) {
+  return 'showcase-' + id;
+}
+
+function addSectionToOrder(sectionId) {
+  siteData.sectionOrder = siteData.sectionOrder || [];
+  if (!siteData.sectionOrder.includes(sectionId)) siteData.sectionOrder.push(sectionId);
+}
+
+function removeSectionFromOrder(sectionId) {
+  siteData.sectionOrder = (siteData.sectionOrder || []).filter(id => id !== sectionId);
+}
+
+function renderShowcases() {
+  const showcases = siteData.showcases || [];
+  document.getElementById('showcases-count').textContent = showcases.length;
+  const wrap = document.getElementById('showcases-list');
+  wrap.innerHTML = showcases.map((s, i) => `
+    <div class="item-card" draggable="true" data-drag-id="${s.id}">
+      <span class="item-drag-handle" aria-hidden="true">${iconDrag()}</span>
+      <div class="item-img"><img src="${s.mainImage}" alt="${escapeAttr(s.title)}" loading="lazy"></div>
+      <div class="item-body">
+        <span class="item-meta">${(s.subImages || []).length} صور فرعية${s.autoplay === false ? ' · بدون تبديل تلقائي' : ' · تبديل تلقائي'}</span>
+        <h3 class="item-title">${escapeHtml(s.title)}</h3>
+        <p class="item-desc">${escapeHtml(s.description || '')}</p>
+        <div class="item-actions">
+          <button class="btn-icon" data-action="move-up-showcase" data-id="${s.id}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
+          <button class="btn-icon" data-action="move-down-showcase" data-id="${s.id}" aria-label="تحريك لأسفل" ${i === showcases.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
+          <button class="btn-icon" data-action="edit-showcase" data-id="${s.id}" aria-label="تعديل">${iconEdit()}</button>
+          <button class="btn-icon danger" data-action="delete-showcase" data-id="${s.id}" aria-label="حذف">${iconTrash()}</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  wrap.querySelectorAll('[data-action="edit-showcase"]').forEach(btn => {
+    btn.addEventListener('click', () => openShowcaseModal(Number(btn.dataset.id)));
+  });
+  wrap.querySelectorAll('[data-action="delete-showcase"]').forEach(btn => {
+    btn.addEventListener('click', () => deleteShowcase(Number(btn.dataset.id)));
+  });
+  wrap.querySelectorAll('[data-action="move-up-showcase"]').forEach(btn => {
+    btn.addEventListener('click', () => moveShowcase(Number(btn.dataset.id), -1));
+  });
+  wrap.querySelectorAll('[data-action="move-down-showcase"]').forEach(btn => {
+    btn.addEventListener('click', () => moveShowcase(Number(btn.dataset.id), 1));
+  });
+
+  enableCardDrag(wrap, '.item-card', (draggedId, targetId) => reorderById(siteData.showcases, draggedId, targetId, renderShowcases));
+}
+
+async function moveShowcase(id, direction) {
+  if (!moveArrayItem(siteData.showcases, id, direction)) return;
+  renderShowcases();
+  await persist();
+}
+
+async function submitShowcase() {
+  const title = getVal('sh-title').trim();
+  const title_en = getVal('sh-title-en').trim();
+  const description = getVal('sh-description').trim();
+  const description_en = getVal('sh-description-en').trim();
+  const autoplay = document.getElementById('sh-autoplay').checked;
+
+  if (!title) { showToast('أدخلي عنوان القسم', true); return; }
+  if (!pendingShowcaseMainImage) { showToast('اختاري صورة رئيسية للقسم', true); return; }
+  if (pendingShowcaseSubImages.length === 0) { showToast('أضيفي صورة صغيرة واحدة على الأقل', true); return; }
+
+  const nextId = siteData.showcases.reduce((m, s) => Math.max(m, s.id), 0) + 1;
+  siteData.showcases.push({
+    id: nextId,
+    title, title_en,
+    description, description_en,
+    mainImage: pendingShowcaseMainImage,
+    subImages: pendingShowcaseSubImages.slice(),
+    autoplay
+  });
+  addSectionToOrder(showcaseSectionId(nextId));
+
+  resetShowcaseForm();
+  renderShowcases();
+  renderImageLibrary();
+  renderSectionOrder();
+  await persist();
+}
+
+function resetShowcaseForm() {
+  pendingShowcaseMainImage = null;
+  pendingShowcaseSubImages = [];
+  setVal('sh-title', '');
+  setVal('sh-title-en', '');
+  setVal('sh-description', '');
+  setVal('sh-description-en', '');
+  document.getElementById('sh-autoplay').checked = true;
+  hidePreview('sh-main-image-preview');
+  document.getElementById('sh-main-image-upload').value = '';
+  document.getElementById('sh-sub-image-upload').value = '';
+  renderSubImagesPreview('sh-sub-images', pendingShowcaseSubImages);
+}
+
+function openShowcaseModal(id) {
+  const s = siteData.showcases.find(s => s.id === id);
+  if (!s) return;
+  quickEditShowcaseId = id;
+  setVal('shm-title', s.title);
+  setVal('shm-title-en', s.title_en);
+  setVal('shm-description', s.description);
+  setVal('shm-description-en', s.description_en);
+  document.getElementById('shm-autoplay').checked = s.autoplay !== false;
+  pendingShowcaseModalMainImage = s.mainImage;
+  pendingShowcaseModalSubImages = (s.subImages || []).slice();
+  showPreview('shm-main-image-preview', s.mainImage, false);
+  renderSubImagesPreview('shm-sub-images', pendingShowcaseModalSubImages);
+  showModal('showcase-modal');
+}
+
+function closeShowcaseModal() {
+  quickEditShowcaseId = null;
+  pendingShowcaseModalMainImage = null;
+  pendingShowcaseModalSubImages = [];
+  hideModal('showcase-modal');
+}
+
+async function saveShowcaseModal() {
+  const s = siteData.showcases.find(s => s.id === quickEditShowcaseId);
+  if (!s) return;
+  const title = getVal('shm-title').trim();
+  const title_en = getVal('shm-title-en').trim();
+  const description = getVal('shm-description').trim();
+  const description_en = getVal('shm-description-en').trim();
+  const autoplay = document.getElementById('shm-autoplay').checked;
+
+  if (!title) { showToast('أدخلي عنوان القسم', true); return; }
+  if (!pendingShowcaseModalMainImage) { showToast('اختاري صورة رئيسية للقسم', true); return; }
+  if (pendingShowcaseModalSubImages.length === 0) { showToast('أضيفي صورة صغيرة واحدة على الأقل', true); return; }
+
+  Object.assign(s, {
+    title, title_en, description, description_en, autoplay,
+    mainImage: pendingShowcaseModalMainImage,
+    subImages: pendingShowcaseModalSubImages.slice()
+  });
+  closeShowcaseModal();
+  renderShowcases();
+  renderImageLibrary();
+  renderSectionOrder();
+  await persist();
+  showToast('تم حفظ التعديلات ✓');
+}
+
+async function deleteShowcaseFromModal() {
+  const id = quickEditShowcaseId;
+  if (id === null) return;
+  await deleteShowcase(id);
+  if (!siteData.showcases.find(s => s.id === id)) closeShowcaseModal();
+}
+
+async function deleteShowcase(id) {
+  const s = siteData.showcases.find(s => s.id === id);
+  if (!s) return;
+  if (!confirm(`حذف القسم "${s.title}"؟`)) return;
+  siteData.showcases = siteData.showcases.filter(s => s.id !== id);
+  removeSectionFromOrder(showcaseSectionId(id));
+  renderShowcases();
+  renderImageLibrary();
+  renderSectionOrder();
+  await persist();
+}
+
 function moveArrayItem(array, id, direction) {
   const index = array.findIndex(item => item.id === id);
   const target = index + direction;
   if (index === -1 || target < 0 || target >= array.length) return false;
   [array[index], array[target]] = [array[target], array[index]];
   return true;
+}
+
+/* =========================================================
+   Drag-and-drop reordering (generic — works, showcases, section order)
+   ========================================================= */
+function showModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+function hideModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+}
+
+// بيرتّب مصفوفة من العناصر (كل عنصر له .id) بنقل عنصر لمكان عنصر تاني
+function reorderById(array, draggedId, targetId, afterRender) {
+  const from = array.findIndex(item => String(item.id) === String(draggedId));
+  const to = array.findIndex(item => String(item.id) === String(targetId));
+  if (from === -1 || to === -1) return;
+  const [item] = array.splice(from, 1);
+  array.splice(to, 0, item);
+  afterRender();
+  persist();
+}
+
+// بيرتّب مصفوفة من قيم نصية (زي sectionOrder) بنقل قيمة لمكان قيمة تانية
+function reorderArrayValue(array, draggedVal, targetVal, afterRender) {
+  const from = array.indexOf(draggedVal);
+  const to = array.indexOf(targetVal);
+  if (from === -1 || to === -1) return;
+  const [item] = array.splice(from, 1);
+  array.splice(to, 0, item);
+  afterRender();
+  persist();
+}
+
+// بيفعّل السحب والإفلات لكروت جوه حاوية معينة؛ onDrop(draggedId, targetId) بتتنفذ عند الإفلات
+function enableCardDrag(container, selector, onDrop) {
+  let draggedId = null;
+  container.querySelectorAll(selector + '[draggable="true"]').forEach(card => {
+    card.addEventListener('dragstart', () => {
+      draggedId = card.dataset.dragId;
+      card.classList.add('dragging');
+    });
+    card.addEventListener('dragend', () => {
+      card.classList.remove('dragging');
+      container.querySelectorAll(selector).forEach(c => c.classList.remove('drag-over'));
+      draggedId = null;
+    });
+    card.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      if (card.dataset.dragId !== draggedId) card.classList.add('drag-over');
+    });
+    card.addEventListener('dragleave', () => card.classList.remove('drag-over'));
+    card.addEventListener('drop', (e) => {
+      e.preventDefault();
+      card.classList.remove('drag-over');
+      const targetId = card.dataset.dragId;
+      if (draggedId === null || draggedId === targetId) return;
+      onDrop(draggedId, targetId);
+    });
+  });
 }
 
 async function moveProcess(id, direction) {
@@ -1083,31 +1424,43 @@ async function saveTexts() {
    Section order
    ========================================================= */
 const SECTION_LABELS = {
-  about:    'عن الفنانة',
-  featured: 'أعمال مميزة',
-  process:  'رحلة العمل',
-  gallery:  'المعرض / كل الأعمال',
-  'mag-1':  'مجلة ١ — الأزياء السريالية',
-  'mag-2':  'مجلة ٢ — جاكار كريسماس',
-  'mag-3':  'مجلة ٣ — جاكار أطلانتس',
-  'mag-4':  'مجلة ٤ — الطباعة المنزلية',
-  magazines:'المجلات التفاعلية (قديم)',
-  events:   'الفعاليات',
-  quotes:   'الاقتباسات'
+  about:        'عن الفنانة',
+  'motion-film':'فيديو — تصاميم في حركة',
+  featured:     'أعمال مميزة',
+  process:      'رحلة العمل',
+  gallery:      'المعرض / كل الأعمال',
+  'mag-1':      'مجلة ١ — الأزياء السريالية',
+  'mag-2':      'مجلة ٢ — جاكار كريسماس',
+  'mag-3':      'مجلة ٣ — جاكار أطلانتس',
+  'mag-4':      'مجلة ٤ — الطباعة المنزلية',
+  magazines:    'المجلات التفاعلية (قديم)',
+  events:       'الفعاليات',
+  quotes:       'الاقتباسات'
 };
+
+// بيرجع اسم مفهوم للقسم — الأقسام المصورة اسمها ديناميكي حسب عنوانها
+function sectionLabel(id) {
+  if (id.startsWith('showcase-')) {
+    const showcaseId = Number(id.slice('showcase-'.length));
+    const s = (siteData.showcases || []).find(s => s.id === showcaseId);
+    return s ? `قسم مصور — ${s.title}` : id;
+  }
+  return SECTION_LABELS[id] || id;
+}
 
 function renderSectionOrder() {
   const wrap = document.getElementById('section-order-list');
   const order = siteData.sectionOrder || [];
   wrap.innerHTML = order.map((id, i) => `
-    <div class="row-card">
+    <div class="row-card" draggable="true" data-drag-id="${escapeAttr(id)}">
       <div class="flex items-center gap-3">
+        <span class="row-drag-handle" aria-hidden="true">${iconDrag()}</span>
         <span class="text-gold text-sm font-semibold">${i + 1}</span>
-        <h3 class="font-semibold">${escapeHtml(SECTION_LABELS[id] || id)}</h3>
+        <h3 class="font-semibold">${escapeHtml(sectionLabel(id))}</h3>
       </div>
       <div class="flex gap-2">
-        <button class="btn-icon" data-action="move-up-section" data-id="${id}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
-        <button class="btn-icon" data-action="move-down-section" data-id="${id}" aria-label="تحريك لأسفل" ${i === order.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
+        <button class="btn-icon" data-action="move-up-section" data-id="${escapeAttr(id)}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
+        <button class="btn-icon" data-action="move-down-section" data-id="${escapeAttr(id)}" aria-label="تحريك لأسفل" ${i === order.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
       </div>
     </div>
   `).join('');
@@ -1118,6 +1471,8 @@ function renderSectionOrder() {
   wrap.querySelectorAll('[data-action="move-down-section"]').forEach(btn => {
     btn.addEventListener('click', () => moveSection(btn.dataset.id, 1));
   });
+
+  enableCardDrag(wrap, '.row-card', (draggedId, targetId) => reorderArrayValue(siteData.sectionOrder, draggedId, targetId, renderSectionOrder));
 }
 
 async function moveSection(id, direction) {
@@ -1150,6 +1505,10 @@ function usedImagePaths() {
   siteData.events.forEach(e => used.add(e.image));
   (siteData.magazines || []).forEach(m => used.add(m.cover));
   (siteData.process || []).forEach(p => used.add(p.image));
+  (siteData.showcases || []).forEach(s => {
+    if (s.mainImage) used.add(s.mainImage);
+    (s.subImages || []).forEach(img => used.add(img));
+  });
   if (siteData.artist && siteData.artist.photo) used.add(siteData.artist.photo);
   return used;
 }
@@ -1164,25 +1523,97 @@ function renderImageLibrary() {
     const isUsed = used.has(path);
     return `<div class="lib-item ${isUsed ? 'used' : ''}" data-path="${escapeAttr(path)}">
       <img src="${path}" alt="${escapeAttr(m.original)}" loading="lazy">
+      <button type="button" class="lib-position-btn" data-path="${escapeAttr(path)}" aria-label="ضبط وضع الصورة" title="ضبط وضع الصورة">${iconTarget()}</button>
     </div>`;
   }).join('');
 
   wrap.querySelectorAll('.lib-item').forEach(el => {
     el.addEventListener('click', () => onLibraryPick(el.dataset.path));
   });
+  wrap.querySelectorAll('.lib-position-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openPositionModal(btn.dataset.path);
+    });
+  });
 }
 
-function startPicking(target) {
+/* =========================================================
+   Image position editor (focal point picker)
+   ========================================================= */
+function openPositionModal(path) {
+  positionEditingPath = path;
+  const current = (siteData.imagePosition && siteData.imagePosition[path]) || '50% 50%';
+  const parts = current.split(' ');
+  pendingImagePosition = { x: parseFloat(parts[0]) || 50, y: parseFloat(parts[1]) || 50 };
+
+  document.getElementById('ip-source-img').src = path;
+  document.getElementById('ip-preview-1').src = path;
+  document.getElementById('ip-preview-2').src = path;
+  applyPositionPreview();
+  showModal('image-position-modal');
+}
+
+function closePositionModal() {
+  positionEditingPath = null;
+  hideModal('image-position-modal');
+}
+
+function applyPositionPreview() {
+  const pos = `${pendingImagePosition.x}% ${pendingImagePosition.y}%`;
+  document.getElementById('ip-marker').style.left = pendingImagePosition.x + '%';
+  document.getElementById('ip-marker').style.top = pendingImagePosition.y + '%';
+  document.getElementById('ip-preview-1').style.objectPosition = pos;
+  document.getElementById('ip-preview-2').style.objectPosition = pos;
+}
+
+function setPositionFromEvent(e) {
+  const area = document.getElementById('ip-click-area');
+  const rect = area.getBoundingClientRect();
+  let x = ((e.clientX - rect.left) / rect.width) * 100;
+  let y = ((e.clientY - rect.top) / rect.height) * 100;
+  x = Math.max(0, Math.min(100, x));
+  y = Math.max(0, Math.min(100, y));
+  pendingImagePosition = { x: Math.round(x), y: Math.round(y) };
+  applyPositionPreview();
+}
+
+function resetImagePosition() {
+  pendingImagePosition = { x: 50, y: 50 };
+  applyPositionPreview();
+}
+
+async function saveImagePosition() {
+  if (!positionEditingPath) return;
+  siteData.imagePosition = siteData.imagePosition || {};
+  siteData.imagePosition[positionEditingPath] = `${pendingImagePosition.x}% ${pendingImagePosition.y}%`;
+  closePositionModal();
+  await persist();
+  showToast('تم حفظ وضع الصورة ✓');
+}
+
+// المودال اللي بيتفتح منه الاختيار — لو اتفتح، لازم يترد يفتح تاني لما نقفل مكتبة الصور
+let pickerReturnModal = null;
+
+function startPicking(target, returnModal) {
   pickerTarget = target;
+  pickerReturnModal = returnModal || null;
+  const multi = target === 'sh-sub' || target === 'shm-sub';
   const labels = {
     artist: 'صورة الفنانة',
     'artist-about': 'صورة قسم عن الفنانة',
     work: 'صورة العمل الجديد',
+    'work-modal': 'صورة العمل',
     event: 'صورة الفعالية',
     'mg-cover': 'صورة غلاف المجلة',
-    'pr-image': 'صورة مرحلة رحلة العمل'
+    'pr-image': 'صورة مرحلة رحلة العمل',
+    'sh-main': 'الصورة الرئيسية للقسم',
+    'shm-main': 'الصورة الرئيسية للقسم',
+    'sh-sub': 'صورة صغيرة (اضغطي على أكتر من صورة)',
+    'shm-sub': 'صورة صغيرة (اضغطي على أكتر من صورة)'
   };
   document.getElementById('library-picker-text').textContent = `اضغطي على صورة لاختيارها لـ: ${labels[target]}`;
+  document.getElementById('btn-cancel-pick').textContent = multi ? 'تم ✓' : 'إلغاء ✕';
   document.getElementById('library-picker-banner').classList.remove('hidden');
   switchTab('works');
   document.getElementById('image-library').scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -1191,10 +1622,15 @@ function startPicking(target) {
 function stopPicking() {
   pickerTarget = null;
   document.getElementById('library-picker-banner').classList.add('hidden');
+  if (pickerReturnModal) {
+    showModal(pickerReturnModal);
+    pickerReturnModal = null;
+  }
 }
 
 function onLibraryPick(path) {
   if (!pickerTarget) return;
+  let closeAfter = true;
   if (pickerTarget === 'artist') {
     pendingArtistImage = path;
     showPreview('artist-photo-preview', path, false);
@@ -1204,6 +1640,9 @@ function onLibraryPick(path) {
   } else if (pickerTarget === 'work') {
     pendingWorkImage = path;
     showPreview('w-image-preview', path);
+  } else if (pickerTarget === 'work-modal') {
+    pendingWorkModalImage = path;
+    showPreview('wm-image-preview', path, false);
   } else if (pickerTarget === 'event') {
     pendingEventImage = path;
     showPreview('e-image-preview', path);
@@ -1213,9 +1652,25 @@ function onLibraryPick(path) {
   } else if (pickerTarget === 'pr-image') {
     pendingProcessImage = path;
     showPreview('pr-image-preview', path);
+  } else if (pickerTarget === 'sh-main') {
+    pendingShowcaseMainImage = path;
+    showPreview('sh-main-image-preview', path, false);
+  } else if (pickerTarget === 'shm-main') {
+    pendingShowcaseModalMainImage = path;
+    showPreview('shm-main-image-preview', path, false);
+  } else if (pickerTarget === 'sh-sub') {
+    pendingShowcaseSubImages.push(path);
+    renderSubImagesPreview('sh-sub-images', pendingShowcaseSubImages);
+    closeAfter = false;
+  } else if (pickerTarget === 'shm-sub') {
+    pendingShowcaseModalSubImages.push(path);
+    renderSubImagesPreview('shm-sub-images', pendingShowcaseModalSubImages);
+    closeAfter = false;
   }
-  stopPicking();
-  showToast('تم اختيار الصورة');
+  if (closeAfter) {
+    stopPicking();
+    showToast('تم اختيار الصورة');
+  }
 }
 
 /* =========================================================
@@ -1236,6 +1691,9 @@ async function handleUpload(e, target) {
     } else if (target === 'work') {
       pendingWorkImage = path;
       showPreview('w-image-preview', path);
+    } else if (target === 'work-modal') {
+      pendingWorkModalImage = path;
+      showPreview('wm-image-preview', path, false);
     } else if (target === 'event') {
       pendingEventImage = path;
       showPreview('e-image-preview', path);
@@ -1245,6 +1703,18 @@ async function handleUpload(e, target) {
     } else if (target === 'pr-image') {
       pendingProcessImage = path;
       showPreview('pr-image-preview', path);
+    } else if (target === 'sh-main') {
+      pendingShowcaseMainImage = path;
+      showPreview('sh-main-image-preview', path, false);
+    } else if (target === 'shm-main') {
+      pendingShowcaseModalMainImage = path;
+      showPreview('shm-main-image-preview', path, false);
+    } else if (target === 'sh-sub') {
+      pendingShowcaseSubImages.push(path);
+      renderSubImagesPreview('sh-sub-images', pendingShowcaseSubImages);
+    } else if (target === 'shm-sub') {
+      pendingShowcaseModalSubImages.push(path);
+      renderSubImagesPreview('shm-sub-images', pendingShowcaseModalSubImages);
     }
     renderImageLibrary();
     showToast('تم رفع الصورة ✓');
@@ -1252,6 +1722,23 @@ async function handleUpload(e, target) {
     console.error(err);
     showToast('فشل رفع الصورة: ' + err.message, true);
   }
+}
+
+// بيرسم صور صغيرة قابلة للحذف لقائمة الصور الفرعية بتاعة القسم المصور
+function renderSubImagesPreview(containerId, list) {
+  const wrap = document.getElementById(containerId);
+  wrap.innerHTML = list.map((path, i) => `
+    <div class="sh-sub-thumb">
+      <img src="${escapeAttr(path)}" alt="">
+      <button type="button" class="sh-sub-remove" data-index="${i}" aria-label="حذف الصورة">✕</button>
+    </div>
+  `).join('');
+  wrap.querySelectorAll('.sh-sub-remove').forEach(btn => {
+    btn.addEventListener('click', () => {
+      list.splice(Number(btn.dataset.index), 1);
+      renderSubImagesPreview(containerId, list);
+    });
+  });
 }
 
 function resizeImageFile(file, maxDim = 1600, quality = 0.85) {
@@ -1312,6 +1799,7 @@ async function addImageToLibrary(file) {
     width, height,
     orientation: width > height ? 'landscape' : (height > width ? 'portrait' : 'square')
   });
+  manifestDirty = true;
 
   siteData.imageMeta = siteData.imageMeta || {};
   siteData.imageMeta['images/' + name] = { width, height };
@@ -1368,4 +1856,10 @@ function iconUp() {
 }
 function iconDown() {
   return `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>`;
+}
+function iconDrag() {
+  return `<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><circle cx="6" cy="5" r="1.4"/><circle cx="14" cy="5" r="1.4"/><circle cx="6" cy="10" r="1.4"/><circle cx="14" cy="10" r="1.4"/><circle cx="6" cy="15" r="1.4"/><circle cx="14" cy="15" r="1.4"/></svg>`;
+}
+function iconTarget() {
+  return `<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg>`;
 }

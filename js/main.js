@@ -15,6 +15,9 @@ function initSite() {
   /* ── Magazines FIRST: fill slots before reorder so they have height ── */
   renderMagazines(data);
 
+  /* ── Showcase sections: build dynamic sections before reorder so they exist to be moved ── */
+  renderShowcases(data);
+
   /* ── Section order (slots now have content + height) ── */
   applySectionOrder(data);
 
@@ -116,6 +119,11 @@ function imageAttrs(data, src) {
 function categoryLabel(data, catId) {
   const cat = data.categories.find(c => c.id === catId);
   return cat ? localized(cat, 'label') : catId;
+}
+// وضع الصورة (object-position) اللي متضبط لها من لوحة التحكم — لو موجود
+function posStyle(data, src) {
+  const pos = data.imagePosition && data.imagePosition[src];
+  return pos ? ` style="object-position:${pos}"` : '';
 }
 function getPath(obj, path) {
   return path.split('.').reduce((o, key) => (o && o[key] !== undefined ? o[key] : undefined), obj);
@@ -235,7 +243,7 @@ function renderFeatured(data) {
   const featured = data.works.filter(w => w.featured);
   const renderCard = (w, isDuplicate = false) => `
     <div class="featured-card" data-work-id="${w.id}"${isDuplicate ? ' aria-hidden="true"' : ''}>
-      <img src="${w.image}" alt="${escapeHtml(localized(w, 'title'))}" loading="lazy">
+      <img src="${w.image}" alt="${escapeHtml(localized(w, 'title'))}"${posStyle(data, w.image)} loading="lazy">
       <div class="fc-overlay">
         <span class="fc-cat">${escapeHtml(categoryLabel(data, w.category))}</span>
         <h3 class="fc-title">${escapeHtml(localized(w, 'title'))}</h3>
@@ -268,7 +276,7 @@ function renderProcess(data) {
   wrap.innerHTML = data.process.map((step, i) => `
     <div class="process-step ${i % 2 === 1 ? 'reverse' : ''}" data-reveal>
       <div class="process-img">
-        <img src="${step.image}" alt="${escapeHtml(localized(step, 'title'))}" loading="lazy">
+        <img src="${step.image}" alt="${escapeHtml(localized(step, 'title'))}"${posStyle(data, step.image)} loading="lazy">
       </div>
       <div class="process-text">
         <span class="process-num">${String(i + 1).padStart(2, '0')}</span>
@@ -390,17 +398,21 @@ function renderGallery(data) {
   if (!grid) return;
   grid.innerHTML = data.works.map(w => {
     const img = imageAttrs(data, w.image);
+    const desc = localized(w, 'description');
     return `
-    <div class="gallery-item item-anim" data-work-id="${w.id}" data-category="${w.category}"${img.boxStyle}>
-      <img src="${w.image}" alt="${escapeHtml(localized(w, 'title'))}" ${img.imgAttrs}>
-      <span class="gi-zoom">
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16zM11 8v6M8 11h6" />
-        </svg>
-      </span>
-      <div class="gi-overlay">
+    <div class="gallery-item item-anim" data-work-id="${w.id}" data-category="${w.category}">
+      <div class="gi-media"${img.boxStyle}>
+        <img src="${w.image}" alt="${escapeHtml(localized(w, 'title'))}"${posStyle(data, w.image)} ${img.imgAttrs}>
+        <span class="gi-zoom">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16zM11 8v6M8 11h6" />
+          </svg>
+        </span>
+      </div>
+      <div class="gi-caption">
         <span class="gi-cat">${escapeHtml(categoryLabel(data, w.category))}</span>
         <h3 class="gi-title">${escapeHtml(localized(w, 'title'))}</h3>
+        ${desc ? `<p class="gi-desc">${escapeHtml(desc)}</p>` : ''}
       </div>
     </div>
   `;
@@ -427,7 +439,7 @@ function renderEvents(data) {
   wrap.innerHTML = data.events.map((ev, i) => `
     <div class="event-card" data-reveal data-reveal-delay="${i * 100}">
       <div class="ev-img">
-        <img src="${ev.image}" alt="${escapeHtml(localized(ev, 'title'))}" loading="lazy">
+        <img src="${ev.image}" alt="${escapeHtml(localized(ev, 'title'))}"${posStyle(data, ev.image)} loading="lazy">
       </div>
       <div class="ev-body">
         <span class="ev-date">
@@ -442,6 +454,109 @@ function renderEvents(data) {
 
   // newly injected reveal elements need observing
   initRevealAnimations();
+}
+
+/* =========================================================
+   Showcase sections — main image + auto-rotating sub-images,
+   title/description positioned per site language (dir-aware grid order)
+   ========================================================= */
+function renderShowcases(data) {
+  const showcases = data.showcases || [];
+  const footer = document.getElementById('contact');
+  showcases.forEach(s => {
+    const id = 'showcase-' + s.id;
+    const old = document.getElementById(id);
+    if (old && old._showcaseStop) old._showcaseStop();
+
+    const section = document.createElement('section');
+    section.id = id;
+    section.className = 'showcase-section py-20 px-6';
+    section.innerHTML = buildShowcaseInnerHtml(data, s);
+
+    if (old) {
+      old.replaceWith(section);
+    } else if (footer) {
+      footer.parentNode.insertBefore(section, footer);
+    }
+    initShowcaseCarousel(section, s);
+  });
+  initRevealAnimations();
+}
+
+function buildShowcaseInnerHtml(data, s) {
+  const slides = [s.mainImage, ...(s.subImages || [])].filter(Boolean);
+  const title = localized(s, 'title');
+  const desc = localized(s, 'description');
+  const mainImg = imageAttrs(data, slides[0]);
+
+  return `
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="showcase-media order-2 md:order-1" data-reveal>
+        <div class="showcase-main"${mainImg.boxStyle}>
+          <img class="showcase-main-img" src="${slides[0]}" alt="${escapeHtml(title)}"${posStyle(data, slides[0])} ${mainImg.imgAttrs}>
+        </div>
+        ${slides.length > 1 ? `
+        <div class="showcase-thumbs">
+          ${slides.map((src, i) => `
+            <button type="button" class="showcase-thumb${i === 0 ? ' active' : ''}" data-index="${i}" data-src="${escapeHtml(src)}" aria-label="عرض صورة ${i + 1}">
+              <img src="${src}" alt=""${posStyle(data, src)} loading="lazy">
+            </button>
+          `).join('')}
+        </div>` : ''}
+      </div>
+      <div class="showcase-copy order-1 md:order-2" data-reveal data-reveal-delay="120">
+        <h2 class="font-serif text-3xl sm:text-4xl mb-4 leading-tight">${escapeHtml(title)}</h2>
+        <p class="text-ink2 leading-relaxed text-lg">${escapeHtml(desc)}</p>
+      </div>
+    </div>
+  `;
+}
+
+function initShowcaseCarousel(section, s) {
+  const slides = [s.mainImage, ...(s.subImages || [])].filter(Boolean);
+  const mainImgEl = section.querySelector('.showcase-main-img');
+  const thumbs = section.querySelectorAll('.showcase-thumb');
+  let index = 0;
+  let timer = null;
+
+  function goTo(i) {
+    index = ((i % slides.length) + slides.length) % slides.length;
+    const src = slides[index];
+    mainImgEl.style.opacity = '0';
+    window.setTimeout(() => {
+      mainImgEl.src = src;
+      mainImgEl.style.opacity = '1';
+    }, 220);
+    thumbs.forEach((t, ti) => t.classList.toggle('active', ti === index));
+    if (thumbs[index]) thumbs[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }
+
+  function startAutoplay() {
+    if (s.autoplay === false || slides.length <= 1) return;
+    timer = window.setInterval(() => goTo(index + 1), 4200);
+  }
+  function stopAutoplay() {
+    if (timer) { window.clearInterval(timer); timer = null; }
+  }
+  function restartAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  thumbs.forEach((t, ti) => {
+    t.addEventListener('click', () => {
+      goTo(ti);
+      restartAutoplay();
+    });
+  });
+
+  if (slides.length > 1) {
+    section.addEventListener('mouseenter', stopAutoplay);
+    section.addEventListener('mouseleave', startAutoplay);
+  }
+
+  section._showcaseStop = stopAutoplay;
+  startAutoplay();
 }
 
 /* =========================================================
@@ -693,6 +808,7 @@ function initLangToggle(data) {
 
     renderMagazines(data);
     renderMotionFilm(data);
+    renderShowcases(data);
     renderFeatured(data);
     renderProcess(data);
     renderFilters(data);
