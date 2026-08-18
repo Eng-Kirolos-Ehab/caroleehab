@@ -516,6 +516,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 41,
+      "image": "images/work-062.jpg",
+      "title": "سريالية الموضة",
+      "category": "fashion",
+      "year": "2025",
+      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
+      "featured": true,
+      "title_en": "Surreal Fashion",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 33,
       "image": "images/work-116.jpg",
       "title": "جاكار تركواز - موجات البحر",
@@ -591,17 +602,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Golden Botanical Pattern",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 41,
-      "image": "images/work-062.jpg",
-      "title": "سريالية الموضة",
-      "category": "fashion",
-      "year": "2025",
-      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
-      "featured": true,
-      "title_en": "Surreal Fashion",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 42,
