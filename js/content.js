@@ -457,12 +457,12 @@ const SITE_DATA = {
     {
       "id": 71,
       "image": "images/work-136.jpg",
-      "title": "تيشيرت Textile is Art",
-      "title_en": "Textile is Art Tee",
+      "title": "تيشيرت تصميم من  الخلف",
+      "title_en": "Back Design",
       "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
-      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
+      "year": "2022",
+      "description": "تصميم خلفي جرافيكي جريء يجمع بين البورتريه والعناصر الطباعية والألوان، ليعبّر عن فكرة Textile is Art بأسلوب معاصر ومميز.",
+      "description_en": "A bold back graphic design combining portraiture, typographic elements, and color to express the concept of “Textile is Art” in a contemporary and distinctive style",
       "featured": false
     },
     {
