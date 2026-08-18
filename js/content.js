@@ -307,6 +307,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 31,
+      "image": "images/work-065.jpg",
+      "title": "جاكار مصري - الهيروغليفية",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
+      "featured": false,
+      "title_en": "Egyptian Jacquard - Hieroglyphics",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 13,
       "image": "images/work-087.jpg",
       "title": "دفتر تصميم - أزياء وأنماط",
@@ -371,17 +382,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Blue Bottle",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 31,
-      "image": "images/work-065.jpg",
-      "title": "جاكار مصري - الهيروغليفية",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "نقشة جاكار بألوان رمادية وزرقاء مستوحاة من الآثار المصرية والكتابة الهيروغليفية.",
-      "featured": false,
-      "title_en": "Egyptian Jacquard - Hieroglyphics",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
       "id": 30,
