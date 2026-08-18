@@ -730,17 +730,6 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
-      "id": 29,
-      "image": "images/work-021.jpg",
-      "title": "جاكار كريسماس - التوت والصنوبر",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "تصميم جاكار بكونسبت كريسماس — أوراق الصنوبر وحبات التوت الحمراء في نسيج دافئ ومتكرر يبث أجواء الشتاء.",
-      "featured": true,
-      "title_en": "Christmas Jacquard - Berries and Pine",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
       "id": 33,
       "image": "images/work-116.jpg",
       "title": "جاكار تركواز - موجات البحر",
