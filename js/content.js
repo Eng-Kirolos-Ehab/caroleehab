@@ -122,8 +122,8 @@ const SITE_DATA = {
     {
       "id": 66,
       "image": "images/work-131.jpg",
-      "title": "فستان زهرة الزنبق",
-      "title_en": "Lily Petal Gown",
+      "title": "خيال الزهور",
+      "title_en": "Floral Fantasy",
       "category": "sketchbook",
       "year": "2026",
       "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
