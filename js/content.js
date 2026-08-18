@@ -805,6 +805,17 @@ const SITE_DATA = {
       "description": "شهادة تقدير من كلية الفنون التطبيقية تقديرًا للتميز الفني والإبداع والالتزام بالتطوير المستمر، وللأعمال والإنجازات التي تعكس شغفي بالفنون والتصميم.",
       "description_en": "A Certificate of Appreciation recognizing artistic excellence, creativity, dedication, and continuous development, awarded for outstanding work and achievements in art and design.",
       "featured": false
+    },
+    {
+      "id": 77,
+      "image": "images/work-143.jpg",
+      "title": "التدريب الصيفي – Jade Textile",
+      "title_en": "Internship Program – Jade Textile",
+      "category": "Certificates",
+      "year": "2025",
+      "description": "شهادة إتمام برنامج تدريب لمدة أربعة أسابيع في شركة Jade Textile، مع المشاركة في قسم التحسين المستمر – Continuous Improvement Department والتعرف على بيئة العمل الصناعية وأساليب تطوير وتحسين العمليات الإنتاجية.",
+      "description_en": "Certificate of completion of a four-week internship at Jade Textile, with active involvement in the Continuous Improvement Department, gaining practical exposure to industrial operations and process improvement practices.",
+      "featured": false
     }
   ],
   "events": [
@@ -1655,6 +1666,10 @@ const SITE_DATA = {
     "images/work-142.jpg": {
       "width": 1600,
       "height": 1136
+    },
+    "images/work-143.jpg": {
+      "width": 1600,
+      "height": 1128
     }
   },
   "motionFilm": {
