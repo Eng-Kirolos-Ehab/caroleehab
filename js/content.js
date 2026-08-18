@@ -571,6 +571,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 63,
+      "image": "images/work-128.jpg",
+      "title": "فستان الحراشف الزرقاء",
+      "title_en": "Blue Scale Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
+      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
+      "featured": false
+    },
+    {
       "id": 40,
       "image": "images/work-120.jpg",
       "title": "نقشة ذهبية نباتية",
@@ -734,17 +745,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Denim Dress - My Touch",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 63,
-      "image": "images/work-128.jpg",
-      "title": "فستان الحراشف الزرقاء",
-      "title_en": "Blue Scale Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
-      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
-      "featured": false
     },
     {
       "id": 55,
