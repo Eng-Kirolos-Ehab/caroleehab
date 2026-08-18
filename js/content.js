@@ -241,17 +241,6 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
-      "id": 41,
-      "image": "images/work-062.jpg",
-      "title": "سريالية الموضة",
-      "category": "fashion",
-      "year": "2025",
-      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
-      "featured": true,
-      "title_en": "Surreal Fashion",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
       "id": 25,
       "image": "images/work-102.jpg",
       "title": "البدوية الضاحكة",
@@ -261,6 +250,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "The Laughing Bedouin Woman",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
+      "id": 41,
+      "image": "images/work-062.jpg",
+      "title": "سريالية الموضة",
+      "category": "fashion",
+      "year": "2025",
+      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
+      "featured": true,
+      "title_en": "Surreal Fashion",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 3,
