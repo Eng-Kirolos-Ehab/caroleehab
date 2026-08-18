@@ -664,6 +664,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 15,
+      "image": "images/work-010.jpg",
+      "title": "دفتر تصميم - الكاروهات",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "صفحة بحث عن أنماط الكاروهات (Tartan/Check) ومصادرها التاريخية، مع عينات أقمشة حقيقية.",
+      "featured": false,
+      "title_en": "Design Notebook - Checks",
+      "description_en": "A design study page documenting ideas, structure, color, and visual research."
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -695,17 +706,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Factory Layout Plan",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 15,
-      "image": "images/work-010.jpg",
-      "title": "دفتر تصميم - الكاروهات",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "صفحة بحث عن أنماط الكاروهات (Tartan/Check) ومصادرها التاريخية، مع عينات أقمشة حقيقية.",
-      "featured": false,
-      "title_en": "Design Notebook - Checks",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
       "id": 23,
