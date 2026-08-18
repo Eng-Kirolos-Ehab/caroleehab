@@ -340,6 +340,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 25,
+      "image": "images/work-102.jpg",
+      "title": "البدوية الضاحكة",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
+      "featured": false,
+      "title_en": "The Laughing Bedouin Woman",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 11,
       "image": "images/work-099.jpg",
       "title": "ميداليات الساعات الذائبة",
@@ -371,17 +382,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Design Notebook - Fashion and Patterns",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 25,
-      "image": "images/work-102.jpg",
-      "title": "البدوية الضاحكة",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
-      "featured": false,
-      "title_en": "The Laughing Bedouin Woman",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 14,
