@@ -516,6 +516,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 65,
+      "image": "images/work-130.jpg",
+      "title": "تيشيرت Glow in the Dark",
+      "title_en": "Glow in the Dark Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
+      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
+      "featured": false
+    },
+    {
       "id": 29,
       "image": "images/work-021.jpg",
       "title": "جاكار كريسماس - التوت والصنوبر",
@@ -580,17 +591,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Botanical Wallpaper",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 65,
-      "image": "images/work-130.jpg",
-      "title": "تيشيرت Glow in the Dark",
-      "title_en": "Glow in the Dark Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
-      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
-      "featured": false
     },
     {
       "id": 38,
