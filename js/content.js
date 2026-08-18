@@ -820,10 +820,10 @@ const SITE_DATA = {
     {
       "id": 70,
       "image": "images/work-135.jpg",
-      "title": "بورتريه كلاسيكي بالزيت",
+      "title": "بورتريه كلاسيكي ب الوان السوفت باستيل",
       "title_en": "Classical Oil Portrait",
       "category": "painting",
-      "year": "2026",
+      "year": "2025",
       "description": "بورتريه ب السوفت باستيل بأسلوب كلاسيكي، إكليل غار وخلفية ذهبية دافئة تستحضر لوحات عصر النهضة.",
       "description_en": "An oil portrait in a classical style, with a laurel wreath and a warm golden background evoking Renaissance painting.",
       "featured": false
