@@ -285,6 +285,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 24,
+      "image": "images/work-101.jpg",
+      "title": "مقهى الفيشاوي",
+      "category": "painting",
+      "year": "2025",
+      "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
+      "featured": false,
+      "title_en": "El Fishawy Cafe",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 5,
       "image": "images/work-001.jpg",
       "title": "عالم تحت الماء",
@@ -316,17 +327,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 24,
-      "image": "images/work-101.jpg",
-      "title": "مقهى الفيشاوي",
-      "category": "painting",
-      "year": "2025",
-      "description": "لوحة فحم ضخمة ترصد أجواء مقهى الفيشاوي العريق في القاهرة — وجوه ومشاعر وحكايات.",
-      "featured": false,
-      "title_en": "El Fishawy Cafe",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 8,
