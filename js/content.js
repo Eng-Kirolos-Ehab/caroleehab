@@ -456,6 +456,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 39,
+      "image": "images/work-067.jpg",
+      "title": "أزهار زرقاء داكنة",
+      "category": "homeprint",
+      "year": "2025",
+      "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
+      "featured": false,
+      "title_en": "Dark Blue Flowers",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
       "id": 33,
       "image": "images/work-116.jpg",
       "title": "جاكار تركواز - موجات البحر",
@@ -519,17 +530,6 @@ const SITE_DATA = {
       "description": "نقشة طباعة بألوان خضراء وذهبية بطابع شتوي دافئ، مناسبة للستائر والمفروشات الراقية.",
       "featured": false,
       "title_en": "Winter Botanical Print",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 39,
-      "image": "images/work-067.jpg",
-      "title": "أزهار زرقاء داكنة",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
-      "featured": false,
-      "title_en": "Dark Blue Flowers",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
