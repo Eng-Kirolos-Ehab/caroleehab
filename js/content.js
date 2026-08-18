@@ -620,6 +620,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 9,
+      "image": "images/work-049.jpg",
+      "title": "جاكار كاروهات - دفء",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "تصميم جاكار بدرجات الأحمر والبني، دراسة في توافق الألوان الدافئة وتأثيرها على تصميم الأقمشة.",
+      "featured": false,
+      "title_en": "Warm Check Jacquard",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 14,
       "image": "images/work-003.jpg",
       "title": "دفتر تصميم - الخطوط",
@@ -639,17 +650,6 @@ const SITE_DATA = {
       "description": "تصميم نسيج جاكار Tartan/Check تم تطويره باستخدام برامج تصميم الأنسجة المتخصصة.",
       "featured": false,
       "title_en": "Green Check Jacquard",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 9,
-      "image": "images/work-049.jpg",
-      "title": "جاكار كاروهات - دفء",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "تصميم جاكار بدرجات الأحمر والبني، دراسة في توافق الألوان الدافئة وتأثيرها على تصميم الأقمشة.",
-      "featured": false,
-      "title_en": "Warm Check Jacquard",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
