@@ -104,17 +104,6 @@ const SITE_DATA = {
   ],
   "works": [
     {
-      "id": 2,
-      "image": "images/work-106.jpg",
-      "title": "بنت البادية",
-      "category": "charcoal",
-      "year": "2026",
-      "description": "عمل بالفحم يحتفي بتفاصيل الوجه والملامح، مع لمسة من الحياة الصحراوية.",
-      "featured": true,
-      "title_en": "Bedouin Girl",
-      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -124,6 +113,17 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "People of Gaza",
       "description_en": "An expressive artwork exploring portraiture, emotion, and storytelling through painted detail."
+    },
+    {
+      "id": 2,
+      "image": "images/work-106.jpg",
+      "title": "بنت البادية",
+      "category": "charcoal",
+      "year": "2026",
+      "description": "عمل بالفحم يحتفي بتفاصيل الوجه والملامح، مع لمسة من الحياة الصحراوية.",
+      "featured": true,
+      "title_en": "Bedouin Girl",
+      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
       "id": 3,
