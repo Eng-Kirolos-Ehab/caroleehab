@@ -488,6 +488,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 57,
+      "image": "images/work-097.jpg",
+      "title": "الساعة الذائبة وأوشحتي",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
+      "featured": false,
+      "title_en": "Melting Clock and Scarves",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 8,
       "image": "images/work-027.jpg",
       "title": "جاكار كاروهات - أخضر",
@@ -552,17 +563,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Design Notebook - Checks",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 57,
-      "image": "images/work-097.jpg",
-      "title": "الساعة الذائبة وأوشحتي",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
-      "featured": false,
-      "title_en": "Melting Clock and Scarves",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 16,
