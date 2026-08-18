@@ -406,6 +406,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 46,
+      "image": "images/work-086.jpg",
+      "title": "سكتشات أزياء - أبيض وأسود",
+      "category": "fashion",
+      "year": "2025",
+      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
+      "featured": false,
+      "title_en": "Fashion Sketches - Black and White",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 15,
       "image": "images/work-010.jpg",
       "title": "دفتر تصميم - الكاروهات",
@@ -448,17 +459,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Bread and Pot",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 46,
-      "image": "images/work-086.jpg",
-      "title": "سكتشات أزياء - أبيض وأسود",
-      "category": "fashion",
-      "year": "2025",
-      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
-      "featured": false,
-      "title_en": "Fashion Sketches - Black and White",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 20,
