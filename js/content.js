@@ -470,7 +470,7 @@ const SITE_DATA = {
       "image": "images/work-118.jpg",
       "title": "وجوه",
       "category": "charcoal",
-      "year": "2026",
+      "year": "2025",
       "description": "مجموعة بورتريهات بالفحم، كل وجه يحمل تعبيره وقصته الخاصة.",
       "featured": true,
       "title_en": "Faces",
