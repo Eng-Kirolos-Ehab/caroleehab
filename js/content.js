@@ -510,6 +510,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 20,
+      "image": "images/work-082.jpg",
+      "title": "طبيعة صامتة - البرتقالي والأزرق",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "تناقض مشرق بين وعاء برتقالي وإبريق أزرق على خلفية مزخرفة — دراسة في التضاد اللوني.",
+      "featured": false,
+      "title_en": "Still Life - Orange and Blue",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 5,
       "image": "images/work-001.jpg",
       "title": "عالم تحت الماء",
@@ -596,17 +607,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand-Painted Phone Case",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 20,
-      "image": "images/work-082.jpg",
-      "title": "طبيعة صامتة - البرتقالي والأزرق",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "تناقض مشرق بين وعاء برتقالي وإبريق أزرق على خلفية مزخرفة — دراسة في التضاد اللوني.",
-      "featured": false,
-      "title_en": "Still Life - Orange and Blue",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 11,
