@@ -422,6 +422,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 62,
+      "image": "images/work-127.jpg",
+      "title": "بنطلون الأخطبوط تحت الماء",
+      "title_en": "Underwater Octopus Jeans",
+      "category": "personal",
+      "year": "2026",
+      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
+      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
+      "featured": false
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -486,17 +497,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Blue Bottle",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 62,
-      "image": "images/work-127.jpg",
-      "title": "بنطلون الأخطبوط تحت الماء",
-      "title_en": "Underwater Octopus Jeans",
-      "category": "personal",
-      "year": "2026",
-      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
-      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
-      "featured": false
     },
     {
       "id": 19,
