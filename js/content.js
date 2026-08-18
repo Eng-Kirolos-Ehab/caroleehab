@@ -120,6 +120,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 66,
+      "image": "images/work-131.jpg",
+      "title": "فستان زهرة الزنبق",
+      "title_en": "Lily Petal Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
+      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
+      "featured": false
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -184,17 +195,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Autumn Leaves",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 66,
-      "image": "images/work-131.jpg",
-      "title": "فستان زهرة الزنبق",
-      "title_en": "Lily Petal Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
-      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
-      "featured": false
     },
     {
       "id": 7,
