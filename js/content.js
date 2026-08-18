@@ -389,6 +389,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 74,
+      "image": "images/work-139.jpg",
+      "title": "تيشيرت كولاج تجريدي",
+      "title_en": "Abstract Collage Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
+      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
+      "featured": false
+    },
+    {
       "id": 14,
       "image": "images/work-003.jpg",
       "title": "دفتر تصميم - الخطوط",
@@ -442,17 +453,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand-Painted Phone Case",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 74,
-      "image": "images/work-139.jpg",
-      "title": "تيشيرت كولاج تجريدي",
-      "title_en": "Abstract Collage Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
-      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
-      "featured": false
     },
     {
       "id": 72,
