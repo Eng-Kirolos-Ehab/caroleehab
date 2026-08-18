@@ -1030,7 +1030,8 @@ const SITE_DATA = {
     "mag-3",
     "events",
     "mag-4",
-    "quotes"
+    "quotes",
+    "showcase-1"
   ],
   "imageMeta": {
     "images/work-001.jpg": {
@@ -1540,7 +1541,33 @@ const SITE_DATA = {
     "heading_en": "When sketches become living scenes",
     "description_en": "Carole did not stop at turning her designs into mockups. She brought them into motion through scenes of models wearing her pieces, moving inside worlds inspired by iconic paintings, so each design feels alive, expressive, and cinematic."
   },
-  "showcases": [],
+  "showcases": [
+    {
+      "id": 1,
+      "title": "حين تنبض التصاميم بالحياة",
+      "title_en": "Where Creativity Came to Life",
+      "description": "كنت سعيدة جدًا بحصولي على فرص مميزة للمشاركة في العديد من الفعاليات والمعارض والتجارب الفنية، والتي أتاحت لي عرض أعمالي، والتواصل مع أشخاص ملهمين، وتطوير رؤيتي الإبداعية بشكل مستمر. كل تجربة من هذه التجارب كانت محطة مهمة في رحلتي الفنية، ساعدتني على تحويل أفكاري وتصاميمي إلى واقع ملموس.\n\nومن أكثر اللحظات التي أعتز بها وأسعدتني للغاية، كانت لحظة تنفيذ فستاني الأزرق، الذي جاء من تصميمي الكامل ومن اختياراتي الخاصة في كل التفاصيل، بداية من الفكرة وحتى الشكل النهائي. وكانت رؤية هذا العمل يتحول من تصور ورسمة إلى قطعة حقيقية من أجمل اللحظات وأكثرها قربًا إلى قلبي.",
+      "description_en": "I’ve been fortunate to take part in a variety of exhibitions, events, presentations, and creative experiences that allowed me to share my work, meet inspiring people, and continuously grow as a designer and artist. Each participation became a meaningful step in my creative journey, turning ideas and sketches into real experiences.\n\nOne of my most memorable and rewarding moments was bringing my blue dress to life — a piece created entirely from my own vision, from the initial design and artistic direction to every detail and choice behind the final look. Seeing something I had imagined, sketched, and carefully developed become a real garment remains one of the moments I am most proud of.",
+      "mainImage": "images/work-115.jpg",
+      "subImages": [
+        "images/work-114.jpg",
+        "images/work-115.jpg",
+        "images/work-120.jpg",
+        "images/work-105.jpg",
+        "images/work-094.jpg",
+        "images/work-068.jpg",
+        "images/work-073.jpg",
+        "images/work-037.jpg",
+        "images/work-024.jpg",
+        "images/work-026.jpg",
+        "images/work-028.jpg",
+        "images/work-020.jpg",
+        "images/work-022.jpg",
+        "images/work-032.jpg"
+      ],
+      "autoplay": true
+    }
+  ],
   "imagePosition": {
     "images/work-026.jpg": "50% 50%",
     "images/work-115.jpg": "24% 62%"
