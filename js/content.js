@@ -450,6 +450,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 66,
+      "image": "images/work-131.jpg",
+      "title": "فستان زهرة الزنبق",
+      "title_en": "Lily Petal Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
+      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
+      "featured": false
+    },
+    {
       "id": 27,
       "image": "images/work-014.jpg",
       "title": "دراسة بالرصاص - الزجاجة والفواكه",
@@ -503,17 +514,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Winter Jacquard - Berries and Leaves",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 66,
-      "image": "images/work-131.jpg",
-      "title": "فستان زهرة الزنبق",
-      "title_en": "Lily Petal Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
-      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
-      "featured": false
     },
     {
       "id": 35,
