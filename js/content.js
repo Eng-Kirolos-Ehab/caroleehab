@@ -554,6 +554,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 57,
+      "image": "images/work-097.jpg",
+      "title": "الساعة الذائبة وأوشحتي",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
+      "featured": false,
+      "title_en": "Melting Clock and Scarves",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 16,
       "image": "images/work-077.jpg",
       "title": "طبيعة صامتة",
@@ -617,17 +628,6 @@ const SITE_DATA = {
       "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
       "featured": false,
       "title_en": "Embroidered Panel - Singer and Tower",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 57,
-      "image": "images/work-097.jpg",
-      "title": "الساعة الذائبة وأوشحتي",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
-      "featured": false,
-      "title_en": "Melting Clock and Scarves",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
