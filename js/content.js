@@ -318,6 +318,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 47,
+      "image": "images/work-088.jpg",
+      "title": "أزياء ونظرية الألوان",
+      "category": "fashion",
+      "year": "2025",
+      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
+      "featured": false,
+      "title_en": "Fashion and Color Theory",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 5,
       "image": "images/work-001.jpg",
       "title": "عالم تحت الماء",
@@ -349,17 +360,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 47,
-      "image": "images/work-088.jpg",
-      "title": "أزياء ونظرية الألوان",
-      "category": "fashion",
-      "year": "2025",
-      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
-      "featured": false,
-      "title_en": "Fashion and Color Theory",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 8,
