@@ -404,7 +404,7 @@ const SITE_DATA = {
       "id": 28,
       "image": "images/work-112.jpg",
       "title": "دراسة بالرصاص - الإبريق والنظارة",
-      "category": "sketchbook",
+      "category": "Certificates",
       "year": "2025",
       "description": "طبيعة صامتة بالرصاص تجمع إبريقًا وفواكه ونظارة — تفاصيل دقيقة وتظليل ناعم.",
       "featured": false,
