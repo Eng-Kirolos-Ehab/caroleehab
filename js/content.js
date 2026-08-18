@@ -406,17 +406,6 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
-      "id": 25,
-      "image": "images/work-102.jpg",
-      "title": "البدوية الضاحكة",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
-      "featured": false,
-      "title_en": "The Laughing Bedouin Woman",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
       "id": 39,
       "image": "images/work-067.jpg",
       "title": "تصميم مستوحى من زهرة اللوتس.",
@@ -426,6 +415,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Lotus-Inspired Design",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
+      "id": 25,
+      "image": "images/work-102.jpg",
+      "title": "البدوية الضاحكة",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة فحم لسيدة بدوية تضحك بتلقائية مع جمالها — لحظة إنسانية أصيلة خُلّدت بالفحم.",
+      "featured": false,
+      "title_en": "The Laughing Bedouin Woman",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 26,
