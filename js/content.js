@@ -807,6 +807,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 71,
+      "image": "images/work-136.jpg",
+      "title": "تيشيرت Textile is Art",
+      "title_en": "Textile is Art Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
+      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
+      "featured": false
+    },
+    {
       "id": 57,
       "image": "images/work-097.jpg",
       "title": "الساعة الذائبة وأوشحتي",
@@ -870,17 +881,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
       "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
-      "featured": false
-    },
-    {
-      "id": 71,
-      "image": "images/work-136.jpg",
-      "title": "تيشيرت Textile is Art",
-      "title_en": "Textile is Art Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
-      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
       "featured": false
     },
     {
