@@ -524,7 +524,7 @@ const SITE_DATA = {
       "id": 18,
       "image": "images/work-078.jpg",
       "title": "تباين الألوان",
-      "category": "bigworks",
+      "category": "charcoal",
       "year": "2024",
       "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
       "featured": false,
