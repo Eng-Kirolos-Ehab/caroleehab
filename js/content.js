@@ -479,9 +479,9 @@ const SITE_DATA = {
     {
       "id": 16,
       "image": "images/work-077.jpg",
-      "title": "طبيعة صامتة - الإبريق والكتب",
-      "category": "bigworks",
-      "year": "2025",
+      "title": "طبيعة صامتة",
+      "category": "charcoal",
+      "year": "2024",
       "description": "لوحة زيتية كبيرة تجمع بين الإبريق والكتب والقماش — دراسة أكاديمية في التدرجات الدافئة والتكوين الكلاسيكي.",
       "featured": true,
       "title_en": "Still Life - Pitcher and Books",
