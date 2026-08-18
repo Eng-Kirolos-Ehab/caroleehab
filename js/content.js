@@ -105,6 +105,11 @@ const SITE_DATA = {
       "id": "Egy Stitch Competition Designs",
       "label": "تصاميم مسابقه egy stitch",
       "label_en": "Egy Stitch Competition Designs"
+    },
+    {
+      "id": "mood boards",
+      "label": "مود بورد",
+      "label_en": "mood boards"
     }
   ],
   "works": [
