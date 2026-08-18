@@ -615,6 +615,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 46,
+      "image": "images/work-086.jpg",
+      "title": "سكتشات أزياء - أبيض وأسود",
+      "category": "fashion",
+      "year": "2025",
+      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
+      "featured": false,
+      "title_en": "Fashion Sketches - Black and White",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 42,
       "image": "images/work-098.jpg",
       "title": "غلاف مجلة سرّيفا",
@@ -645,17 +656,6 @@ const SITE_DATA = {
       "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
       "featured": false,
       "title_en": "Fashion Sketch - Geometric Patterns",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
-      "id": 46,
-      "image": "images/work-086.jpg",
-      "title": "سكتشات أزياء - أبيض وأسود",
-      "category": "fashion",
-      "year": "2025",
-      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
-      "featured": false,
-      "title_en": "Fashion Sketches - Black and White",
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
