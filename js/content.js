@@ -43,7 +43,7 @@ const SITE_DATA = {
     },
     {
       "id": "painting",
-      "label": "لوحات زيتية وبورتريه",
+      "label": "اشتراك ف مسابقات الرسم الجامعيه ونوار",
       "label_en": "Oil Paintings & Portraits"
     },
     {
