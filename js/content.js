@@ -153,17 +153,6 @@ const SITE_DATA = {
       "featured": false
     },
     {
-      "id": 41,
-      "image": "images/work-062.jpg",
-      "title": "سريالية الموضة",
-      "category": "fashion",
-      "year": "2025",
-      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
-      "featured": true,
-      "title_en": "Surreal Fashion",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
       "id": 65,
       "image": "images/work-130.jpg",
       "title": "رسم بالكلور",
@@ -173,6 +162,17 @@ const SITE_DATA = {
       "description": "تصميم يدوي لتيشيرت أسود بدأته باسكتش أولي، ثم نفذته باستخدام تقنية الرسم بالكلور. يعكس العمل أسلوبًا فنيًا جريئًا يجمع بين الرسم الحر وتجريب الخامات، ليحوّل التيشيرت إلى قطعة فنية مميزة",
       "description_en": "A hand-drawn black T-shirt design that started with an initial sketch and was executed using the bleach painting technique. The piece combines freehand illustration and textile experimentation, turning the T-shirt into a distinctive wearable artwork.",
       "featured": false
+    },
+    {
+      "id": 41,
+      "image": "images/work-062.jpg",
+      "title": "سريالية الموضة",
+      "category": "fashion",
+      "year": "2025",
+      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
+      "featured": true,
+      "title_en": "Surreal Fashion",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 1,
