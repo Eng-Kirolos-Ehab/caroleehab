@@ -513,7 +513,7 @@ const SITE_DATA = {
       "id": 19,
       "image": "images/work-079.jpg",
       "title": "دفء الحصاد",
-      "category": "bigworks",
+      "category": "charcoal",
       "year": "2024",
       "description": "لوحة زيتية بأجواء منزلية دافئة — طنجرة وخبز وسكين على قماش مخطط في ضوء هادئ.",
       "featured": false,
