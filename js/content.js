@@ -576,6 +576,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 69,
+      "image": "images/work-134.jpg",
+      "title": "سيناء شهد للأديان",
+      "title_en": "Sinai, Witness to Religions",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
+      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
+      "featured": false
+    },
+    {
       "id": 16,
       "image": "images/work-077.jpg",
       "title": "طبيعة صامتة",
@@ -607,17 +618,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Color Contrast",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 69,
-      "image": "images/work-134.jpg",
-      "title": "سيناء شهد للأديان",
-      "title_en": "Sinai, Witness to Religions",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
-      "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
-      "featured": false
     },
     {
       "id": 40,
