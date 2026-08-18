@@ -747,6 +747,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 60,
+      "image": "images/work-125.jpg",
+      "title": "فستان الأزهار الحقيقية",
+      "title_en": "Real Flower Dress",
+      "category": "mixed",
+      "year": "2026",
+      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
+      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
+      "featured": false
+    },
+    {
       "id": 57,
       "image": "images/work-097.jpg",
       "title": "الساعة الذائبة وأوشحتي",
@@ -778,17 +789,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Embroidered Panel - Microphone Voice",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 60,
-      "image": "images/work-125.jpg",
-      "title": "فستان الأزهار الحقيقية",
-      "title_en": "Real Flower Dress",
-      "category": "mixed",
-      "year": "2026",
-      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
-      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
-      "featured": false
     },
     {
       "id": 62,
