@@ -587,17 +587,6 @@ const SITE_DATA = {
       "description_en": "A seamless foliage-inspired pattern featuring motifs that were all originally hand-drawn by me"
     },
     {
-      "id": 14,
-      "image": "images/work-003.jpg",
-      "title": "دفتر تصميم - الخطوط",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "صفحة بحث بصري عن أنواع الخطوط (Stripes) وتأثيرها على تصميم الملابس.",
-      "featured": false,
-      "title_en": "Design Notebook - Lines",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
       "id": 7,
       "image": "images/work-063.jpg",
       "title": "توت وصنوبر",
@@ -607,6 +596,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
+      "id": 14,
+      "image": "images/work-003.jpg",
+      "title": "دفتر تصميم - الخطوط",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "صفحة بحث بصري عن أنواع الخطوط (Stripes) وتأثيرها على تصميم الملابس.",
+      "featured": false,
+      "title_en": "Design Notebook - Lines",
+      "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
       "id": 8,
