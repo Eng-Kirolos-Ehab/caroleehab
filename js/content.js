@@ -752,6 +752,17 @@ const SITE_DATA = {
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
     },
     {
+      "id": 48,
+      "image": "images/work-107.jpg",
+      "title": "مجسم ماكينة النسيج",
+      "category": "factory",
+      "year": "2025",
+      "description": "نموذج خشبي مصغر لماكينة النسيج منفّذ يدويًا — مجسم دقيق يعكس فهمًا عميقًا لمعدات المصنع.",
+      "featured": true,
+      "title_en": "Textile Machine Model",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 37,
       "image": "images/work-019.jpg",
       "title": "ورق جداري نباتي",
@@ -794,17 +805,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Fashion Inspired by Ancient Egypt",
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
-      "id": 48,
-      "image": "images/work-107.jpg",
-      "title": "مجسم ماكينة النسيج",
-      "category": "factory",
-      "year": "2025",
-      "description": "نموذج خشبي مصغر لماكينة النسيج منفّذ يدويًا — مجسم دقيق يعكس فهمًا عميقًا لمعدات المصنع.",
-      "featured": true,
-      "title_en": "Textile Machine Model",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
       "id": 50,
