@@ -708,6 +708,28 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 74,
+      "image": "images/work-139.jpg",
+      "title": "تيشيرت كولاج تجريدي",
+      "title_en": "Abstract Collage Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
+      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
+      "featured": false
+    },
+    {
+      "id": 72,
+      "image": "images/work-137.jpg",
+      "title": "تيشيرت الراقصات",
+      "title_en": "Ballerinas Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
+      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
+      "featured": false
+    },
+    {
       "id": 49,
       "image": "images/work-108.jpg",
       "title": "مخطط توزيع المصنع",
@@ -840,17 +862,6 @@ const SITE_DATA = {
       "featured": false
     },
     {
-      "id": 74,
-      "image": "images/work-139.jpg",
-      "title": "تيشيرت كولاج تجريدي",
-      "title_en": "Abstract Collage Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
-      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
-      "featured": false
-    },
-    {
       "id": 68,
       "image": "images/work-133.jpg",
       "title": "معرض النوستالجيا المصرية",
@@ -859,17 +870,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
       "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
-      "featured": false
-    },
-    {
-      "id": 72,
-      "image": "images/work-137.jpg",
-      "title": "تيشيرت الراقصات",
-      "title_en": "Ballerinas Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
-      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
       "featured": false
     },
     {
