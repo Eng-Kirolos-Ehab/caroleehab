@@ -873,17 +873,6 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
-      "id": 55,
-      "image": "images/work-028.jpg",
-      "title": "فستان جينز - تايداي",
-      "category": "personal",
-      "year": "2025",
-      "description": "فستان جينز مرسوم بنقشات يدوية بأسلوب تايداي — كل خطوة فيه برؤية ولمسة شخصية.",
-      "featured": false,
-      "title_en": "Denim Dress - Tie-Dye",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
       "id": 59,
       "image": "images/work-121.jpg",
       "title": "لوحة مطرزة - صوت الميكروفون",
