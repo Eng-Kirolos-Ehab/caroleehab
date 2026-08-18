@@ -510,6 +510,17 @@ const SITE_DATA = {
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
     },
     {
+      "id": 16,
+      "image": "images/work-077.jpg",
+      "title": "طبيعة صامتة",
+      "category": "charcoal",
+      "year": "2024",
+      "description": "لوحة زيتية كبيرة تجمع بين الإبريق والكتب والقماش — دراسة أكاديمية في التدرجات الدافئة والتكوين الكلاسيكي.",
+      "featured": true,
+      "title_en": "Still Life - Pitcher and Books",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 6,
       "image": "images/work-017.jpg",
       "title": "أوراق الخريف",
@@ -574,17 +585,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand-Painted Phone Case",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 16,
-      "image": "images/work-077.jpg",
-      "title": "طبيعة صامتة",
-      "category": "charcoal",
-      "year": "2024",
-      "description": "لوحة زيتية كبيرة تجمع بين الإبريق والكتب والقماش — دراسة أكاديمية في التدرجات الدافئة والتكوين الكلاسيكي.",
-      "featured": true,
-      "title_en": "Still Life - Pitcher and Books",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 19,
