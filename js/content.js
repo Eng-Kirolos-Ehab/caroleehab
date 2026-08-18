@@ -455,6 +455,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 73,
+      "image": "images/work-138.jpg",
+      "title": "تيشيرت أدوات الرسم",
+      "title_en": "Art Tools Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
+      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
+      "featured": false
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -519,17 +530,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Pitcher and Fabric",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 73,
-      "image": "images/work-138.jpg",
-      "title": "تيشيرت أدوات الرسم",
-      "title_en": "Art Tools Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
-      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
-      "featured": false
     },
     {
       "id": 18,
