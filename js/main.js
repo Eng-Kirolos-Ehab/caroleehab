@@ -528,7 +528,16 @@ function initShowcaseCarousel(section, s) {
       mainImgEl.style.opacity = '1';
     }, 220);
     thumbs.forEach((t, ti) => t.classList.toggle('active', ti === index));
-    if (thumbs[index]) thumbs[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    centerThumb(index);
+  }
+
+  // بيوسّط الصورة النشطة جوه شريط الصور الصغيرة بس، من غير ما يحرك سكرول الصفحة نفسها
+  function centerThumb(i) {
+    const track = section.querySelector('.showcase-thumbs');
+    const thumb = thumbs[i];
+    if (!track || !thumb) return;
+    const target = thumb.offsetLeft - (track.clientWidth - thumb.clientWidth) / 2;
+    track.scrollTo({ left: target, behavior: 'smooth' });
   }
 
   function startAutoplay() {
