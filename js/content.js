@@ -499,6 +499,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 71,
+      "image": "images/work-136.jpg",
+      "title": "تيشيرت Textile is Art",
+      "title_en": "Textile is Art Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
+      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
+      "featured": false
+    },
+    {
       "id": 15,
       "image": "images/work-010.jpg",
       "title": "دفتر تصميم - الكاروهات",
@@ -563,17 +574,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Orange and Blue",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 71,
-      "image": "images/work-136.jpg",
-      "title": "تيشيرت Textile is Art",
-      "title_en": "Textile is Art Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
-      "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
-      "featured": false
     },
     {
       "id": 21,
