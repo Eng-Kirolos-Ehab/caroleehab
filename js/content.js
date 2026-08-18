@@ -111,12 +111,12 @@ const SITE_DATA = {
     {
       "id": 61,
       "image": "images/work-126.jpg",
-      "title": "صفحات من دفتر التصميم",
-      "title_en": "Pages from the Design Sketchbook",
+      "title": "اسكتشات أزياء",
+      "title_en": "Fashion Sketches",
       "category": "sketchbook",
       "year": "2026",
-      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
-      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
+      "description": "مجموعة من الاسكتشات اليدوية التي تستعرض تطوير الأفكار والتصميمات من خلال دراسة الخطوط، القصّات، التفاصيل، وتكوينات الملابس المختلفة، مع التركيز على التعبير الفني والهوية الإبداعية لكل تصميم.",
+      "description_en": "Hand-drawn fashion sketches exploring silhouettes, garment details, and creative design development.",
       "featured": false
     },
     {
