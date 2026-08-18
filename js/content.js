@@ -114,7 +114,7 @@ const SITE_DATA = {
       "title": "اسكتشات أزياء",
       "title_en": "Fashion Sketches",
       "category": "sketchbook",
-      "year": "2026",
+      "year": "2025",
       "description": "مجموعة من الاسكتشات اليدوية التي تستعرض تطوير الأفكار والتصميمات من خلال دراسة الخطوط، القصّات، التفاصيل، وتكوينات الملابس المختلفة، مع التركيز على التعبير الفني والهوية الإبداعية لكل تصميم.",
       "description_en": "Hand-drawn fashion sketches exploring silhouettes, garment details, and creative design development.",
       "featured": false
