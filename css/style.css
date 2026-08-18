@@ -556,28 +556,34 @@ html[dir="rtl"] .featured-card {
 }
 
 /* ---------------------------------------------------------
-   Masonry gallery (CSS columns)
+   Gallery grid — CSS Grid (row-major order) so image order
+   reads left-to-right, top-to-bottom identically on every
+   screen size, matching the admin panel's list order. A CSS
+   multi-column ("masonry") layout was used before, but it
+   fills column-by-column, which desyncs the visual order
+   from the admin list order once the column count changes
+   (e.g. 2 columns on mobile vs 3 on desktop).
 --------------------------------------------------------- */
 .gallery-grid {
-  column-count: 1;
-  column-gap: 0.85rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 0.85rem;
 }
 @media (min-width: 360px) {
-  .gallery-grid { column-count: 2; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 480px) {
-  .gallery-grid { column-gap: 1rem; }
+  .gallery-grid { gap: 1rem; }
 }
 @media (min-width: 700px) {
-  .gallery-grid { column-count: 3; column-gap: 1.25rem; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 }
 @media (min-width: 1024px) {
-  .gallery-grid { column-count: 3; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .gallery-item {
-  break-inside: avoid;
-  margin-bottom: 1.25rem;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
