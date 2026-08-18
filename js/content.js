@@ -620,6 +620,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 27,
+      "image": "images/work-014.jpg",
+      "title": "دراسة بالرصاص - الزجاجة والفواكه",
+      "category": "sketchbook",
+      "year": "2025",
+      "description": "سكتش بالرصاص لزجاجة نبيذ وموز وسكين — تمرين في الواقعية وتقنية التظليل الدقيق.",
+      "featured": false,
+      "title_en": "Pencil Study - Bottle and Fruit",
+      "description_en": "A design study page documenting ideas, structure, color, and visual research."
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -661,17 +672,6 @@ const SITE_DATA = {
       "description": "صفحة بحث عن أنماط الكاروهات (Tartan/Check) ومصادرها التاريخية، مع عينات أقمشة حقيقية.",
       "featured": false,
       "title_en": "Design Notebook - Checks",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 27,
-      "image": "images/work-014.jpg",
-      "title": "دراسة بالرصاص - الزجاجة والفواكه",
-      "category": "sketchbook",
-      "year": "2025",
-      "description": "سكتش بالرصاص لزجاجة نبيذ وموز وسكين — تمرين في الواقعية وتقنية التظليل الدقيق.",
-      "featured": false,
-      "title_en": "Pencil Study - Bottle and Fruit",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
