@@ -411,6 +411,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 56,
+      "image": "images/work-090.jpg",
+      "title": "منحوتة الساعة الذائبة",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة يدوية مستوحاة من الساعات الذائبة لسالفادور دالي بألوان فيروزية وذهبية — السريالية بين يدين.",
+      "featured": false,
+      "title_en": "Melting Clock Sculpture",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 71,
       "image": "images/work-136.jpg",
       "title": "تيشيرت Textile is Art",
@@ -475,17 +486,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 56,
-      "image": "images/work-090.jpg",
-      "title": "منحوتة الساعة الذائبة",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة يدوية مستوحاة من الساعات الذائبة لسالفادور دالي بألوان فيروزية وذهبية — السريالية بين يدين.",
-      "featured": false,
-      "title_en": "Melting Clock Sculpture",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 57,
