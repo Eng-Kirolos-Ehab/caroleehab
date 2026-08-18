@@ -697,6 +697,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 48,
+      "image": "images/work-107.jpg",
+      "title": "مجسم ماكينة النسيج",
+      "category": "factory",
+      "year": "2025",
+      "description": "نموذج خشبي مصغر لماكينة النسيج منفّذ يدويًا — مجسم دقيق يعكس فهمًا عميقًا لمعدات المصنع.",
+      "featured": true,
+      "title_en": "Textile Machine Model",
+      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
       "id": 15,
       "image": "images/work-010.jpg",
       "title": "دفتر تصميم - الكاروهات",
@@ -750,17 +761,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand Weaving on Loom - Gray",
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
-    },
-    {
-      "id": 48,
-      "image": "images/work-107.jpg",
-      "title": "مجسم ماكينة النسيج",
-      "category": "factory",
-      "year": "2025",
-      "description": "نموذج خشبي مصغر لماكينة النسيج منفّذ يدويًا — مجسم دقيق يعكس فهمًا عميقًا لمعدات المصنع.",
-      "featured": true,
-      "title_en": "Textile Machine Model",
-      "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
       "id": 37,
