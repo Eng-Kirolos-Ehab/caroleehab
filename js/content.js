@@ -164,6 +164,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 41,
+      "image": "images/work-062.jpg",
+      "title": "سريالية الموضة",
+      "category": "fashion",
+      "year": "2025",
+      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
+      "featured": true,
+      "title_en": "Surreal Fashion",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 31,
       "image": "images/work-065.jpg",
       "title": "جاكار مصري - الهيروغليفية",
@@ -250,17 +261,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "People of Gaza",
       "description_en": "An expressive artwork exploring portraiture, emotion, and storytelling through painted detail."
-    },
-    {
-      "id": 41,
-      "image": "images/work-062.jpg",
-      "title": "سريالية الموضة",
-      "category": "fashion",
-      "year": "2025",
-      "description": "لوحة موضة سريالية تمزج بين الفن والتصميم بأسلوب عصري جريء — الموضة كفن لا حدود له.",
-      "featured": true,
-      "title_en": "Surreal Fashion",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 17,
