@@ -736,6 +736,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 63,
+      "image": "images/work-128.jpg",
+      "title": "فستان الحراشف الزرقاء",
+      "title_en": "Blue Scale Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
+      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
+      "featured": false
+    },
+    {
       "id": 55,
       "image": "images/work-028.jpg",
       "title": "فستان جينز - تايداي",
@@ -799,17 +810,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
       "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
-      "featured": false
-    },
-    {
-      "id": 63,
-      "image": "images/work-128.jpg",
-      "title": "فستان الحراشف الزرقاء",
-      "title_en": "Blue Scale Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
-      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
       "featured": false
     },
     {
