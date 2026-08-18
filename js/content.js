@@ -83,8 +83,8 @@ const SITE_DATA = {
     },
     {
       "id": "factory",
-      "label": "شغل المصنع",
-      "label_en": "Factory Work"
+      "label": "التدريب الصيفي",
+      "label_en": "summer internship"
     },
     {
       "id": "mixed",
