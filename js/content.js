@@ -122,7 +122,7 @@ const SITE_DATA = {
     {
       "id": 2,
       "image": "images/work-106.jpg",
-      "title": "بنت البادية",
+      "title": "وهج",
       "category": "charcoal",
       "year": "2026",
       "description": "عمل بالفحم يحتفي بتفاصيل الوجه والملامح، مع لمسة من الحياة الصحراوية.",
