@@ -763,17 +763,6 @@ const SITE_DATA = {
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
     },
     {
-      "id": 37,
-      "image": "images/work-019.jpg",
-      "title": "ورق جداري نباتي",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "تصميم طباعة لورق الجدار بأوراق نباتية خضراء على خلفية رمادية غامقة — أناقة طبيعية للمنزل.",
-      "featured": true,
-      "title_en": "Botanical Wallpaper",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
       "id": 67,
       "image": "images/work-132.jpg",
       "title": "شهادة تخرج",
