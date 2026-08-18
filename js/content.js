@@ -133,12 +133,12 @@ const SITE_DATA = {
     {
       "id": 63,
       "image": "images/work-128.jpg",
-      "title": "فستان الحراشف الزرقاء",
-      "title_en": "Blue Scale Gown",
+      "title": "تفتّح المحيط",
+      "title_en": "Ocean Bloom",
       "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
-      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
+      "year": "2022",
+      "description": "فستان مسائي مستوحى من انسيابية الطبيعة وتكوينات البتلات، بدرجات الأزرق وتفاصيل متداخلة تمنح التصميم إحساسًا بالحركة والأناقة.",
+      "description_en": "An evening gown inspired by the fluidity of nature and petal-like forms, featuring layered blue tones and flowing details that create a sense of movement and elegance.",
       "featured": false
     },
     {
