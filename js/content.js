@@ -510,6 +510,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 26,
+      "image": "images/work-011.jpg",
+      "title": "دراسة بالرصاص - الإبريق والقماش",
+      "category": "sketchbook",
+      "year": "2025",
+      "description": "رسم تخطيطي بالقلم الرصاص لتكوين من الإبريق والقماش — دراسة في المنظور والظل والنور.",
+      "featured": false,
+      "title_en": "Pencil Study - Pitcher and Fabric",
+      "description_en": "A design study page documenting ideas, structure, color, and visual research."
+    },
+    {
       "id": 18,
       "image": "images/work-078.jpg",
       "title": "تباين الألوان",
@@ -574,17 +585,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Classic Portrait",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 26,
-      "image": "images/work-011.jpg",
-      "title": "دراسة بالرصاص - الإبريق والقماش",
-      "category": "sketchbook",
-      "year": "2025",
-      "description": "رسم تخطيطي بالقلم الرصاص لتكوين من الإبريق والقماش — دراسة في المنظور والظل والنور.",
-      "featured": false,
-      "title_en": "Pencil Study - Pitcher and Fabric",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
       "id": 71,
