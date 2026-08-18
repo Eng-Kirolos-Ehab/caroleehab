@@ -166,12 +166,12 @@ const SITE_DATA = {
     {
       "id": 65,
       "image": "images/work-130.jpg",
-      "title": "تيشيرت Glow in the Dark",
-      "title_en": "Glow in the Dark Tee",
+      "title": "رسم بالكلور",
+      "title_en": "Bleach Painting",
       "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
-      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
+      "year": "2022",
+      "description": "تصميم يدوي لتيشيرت أسود بدأته باسكتش أولي، ثم نفذته باستخدام تقنية الرسم بالكلور. يعكس العمل أسلوبًا فنيًا جريئًا يجمع بين الرسم الحر وتجريب الخامات، ليحوّل التيشيرت إلى قطعة فنية مميزة",
+      "description_en": "A hand-drawn black T-shirt design that started with an initial sketch and was executed using the bleach painting technique. The piece combines freehand illustration and textile experimentation, turning the T-shirt into a distinctive wearable artwork.",
       "featured": false
     },
     {
