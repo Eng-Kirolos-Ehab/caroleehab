@@ -587,6 +587,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 40,
+      "image": "images/work-120.jpg",
+      "title": "نقشة ذهبية نباتية",
+      "category": "homeprint",
+      "year": "2025",
+      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
+      "featured": false,
+      "title_en": "Golden Botanical Pattern",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
       "id": 19,
       "image": "images/work-079.jpg",
       "title": "دفء الحصاد",
@@ -651,17 +662,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Bottle and Fruit",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 40,
-      "image": "images/work-120.jpg",
-      "title": "نقشة ذهبية نباتية",
-      "category": "homeprint",
-      "year": "2025",
-      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
-      "featured": false,
-      "title_en": "Golden Botanical Pattern",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
       "id": 28,
