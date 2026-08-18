@@ -318,6 +318,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 13,
+      "image": "images/work-087.jpg",
+      "title": "دفتر تصميم - أزياء وأنماط",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "صفحة من دفتر التصميم تجمع بين رسومات الأزياء ودراسة الأنماط والألوان.",
+      "featured": false,
+      "title_en": "Design Notebook - Fashion and Patterns",
+      "description_en": "A design study page documenting ideas, structure, color, and visual research."
+    },
+    {
       "id": 7,
       "image": "images/work-063.jpg",
       "title": "توت وصنوبر",
@@ -382,17 +393,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Textile Equipment Model",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 13,
-      "image": "images/work-087.jpg",
-      "title": "دفتر تصميم - أزياء وأنماط",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "صفحة من دفتر التصميم تجمع بين رسومات الأزياء ودراسة الأنماط والألوان.",
-      "featured": false,
-      "title_en": "Design Notebook - Fashion and Patterns",
-      "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
       "id": 14,
