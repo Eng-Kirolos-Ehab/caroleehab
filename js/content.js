@@ -824,7 +824,7 @@ const SITE_DATA = {
       "title_en": "Classical Oil Portrait",
       "category": "painting",
       "year": "2026",
-      "description": "بورتريه زيتي بأسلوب كلاسيكي، إكليل غار وخلفية ذهبية دافئة تستحضر لوحات عصر النهضة.",
+      "description": "بورتريه ب السوفت باستيل بأسلوب كلاسيكي، إكليل غار وخلفية ذهبية دافئة تستحضر لوحات عصر النهضة.",
       "description_en": "An oil portrait in a classical style, with a laurel wreath and a warm golden background evoking Renaissance painting.",
       "featured": false
     }
