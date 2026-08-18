@@ -413,13 +413,13 @@ const SITE_DATA = {
     {
       "id": 58,
       "image": "images/work-117.jpg",
-      "title": "لوحة مطرزة - مطربة وبرج",
-      "category": "personal",
+      "title": "مشربتش من نيلها",
+      "category": "jacquard",
       "year": "2025",
-      "description": "لوحة جدارية مطرزة بالأسود والأبيض لمطربة وبرج — التطريز كأداة فنية للتعبير والسرد البصري.",
+      "description": "لوحة نسيجية مستوحاة من أغنية شيرين \"مشربتش من نيلها\"، تجمع بين صورة المطربة وبرج القاهرة في تكوين بصري يعبر عن حب الوطن والهوية المصرية",
       "featured": false,
-      "title_en": "Embroidered Panel - Singer and Tower",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+      "title_en": "Meshrebtesh Men Neelha",
+      "description_en": "A textile artwork inspired by **Sherine’s song “Meshrebtesh Men Neelha,”** featuring he portrait alongside Cairo Tower in a composition that reflects Egyptian identity, patriotism, and a strong sense of belonging."
     },
     {
       "id": 56,
