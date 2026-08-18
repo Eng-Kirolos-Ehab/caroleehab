@@ -208,6 +208,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 39,
+      "image": "images/work-067.jpg",
+      "title": "تصميم مستوحى من زهرة اللوتس.",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
+      "featured": false,
+      "title_en": "Lotus-Inspired Design",
+      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -261,17 +272,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Underwater World",
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
-    },
-    {
-      "id": 39,
-      "image": "images/work-067.jpg",
-      "title": "تصميم مستوحى من زهرة اللوتس.",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
-      "featured": false,
-      "title_en": "Lotus-Inspired Design",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
       "id": 6,
