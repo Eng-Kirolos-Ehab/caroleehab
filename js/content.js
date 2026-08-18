@@ -400,6 +400,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 57,
+      "image": "images/work-097.jpg",
+      "title": "الساعة الذائبة وأوشحتي",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
+      "featured": false,
+      "title_en": "Melting Clock and Scarves",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 73,
       "image": "images/work-138.jpg",
       "title": "تيشيرت أدوات الرسم",
@@ -420,17 +431,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - The Pitcher",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 57,
-      "image": "images/work-097.jpg",
-      "title": "الساعة الذائبة وأوشحتي",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة الساعة الذائبة الفيروزية بجانب أوشحة مطبوعة — عرض يجمع عملين إبداعيين في لقطة واحدة.",
-      "featured": false,
-      "title_en": "Melting Clock and Scarves",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 71,
