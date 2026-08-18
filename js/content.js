@@ -549,6 +549,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 45,
+      "image": "images/work-085.jpg",
+      "title": "سكتش أزياء - الأنماط الهندسية",
+      "category": "fashion",
+      "year": "2025",
+      "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
+      "featured": false,
+      "title_en": "Fashion Sketch - Geometric Patterns",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 29,
       "image": "images/work-021.jpg",
       "title": "جاكار كريسماس - التوت والصنوبر",
@@ -580,17 +591,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Winter Jacquard - Berries and Leaves",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 45,
-      "image": "images/work-085.jpg",
-      "title": "سكتش أزياء - الأنماط الهندسية",
-      "category": "fashion",
-      "year": "2025",
-      "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
-      "featured": false,
-      "title_en": "Fashion Sketch - Geometric Patterns",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 35,
