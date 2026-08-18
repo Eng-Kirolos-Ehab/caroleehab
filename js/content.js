@@ -620,6 +620,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 18,
+      "image": "images/work-078.jpg",
+      "title": "تباين الألوان",
+      "category": "bigworks",
+      "year": "2024",
+      "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
+      "featured": false,
+      "title_en": "Color Contrast",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 12,
       "image": "images/work-111.jpg",
       "title": "مجسم معدات النسيج",
@@ -662,17 +673,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Bottle and Fruit",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 18,
-      "image": "images/work-078.jpg",
-      "title": "تباين الألوان",
-      "category": "bigworks",
-      "year": "2024",
-      "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
-      "featured": false,
-      "title_en": "Color Contrast",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 21,
