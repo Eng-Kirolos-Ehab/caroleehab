@@ -146,8 +146,8 @@ const SITE_DATA = {
       "image": "images/work-125.jpg",
       "title": "فستان الأزهار الحقيقية",
       "title_en": "Real Flower Dress",
-      "category": "mixed",
-      "year": "2026",
+      "category": "sketchbook",
+      "year": "2022",
       "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
       "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
       "featured": false
