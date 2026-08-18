@@ -576,6 +576,17 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
+      "id": 74,
+      "image": "images/work-139.jpg",
+      "title": "تيشيرت كولاج تجريدي",
+      "title_en": "Abstract Collage Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
+      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
+      "featured": false
+    },
+    {
       "id": 28,
       "image": "images/work-112.jpg",
       "title": "دراسة بالرصاص - الإبريق والنظارة",
@@ -642,14 +653,14 @@ const SITE_DATA = {
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
     },
     {
-      "id": 74,
-      "image": "images/work-139.jpg",
-      "title": "تيشيرت كولاج تجريدي",
-      "title_en": "Abstract Collage Tee",
+      "id": 72,
+      "image": "images/work-137.jpg",
+      "title": "تيشيرت الراقصات",
+      "title_en": "Ballerinas Tee",
       "category": "sketchbook",
       "year": "2026",
-      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
-      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
+      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
+      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
       "featured": false
     },
     {
@@ -717,17 +728,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Textile Machine Model",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 72,
-      "image": "images/work-137.jpg",
-      "title": "تيشيرت الراقصات",
-      "title_en": "Ballerinas Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
-      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
-      "featured": false
     },
     {
       "id": 49,
