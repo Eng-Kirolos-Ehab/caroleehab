@@ -378,6 +378,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 68,
+      "image": "images/work-133.jpg",
+      "title": "معرض النوستالجيا المصرية",
+      "title_en": "Egyptian Nostalgia Exhibition",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
+      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
+      "featured": false
+    },
+    {
       "id": 3,
       "image": "images/work-015.jpg",
       "title": "طبيعة صامتة",
@@ -420,17 +431,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Faces",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 68,
-      "image": "images/work-133.jpg",
-      "title": "معرض النوستالجيا المصرية",
-      "title_en": "Egyptian Nostalgia Exhibition",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
-      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
-      "featured": false
     },
     {
       "id": 5,
