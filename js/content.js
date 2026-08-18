@@ -472,6 +472,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 47,
+      "image": "images/work-088.jpg",
+      "title": "أزياء ونظرية الألوان",
+      "category": "fashion",
+      "year": "2025",
+      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
+      "featured": false,
+      "title_en": "Fashion and Color Theory",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 21,
       "image": "images/work-083.jpg",
       "title": "طبيعة صامتة - الجرة الفرعونية",
@@ -547,17 +558,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Christmas Jacquard - Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 47,
-      "image": "images/work-088.jpg",
-      "title": "أزياء ونظرية الألوان",
-      "category": "fashion",
-      "year": "2025",
-      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
-      "featured": false,
-      "title_en": "Fashion and Color Theory",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 33,
