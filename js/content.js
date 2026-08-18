@@ -846,6 +846,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 72,
+      "image": "images/work-137.jpg",
+      "title": "تيشيرت الراقصات",
+      "title_en": "Ballerinas Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
+      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
+      "featured": false
+    },
+    {
       "id": 69,
       "image": "images/work-134.jpg",
       "title": "سيناء شهد للأديان",
@@ -876,17 +887,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
       "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
-      "featured": false
-    },
-    {
-      "id": 72,
-      "image": "images/work-137.jpg",
-      "title": "تيشيرت الراقصات",
-      "title_en": "Ballerinas Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
-      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
       "featured": false
     },
     {
