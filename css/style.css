@@ -468,6 +468,11 @@ html[dir="rtl"] .featured-card {
 /* ---------------------------------------------------------
    Showcase sections (main image + auto-rotating sub-images)
 --------------------------------------------------------- */
+.showcase-media,
+.showcase-copy {
+  min-width: 0; /* grid items default to min-width:auto, which lets a wide thumbnail
+                   strip force the whole row past the viewport on small screens */
+}
 .showcase-main {
   position: relative;
   border-radius: 1.25rem;
@@ -521,6 +526,9 @@ html[dir="rtl"] .featured-card {
 }
 .showcase-copy h2 {
   color: #1C1917;
+}
+.showcase-copy p {
+  white-space: pre-line; /* preserve paragraph breaks typed in the admin textarea */
 }
 
 /* ---------------------------------------------------------

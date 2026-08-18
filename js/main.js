@@ -491,7 +491,7 @@ function buildShowcaseInnerHtml(data, s) {
 
   return `
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="showcase-media order-2 md:order-1" data-reveal>
+      <div class="showcase-media order-2 md:order-1 min-w-0" data-reveal>
         <div class="showcase-main"${mainImg.boxStyle}>
           <img class="showcase-main-img" src="${slides[0]}" alt="${escapeHtml(title)}"${posStyle(data, slides[0])} ${mainImg.imgAttrs}>
         </div>
@@ -504,7 +504,7 @@ function buildShowcaseInnerHtml(data, s) {
           `).join('')}
         </div>` : ''}
       </div>
-      <div class="showcase-copy order-1 md:order-2" data-reveal data-reveal-delay="120">
+      <div class="showcase-copy order-1 md:order-2 min-w-0" data-reveal data-reveal-delay="120">
         <h2 class="font-serif text-3xl sm:text-4xl mb-4 leading-tight">${escapeHtml(title)}</h2>
         <p class="text-ink2 leading-relaxed text-lg">${escapeHtml(desc)}</p>
       </div>
