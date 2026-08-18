@@ -386,7 +386,7 @@ const SITE_DATA = {
     {
       "id": 30,
       "image": "images/work-064.jpg",
-      "title": "جاكار أطلانتس - نقشة النيل",
+      "title": "جاكار  - نقشة النيل",
       "category": "Egy Stitch Competition Designs",
       "year": "2025",
       "description": "تصميم جاكار بنقشة فرعونية مستوحاة من النيل والتراث المصري القديم — أزرق جينز عميق يحكي حضارة ما تحت الماء.",
