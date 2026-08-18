@@ -752,6 +752,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 67,
+      "image": "images/work-132.jpg",
+      "title": "شهادة تخرج",
+      "title_en": "Graduation Certificate",
+      "category": "Certificates",
+      "year": "2026",
+      "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
+      "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
+      "featured": false
+    },
+    {
       "id": 38,
       "image": "images/work-051.jpg",
       "title": "طبعة نباتية شتوية",
@@ -816,17 +827,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand Printing Workshop",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 67,
-      "image": "images/work-132.jpg",
-      "title": "شهادة تخرج",
-      "title_en": "Graduation Certificate",
-      "category": "Certificates",
-      "year": "2026",
-      "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
-      "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
-      "featured": false
     },
     {
       "id": 52,
