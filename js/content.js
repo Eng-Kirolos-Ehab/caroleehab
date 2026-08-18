@@ -743,12 +743,12 @@ const SITE_DATA = {
     {
       "id": 67,
       "image": "images/work-132.jpg",
-      "title": "شهادة تخرج",
-      "title_en": "Graduation Certificate",
+      "title": "شهادة تحقيق مركز في مسابقة",
+      "title_en": "Competition Achievement Certificate",
       "category": "Certificates",
-      "year": "2026",
-      "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
-      "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
+      "year": "2024",
+      "description": "شهادة تقدير لحصولي على مركز في مسابقة، تقديرًا لتميزي في التصميم والمشاركة بالعمل المقدم.",
+      "description_en": "An achievement certificate awarded for securing a place in a competition, recognizing the quality of my design and submitted work.",
       "featured": false
     },
     {
