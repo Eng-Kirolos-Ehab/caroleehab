@@ -521,6 +521,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 72,
+      "image": "images/work-137.jpg",
+      "title": "تيشيرت الراقصات",
+      "title_en": "Ballerinas Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
+      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
+      "featured": false
+    },
+    {
       "id": 20,
       "image": "images/work-082.jpg",
       "title": "طبيعة صامتة - البرتقالي والأزرق",
@@ -585,17 +596,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Pencil Study - Bottle and Fruit",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 72,
-      "image": "images/work-137.jpg",
-      "title": "تيشيرت الراقصات",
-      "title_en": "Ballerinas Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
-      "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
-      "featured": false
     },
     {
       "id": 28,
