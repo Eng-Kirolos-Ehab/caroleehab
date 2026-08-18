@@ -609,6 +609,17 @@ const SITE_DATA = {
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
     },
     {
+      "id": 54,
+      "image": "images/work-026.jpg",
+      "title": "فستان جينز - لمستي",
+      "category": "personal",
+      "year": "2025",
+      "description": "فستان جينز مطبوع برسومات يدوية أزرق وأبيض — تحويل قطعة ملابس عادية لعمل فني مميز.",
+      "featured": false,
+      "title_en": "Denim Dress - My Touch",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 40,
       "image": "images/work-120.jpg",
       "title": "نقشة ذهبية نباتية",
@@ -673,17 +684,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Textile Machine Model",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 54,
-      "image": "images/work-026.jpg",
-      "title": "فستان جينز - لمستي",
-      "category": "personal",
-      "year": "2025",
-      "description": "فستان جينز مطبوع برسومات يدوية أزرق وأبيض — تحويل قطعة ملابس عادية لعمل فني مميز.",
-      "featured": false,
-      "title_en": "Denim Dress - My Touch",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 49,
