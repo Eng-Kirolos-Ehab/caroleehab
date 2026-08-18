@@ -318,6 +318,17 @@ const SITE_DATA = {
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
     },
     {
+      "id": 46,
+      "image": "images/work-086.jpg",
+      "title": "سكتشات أزياء - أبيض وأسود",
+      "category": "fashion",
+      "year": "2025",
+      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
+      "featured": false,
+      "title_en": "Fashion Sketches - Black and White",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 6,
       "image": "images/work-017.jpg",
       "title": "أوراق الخريف",
@@ -338,17 +349,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 46,
-      "image": "images/work-086.jpg",
-      "title": "سكتشات أزياء - أبيض وأسود",
-      "category": "fashion",
-      "year": "2025",
-      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
-      "featured": false,
-      "title_en": "Fashion Sketches - Black and White",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 8,
