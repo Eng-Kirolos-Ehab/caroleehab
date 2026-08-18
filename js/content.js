@@ -345,17 +345,6 @@ const SITE_DATA = {
       "featured": false
     },
     {
-      "id": 3,
-      "image": "images/work-015.jpg",
-      "title": "طبيعة صامتة",
-      "category": "charcoal",
-      "year": "2024",
-      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
-      "featured": false,
-      "title_en": "Still Life - The Pitcher",
-      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
       "id": 74,
       "image": "images/work-139.jpg",
       "title": "تيشيرت كولاج تجريدي",
@@ -365,6 +354,17 @@ const SITE_DATA = {
       "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
       "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
       "featured": false
+    },
+    {
+      "id": 3,
+      "image": "images/work-015.jpg",
+      "title": "طبيعة صامتة",
+      "category": "charcoal",
+      "year": "2024",
+      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
+      "featured": false,
+      "title_en": "Still Life - The Pitcher",
+      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
       "id": 4,
