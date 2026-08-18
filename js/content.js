@@ -373,6 +373,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 45,
+      "image": "images/work-085.jpg",
+      "title": "سكتش أزياء - الأنماط الهندسية",
+      "category": "fashion",
+      "year": "2025",
+      "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
+      "featured": false,
+      "title_en": "Fashion Sketch - Geometric Patterns",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 8,
       "image": "images/work-027.jpg",
       "title": "جاكار كاروهات - أخضر",
@@ -415,17 +426,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Melting Clock Keychains",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 45,
-      "image": "images/work-085.jpg",
-      "title": "سكتش أزياء - الأنماط الهندسية",
-      "category": "fashion",
-      "year": "2025",
-      "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
-      "featured": false,
-      "title_en": "Fashion Sketch - Geometric Patterns",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 12,
