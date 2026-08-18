@@ -642,6 +642,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 11,
+      "image": "images/work-099.jpg",
+      "title": "ميداليات الساعات الذائبة",
+      "category": "personal",
+      "year": "2026",
+      "description": "مجموعة ميداليات (كي تشينز) مستوحاة من الساعات الذائبة لسالفادور دالي، مصنوعة ومرسومة يدويًا.",
+      "featured": false,
+      "title_en": "Melting Clock Keychains",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 14,
       "image": "images/work-003.jpg",
       "title": "دفتر تصميم - الخطوط",
@@ -661,17 +672,6 @@ const SITE_DATA = {
       "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
       "featured": false,
       "title_en": "Hand-Painted Phone Case",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 11,
-      "image": "images/work-099.jpg",
-      "title": "ميداليات الساعات الذائبة",
-      "category": "personal",
-      "year": "2026",
-      "description": "مجموعة ميداليات (كي تشينز) مستوحاة من الساعات الذائبة لسالفادور دالي، مصنوعة ومرسومة يدويًا.",
-      "featured": false,
-      "title_en": "Melting Clock Keychains",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
