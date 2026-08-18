@@ -389,6 +389,17 @@ const SITE_DATA = {
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
+      "id": 73,
+      "image": "images/work-138.jpg",
+      "title": "تيشيرت أدوات الرسم",
+      "title_en": "Art Tools Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
+      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
+      "featured": false
+    },
+    {
       "id": 5,
       "image": "images/work-001.jpg",
       "title": "عالم تحت الماء",
@@ -464,17 +475,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Warm Check Jacquard",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 73,
-      "image": "images/work-138.jpg",
-      "title": "تيشيرت أدوات الرسم",
-      "title_en": "Art Tools Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
-      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
-      "featured": false
     },
     {
       "id": 10,
