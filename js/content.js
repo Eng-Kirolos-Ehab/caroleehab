@@ -626,17 +626,6 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
-      "id": 44,
-      "image": "images/work-084.jpg",
-      "title": "سكتشات أزياء - ألوان مائية",
-      "category": "fashion",
-      "year": "2025",
-      "description": "صفحة سكتشات أزياء بألوان مائية زاهية مع دراسة نظرية الألوان ودولاب الألوان.",
-      "featured": false,
-      "title_en": "Fashion Sketches - Watercolor",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
       "id": 45,
       "image": "images/work-085.jpg",
       "title": "سكتش أزياء - الأنماط الهندسية",
