@@ -546,7 +546,7 @@ const SITE_DATA = {
       "id": 26,
       "image": "images/work-011.jpg",
       "title": "دراسة بالرصاص - الإبريق والقماش",
-      "category": "sketchbook",
+      "category": "charcoal",
       "year": "2025",
       "description": "رسم تخطيطي بالقلم الرصاص لتكوين من الإبريق والقماش — دراسة في المنظور والظل والنور.",
       "featured": false,
