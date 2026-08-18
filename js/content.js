@@ -609,6 +609,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 22,
+      "image": "images/work-033.jpg",
+      "title": "بورتريه بالباستيل",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة بورتريه بألوان الباستيل لامرأة بتاج ووشاح — تجسيد للأناقة والكياسة بألوان دافئة.",
+      "featured": false,
+      "title_en": "Pastel Portrait",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 14,
       "image": "images/work-003.jpg",
       "title": "دفتر تصميم - الخطوط",
@@ -651,17 +662,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Hand-Painted Phone Case",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 22,
-      "image": "images/work-033.jpg",
-      "title": "بورتريه بالباستيل",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة بورتريه بألوان الباستيل لامرأة بتاج ووشاح — تجسيد للأناقة والكياسة بألوان دافئة.",
-      "featured": false,
-      "title_en": "Pastel Portrait",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 11,
