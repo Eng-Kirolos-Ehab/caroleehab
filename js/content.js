@@ -420,7 +420,7 @@ const SITE_DATA = {
       "id": 39,
       "image": "images/work-067.jpg",
       "title": "أزهار زرقاء داكنة",
-      "category": "homeprint",
+      "category": "Egy Stitch Competition Designs",
       "year": "2025",
       "description": "نقشة طباعة قماش بأزهار زرقاء وخضراء على خلفية كحلية داكنة — فخامة لمفروشات الصالون.",
       "featured": false,
