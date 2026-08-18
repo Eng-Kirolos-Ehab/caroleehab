@@ -1024,14 +1024,14 @@ const SITE_DATA = {
     "motion-film",
     "mag-1",
     "featured",
+    "showcase-1",
     "mag-2",
     "process",
     "gallery",
     "mag-3",
     "events",
     "mag-4",
-    "quotes",
-    "showcase-1"
+    "quotes"
   ],
   "imageMeta": {
     "images/work-001.jpg": {
