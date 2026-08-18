@@ -807,6 +807,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 56,
+      "image": "images/work-090.jpg",
+      "title": "منحوتة الساعة الذائبة",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة يدوية مستوحاة من الساعات الذائبة لسالفادور دالي بألوان فيروزية وذهبية — السريالية بين يدين.",
+      "featured": false,
+      "title_en": "Melting Clock Sculpture",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 50,
       "image": "images/work-024.jpg",
       "title": "تخطيط منطقة التحضير",
@@ -870,17 +881,6 @@ const SITE_DATA = {
       "description": "فستان جينز مرسوم بنقشات يدوية بأسلوب تايداي — كل خطوة فيه برؤية ولمسة شخصية.",
       "featured": false,
       "title_en": "Denim Dress - Tie-Dye",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 56,
-      "image": "images/work-090.jpg",
-      "title": "منحوتة الساعة الذائبة",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة يدوية مستوحاة من الساعات الذائبة لسالفادور دالي بألوان فيروزية وذهبية — السريالية بين يدين.",
-      "featured": false,
-      "title_en": "Melting Clock Sculpture",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
