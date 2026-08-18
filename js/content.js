@@ -675,17 +675,6 @@ const SITE_DATA = {
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
     },
     {
-      "id": 10,
-      "image": "images/work-075.jpg",
-      "title": "رسم على جراب موبايل",
-      "category": "personal",
-      "year": "2026",
-      "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
-      "featured": false,
-      "title_en": "Hand-Painted Phone Case",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
       "id": 12,
       "image": "images/work-111.jpg",
       "title": "مجسم معدات النسيج",
@@ -695,6 +684,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Textile Equipment Model",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
+    },
+    {
+      "id": 10,
+      "image": "images/work-075.jpg",
+      "title": "رسم على جراب موبايل",
+      "category": "personal",
+      "year": "2026",
+      "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
+      "featured": false,
+      "title_en": "Hand-Painted Phone Case",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 49,
