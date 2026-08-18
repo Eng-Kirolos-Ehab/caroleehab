@@ -827,6 +827,17 @@ const SITE_DATA = {
       "description": "شهادة تقدير من جامعة بدر بالقاهرة لحصولي على المركز الثالث في مجال التصوير والرسم ضمن مسابقة الفنون التشكيلية للعام الجامعي 2023/2024، تقديرًا لمهاراتي الفنية والإبداعية.",
       "description_en": "Certificate of recognition from Badr University in Cairo for achieving Third Place in Photography and Drawing in the Fine Arts Competition 2023/2024, reflecting my artistic skills and creative expression.",
       "featured": false
+    },
+    {
+      "id": 79,
+      "image": "images/work-145.jpg",
+      "title": "التدريب العملي – شركة حصني للمنسوجات",
+      "title_en": "Practical Training – Hosny Textiles",
+      "category": "Certificates",
+      "year": "2026",
+      "description": "شهادة إتمام تدريب عملي بشركة حصني للمنسوجات في مجالات الصباغة والتجهيز والطباعة، مما أتاح لي التعرف بشكل عملي على مراحل معالجة وإنتاج الأقمشة داخل البيئة الصناعية.",
+      "description_en": "Certificate of completion of practical training at Hosny Textiles, covering dyeing, finishing, and textile printing, with hands-on exposure to industrial textile processing and production.",
+      "featured": false
     }
   ],
   "events": [
