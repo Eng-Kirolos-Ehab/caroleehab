@@ -774,6 +774,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 64,
+      "image": "images/work-129.jpg",
+      "title": "جاكيت الأخطبوط المرصّع",
+      "title_en": "Beaded Octopus Jacket",
+      "category": "personal",
+      "year": "2026",
+      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
+      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
+      "featured": false
+    },
+    {
       "id": 58,
       "image": "images/work-117.jpg",
       "title": "لوحة مطرزة - مطربة وبرج",
@@ -804,17 +815,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
       "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
-      "featured": false
-    },
-    {
-      "id": 64,
-      "image": "images/work-129.jpg",
-      "title": "جاكيت الأخطبوط المرصّع",
-      "title_en": "Beaded Octopus Jacket",
-      "category": "personal",
-      "year": "2026",
-      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
-      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
       "featured": false
     },
     {
