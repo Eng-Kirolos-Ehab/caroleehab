@@ -741,6 +741,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 64,
+      "image": "images/work-129.jpg",
+      "title": "جاكيت الأخطبوط المرصّع",
+      "title_en": "Beaded Octopus Jacket",
+      "category": "personal",
+      "year": "2026",
+      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
+      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
+      "featured": false
+    },
+    {
       "id": 55,
       "image": "images/work-028.jpg",
       "title": "فستان جينز - تايداي",
@@ -772,17 +783,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Melting Clock and Scarves",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 64,
-      "image": "images/work-129.jpg",
-      "title": "جاكيت الأخطبوط المرصّع",
-      "title_en": "Beaded Octopus Jacket",
-      "category": "personal",
-      "year": "2026",
-      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
-      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
-      "featured": false
     },
     {
       "id": 58,
