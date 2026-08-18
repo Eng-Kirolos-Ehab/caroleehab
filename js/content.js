@@ -340,6 +340,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 61,
+      "image": "images/work-126.jpg",
+      "title": "صفحات من دفتر التصميم",
+      "title_en": "Pages from the Design Sketchbook",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
+      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
+      "featured": false
+    },
+    {
       "id": 22,
       "image": "images/work-033.jpg",
       "title": "بورتريه بالباستيل",
@@ -404,17 +415,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Egyptian Jacquard - Pharaonic Symbols",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 61,
-      "image": "images/work-126.jpg",
-      "title": "صفحات من دفتر التصميم",
-      "title_en": "Pages from the Design Sketchbook",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
-      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
-      "featured": false
     },
     {
       "id": 39,
