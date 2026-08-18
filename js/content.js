@@ -197,6 +197,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 60,
+      "image": "images/work-125.jpg",
+      "title": "فستان الأزهار الحقيقية",
+      "title_en": "Real Flower Dress",
+      "category": "mixed",
+      "year": "2026",
+      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
+      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
+      "featured": false
+    },
+    {
       "id": 7,
       "image": "images/work-063.jpg",
       "title": "توت وصنوبر",
@@ -293,17 +304,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
       "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
-      "featured": false
-    },
-    {
-      "id": 60,
-      "image": "images/work-125.jpg",
-      "title": "فستان الأزهار الحقيقية",
-      "title_en": "Real Flower Dress",
-      "category": "mixed",
-      "year": "2026",
-      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
-      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
       "featured": false
     },
     {
