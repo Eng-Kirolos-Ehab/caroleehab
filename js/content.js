@@ -263,6 +263,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 32,
+      "image": "images/work-066.jpg",
+      "title": "جاكار مصري - الرموز الفرعونية",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "تصميم جاكار بأزرق غامق يحتضن رموزًا فرعونية كالعين والخنفساء — أطلانتس بلمسة مصرية أصيلة.",
+      "featured": false,
+      "title_en": "Egyptian Jacquard - Pharaonic Symbols",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 7,
       "image": "images/work-063.jpg",
       "title": "توت وصنوبر",
@@ -327,17 +338,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Textile Equipment Model",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 32,
-      "image": "images/work-066.jpg",
-      "title": "جاكار مصري - الرموز الفرعونية",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "تصميم جاكار بأزرق غامق يحتضن رموزًا فرعونية كالعين والخنفساء — أطلانتس بلمسة مصرية أصيلة.",
-      "featured": false,
-      "title_en": "Egyptian Jacquard - Pharaonic Symbols",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
       "id": 13,
