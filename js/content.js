@@ -615,6 +615,17 @@ const SITE_DATA = {
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
     },
     {
+      "id": 47,
+      "image": "images/work-088.jpg",
+      "title": "أزياء ونظرية الألوان",
+      "category": "fashion",
+      "year": "2025",
+      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
+      "featured": false,
+      "title_en": "Fashion and Color Theory",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 40,
       "image": "images/work-120.jpg",
       "title": "نقشة ذهبية نباتية",
@@ -656,17 +667,6 @@ const SITE_DATA = {
       "description": "سكتش أزياء بألوان زاهية ببنطلون أنماط هندسية ملونة — إبداع في تصميم الأزياء العصرية.",
       "featured": false,
       "title_en": "Fashion Sketch - Geometric Patterns",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
-    },
-    {
-      "id": 47,
-      "image": "images/work-088.jpg",
-      "title": "أزياء ونظرية الألوان",
-      "category": "fashion",
-      "year": "2025",
-      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
-      "featured": false,
-      "title_en": "Fashion and Color Theory",
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
