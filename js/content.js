@@ -598,6 +598,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 20,
+      "image": "images/work-082.jpg",
+      "title": "طبيعة صامتة - البرتقالي والأزرق",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "تناقض مشرق بين وعاء برتقالي وإبريق أزرق على خلفية مزخرفة — دراسة في التضاد اللوني.",
+      "featured": false,
+      "title_en": "Still Life - Orange and Blue",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 11,
       "image": "images/work-099.jpg",
       "title": "ميداليات الساعات الذائبة",
@@ -661,17 +672,6 @@ const SITE_DATA = {
       "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
       "featured": false,
       "title_en": "Color Contrast",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 20,
-      "image": "images/work-082.jpg",
-      "title": "طبيعة صامتة - البرتقالي والأزرق",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "تناقض مشرق بين وعاء برتقالي وإبريق أزرق على خلفية مزخرفة — دراسة في التضاد اللوني.",
-      "featured": false,
-      "title_en": "Still Life - Orange and Blue",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
