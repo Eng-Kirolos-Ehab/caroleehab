@@ -751,94 +751,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Embroidered Panel - Microphone Voice",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 60,
-      "image": "images/work-125.jpg",
-      "title": "فستان الأزهار الحقيقية",
-      "title_en": "Real Flower Dress",
-      "category": "mixed",
-      "year": "2026",
-      "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
-      "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
-      "featured": false
-    },
-    {
-      "id": 61,
-      "image": "images/work-126.jpg",
-      "title": "صفحات من دفتر التصميم",
-      "title_en": "Pages from the Design Sketchbook",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
-      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
-      "featured": false
-    },
-    {
-      "id": 62,
-      "image": "images/work-127.jpg",
-      "title": "بنطلون الأخطبوط تحت الماء",
-      "title_en": "Underwater Octopus Jeans",
-      "category": "personal",
-      "year": "2026",
-      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
-      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
-      "featured": false
-    },
-    {
-      "id": 63,
-      "image": "images/work-128.jpg",
-      "title": "فستان الحراشف الزرقاء",
-      "title_en": "Blue Scale Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
-      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
-      "featured": false
-    },
-    {
-      "id": 64,
-      "image": "images/work-129.jpg",
-      "title": "جاكيت الأخطبوط المرصّع",
-      "title_en": "Beaded Octopus Jacket",
-      "category": "personal",
-      "year": "2026",
-      "description": "جاكيت دنيم مطرز بالكامل يدويًا بالخرز واللؤلؤ، بتصميم أخطبوط بعين زجاجية حقيقية — عمل تفصيلي بياخد وقت طويل من الصبر.",
-      "description_en": "A denim jacket fully hand-embroidered with beads and pearls in an octopus design with a real glass eye — a detailed piece that takes patience.",
-      "featured": false
-    },
-    {
-      "id": 65,
-      "image": "images/work-130.jpg",
-      "title": "تيشيرت Glow in the Dark",
-      "title_en": "Glow in the Dark Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة على تيشيرت أسود بخطوط رسم حرة لجمجمة وحذاء، بخامة متوهجة في الضلمة.",
-      "description_en": "A graphic print design on a black tee — loose line art of a skull and a sneaker, printed in glow-in-the-dark ink.",
-      "featured": false
-    },
-    {
-      "id": 66,
-      "image": "images/work-131.jpg",
-      "title": "فستان زهرة الزنبق",
-      "title_en": "Lily Petal Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "فستان سهرة مستوحى من بتلات زهرة الزنبق بدرجات الوردي والبرتقالي، بقصة تنسدل زي بتلة بتتفتح.",
-      "description_en": "An evening gown inspired by lily petals in shades of pink and orange, cascading like a blooming flower.",
-      "featured": false
-    },
-    {
-      "id": 67,
-      "image": "images/work-132.jpg",
-      "title": "شهادة تخرج",
-      "title_en": "Graduation Certificate",
-      "category": "Certificates",
-      "year": "2026",
-      "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
-      "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
-      "featured": false
     }
   ],
   "events": [
@@ -1616,38 +1528,6 @@ const SITE_DATA = {
     "images/work-124.jpg": {
       "width": 1024,
       "height": 1280
-    },
-    "images/work-125.jpg": {
-      "width": 883,
-      "height": 1280
-    },
-    "images/work-126.jpg": {
-      "width": 719,
-      "height": 1046
-    },
-    "images/work-127.jpg": {
-      "width": 475,
-      "height": 1280
-    },
-    "images/work-128.jpg": {
-      "width": 960,
-      "height": 1280
-    },
-    "images/work-129.jpg": {
-      "width": 960,
-      "height": 1280
-    },
-    "images/work-130.jpg": {
-      "width": 1024,
-      "height": 1280
-    },
-    "images/work-131.jpg": {
-      "width": 960,
-      "height": 1280
-    },
-    "images/work-132.jpg": {
-      "width": 960,
-      "height": 1280
     }
   },
   "motionFilm": {
@@ -1662,6 +1542,7 @@ const SITE_DATA = {
   },
   "showcases": [],
   "imagePosition": {
-    "images/work-026.jpg": "50% 50%"
+    "images/work-026.jpg": "50% 50%",
+    "images/work-115.jpg": "24% 62%"
   }
 };
