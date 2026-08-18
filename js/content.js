@@ -131,6 +131,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 63,
+      "image": "images/work-128.jpg",
+      "title": "فستان الحراشف الزرقاء",
+      "title_en": "Blue Scale Gown",
+      "category": "fashion",
+      "year": "2026",
+      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
+      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
+      "featured": false
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -184,17 +195,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Underwater World",
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
-    },
-    {
-      "id": 63,
-      "image": "images/work-128.jpg",
-      "title": "فستان الحراشف الزرقاء",
-      "title_en": "Blue Scale Gown",
-      "category": "fashion",
-      "year": "2026",
-      "description": "تصميم فستان سهرة مستوحى من حراشف الأسماك بتدرجات الأزرق، بقصة انسيابية وفتحة جانبية جريئة.",
-      "description_en": "An evening gown design inspired by fish scales in shades of blue, with a flowing silhouette and a bold side slit.",
-      "featured": false
     },
     {
       "id": 6,
