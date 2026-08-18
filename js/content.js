@@ -95,6 +95,11 @@ const SITE_DATA = {
       "id": "personal",
       "label": "لمساتي الخاصة",
       "label_en": "Personal Touches"
+    },
+    {
+      "id": "Certificates",
+      "label": "شهادات و تدريب",
+      "label_en": "Certificates"
     }
   ],
   "works": [
