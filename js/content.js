@@ -521,6 +521,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 18,
+      "image": "images/work-078.jpg",
+      "title": "تباين الألوان",
+      "category": "bigworks",
+      "year": "2024",
+      "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
+      "featured": false,
+      "title_en": "Color Contrast",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 3,
       "image": "images/work-015.jpg",
       "title": "طبيعة صامتة",
@@ -552,17 +563,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Autumn Leaves",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
-    },
-    {
-      "id": 18,
-      "image": "images/work-078.jpg",
-      "title": "تباين الألوان",
-      "category": "bigworks",
-      "year": "2024",
-      "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
-      "featured": false,
-      "title_en": "Color Contrast",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 14,
