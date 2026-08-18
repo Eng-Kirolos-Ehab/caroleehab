@@ -580,11 +580,11 @@ const SITE_DATA = {
       "image": "images/work-017.jpg",
       "title": "أوراق الخريف",
       "category": "homeprint",
-      "year": "2026",
-      "description": "تصميم طباعة متكرر (Seamless Pattern) مستوحى من أوراق الشجر، مناسب للأقمشة والمنتجات المنزلية.",
+      "year": "2025",
+      "description": "تصميم طباعة متكرر مستوحى من أوراق الشجر، وجميع الموتيفات مرسومة يدويًا من تصميمي.",
       "featured": false,
       "title_en": "Autumn Leaves",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+      "description_en": "A seamless foliage-inspired pattern featuring motifs that were all originally hand-drawn by me"
     },
     {
       "id": 14,
