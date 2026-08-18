@@ -336,12 +336,12 @@ const SITE_DATA = {
     {
       "id": 62,
       "image": "images/work-127.jpg",
-      "title": "بنطلون الأخطبوط تحت الماء",
-      "title_en": "Underwater Octopus Jeans",
+      "title": "تطريز على بنطلون",
+      "title_en": "Embroidery on Trousers",
       "category": "personal",
-      "year": "2026",
-      "description": "جينز مرسوم يدويًا بألوان زاهية بعالم تحت الماء — أخطبوط ونجمة بحر وأصداف، لمسة شخصية على قطعة يومية.",
-      "description_en": "Hand-painted denim in vivid colors, bringing an underwater world — octopus, starfish, and shells — to an everyday piece.",
+      "year": "2022",
+      "description": "تصميم يبدأ **برسم يدوي للأخطبوط والعناصر البحرية** على قماش الجينز، ثم تم تحويل الخطوط المرسومة إلى تطريز يدوي لإبراز التفاصيل وإضافة ملمس فني للقطعة.",
+      "description_en": "The design began with a **hand-drawn octopus and marine elements** on denim, then the illustrated lines were transformed into hand embroidery to add texture and artistic detail to the piece.",
       "featured": false
     },
     {
