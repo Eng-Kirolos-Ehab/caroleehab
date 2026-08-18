@@ -347,9 +347,9 @@ const SITE_DATA = {
     {
       "id": 3,
       "image": "images/work-015.jpg",
-      "title": "طبيعة صامتة - الإبريق",
+      "title": "طبيعة صامتة",
       "category": "charcoal",
-      "year": "2026",
+      "year": "2024",
       "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
       "featured": false,
       "title_en": "Still Life - The Pitcher",
