@@ -422,17 +422,6 @@ const SITE_DATA = {
       "featured": false
     },
     {
-      "id": 3,
-      "image": "images/work-015.jpg",
-      "title": "طبيعة صامتة",
-      "category": "charcoal",
-      "year": "2024",
-      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
-      "featured": false,
-      "title_en": "Still Life - The Pitcher",
-      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
       "id": 71,
       "image": "images/work-136.jpg",
       "title": "تيشيرت Textile is Art",
@@ -442,6 +431,17 @@ const SITE_DATA = {
       "description": "تصميم طباعة بأسلوب كولاج بوب آرت ملون، بعنوان \"النسيج سجل الفن\".",
       "description_en": "A colorful pop-art collage print design with the tagline \"Textile is the record of art.\"",
       "featured": false
+    },
+    {
+      "id": 3,
+      "image": "images/work-015.jpg",
+      "title": "طبيعة صامتة",
+      "category": "charcoal",
+      "year": "2024",
+      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
+      "featured": false,
+      "title_en": "Still Life - The Pitcher",
+      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
       "id": 4,
