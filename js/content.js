@@ -510,6 +510,17 @@ const SITE_DATA = {
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
     },
     {
+      "id": 54,
+      "image": "images/work-026.jpg",
+      "title": "فستان جينز - لمستي",
+      "category": "personal",
+      "year": "2025",
+      "description": "فستان جينز مطبوع برسومات يدوية أزرق وأبيض — تحويل قطعة ملابس عادية لعمل فني مميز.",
+      "featured": false,
+      "title_en": "Denim Dress - My Touch",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 15,
       "image": "images/work-010.jpg",
       "title": "دفتر تصميم - الكاروهات",
@@ -574,17 +585,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Orange and Blue",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 54,
-      "image": "images/work-026.jpg",
-      "title": "فستان جينز - لمستي",
-      "category": "personal",
-      "year": "2025",
-      "description": "فستان جينز مطبوع برسومات يدوية أزرق وأبيض — تحويل قطعة ملابس عادية لعمل فني مميز.",
-      "featured": false,
-      "title_en": "Denim Dress - My Touch",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 21,
