@@ -741,6 +741,17 @@ const SITE_DATA = {
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
     },
     {
+      "id": 56,
+      "image": "images/work-090.jpg",
+      "title": "منحوتة الساعة الذائبة",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة يدوية مستوحاة من الساعات الذائبة لسالفادور دالي بألوان فيروزية وذهبية — السريالية بين يدين.",
+      "featured": false,
+      "title_en": "Melting Clock Sculpture",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 37,
       "image": "images/work-019.jpg",
       "title": "ورق جداري نباتي",
@@ -805,17 +816,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Factory Layout Plan",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 56,
-      "image": "images/work-090.jpg",
-      "title": "منحوتة الساعة الذائبة",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة يدوية مستوحاة من الساعات الذائبة لسالفادور دالي بألوان فيروزية وذهبية — السريالية بين يدين.",
-      "featured": false,
-      "title_en": "Melting Clock Sculpture",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 57,
