@@ -796,6 +796,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 73,
+      "image": "images/work-138.jpg",
+      "title": "تيشيرت أدوات الرسم",
+      "title_en": "Art Tools Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
+      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
+      "featured": false
+    },
+    {
       "id": 56,
       "image": "images/work-090.jpg",
       "title": "منحوتة الساعة الذائبة",
@@ -859,17 +870,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "لحظة استلام شهادة من جامعة بدر بالقاهرة، تتويجًا لمشوار الدراسة في تصميم النسيج.",
       "description_en": "A moment receiving a certificate from Badr University in Cairo, marking a milestone in the textile design journey.",
-      "featured": false
-    },
-    {
-      "id": 73,
-      "image": "images/work-138.jpg",
-      "title": "تيشيرت أدوات الرسم",
-      "title_en": "Art Tools Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم خط ذهبي مستمر لأدوات الرسم — فرش وباليتة وأنبوبة ألوان.",
-      "description_en": "A continuous gold line-art design of art tools — brushes, a palette, and a paint tube.",
       "featured": false
     },
     {
