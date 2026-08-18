@@ -340,6 +340,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 46,
+      "image": "images/work-086.jpg",
+      "title": "سكتشات أزياء - أبيض وأسود",
+      "category": "fashion",
+      "year": "2025",
+      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
+      "featured": false,
+      "title_en": "Fashion Sketches - Black and White",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 8,
       "image": "images/work-027.jpg",
       "title": "جاكار كاروهات - أخضر",
@@ -382,17 +393,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Melting Clock Keychains",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 46,
-      "image": "images/work-086.jpg",
-      "title": "سكتشات أزياء - أبيض وأسود",
-      "category": "fashion",
-      "year": "2025",
-      "description": "صفحة سكتشات أزياء بأنماط هندسية بالأبيض والأسود والأحمر — قوة التصميم بلا ألوان زائدة.",
-      "featured": false,
-      "title_en": "Fashion Sketches - Black and White",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 12,
