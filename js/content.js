@@ -318,6 +318,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 30,
+      "image": "images/work-064.jpg",
+      "title": "جاكار  - نقشة النيل",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "تصميم جاكار بنقشة فرعونية مستوحاة من النيل والتراث المصري القديم — أزرق جينز عميق يحكي حضارة ما تحت الماء.",
+      "featured": true,
+      "title_en": "Atlantis Jacquard - Nile Motif",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 13,
       "image": "images/work-087.jpg",
       "title": "دفتر تصميم - أزياء وأنماط",
@@ -382,17 +393,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Blue Bottle",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 30,
-      "image": "images/work-064.jpg",
-      "title": "جاكار  - نقشة النيل",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "تصميم جاكار بنقشة فرعونية مستوحاة من النيل والتراث المصري القديم — أزرق جينز عميق يحكي حضارة ما تحت الماء.",
-      "featured": true,
-      "title_en": "Atlantis Jacquard - Nile Motif",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
       "id": 32,
