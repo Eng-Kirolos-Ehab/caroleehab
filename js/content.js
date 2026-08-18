@@ -846,6 +846,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 74,
+      "image": "images/work-139.jpg",
+      "title": "تيشيرت كولاج تجريدي",
+      "title_en": "Abstract Collage Tee",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
+      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
+      "featured": false
+    },
+    {
       "id": 68,
       "image": "images/work-133.jpg",
       "title": "معرض النوستالجيا المصرية",
@@ -887,17 +898,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "لوحة جاكار منسوجة تجمع بين موسى والمسيح والجندي المصري، احتفاءً بمكانة سيناء الدينية والوطنية.",
       "description_en": "A woven jacquard piece bringing together Moses, Christ, and the Egyptian soldier, honoring Sinai’s religious and national significance.",
-      "featured": false
-    },
-    {
-      "id": 74,
-      "image": "images/work-139.jpg",
-      "title": "تيشيرت كولاج تجريدي",
-      "title_en": "Abstract Collage Tee",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "تصميم طباعة كولاج بأسلوب استريت وير، يجمع بين رسم رقمي وخطوط طباعية وأنماط قماش مختلفة.",
-      "description_en": "A streetwear-style collage print design combining digital illustration, typographic elements, and mixed fabric patterns.",
       "featured": false
     },
     {
