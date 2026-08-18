@@ -1551,7 +1551,6 @@ const SITE_DATA = {
       "mainImage": "images/work-115.jpg",
       "subImages": [
         "images/work-114.jpg",
-        "images/work-115.jpg",
         "images/work-120.jpg",
         "images/work-105.jpg",
         "images/work-094.jpg",
