@@ -230,6 +230,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 47,
+      "image": "images/work-088.jpg",
+      "title": "أزياء ونظرية الألوان",
+      "category": "fashion",
+      "year": "2025",
+      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
+      "featured": false,
+      "title_en": "Fashion and Color Theory",
+      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -283,17 +294,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "El Fishawy Cafe",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 47,
-      "image": "images/work-088.jpg",
-      "title": "أزياء ونظرية الألوان",
-      "category": "fashion",
-      "year": "2025",
-      "description": "دراسة تصميم أزياء بنظرية الألوان: تكامل، انقسام، ثلاثي — العلم والجماليات في صفحة واحدة.",
-      "featured": false,
-      "title_en": "Fashion and Color Theory",
-      "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
       "id": 41,
