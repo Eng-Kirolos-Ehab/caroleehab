@@ -587,6 +587,17 @@ const SITE_DATA = {
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
+      "id": 19,
+      "image": "images/work-079.jpg",
+      "title": "دفء الحصاد",
+      "category": "bigworks",
+      "year": "2024",
+      "description": "لوحة زيتية بأجواء منزلية دافئة — طنجرة وخبز وسكين على قماش مخطط في ضوء هادئ.",
+      "featured": false,
+      "title_en": "Harvest Warmth",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 11,
       "image": "images/work-099.jpg",
       "title": "ميداليات الساعات الذائبة",
@@ -650,17 +661,6 @@ const SITE_DATA = {
       "description": "لوحة زيتية بألوان برودة جميلة؛ زجاجة وإبريق أزرق على خلفية وردية هادئة.",
       "featured": false,
       "title_en": "Color Contrast",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 19,
-      "image": "images/work-079.jpg",
-      "title": "دفء الحصاد",
-      "category": "bigworks",
-      "year": "2024",
-      "description": "لوحة زيتية بأجواء منزلية دافئة — طنجرة وخبز وسكين على قماش مخطط في ضوء هادئ.",
-      "featured": false,
-      "title_en": "Harvest Warmth",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
