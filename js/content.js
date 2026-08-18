@@ -433,17 +433,6 @@ const SITE_DATA = {
       "featured": false
     },
     {
-      "id": 3,
-      "image": "images/work-015.jpg",
-      "title": "طبيعة صامتة",
-      "category": "charcoal",
-      "year": "2024",
-      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
-      "featured": false,
-      "title_en": "Still Life - The Pitcher",
-      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
       "id": 4,
       "image": "images/work-118.jpg",
       "title": "وجوه",
@@ -452,6 +441,17 @@ const SITE_DATA = {
       "description": "مجموعة بورتريهات بالفحم، كل وجه يحمل تعبيره وقصته الخاصة.",
       "featured": true,
       "title_en": "Faces",
+      "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
+    },
+    {
+      "id": 3,
+      "image": "images/work-015.jpg",
+      "title": "طبيعة صامتة",
+      "category": "charcoal",
+      "year": "2024",
+      "description": "رسم بالفحم لتكوين من أدوات المطبخ والخضروات، يركّز على التدرجات والظل والنور.",
+      "featured": false,
+      "title_en": "Still Life - The Pitcher",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
     },
     {
