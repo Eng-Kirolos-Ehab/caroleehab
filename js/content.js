@@ -653,6 +653,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 22,
+      "image": "images/work-033.jpg",
+      "title": "بورتريه بالباستيل",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة بورتريه بألوان الباستيل لامرأة بتاج ووشاح — تجسيد للأناقة والكياسة بألوان دافئة.",
+      "featured": false,
+      "title_en": "Pastel Portrait",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+    },
+    {
       "id": 11,
       "image": "images/work-099.jpg",
       "title": "ميداليات الساعات الذائبة",
@@ -694,17 +705,6 @@ const SITE_DATA = {
       "description": "لوحة زيتية تجمع بين جرة فرعونية وخضروات طازجة — تلاقي التراث والحياة اليومية.",
       "featured": false,
       "title_en": "Still Life - Pharaonic Jar",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 22,
-      "image": "images/work-033.jpg",
-      "title": "بورتريه بالباستيل",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة بورتريه بألوان الباستيل لامرأة بتاج ووشاح — تجسيد للأناقة والكياسة بألوان دافئة.",
-      "featured": false,
-      "title_en": "Pastel Portrait",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
