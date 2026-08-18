@@ -477,6 +477,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 56,
+      "image": "images/work-090.jpg",
+      "title": "منحوتة الساعة الذائبة",
+      "category": "personal",
+      "year": "2025",
+      "description": "منحوتة يدوية مستوحاة من الساعات الذائبة لسالفادور دالي بألوان فيروزية وذهبية — السريالية بين يدين.",
+      "featured": false,
+      "title_en": "Melting Clock Sculpture",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
       "id": 8,
       "image": "images/work-027.jpg",
       "title": "جاكار كاروهات - أخضر",
@@ -541,17 +552,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Design Notebook - Checks",
       "description_en": "A design study page documenting ideas, structure, color, and visual research."
-    },
-    {
-      "id": 56,
-      "image": "images/work-090.jpg",
-      "title": "منحوتة الساعة الذائبة",
-      "category": "personal",
-      "year": "2025",
-      "description": "منحوتة يدوية مستوحاة من الساعات الذائبة لسالفادور دالي بألوان فيروزية وذهبية — السريالية بين يدين.",
-      "featured": false,
-      "title_en": "Melting Clock Sculpture",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 16,
