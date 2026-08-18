@@ -402,13 +402,13 @@ const SITE_DATA = {
     {
       "id": 40,
       "image": "images/work-120.jpg",
-      "title": "نقشة ذهبية نباتية",
+      "title": "بشرة خير",
       "category": "homeprint",
       "year": "2025",
-      "description": "ورق جداري بنقشة نباتية ذهبية على خلفية كحلية — تصميم فاخر للمساحات الراقية.",
+      "description": "لوحة نسيجية مستوحاة من أغنية «بشرة خير»، تجسد روح الأغنية من خلال تكوين بصري يجمع رموزًا ومشاهد تعبّر عن الهوية المصرية والوحدة والفرحة.",
       "featured": false,
-      "title_en": "Golden Botanical Pattern",
-      "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+      "title_en": "Boshret Kheir",
+      "description_en": "A textile artwork inspired by the song “Boshret Kheir,” translating its spirit into a visual composition that reflects Egyptian identity, unity, and celebration."
     },
     {
       "id": 58,
