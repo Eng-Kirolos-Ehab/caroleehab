@@ -675,6 +675,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 68,
+      "image": "images/work-133.jpg",
+      "title": "معرض النوستالجيا المصرية",
+      "title_en": "Egyptian Nostalgia Exhibition",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
+      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
+      "featured": false
+    },
+    {
       "id": 35,
       "image": "images/work-005.jpg",
       "title": "نسيج يدوي على النول - وردي وبيج",
@@ -750,17 +761,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Textile Machine Model",
       "description_en": "A practical textile-engineering piece connected to factory planning, equipment, or production workflow."
-    },
-    {
-      "id": 68,
-      "image": "images/work-133.jpg",
-      "title": "معرض النوستالجيا المصرية",
-      "title_en": "Egyptian Nostalgia Exhibition",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
-      "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
-      "featured": false
     },
     {
       "id": 49,
