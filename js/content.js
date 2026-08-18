@@ -406,6 +406,17 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
+      "id": 61,
+      "image": "images/work-126.jpg",
+      "title": "صفحات من دفتر التصميم",
+      "title_en": "Pages from the Design Sketchbook",
+      "category": "sketchbook",
+      "year": "2026",
+      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
+      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
+      "featured": false
+    },
+    {
       "id": 39,
       "image": "images/work-067.jpg",
       "title": "تصميم مستوحى من زهرة اللوتس.",
@@ -766,17 +777,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "تصميم أزياء تجمع فيه الرسم بالقلم مع أزهار حقيقية مجففة، لتتحول التفاصيل النباتية لفستان حي على الورق.",
       "description_en": "A fashion illustration where pen work meets real dried flowers, turning botanical details into a living dress on paper.",
-      "featured": false
-    },
-    {
-      "id": 61,
-      "image": "images/work-126.jpg",
-      "title": "صفحات من دفتر التصميم",
-      "title_en": "Pages from the Design Sketchbook",
-      "category": "sketchbook",
-      "year": "2026",
-      "description": "لقطة من دفتر الاسكتشات بتجمع مجموعة تصاميم فاشون بالقلم الرصاص، من أول الفكرة لحد رسم التفاصيل والإكسسوارات.",
-      "description_en": "A glimpse into the sketchbook — a set of pencil fashion croquis, from first idea to detailed accessory notes.",
       "featured": false
     },
     {
