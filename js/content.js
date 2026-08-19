@@ -290,6 +290,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 81,
+      "image": "images/work-147.jpg",
+      "title": "زهرة متجسدة | تصميم أزياء بخامات طبيعية",
+      "title_en": "Bloom in Form | Natural Material Fashion Design",
+      "category": "painting",
+      "year": "2022",
+      "description": "تصميم أزياء مستوحى من جمال وتكوين الزهور، يجمع بين الرسم اليدوي وتوظيف خامات طبيعية ثلاثية الأبعاد لتشكيل تفاصيل الفستان. يبرز التصميم الدمج بين الاسكتش الفني، الملمس، واللون في تكوين مبتكر يحول العناصر النباتية إلى قطعة أزياء فنية.",
+      "description_en": "A fashion design inspired by the beauty and structure of flowers, combining hand illustration with three-dimensional natural materials to create the garment details. The design explores the relationship between sketching, texture, and color, transforming botanical elements into an expressive wearable concept.",
+      "featured": false
+    },
+    {
       "id": 1,
       "image": "images/work-070.jpg",
       "title": "لوحة اهل غزة",
@@ -397,17 +408,6 @@ const SITE_DATA = {
       "year": "2026",
       "description": "ثلاث لوحات جاكار منسوجة مستوحاة من أغاني مصرية خالدة عن الوطن، كل لوحة مرفقة بشريط كاسيت بيحمل اسم الأغنية وسنتها.",
       "description_en": "Three woven jacquard tapestries inspired by timeless Egyptian songs about the homeland, each paired with a cassette-tape label naming the song and its year.",
-      "featured": false
-    },
-    {
-      "id": 81,
-      "image": "images/work-147.jpg",
-      "title": "زهرة متجسدة | تصميم أزياء بخامات طبيعية",
-      "title_en": "Bloom in Form | Natural Material Fashion Design",
-      "category": "painting",
-      "year": "2022",
-      "description": "تصميم أزياء مستوحى من جمال وتكوين الزهور، يجمع بين الرسم اليدوي وتوظيف خامات طبيعية ثلاثية الأبعاد لتشكيل تفاصيل الفستان. يبرز التصميم الدمج بين الاسكتش الفني، الملمس، واللون في تكوين مبتكر يحول العناصر النباتية إلى قطعة أزياء فنية.",
-      "description_en": "A fashion design inspired by the beauty and structure of flowers, combining hand illustration with three-dimensional natural materials to create the garment details. The design explores the relationship between sketching, texture, and color, transforming botanical elements into an expressive wearable concept.",
       "featured": false
     },
     {
