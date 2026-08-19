@@ -829,6 +829,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 79,
+      "image": "images/work-145.jpg",
+      "title": "التدريب العملي – شركة حصني للمنسوجات",
+      "title_en": "Practical Training – Hosny Textiles",
+      "category": "Certificates",
+      "year": "2026",
+      "description": "شهادة إتمام تدريب عملي بشركة حصني للمنسوجات في مجالات الصباغة والتجهيز والطباعة، مما أتاح لي التعرف بشكل عملي على مراحل معالجة وإنتاج الأقمشة داخل البيئة الصناعية.",
+      "description_en": "Certificate of completion of practical training at Hosny Textiles, covering dyeing, finishing, and textile printing, with hands-on exposure to industrial textile processing and production.",
+      "featured": false
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -849,17 +860,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Phone Case - Starry Night",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 79,
-      "image": "images/work-145.jpg",
-      "title": "التدريب العملي – شركة حصني للمنسوجات",
-      "title_en": "Practical Training – Hosny Textiles",
-      "category": "Certificates",
-      "year": "2026",
-      "description": "شهادة إتمام تدريب عملي بشركة حصني للمنسوجات في مجالات الصباغة والتجهيز والطباعة، مما أتاح لي التعرف بشكل عملي على مراحل معالجة وإنتاج الأقمشة داخل البيئة الصناعية.",
-      "description_en": "Certificate of completion of practical training at Hosny Textiles, covering dyeing, finishing, and textile printing, with hands-on exposure to industrial textile processing and production.",
-      "featured": false
     }
   ],
   "events": [
