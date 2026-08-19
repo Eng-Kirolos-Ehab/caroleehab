@@ -807,6 +807,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 77,
+      "image": "images/work-143.jpg",
+      "title": "التدريب الصيفي – Jade Textile",
+      "title_en": "Internship Program – Jade Textile",
+      "category": "Certificates",
+      "year": "2025",
+      "description": "شهادة إتمام برنامج تدريب لمدة أربعة أسابيع في شركة Jade Textile، مع المشاركة في قسم التحسين المستمر – Continuous Improvement Department والتعرف على بيئة العمل الصناعية وأساليب تطوير وتحسين العمليات الإنتاجية.",
+      "description_en": "Certificate of completion of a four-week internship at Jade Textile, with active involvement in the Continuous Improvement Department, gaining practical exposure to industrial operations and process improvement practices.",
+      "featured": false
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -827,17 +838,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Phone Case - Starry Night",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 77,
-      "image": "images/work-143.jpg",
-      "title": "التدريب الصيفي – Jade Textile",
-      "title_en": "Internship Program – Jade Textile",
-      "category": "Certificates",
-      "year": "2025",
-      "description": "شهادة إتمام برنامج تدريب لمدة أربعة أسابيع في شركة Jade Textile، مع المشاركة في قسم التحسين المستمر – Continuous Improvement Department والتعرف على بيئة العمل الصناعية وأساليب تطوير وتحسين العمليات الإنتاجية.",
-      "description_en": "Certificate of completion of a four-week internship at Jade Textile, with active involvement in the Continuous Improvement Department, gaining practical exposure to industrial operations and process improvement practices.",
-      "featured": false
     },
     {
       "id": 78,
