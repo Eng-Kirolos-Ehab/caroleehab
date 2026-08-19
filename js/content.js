@@ -598,17 +598,6 @@ const SITE_DATA = {
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
     },
     {
-      "id": 7,
-      "image": "images/work-063.jpg",
-      "title": "توت وصنوبر",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "نمط جاكار بكونسبت كريسماس — التوت الأحمر والصنوبر الأخضر في هارمونية نسيج دافئة.",
-      "featured": false,
-      "title_en": "Berries and Pine",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
       "id": 34,
       "image": "images/work-119.jpg",
       "title": "جاكار شتوي - التوت والأوراق",
@@ -631,14 +620,14 @@ const SITE_DATA = {
       "description_en": "A seamless foliage-inspired pattern featuring motifs that were all originally hand-drawn by me"
     },
     {
-      "id": 9,
-      "image": "images/work-049.jpg",
-      "title": "جاكار كاروهات - دفء",
+      "id": 7,
+      "image": "images/work-063.jpg",
+      "title": "توت وصنوبر",
       "category": "jacquard",
-      "year": "2026",
-      "description": "تصميم جاكار بدرجات الأحمر والبني، دراسة في توافق الألوان الدافئة وتأثيرها على تصميم الأقمشة.",
+      "year": "2025",
+      "description": "نمط جاكار بكونسبت كريسماس — التوت الأحمر والصنوبر الأخضر في هارمونية نسيج دافئة.",
       "featured": false,
-      "title_en": "Warm Check Jacquard",
+      "title_en": "Berries and Pine",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
@@ -662,6 +651,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Melting Clock Keychains",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
+      "id": 9,
+      "image": "images/work-049.jpg",
+      "title": "جاكار كاروهات - دفء",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "تصميم جاكار بدرجات الأحمر والبني، دراسة في توافق الألوان الدافئة وتأثيرها على تصميم الأقمشة.",
+      "featured": false,
+      "title_en": "Warm Check Jacquard",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
       "id": 22,
