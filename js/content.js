@@ -741,6 +741,17 @@ const SITE_DATA = {
       "description_en": "A textile work that highlights handcraft, material exploration, and woven structure."
     },
     {
+      "id": 80,
+      "image": "images/work-146.jpg",
+      "title": "فستان جينز من تصميمي",
+      "title_en": "Denim Dress",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
+      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition",
+      "featured": false
+    },
+    {
       "id": 36,
       "image": "images/work-016.jpg",
       "title": "نسيج يدوي على النول - رمادي",
@@ -804,17 +815,6 @@ const SITE_DATA = {
       "year": "2025",
       "description": "شهادة تقدير من كلية الفنون التطبيقية تقديرًا للتميز الفني والإبداع والالتزام بالتطوير المستمر، وللأعمال والإنجازات التي تعكس شغفي بالفنون والتصميم.",
       "description_en": "A Certificate of Appreciation recognizing artistic excellence, creativity, dedication, and continuous development, awarded for outstanding work and achievements in art and design.",
-      "featured": false
-    },
-    {
-      "id": 80,
-      "image": "images/work-146.jpg",
-      "title": "فستان جينز من تصميمي",
-      "title_en": "Denim Dress",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
-      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition",
       "featured": false
     },
     {
