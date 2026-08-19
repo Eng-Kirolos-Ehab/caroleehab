@@ -1139,8 +1139,8 @@ const SITE_DATA = {
     "mag-4",
     "gallery",
     "events",
-    "process",
-    "quotes"
+    "quotes",
+    "process"
   ],
   "hiddenSections": [
     "process"
