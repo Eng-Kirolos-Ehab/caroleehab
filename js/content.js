@@ -785,28 +785,6 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
-      "id": 10,
-      "image": "images/work-075.jpg",
-      "title": "رسم على جراب موبايل",
-      "category": "personal",
-      "year": "2026",
-      "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
-      "featured": false,
-      "title_en": "Hand-Painted Phone Case",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 53,
-      "image": "images/work-076.jpg",
-      "title": "موبايل كيس - ليلة النجوم",
-      "category": "personal",
-      "year": "2025",
-      "description": "غلاف موبايل مرسوم بأسلوب 'ليلة النجوم' لفان جوخ بألوان زرقاء مذهلة — فن الماسترز على يومياتك.",
-      "featured": true,
-      "title_en": "Phone Case - Starry Night",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
       "id": 75,
       "image": "images/work-141.jpg",
       "title": "شهادة تقدير للمشاركة في Textile Program",
@@ -827,6 +805,28 @@ const SITE_DATA = {
       "description": "شهادة تقدير من كلية الفنون التطبيقية تقديرًا للتميز الفني والإبداع والالتزام بالتطوير المستمر، وللأعمال والإنجازات التي تعكس شغفي بالفنون والتصميم.",
       "description_en": "A Certificate of Appreciation recognizing artistic excellence, creativity, dedication, and continuous development, awarded for outstanding work and achievements in art and design.",
       "featured": false
+    },
+    {
+      "id": 10,
+      "image": "images/work-075.jpg",
+      "title": "رسم على جراب موبايل",
+      "category": "personal",
+      "year": "2026",
+      "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
+      "featured": false,
+      "title_en": "Hand-Painted Phone Case",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
+      "id": 53,
+      "image": "images/work-076.jpg",
+      "title": "موبايل كيس - ليلة النجوم",
+      "category": "personal",
+      "year": "2025",
+      "description": "غلاف موبايل مرسوم بأسلوب 'ليلة النجوم' لفان جوخ بألوان زرقاء مذهلة — فن الماسترز على يومياتك.",
+      "featured": true,
+      "title_en": "Phone Case - Starry Night",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
       "id": 77,
