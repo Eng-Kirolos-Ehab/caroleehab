@@ -158,6 +158,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 81,
+      "image": "images/work-147.jpg",
+      "title": "زهرة متجسدة | تصميم أزياء بخامات طبيعية",
+      "title_en": "Bloom in Form | Natural Material Fashion Design",
+      "category": "sketchbook",
+      "year": "2022",
+      "description": "تصميم أزياء مستوحى من جمال وتكوين الزهور، يجمع بين الرسم اليدوي وتوظيف خامات طبيعية ثلاثية الأبعاد لتشكيل تفاصيل الفستان. يبرز التصميم الدمج بين الاسكتش الفني، الملمس، واللون في تكوين مبتكر يحول العناصر النباتية إلى قطعة أزياء فنية.",
+      "description_en": "A fashion design inspired by the beauty and structure of flowers, combining hand illustration with three-dimensional natural materials to create the garment details. The design explores the relationship between sketching, texture, and color, transforming botanical elements into an expressive wearable concept.",
+      "featured": false
+    },
+    {
       "id": 65,
       "image": "images/work-130.jpg",
       "title": "رسم بالكلور",
@@ -222,6 +233,28 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Lotus-Inspired Design",
       "description_en": "A home-printing pattern designed for interiors, fabrics, and decorative surfaces."
+    },
+    {
+      "id": 80,
+      "image": "images/work-146.jpg",
+      "title": "فستان جينز من تصميمي",
+      "title_en": "Denim Dress",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
+      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition",
+      "featured": false
+    },
+    {
+      "id": 54,
+      "image": "images/work-026.jpg",
+      "title": "فستان جينز",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
+      "featured": false,
+      "title_en": "Denim Dress",
+      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition"
     },
     {
       "id": 13,
@@ -365,17 +398,6 @@ const SITE_DATA = {
       "description": "تصميم بخط واحد مستمر لراقصتي باليه، بأسلوب بسيط وأنيق.",
       "description_en": "A continuous single-line design of two ballet dancers, minimal and elegant.",
       "featured": false
-    },
-    {
-      "id": 54,
-      "image": "images/work-026.jpg",
-      "title": "فستان جينز",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
-      "featured": false,
-      "title_en": "Denim Dress",
-      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition"
     },
     {
       "id": 68,
@@ -576,6 +598,17 @@ const SITE_DATA = {
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
     },
     {
+      "id": 34,
+      "image": "images/work-119.jpg",
+      "title": "جاكار شتوي - التوت والأوراق",
+      "category": "jacquard",
+      "year": "2025",
+      "description": "نمط جاكار بدرجات البني والكراميل الدافئة مع أوراق شتوية — كونسبت كريسماس بمزاج رومانسي هادئ.",
+      "featured": false,
+      "title_en": "Winter Jacquard - Berries and Leaves",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
       "id": 6,
       "image": "images/work-017.jpg",
       "title": "أوراق الخريف",
@@ -595,39 +628,6 @@ const SITE_DATA = {
       "description": "نمط جاكار بكونسبت كريسماس — التوت الأحمر والصنوبر الأخضر في هارمونية نسيج دافئة.",
       "featured": false,
       "title_en": "Berries and Pine",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 34,
-      "image": "images/work-119.jpg",
-      "title": "جاكار شتوي - التوت والأوراق",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "نمط جاكار بدرجات البني والكراميل الدافئة مع أوراق شتوية — كونسبت كريسماس بمزاج رومانسي هادئ.",
-      "featured": false,
-      "title_en": "Winter Jacquard - Berries and Leaves",
-      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
-    },
-    {
-      "id": 22,
-      "image": "images/work-033.jpg",
-      "title": "بورتريه بالباستيل",
-      "category": "bigworks",
-      "year": "2025",
-      "description": "لوحة بورتريه بألوان الباستيل لامرأة بتاج ووشاح — تجسيد للأناقة والكياسة بألوان دافئة.",
-      "featured": false,
-      "title_en": "Pastel Portrait",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 9,
-      "image": "images/work-049.jpg",
-      "title": "جاكار كاروهات - دفء",
-      "category": "jacquard",
-      "year": "2026",
-      "description": "تصميم جاكار بدرجات الأحمر والبني، دراسة في توافق الألوان الدافئة وتأثيرها على تصميم الأقمشة.",
-      "featured": false,
-      "title_en": "Warm Check Jacquard",
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
@@ -651,6 +651,28 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Melting Clock Keychains",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
+      "id": 9,
+      "image": "images/work-049.jpg",
+      "title": "جاكار كاروهات - دفء",
+      "category": "jacquard",
+      "year": "2026",
+      "description": "تصميم جاكار بدرجات الأحمر والبني، دراسة في توافق الألوان الدافئة وتأثيرها على تصميم الأقمشة.",
+      "featured": false,
+      "title_en": "Warm Check Jacquard",
+      "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
+    },
+    {
+      "id": 22,
+      "image": "images/work-033.jpg",
+      "title": "بورتريه بالباستيل",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة بورتريه بألوان الباستيل لامرأة بتاج ووشاح — تجسيد للأناقة والكياسة بألوان دافئة.",
+      "featured": false,
+      "title_en": "Pastel Portrait",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 14,
@@ -763,28 +785,6 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
-      "id": 10,
-      "image": "images/work-075.jpg",
-      "title": "رسم على جراب موبايل",
-      "category": "personal",
-      "year": "2026",
-      "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
-      "featured": false,
-      "title_en": "Hand-Painted Phone Case",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 53,
-      "image": "images/work-076.jpg",
-      "title": "موبايل كيس - ليلة النجوم",
-      "category": "personal",
-      "year": "2025",
-      "description": "غلاف موبايل مرسوم بأسلوب 'ليلة النجوم' لفان جوخ بألوان زرقاء مذهلة — فن الماسترز على يومياتك.",
-      "featured": true,
-      "title_en": "Phone Case - Starry Night",
-      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
       "id": 75,
       "image": "images/work-141.jpg",
       "title": "شهادة تقدير للمشاركة في Textile Program",
@@ -838,6 +838,28 @@ const SITE_DATA = {
       "description": "شهادة إتمام تدريب عملي بشركة حصني للمنسوجات في مجالات الصباغة والتجهيز والطباعة، مما أتاح لي التعرف بشكل عملي على مراحل معالجة وإنتاج الأقمشة داخل البيئة الصناعية.",
       "description_en": "Certificate of completion of practical training at Hosny Textiles, covering dyeing, finishing, and textile printing, with hands-on exposure to industrial textile processing and production.",
       "featured": false
+    },
+    {
+      "id": 10,
+      "image": "images/work-075.jpg",
+      "title": "رسم على جراب موبايل",
+      "category": "personal",
+      "year": "2026",
+      "description": "جراب موبايل مرسوم بالكامل باليد بشخصيات وألوان زاهية — لمستي الخاصة على شيء عادي.",
+      "featured": false,
+      "title_en": "Hand-Painted Phone Case",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
+      "id": 53,
+      "image": "images/work-076.jpg",
+      "title": "موبايل كيس - ليلة النجوم",
+      "category": "personal",
+      "year": "2025",
+      "description": "غلاف موبايل مرسوم بأسلوب 'ليلة النجوم' لفان جوخ بألوان زرقاء مذهلة — فن الماسترز على يومياتك.",
+      "featured": true,
+      "title_en": "Phone Case - Starry Night",
+      "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     }
   ],
   "events": [
@@ -1112,13 +1134,13 @@ const SITE_DATA = {
     "mag-1",
     "featured",
     "showcase-1",
-    "mag-2",
-    "process",
-    "gallery",
     "mag-3",
-    "events",
+    "gallery",
     "mag-4",
-    "quotes"
+    "mag-2",
+    "events",
+    "quotes",
+    "process"
   ],
   "hiddenSections": [
     "process"
@@ -1699,6 +1721,14 @@ const SITE_DATA = {
     "images/work-144.jpg": {
       "width": 1600,
       "height": 1165
+    },
+    "images/work-146.jpg": {
+      "width": 1122,
+      "height": 1402
+    },
+    "images/work-147.jpg": {
+      "width": 888,
+      "height": 1280
     }
   },
   "motionFilm": {

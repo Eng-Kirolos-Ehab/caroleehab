@@ -1013,5 +1013,19 @@
     "width": 1133,
     "height": 1600,
     "orientation": "portrait"
+  },
+  {
+    "id": "work-146.jpg",
+    "original": "photo_2026-08-19_02-49-39.jpg",
+    "width": 1122,
+    "height": 1402,
+    "orientation": "portrait"
+  },
+  {
+    "id": "work-147.jpg",
+    "original": "photo_2026-08-19_02-49-48.jpg",
+    "width": 888,
+    "height": 1280,
+    "orientation": "portrait"
   }
 ]
