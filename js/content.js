@@ -1134,10 +1134,10 @@ const SITE_DATA = {
     "mag-1",
     "featured",
     "showcase-1",
+    "mag-3",
     "mag-2",
     "process",
     "gallery",
-    "mag-3",
     "mag-4",
     "events",
     "quotes"
