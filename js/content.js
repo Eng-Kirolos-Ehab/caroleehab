@@ -444,6 +444,17 @@ const SITE_DATA = {
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
     },
     {
+      "id": 80,
+      "image": "images/work-146.jpg",
+      "title": "فستان جينز من تصميمي",
+      "title_en": "Denim Dress",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
+      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition",
+      "featured": false
+    },
+    {
       "id": 73,
       "image": "images/work-138.jpg",
       "title": "تيشيرت تصميم من الامام",
@@ -508,17 +519,6 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Still Life - Orange and Blue",
       "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
-    },
-    {
-      "id": 80,
-      "image": "images/work-146.jpg",
-      "title": "فستان جينز من تصميمي",
-      "title_en": "Denim Dress",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
-      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition",
-      "featured": false
     },
     {
       "id": 19,
