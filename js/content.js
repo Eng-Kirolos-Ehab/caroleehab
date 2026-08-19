@@ -838,6 +838,17 @@ const SITE_DATA = {
       "description": "شهادة إتمام تدريب عملي بشركة حصني للمنسوجات في مجالات الصباغة والتجهيز والطباعة، مما أتاح لي التعرف بشكل عملي على مراحل معالجة وإنتاج الأقمشة داخل البيئة الصناعية.",
       "description_en": "Certificate of completion of practical training at Hosny Textiles, covering dyeing, finishing, and textile printing, with hands-on exposure to industrial textile processing and production.",
       "featured": false
+    },
+    {
+      "id": 80,
+      "image": "images/work-146.jpg",
+      "title": "فستان جينز من تصميمي",
+      "title_en": "Denim Dress",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
+      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition",
+      "featured": false
     }
   ],
   "events": [
@@ -1699,6 +1710,10 @@ const SITE_DATA = {
     "images/work-144.jpg": {
       "width": 1600,
       "height": 1165
+    },
+    "images/work-146.jpg": {
+      "width": 1122,
+      "height": 1402
     }
   },
   "motionFilm": {
