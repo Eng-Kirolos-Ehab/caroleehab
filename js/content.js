@@ -268,6 +268,17 @@ const SITE_DATA = {
       "description_en": "A surreal fashion concept combining illustration, fabric ideas, and artistic styling."
     },
     {
+      "id": 54,
+      "image": "images/work-026.jpg",
+      "title": "فستان جينز",
+      "category": "Egy Stitch Competition Designs",
+      "year": "2025",
+      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
+      "featured": false,
+      "title_en": "Denim Dress",
+      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition"
+    },
+    {
       "id": 45,
       "image": "images/work-085.jpg",
       "title": "سكتش أزياء - الأنماط الهندسية",
@@ -310,17 +321,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Wahag",
       "description_en": "A charcoal study focused on contrast, texture, facial expression, and light."
-    },
-    {
-      "id": 54,
-      "image": "images/work-026.jpg",
-      "title": "فستان جينز",
-      "category": "Egy Stitch Competition Designs",
-      "year": "2025",
-      "description": "فستان من تصميمي وتنفيذي بالكامل، بداية من تصميم الموديفات وتوزيعها على القماش، وصولًا إلى تصميم الفستان وتفصيله وتنفيذه. كان هذا التصميم أحد أعمالي المشاركة في مسابقة Egy Stitch",
-      "featured": false,
-      "title_en": "Denim Dress",
-      "description_en": "A fully original dress designed and executed by me, from creating and arranging the motifs on the fabric to developing, tailoring, and constructing the final garment. This piece was one of my designs submitted to the Egy Stitch Competition"
     },
     {
       "id": 25,
