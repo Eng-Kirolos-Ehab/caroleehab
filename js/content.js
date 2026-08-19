@@ -1135,9 +1135,9 @@ const SITE_DATA = {
     "featured",
     "showcase-1",
     "mag-3",
+    "gallery",
     "mag-2",
     "mag-4",
-    "gallery",
     "events",
     "quotes",
     "process"
