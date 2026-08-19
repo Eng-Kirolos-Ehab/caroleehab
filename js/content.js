@@ -1137,8 +1137,8 @@ const SITE_DATA = {
     "mag-3",
     "mag-2",
     "mag-4",
-    "process",
     "gallery",
+    "process",
     "events",
     "quotes"
   ],
