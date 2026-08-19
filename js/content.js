@@ -818,6 +818,17 @@ const SITE_DATA = {
       "featured": false
     },
     {
+      "id": 78,
+      "image": "images/work-144.jpg",
+      "title": "المركز الثالث في مسابقة الفنون التشكيلية",
+      "title_en": "Third Place – Fine Arts Competition",
+      "category": "Certificates",
+      "year": "2024",
+      "description": "شهادة تقدير من جامعة بدر بالقاهرة لحصولي على المركز الثالث في مجال التصوير والرسم ضمن مسابقة الفنون التشكيلية للعام الجامعي 2023/2024، تقديرًا لمهاراتي الفنية والإبداعية.",
+      "description_en": "Certificate of recognition from Badr University in Cairo for achieving Third Place in Photography and Drawing in the Fine Arts Competition 2023/2024, reflecting my artistic skills and creative expression.",
+      "featured": false
+    },
+    {
       "id": 10,
       "image": "images/work-075.jpg",
       "title": "رسم على جراب موبايل",
@@ -838,17 +849,6 @@ const SITE_DATA = {
       "featured": true,
       "title_en": "Phone Case - Starry Night",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
-    },
-    {
-      "id": 78,
-      "image": "images/work-144.jpg",
-      "title": "المركز الثالث في مسابقة الفنون التشكيلية",
-      "title_en": "Third Place – Fine Arts Competition",
-      "category": "Certificates",
-      "year": "2024",
-      "description": "شهادة تقدير من جامعة بدر بالقاهرة لحصولي على المركز الثالث في مجال التصوير والرسم ضمن مسابقة الفنون التشكيلية للعام الجامعي 2023/2024، تقديرًا لمهاراتي الفنية والإبداعية.",
-      "description_en": "Certificate of recognition from Badr University in Cairo for achieving Third Place in Photography and Drawing in the Fine Arts Competition 2023/2024, reflecting my artistic skills and creative expression.",
-      "featured": false
     },
     {
       "id": 79,
