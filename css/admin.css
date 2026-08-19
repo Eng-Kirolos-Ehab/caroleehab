@@ -331,6 +331,18 @@
   border-radius: 0.85rem;
   padding: 0.9rem 1.1rem;
 }
+.row-card.row-card-hidden {
+  opacity: 0.55;
+  background: rgba(28,25,23,0.03);
+}
+.section-hidden-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(28,25,23,0.08);
+  color: #78716C;
+}
 
 /* drag-to-reorder (works list, section order list) */
 .item-card[draggable="true"],

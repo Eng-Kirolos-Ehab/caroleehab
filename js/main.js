@@ -21,6 +21,9 @@ function initSite() {
   /* ── Section order (slots now have content + height) ── */
   applySectionOrder(data);
 
+  /* ── Hide sections toggled off in admin (must run after order) ── */
+  applySectionVisibility(data);
+
   /* ── Site-wide texts ── */
   applyTexts(data);
 
@@ -153,6 +156,24 @@ function applySectionOrder(data) {
   order.forEach(id => {
     const el = document.getElementById(id);
     if (el) footer.parentNode.insertBefore(el, footer);
+  });
+}
+
+/* =========================================================
+   Section visibility — sections toggled off from the admin
+   panel get display:none, so they take no space and the
+   sections around them close up naturally (no manual spacing
+   fixes needed). Matching nav links are hidden too.
+   ========================================================= */
+function applySectionVisibility(data) {
+  const hidden = new Set(data.hiddenSections || []);
+  document.querySelectorAll('section[id]').forEach(el => {
+    if (el.id === 'home') return;
+    el.style.display = hidden.has(el.id) ? 'none' : '';
+  });
+  document.querySelectorAll('.nav-link[href^="#"]').forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    a.style.display = hidden.has(id) ? 'none' : '';
   });
 }
 

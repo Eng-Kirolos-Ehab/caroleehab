@@ -1120,6 +1120,9 @@ const SITE_DATA = {
     "mag-4",
     "quotes"
   ],
+  "hiddenSections": [
+    "process"
+  ],
   "imageMeta": {
     "images/work-001.jpg": {
       "width": 1200,

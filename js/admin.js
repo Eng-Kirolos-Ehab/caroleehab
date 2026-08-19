@@ -308,6 +308,7 @@ async function loadContentJs() {
   siteData.showcases = siteData.showcases || [];
   siteData.imagePosition = siteData.imagePosition || {};
   siteData.sectionOrder = siteData.sectionOrder || [];
+  siteData.hiddenSections = siteData.hiddenSections || [];
   contentSha = sha;
   snapshotSiteData();
 }
@@ -456,6 +457,7 @@ function mergeSiteData(remoteData, originalData, localData) {
   merged.categories = mergeArrayById(remoteData.categories, originalData.categories, localData.categories);
   merged.quotes = deepEqual(localData.quotes, originalData.quotes) ? remoteData.quotes : localData.quotes;
   merged.sectionOrder = mergeStringArray(remoteData.sectionOrder, originalData.sectionOrder, localData.sectionOrder);
+  merged.hiddenSections = mergeStringArray(remoteData.hiddenSections, originalData.hiddenSections, localData.hiddenSections);
   merged.imageMeta = mergeKeyedObject(remoteData.imageMeta, originalData.imageMeta, localData.imageMeta);
   merged.imagePosition = mergeKeyedObject(remoteData.imagePosition, originalData.imagePosition, localData.imagePosition);
   merged.artist = mergeScalarObject(remoteData.artist, originalData.artist, localData.artist);
@@ -1236,6 +1238,7 @@ function addSectionToOrder(sectionId) {
 
 function removeSectionFromOrder(sectionId) {
   siteData.sectionOrder = (siteData.sectionOrder || []).filter(id => id !== sectionId);
+  siteData.hiddenSections = (siteData.hiddenSections || []).filter(id => id !== sectionId);
 }
 
 function renderShowcases() {
@@ -1597,20 +1600,29 @@ function sectionLabel(id) {
 function renderSectionOrder() {
   const wrap = document.getElementById('section-order-list');
   const order = siteData.sectionOrder || [];
-  wrap.innerHTML = order.map((id, i) => `
-    <div class="row-card" draggable="true" data-drag-id="${escapeAttr(id)}">
+  const hidden = new Set(siteData.hiddenSections || []);
+  wrap.innerHTML = order.map((id, i) => {
+    const isHidden = hidden.has(id);
+    return `
+    <div class="row-card${isHidden ? ' row-card-hidden' : ''}" draggable="true" data-drag-id="${escapeAttr(id)}">
       <div class="flex items-center gap-3">
         <span class="row-drag-handle" aria-hidden="true">${iconDrag()}</span>
         <span class="text-gold text-sm font-semibold">${i + 1}</span>
         <h3 class="font-semibold">${escapeHtml(sectionLabel(id))}</h3>
+        ${isHidden ? '<span class="section-hidden-badge">مخفي</span>' : ''}
       </div>
       <div class="flex gap-2">
+        <button class="btn-icon" data-action="toggle-section-visibility" data-id="${escapeAttr(id)}" aria-label="${isHidden ? 'إظهار السكشن' : 'إخفاء السكشن'}" title="${isHidden ? 'إظهار السكشن' : 'إخفاء السكشن'}">${isHidden ? iconEyeOff() : iconEye()}</button>
         <button class="btn-icon" data-action="move-up-section" data-id="${escapeAttr(id)}" aria-label="تحريك لأعلى" ${i === 0 ? 'disabled' : ''}>${iconUp()}</button>
         <button class="btn-icon" data-action="move-down-section" data-id="${escapeAttr(id)}" aria-label="تحريك لأسفل" ${i === order.length - 1 ? 'disabled' : ''}>${iconDown()}</button>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 
+  wrap.querySelectorAll('[data-action="toggle-section-visibility"]').forEach(btn => {
+    btn.addEventListener('click', () => toggleSectionVisibility(btn.dataset.id));
+  });
   wrap.querySelectorAll('[data-action="move-up-section"]').forEach(btn => {
     btn.addEventListener('click', () => moveSection(btn.dataset.id, -1));
   });
@@ -1619,6 +1631,15 @@ function renderSectionOrder() {
   });
 
   enableCardDrag(wrap, '.row-card', (draggedId, targetId) => reorderArrayValue(siteData.sectionOrder, draggedId, targetId, renderSectionOrder));
+}
+
+async function toggleSectionVisibility(id) {
+  siteData.hiddenSections = siteData.hiddenSections || [];
+  const idx = siteData.hiddenSections.indexOf(id);
+  if (idx === -1) siteData.hiddenSections.push(id);
+  else siteData.hiddenSections.splice(idx, 1);
+  renderSectionOrder();
+  await persist();
 }
 
 async function moveSection(id, direction) {
@@ -2008,4 +2029,10 @@ function iconDrag() {
 }
 function iconTarget() {
   return `<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg>`;
+}
+function iconEye() {
+  return `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><circle cx="12" cy="12" r="3"/></svg>`;
+}
+function iconEyeOff() {
+  return `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12c1.292 4.338 5.31 7.5 10.066 7.5.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.774 3.162 10.066 7.5a10.522 10.522 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"/></svg>`;
 }
