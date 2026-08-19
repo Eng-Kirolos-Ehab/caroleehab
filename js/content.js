@@ -598,17 +598,6 @@ const SITE_DATA = {
       "description_en": "A mixed-media work combining drawing, collage, texture, and layered visual storytelling."
     },
     {
-      "id": 6,
-      "image": "images/work-017.jpg",
-      "title": "أوراق الخريف",
-      "category": "jacquard",
-      "year": "2025",
-      "description": "تصميم طباعة متكرر مستوحى من أوراق الشجر، وجميع الموتيفات مرسومة يدويًا من تصميمي.",
-      "featured": false,
-      "title_en": "Autumn Leaves",
-      "description_en": "A seamless foliage-inspired pattern featuring motifs that were all originally hand-drawn by me"
-    },
-    {
       "id": 7,
       "image": "images/work-063.jpg",
       "title": "توت وصنوبر",
@@ -631,15 +620,15 @@ const SITE_DATA = {
       "description_en": "A jacquard textile concept developed through repeat motifs, color harmony, and fabric thinking."
     },
     {
-      "id": 22,
-      "image": "images/work-033.jpg",
-      "title": "بورتريه بالباستيل",
-      "category": "bigworks",
+      "id": 6,
+      "image": "images/work-017.jpg",
+      "title": "أوراق الخريف",
+      "category": "jacquard",
       "year": "2025",
-      "description": "لوحة بورتريه بألوان الباستيل لامرأة بتاج ووشاح — تجسيد للأناقة والكياسة بألوان دافئة.",
+      "description": "تصميم طباعة متكرر مستوحى من أوراق الشجر، وجميع الموتيفات مرسومة يدويًا من تصميمي.",
       "featured": false,
-      "title_en": "Pastel Portrait",
-      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
+      "title_en": "Autumn Leaves",
+      "description_en": "A seamless foliage-inspired pattern featuring motifs that were all originally hand-drawn by me"
     },
     {
       "id": 9,
@@ -673,6 +662,17 @@ const SITE_DATA = {
       "featured": false,
       "title_en": "Melting Clock Keychains",
       "description_en": "A handmade personal piece that turns an everyday object into a small artwork."
+    },
+    {
+      "id": 22,
+      "image": "images/work-033.jpg",
+      "title": "بورتريه بالباستيل",
+      "category": "bigworks",
+      "year": "2025",
+      "description": "لوحة بورتريه بألوان الباستيل لامرأة بتاج ووشاح — تجسيد للأناقة والكياسة بألوان دافئة.",
+      "featured": false,
+      "title_en": "Pastel Portrait",
+      "description_en": "A large exhibition piece built around composition, atmosphere, and academic drawing practice."
     },
     {
       "id": 14,
