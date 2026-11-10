@@ -292,22 +292,37 @@ function renderFeatured(data) {
    Experience — internships (KK Group, LotusTex)
    ========================================================= */
 function renderExperience(data) {
-  const card = (x, kind) => `
-    <article class="xp-card" data-reveal>
-      <a class="xp-media${x.fit === 'cover' ? ' is-cover' : ''}" href="${x.image}" target="_blank" rel="noopener" aria-label="${escapeHtml(localized(x, 'title'))}">
-        <img src="${x.image}" alt="${escapeHtml(localized(x, 'title'))}" loading="lazy">
-        <span class="xp-zoom" aria-hidden="true">⤢</span>
-      </a>
-      <div class="xp-body">
-        <span class="xp-pill">${escapeHtml(localized(x, 'period'))}</span>
-        <h3 class="xp-title">${escapeHtml(localized(x, 'title'))}</h3>
-        <p class="xp-desc">${escapeHtml(localized(x, 'description'))}</p>
-      </div>
-    </article>`;
-  const exp = document.getElementById('experience-list');
-  if (exp && data.experience && data.experience.length) exp.innerHTML = data.experience.map(x => card(x)).join('');
-  const certs = document.getElementById('certificates-list');
-  if (certs && data.certificates && data.certificates.length) certs.innerHTML = data.certificates.map(x => card(x)).join('');
+  const wrap = document.getElementById('experience-list');
+  if (!wrap) return;
+  const en = CURRENT_LANG === 'en';
+  const items = []
+    .concat((data.experience || []).map(x => Object.assign({ kind: 'training' }, x)))
+    .concat((data.certificates || []).map(x => Object.assign({ kind: 'award' }, x)))
+    .sort((a, b) => (a.sort || 0) - (b.sort || 0));
+  if (!items.length) return;
+  const kindLabel = k => k === 'training' ? (en ? 'Internship' : 'تدريب') : (en ? 'Certificate' : 'شهادة');
+  wrap.innerHTML = items.map((x, i) => {
+    const t = escapeHtml(localized(x, 'title'));
+    const year = Math.floor(x.sort || 0) || '';
+    return `
+    <div class="tl-item ${i % 2 ? 'is-right' : 'is-left'}" data-reveal>
+      <span class="tl-dot" aria-hidden="true"></span>
+      <article class="tl-card">
+        <a class="tl-media" href="${x.image}" target="_blank" rel="noopener" aria-label="${t}">
+          <img src="${x.image}" alt="${t}" loading="lazy">
+        </a>
+        <div class="tl-body">
+          <div class="tl-meta">
+            <span class="tl-year">${year}</span>
+            <span class="tl-kind tl-kind-${x.kind}">${kindLabel(x.kind)}</span>
+          </div>
+          <h3 class="tl-title">${t}</h3>
+          <p class="tl-period">${escapeHtml(localized(x, 'period'))}</p>
+          <p class="tl-desc">${escapeHtml(localized(x, 'description'))}</p>
+        </div>
+      </article>
+    </div>`;
+  }).join('');
   initRevealAnimations();
 }
 

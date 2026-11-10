@@ -912,6 +912,7 @@ const SITE_DATA = {
     {
       "id": 1,
       "image": "images/exp-kk-group.jpg",
+      "sort": 2026.5,
       "fit": "cover",
       "org": "KK Group",
       "title": "تدريب في مصنع KK Group للتصاميم",
@@ -924,6 +925,7 @@ const SITE_DATA = {
     {
       "id": 2,
       "image": "images/exp-lotustex-certificate.jpg",
+      "sort": 2026.9,
       "org": "LotusTex Textile Co.",
       "title": "تدريب في LotusTex Textile Co.",
       "period": "سبتمبر 2026",
@@ -935,6 +937,7 @@ const SITE_DATA = {
     {
       "id": 3,
       "image": "images/work-145.jpg",
+      "sort": 2026.4,
       "org": "Hosny Textiles",
       "title": "تدريب عملي في شركة حصني للمنسوجات",
       "period": "2026",
@@ -946,6 +949,7 @@ const SITE_DATA = {
     {
       "id": 4,
       "image": "images/work-143.jpg",
+      "sort": 2025.6,
       "org": "Jade Textile",
       "title": "تدريب صيفي في Jade Textile",
       "period": "٤ أسابيع · 2025",
@@ -959,6 +963,7 @@ const SITE_DATA = {
     {
       "id": 1,
       "image": "images/work-144.jpg",
+      "sort": 2024.3,
       "title": "المركز الثالث في مسابقة الفنون التشكيلية",
       "period": "2024",
       "description": "شهادة تقدير من جامعة بدر بالقاهرة لحصولها على المركز الثالث في مجال التصوير والرسم ضمن مسابقة الفنون التشكيلية للعام الجامعي 2023/2024.",
@@ -969,6 +974,7 @@ const SITE_DATA = {
     {
       "id": 2,
       "image": "images/work-132.jpg",
+      "sort": 2024.5,
       "title": "شهادة تحقيق مركز في مسابقة",
       "period": "2024",
       "description": "شهادة تقدير لحصولها على مركز في مسابقة، تقديرًا لتميزها في التصميم والعمل المقدَّم.",
@@ -979,6 +985,7 @@ const SITE_DATA = {
     {
       "id": 3,
       "image": "images/work-142.jpg",
+      "sort": 2025.2,
       "title": "شهادة التميز الفني والإبداع",
       "period": "2025",
       "description": "شهادة تقدير من كلية الفنون التطبيقية للتميز الفني والإبداع والالتزام بالتطوير المستمر، وللأعمال والإنجازات التي تعكس شغفها بالفنون والتصميم.",
@@ -989,6 +996,7 @@ const SITE_DATA = {
     {
       "id": 4,
       "image": "images/work-141.jpg",
+      "sort": 2025.4,
       "title": "شهادة تقدير – عضوية Textales",
       "period": "2025",
       "description": "شهادة تقدير للمشاركة الفعّالة كعضو في أنشطة Textales، والمساهمة في تنظيم الفعاليات والمبادرات التي دعمت برنامج النسيج وأثرت الحياة الطلابية.",
@@ -1133,7 +1141,7 @@ const SITE_DATA = {
     },
     "experience": {
       "eyebrow": "الخبرات",
-      "heading": "التدريب والخبرة العملية",
+      "heading": "الخبرة والتدريب والشهادات",
       "certsHeading": "الشهادات والتكريمات"
     },
     "process": {
@@ -1195,7 +1203,7 @@ const SITE_DATA = {
     },
     "experience": {
       "eyebrow": "Experience",
-      "heading": "Training & Hands-on Experience",
+      "heading": "Experience, Training & Certificates",
       "certsHeading": "Certificates & Recognition"
     },
     "process": {
