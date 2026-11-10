@@ -306,6 +306,19 @@ function renderExperience(data) {
       </div>
     </div>
   `).join('');
+  const certs = document.getElementById('certificates-list');
+  if (certs && data.certificates && data.certificates.length) {
+    certs.innerHTML = data.certificates.map(c => `
+      <article class="cert-card" data-reveal>
+        <a class="cert-img" href="${c.image}" target="_blank" rel="noopener">
+          <img src="${c.image}" alt="${escapeHtml(localized(c, 'title'))}" loading="lazy">
+        </a>
+        <span class="exp-period">${escapeHtml(localized(c, 'period'))}</span>
+        <h4 class="font-serif text-xl mb-2">${escapeHtml(localized(c, 'title'))}</h4>
+        <p class="text-ink2 leading-relaxed text-sm">${escapeHtml(localized(c, 'description'))}</p>
+      </article>
+    `).join('');
+  }
   initRevealAnimations();
 }
 

@@ -930,6 +930,70 @@ const SITE_DATA = {
       "title_en": "Internship at LotusTex Textile Co.",
       "period_en": "September 2026",
       "description_en": "Successfully completed the internship program at LotusTex Textile Co. in 10th of Ramadan City, and received a certificate of completion recognizing her commitment, dedication, and active participation."
+    },
+    {
+      "id": 3,
+      "image": "images/work-145.jpg",
+      "org": "Hosny Textiles",
+      "title": "تدريب عملي في شركة حصني للمنسوجات",
+      "period": "2026",
+      "description": "أتمّت تدريبًا عمليًا في شركة حصني للمنسوجات في مجالات الصباغة والتجهيز والطباعة، وتعرّفت بشكل عملي على مراحل معالجة وإنتاج الأقمشة داخل البيئة الصناعية.",
+      "title_en": "Practical Training at Hosny Textiles",
+      "period_en": "2026",
+      "description_en": "Completed practical training at Hosny Textiles covering dyeing, finishing, and textile printing, with hands-on exposure to industrial fabric processing and production."
+    },
+    {
+      "id": 4,
+      "image": "images/work-143.jpg",
+      "org": "Jade Textile",
+      "title": "تدريب صيفي في Jade Textile",
+      "period": "٤ أسابيع · 2025",
+      "description": "أتمّت برنامج تدريب لمدة أربعة أسابيع في شركة Jade Textile، وشاركت في قسم التحسين المستمر (Continuous Improvement) وتعرّفت على بيئة العمل الصناعية وأساليب تطوير وتحسين العمليات الإنتاجية.",
+      "title_en": "Summer Internship at Jade Textile",
+      "period_en": "4 weeks · 2025",
+      "description_en": "Completed a four-week internship at Jade Textile, working within the Continuous Improvement Department and gaining practical exposure to industrial operations and process improvement."
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "image": "images/work-144.jpg",
+      "title": "المركز الثالث في مسابقة الفنون التشكيلية",
+      "period": "2024",
+      "description": "شهادة تقدير من جامعة بدر بالقاهرة لحصولها على المركز الثالث في مجال التصوير والرسم ضمن مسابقة الفنون التشكيلية للعام الجامعي 2023/2024.",
+      "title_en": "Third Place – Fine Arts Competition",
+      "period_en": "2024",
+      "description_en": "Certificate from Badr University in Cairo for achieving Third Place in Photography and Drawing in the Fine Arts Competition 2023/2024."
+    },
+    {
+      "id": 2,
+      "image": "images/work-132.jpg",
+      "title": "شهادة تحقيق مركز في مسابقة",
+      "period": "2024",
+      "description": "شهادة تقدير لحصولها على مركز في مسابقة، تقديرًا لتميزها في التصميم والعمل المقدَّم.",
+      "title_en": "Competition Achievement Certificate",
+      "period_en": "2024",
+      "description_en": "An achievement certificate for securing a place in a competition, recognizing the quality of her design and submitted work."
+    },
+    {
+      "id": 3,
+      "image": "images/work-142.jpg",
+      "title": "شهادة التميز الفني والإبداع",
+      "period": "2025",
+      "description": "شهادة تقدير من كلية الفنون التطبيقية للتميز الفني والإبداع والالتزام بالتطوير المستمر، وللأعمال والإنجازات التي تعكس شغفها بالفنون والتصميم.",
+      "title_en": "Certificate of Artistic Excellence & Creativity",
+      "period_en": "2025",
+      "description_en": "Certificate of Appreciation from the Faculty of Applied Arts recognizing artistic excellence, creativity, and continuous development."
+    },
+    {
+      "id": 4,
+      "image": "images/work-141.jpg",
+      "title": "شهادة تقدير – عضوية Textales",
+      "period": "2025",
+      "description": "شهادة تقدير للمشاركة الفعّالة كعضو في أنشطة Textales، والمساهمة في تنظيم الفعاليات والمبادرات التي دعمت برنامج النسيج وأثرت الحياة الطلابية.",
+      "title_en": "Certificate of Appreciation – Textales Member",
+      "period_en": "2025",
+      "description_en": "Certificate of Appreciation for active participation as a Textales member, organizing events and initiatives that supported the Textile Program and student life."
     }
   ],
   "process": [
@@ -1068,7 +1132,8 @@ const SITE_DATA = {
     },
     "experience": {
       "eyebrow": "الخبرات",
-      "heading": "التدريب والخبرة العملية"
+      "heading": "التدريب والخبرة العملية",
+      "certsHeading": "الشهادات والتكريمات"
     },
     "process": {
       "eyebrow": "كيف تولد اللوحة",
@@ -1129,7 +1194,8 @@ const SITE_DATA = {
     },
     "experience": {
       "eyebrow": "Experience",
-      "heading": "Training & Hands-on Experience"
+      "heading": "Training & Hands-on Experience",
+      "certsHeading": "Certificates & Recognition"
     },
     "process": {
       "eyebrow": "How a piece is born",
