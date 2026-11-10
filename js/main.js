@@ -52,6 +52,7 @@ function initSite() {
   renderMotionFilm(data);
   renderFeatured(data);
   renderProcess(data);
+  renderExperience(data);
   renderFilters(data);
   renderGallery(data);
   renderEvents(data);
@@ -285,6 +286,27 @@ function renderFeatured(data) {
       window.dispatchEvent(new CustomEvent('open-lightbox', { detail: { id } }));
     });
   });
+}
+
+/* =========================================================
+   Experience — internships (KK Group, LotusTex)
+   ========================================================= */
+function renderExperience(data) {
+  const wrap = document.getElementById('experience-list');
+  if (!wrap || !data.experience || !data.experience.length) return;
+  wrap.innerHTML = data.experience.map((x, i) => `
+    <div class="exp-card ${i % 2 === 1 ? 'reverse' : ''}" data-reveal>
+      <a class="exp-img" href="${x.image}" target="_blank" rel="noopener">
+        <img src="${x.image}" alt="${escapeHtml(localized(x, 'title'))}" loading="lazy">
+      </a>
+      <div class="exp-text">
+        <span class="exp-period">${escapeHtml(localized(x, 'period'))}</span>
+        <h3 class="font-serif text-2xl sm:text-3xl mb-3">${escapeHtml(localized(x, 'title'))}</h3>
+        <p class="text-ink2 leading-relaxed">${escapeHtml(localized(x, 'description'))}</p>
+      </div>
+    </div>
+  `).join('');
+  initRevealAnimations();
 }
 
 /* =========================================================
@@ -841,6 +863,8 @@ function initLangToggle(data) {
     renderShowcases(data);
     renderFeatured(data);
     renderProcess(data);
+    renderExperience(data);
+  renderExperience(data);
     renderFilters(data);
     renderGallery(data);
     renderEvents(data);

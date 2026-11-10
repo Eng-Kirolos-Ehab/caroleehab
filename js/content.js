@@ -908,6 +908,30 @@ const SITE_DATA = {
       "description_en": "A featured event from Carole's artistic and textile journey, presenting selected work to an audience of artists, students, and guests."
     }
   ],
+  "experience": [
+    {
+      "id": 1,
+      "image": "images/exp-kk-group.jpg",
+      "org": "KK Group",
+      "title": "تدريب في مصنع KK Group للتصاميم",
+      "period": "تدريب لمدة شهر",
+      "description": "تدرّبت لمدة شهر في مصنع KK Group للتصاميم، قُبلت خلاله تصاميمها ونُفّذت وطُرحت في الأسواق. وحصلت على مكافأة مالية في نهاية فترة العمل تقديرًا لشغلها.",
+      "title_en": "Internship at KK Group Design Factory",
+      "period_en": "One-month internship",
+      "description_en": "A one-month internship at KK Group, a design factory, where her designs were accepted, produced, and launched in the market. She received a financial reward at the end of the internship in recognition of her work."
+    },
+    {
+      "id": 2,
+      "image": "images/exp-lotustex-certificate.jpg",
+      "org": "LotusTex Textile Co.",
+      "title": "تدريب في LotusTex Textile Co.",
+      "period": "سبتمبر 2026",
+      "description": "أتمّت بنجاح برنامج التدريب في شركة LotusTex Textile Co. بمدينة العاشر من رمضان، وحصلت على شهادة إتمام تقديرًا لالتزامها وتفانيها ومشاركتها الفعّالة.",
+      "title_en": "Internship at LotusTex Textile Co.",
+      "period_en": "September 2026",
+      "description_en": "Successfully completed the internship program at LotusTex Textile Co. in 10th of Ramadan City, and received a certificate of completion recognizing her commitment, dedication, and active participation."
+    }
+  ],
   "process": [
     {
       "id": 1,
@@ -1042,6 +1066,10 @@ const SITE_DATA = {
       "eyebrow": "مختارات",
       "heading": "أعمال مميزة"
     },
+    "experience": {
+      "eyebrow": "الخبرات",
+      "heading": "التدريب والخبرة العملية"
+    },
     "process": {
       "eyebrow": "كيف تولد اللوحة",
       "heading": "رحلة العمل",
@@ -1099,6 +1127,10 @@ const SITE_DATA = {
       "eyebrow": "Selected",
       "heading": "Featured Works"
     },
+    "experience": {
+      "eyebrow": "Experience",
+      "heading": "Training & Hands-on Experience"
+    },
     "process": {
       "eyebrow": "How a piece is born",
       "heading": "The Creative Journey",
@@ -1130,6 +1162,7 @@ const SITE_DATA = {
   },
   "sectionOrder": [
     "about",
+    "experience",
     "motion-film",
     "mag-1",
     "featured",
