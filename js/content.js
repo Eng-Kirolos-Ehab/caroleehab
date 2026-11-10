@@ -19,7 +19,7 @@ const SITE_DATA = {
     "nameAr": "كارول إيهاب نبيل",
     "title": "فنانة تشكيلية · مصممة نسيج · طالبة هندسة",
     "tagline": "من النسيج إلى الموضة، من الفحم إلى اللون — كل عمل يبدأ برسم يدوي وينتهي بقصة",
-    "bio": "فنانة تشكيلية ومصممة نسيج في السنة الرابعة بكلية هندسة النسيج، جامعة بدر في القاهرة. متخصصة في تصميم الأنماط التكرارية، تصاميم الجاكار، الموضة السريالية، والطباعة المنزلية — كل أعمالها تبدأ برسم يدوي وتنتهي بتصميم يحكي قصة. حصلت على المركز الثالث في مسابقة الفنون الجامعية، وشاركت في معرض EgyStetch وعدة معارض فنية داخل الكلية. مشروع تخرجها يستلهم من السريالية ويجمع بين تصميم الأزياء والمفروشات في مجموعتين متكاملتين — كلتيهما منشورتان على الموقع.",
+    "bio": "فنانة تشكيلية ومصممة نسيج في السنة الرابعة بكلية هندسة النسيج، جامعة بدر في القاهرة. متخصصة في تصميم الأنماط التكرارية، تصاميم الجاكار، الموضة السريالية، والطباعة المنزلية — كل أعمالها تبدأ برسم يدوي وتنتهي بتصميم يحكي قصة. حصلت على المركز الثالث في مسابقة الفنون الجامعية، وشاركت في معرض EgyStetch وعدة معارض فنية داخل الكلية. تدرّبت لمدة شهر في مصنع KK Group للتصاميم، حيث قُبلت تصاميمها ونُفّذت وطُرحت في الأسواق. مشروع تخرجها يستلهم من السريالية ويجمع بين تصميم الأزياء والمفروشات في مجموعتين متكاملتين — كلتيهما منشورتان على الموقع.",
     "bioShort": "فنانة تشكيلية شغوفة بالنسيج، الفحم، والتفاصيل الصغيرة.",
     "photo": "images/work-123.jpg",
     "aboutPhoto": "images/work-124.jpg",
@@ -27,7 +27,7 @@ const SITE_DATA = {
     "location_en": "Suez, Egypt",
     "title_en": "Textile Engineer & Visual Artist",
     "tagline_en": "From textiles to fashion, from charcoal to color — every work begins with a hand-drawn sketch.",
-    "bio_en": "A textile engineering student in her fourth year at Badr University in Cairo (BUC), specializing in repeat pattern design, jacquard, surrealist fashion, and home printing. Her graduation project — two complete surrealist collections (upholstery + fashion) — is published on this portfolio. She won 3rd place in the university-wide arts competition, exhibited at EgyStetch, and received the Department Creative Certificate for excellence in hand-drawn artistic boards.",
+    "bio_en": "A textile engineering student in her fourth year at Badr University in Cairo (BUC), specializing in repeat pattern design, jacquard, surrealist fashion, and home printing. Her graduation project — two complete surrealist collections (upholstery + fashion) — is published on this portfolio. She won 3rd place in the university-wide arts competition, exhibited at EgyStetch, and received the Department Creative Certificate for excellence in hand-drawn artistic boards. She also completed a one-month training at KK Group, a design factory, where her designs were accepted, produced, and launched in the market.",
     "email": "caroleeehab@gmail.com",
     "social": {
       "instagram": "https://www.instagram.com/carole_ehab?igsh=YjloYm8xcHY2MWdj",
