@@ -912,6 +912,7 @@ const SITE_DATA = {
     {
       "id": 1,
       "image": "images/exp-kk-group.jpg",
+      "fit": "cover",
       "org": "KK Group",
       "title": "تدريب في مصنع KK Group للتصاميم",
       "period": "تدريب لمدة شهر",

@@ -292,33 +292,22 @@ function renderFeatured(data) {
    Experience — internships (KK Group, LotusTex)
    ========================================================= */
 function renderExperience(data) {
-  const wrap = document.getElementById('experience-list');
-  if (!wrap || !data.experience || !data.experience.length) return;
-  wrap.innerHTML = data.experience.map((x, i) => `
-    <div class="exp-card ${i % 2 === 1 ? 'reverse' : ''}" data-reveal>
-      <a class="exp-img" href="${x.image}" target="_blank" rel="noopener">
+  const card = (x, kind) => `
+    <article class="xp-card" data-reveal>
+      <a class="xp-media${x.fit === 'cover' ? ' is-cover' : ''}" href="${x.image}" target="_blank" rel="noopener" aria-label="${escapeHtml(localized(x, 'title'))}">
         <img src="${x.image}" alt="${escapeHtml(localized(x, 'title'))}" loading="lazy">
+        <span class="xp-zoom" aria-hidden="true">⤢</span>
       </a>
-      <div class="exp-text">
-        <span class="exp-period">${escapeHtml(localized(x, 'period'))}</span>
-        <h3 class="font-serif text-2xl sm:text-3xl mb-3">${escapeHtml(localized(x, 'title'))}</h3>
-        <p class="text-ink2 leading-relaxed">${escapeHtml(localized(x, 'description'))}</p>
+      <div class="xp-body">
+        <span class="xp-pill">${escapeHtml(localized(x, 'period'))}</span>
+        <h3 class="xp-title">${escapeHtml(localized(x, 'title'))}</h3>
+        <p class="xp-desc">${escapeHtml(localized(x, 'description'))}</p>
       </div>
-    </div>
-  `).join('');
+    </article>`;
+  const exp = document.getElementById('experience-list');
+  if (exp && data.experience && data.experience.length) exp.innerHTML = data.experience.map(x => card(x)).join('');
   const certs = document.getElementById('certificates-list');
-  if (certs && data.certificates && data.certificates.length) {
-    certs.innerHTML = data.certificates.map(c => `
-      <article class="cert-card" data-reveal>
-        <a class="cert-img" href="${c.image}" target="_blank" rel="noopener">
-          <img src="${c.image}" alt="${escapeHtml(localized(c, 'title'))}" loading="lazy">
-        </a>
-        <span class="exp-period">${escapeHtml(localized(c, 'period'))}</span>
-        <h4 class="font-serif text-xl mb-2">${escapeHtml(localized(c, 'title'))}</h4>
-        <p class="text-ink2 leading-relaxed text-sm">${escapeHtml(localized(c, 'description'))}</p>
-      </article>
-    `).join('');
-  }
+  if (certs && data.certificates && data.certificates.length) certs.innerHTML = data.certificates.map(x => card(x)).join('');
   initRevealAnimations();
 }
 
